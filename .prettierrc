@@ -1,0 +1,15 @@
+{
+  "printWidth": 100,
+  "tabWidth": 2,
+  "bracketSpacing": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "jsxBracketSameLine": false,
+  "arrowParens": "avoid",
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": { "parser": "babel" }
+    }
+  ]
+}
