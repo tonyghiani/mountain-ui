@@ -1,6 +1,10 @@
 {
-  "presets": [
-    ["@babel/preset-env", { "targets": { "node": 10 } }],
-    "@babel/preset-typescript"
-  ]
+  "presets": [["@babel/preset-env", { "targets": { "node": 10 } }], "@babel/preset-typescript"],
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      { "ssr": true, "displayName": true, "fileName": false, "pure": true }
+    ]
+  ],
+  "comments": false
 }
