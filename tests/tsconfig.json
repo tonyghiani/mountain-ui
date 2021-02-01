@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "references": [{ "name": "mountain-ui", "path": ".." }],
+  "compilerOptions": {
+    "types": ["jest"],
+    "rootDir": "..",
+    "noEmit": true
+  },
+  "include": ["."]
+}
