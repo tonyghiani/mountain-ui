@@ -3,16 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint"
-
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "prettier/react"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -24,15 +15,23 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-unused-params": "off",
-    "react/prop-types": "off",
     "prefer-const": "error"
   },
   "overrides": [
     {
-      "files": ["tests/**/*.ts"],
-      "env": { "jest": true, "node": true }
+      "files": ["**/*.ts"],
+      "env": { "jest": true, "node": true },
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "prettier/@typescript-eslint"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-unused-params": "off",
+        "react/prop-types": "off"
+      }
     }
   ],
   "settings": { "react": { "version": "detect" } }
