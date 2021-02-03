@@ -1,7 +1,9 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "node": true,
+    "es2021": true,
+    "jest": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended", "prettier", "prettier/react"],
   "parser": "@typescript-eslint/parser",
@@ -15,12 +17,12 @@
   },
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
-    "prefer-const": "error"
+    "prefer-const": "error",
+    "react/prop-types": "off"
   },
   "overrides": [
     {
-      "files": ["**/*.ts"],
-      "env": { "jest": true, "node": true },
+      "files": ["**/*.{ts,tsx}"],
       "plugins": ["@typescript-eslint"],
       "extends": [
         "plugin:@typescript-eslint/recommended",
@@ -29,8 +31,7 @@
       ],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-unused-params": "off",
-        "react/prop-types": "off"
+        "@typescript-eslint/no-unused-params": "off"
       }
     }
   ],
