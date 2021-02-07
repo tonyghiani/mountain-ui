@@ -6,13 +6,20 @@
   "repository": "https://github.com/tonyghiani/mountain-ui",
   "license": "MIT",
   "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && yarn build:cjs && yarn build:esm && yarn build:types",
     "build-storybook": "build-storybook",
+    "build:cjs": "BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.test.ts,src/**/*.stories.tsx ./src --out-dir dist/cjs",
+    "build:esm": "BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.test.ts,src/**/*.stories.tsx ./src --out-dir dist/esm",
+    "build:types": "tsc --project ./tsconfig.types.json",
     "co": "git cz",
-    "dev": "yarn build --watch --preserveWatchOutput",
     "generate": "node scripts/generate.js",
     "lint:package": "sort-package-json",
     "storybook": "start-storybook -p 6006",
@@ -35,7 +42,6 @@
       "path": "git-cz"
     }
   },
-  "browserslist": ">0.5%, not dead, not ie 11,not ie_mob 11, not op_mini all, not safari 5.1, safari 11",
   "resolutions": {
     "styled-components": "^5"
   },
@@ -44,8 +50,11 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.13",
     "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.15",
     "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.7",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",
@@ -69,6 +78,7 @@
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "rimraf": "^3.0.2",
     "sort-package-json": "^1.48.1",
     "typescript": "^4.1.3"
   },
