@@ -1,8 +1,9 @@
 const cjs = process.env.BABEL_ENV === 'cjs';
+const isTest = process.env.NODE_ENV === 'testing';
 
 module.exports = {
   presets: [
-    ['@babel/preset-env', { modules: false, loose: true }],
+    ['@babel/preset-env', { modules: isTest ? 'commonjs' : false, loose: true }],
     '@babel/preset-typescript',
     '@babel/react'
   ],
