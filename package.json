@@ -22,8 +22,10 @@
     "co": "git cz",
     "generate": "node scripts/generate.js",
     "lint:package": "sort-package-json",
-    "storybook": "start-storybook -p 6006",
-    "test": "NODE_ENV=testing jest"
+    "storybook": "yarn test:json && start-storybook -p 6006",
+    "test": "NODE_ENV=testing jest",
+    "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
+    "test:watch": "yarn test --watch"
   },
   "husky": {
     "hooks": {
@@ -56,8 +58,10 @@
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.12.7",
+    "@storybook/addon-a11y": "^6.1.17",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-jest": "^6.1.17",
     "@storybook/addon-links": "^6.1.15",
     "@storybook/addon-storyshots": "^6.1.17",
     "@storybook/react": "^6.1.15",
@@ -71,7 +75,9 @@
     "commitizen": "^4.2.3",
     "eslint": "^7.19.0",
     "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "fs-extra": "^9.1.0",
     "git-cz": "^4.7.6",
     "husky": "^4.3.8",
