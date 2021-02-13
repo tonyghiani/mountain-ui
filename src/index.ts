@@ -1,4 +1,3 @@
-export function sum(a: number, b: number): number {
-  const sum = a + b;
-  return sum;
-}
+export * from './components/atoms';
+export * from './components/molecules';
+export * from './components/organisms';
