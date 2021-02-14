@@ -11,11 +11,13 @@ export default {
   }
 } as Meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+// const Template: Story<ButtonProps> = args => <Button {...args} />;
 
-export const Basic = () => <Template>Click</Template>;
+export const Basic: Story<ButtonProps> = (args) => <Button {...args}>Click</Button>;
 
-Basic.args = {};
+Basic.args = {
+  backgroundColor: 'red'
+};
 
 Basic.parameters = {
   jest: ['Button.test.js'],

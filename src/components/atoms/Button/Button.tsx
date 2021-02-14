@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color } from 'styled-system'
+import { background, color } from 'styled-system'
 
 export interface ButtonProps {
 }
@@ -9,7 +9,6 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 const Button = styled.button`
-  ${color}
   line-height: 1.5rem;
   background-color: blue;
   color: snow;
@@ -18,6 +17,8 @@ const Button = styled.button`
   border: none;
   box-shadow: 0 0 18px 6px rgb(220,220,220);
   outline: none;
+  ${color}
+  ${background}
 `
 
 Button.displayName = 'Button'
