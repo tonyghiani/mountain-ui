@@ -1,3 +1,4 @@
+const fs = require('fs');
 const fse = require('fs-extra');
 const inquirer = require('inquirer');
 
@@ -26,6 +27,7 @@ process.stdin.on('keypress', (_, { name }) => name === 'escape' && process.exit(
     createStory(componentName, type),
     createTest(componentName)
   ]);
+  await addToIndex(type);
 
   console.log(`\n🚀 The ${componentName} component has been correctly created`);
 })();
@@ -55,9 +57,10 @@ async function askComponentDetails() {
 /**
  * Helper functions
  */
-function writeFile(path, body) {
+function writeFile(path, body, options = { trim: true }) {
+  const data = options.trim ? body.trim() : body;
   return fse
-    .outputFile(path, body.trim())
+    .outputFile(path, data, options)
     .then(() => console.log(`✅ Created ${path}`))
     .catch(err => {
       console.error(`❌ Failure creating ${path}`);
@@ -166,9 +169,8 @@ function createTest(name) {
     COMPONENT_IMPLEMENTATION,
     `
 import React from 'react';
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import initStoryshots from '@storybook/addon-storyshots';
+import { render } from '@testing-library/react';
 
 import { Basic } from './${name}.stories';
 
@@ -181,5 +183,29 @@ describe('${name}', () => {
   });
 });  
 `
+  );
+}
+
+function addToIndex(type) {
+  const group = pluralize(type);
+  const GROUP_DIR = `${BASE_DIR}/src/components/${group}`;
+  const GROUP_ENTRYPOINT = `${BASE_DIR}/src/components/${group}/index.ts`;
+
+  fs.unlinkSync(GROUP_ENTRYPOINT);
+
+  const groupList = fs.readdirSync(GROUP_DIR);
+
+  return writeFile(
+    GROUP_ENTRYPOINT,
+    groupList.reduce(
+      (list, name) =>
+        list.concat(
+          `
+export { default as ${name} } from './${name}';
+export * from './${name}';  
+  `
+        ),
+      ''
+    )
   );
 }
