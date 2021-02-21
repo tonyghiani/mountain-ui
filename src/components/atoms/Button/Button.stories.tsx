@@ -6,18 +6,14 @@ import Button, { ButtonProps } from './Button';
 export default {
   title: 'Atoms/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+  argTypes: {}
 } as Meta;
 
-// const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => <Button {...args}>Click</Button>;
 
-export const Basic: Story<ButtonProps> = (args) => <Button {...args}>Click</Button>;
+export const Basic = Template.bind({})
 
-Basic.args = {
-  backgroundColor: 'red'
-};
+Basic.args = {};
 
 Basic.parameters = {
   jest: ['Button.test.js'],
