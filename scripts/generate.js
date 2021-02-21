@@ -133,10 +133,10 @@ export default ${name};
 }
 
 function createStory(name, type) {
-  const COMPONENT_IMPLEMENTATION = `${COMPONENT_DIR}/${name}.stories.tsx`;
+  const COMPONENT_STORY = `${COMPONENT_DIR}/${name}.stories.tsx`;
   const group = pluralize(capitalize(type));
   return writeFile(
-    COMPONENT_IMPLEMENTATION,
+    COMPONENT_STORY,
     `
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0';
@@ -164,9 +164,9 @@ Basic.parameters = {
 }
 
 function createTest(name) {
-  const COMPONENT_IMPLEMENTATION = `${COMPONENT_DIR}/${name}.test.js`;
+  const COMPONENT_TEST = `${COMPONENT_DIR}/${name}.test.js`;
   return writeFile(
-    COMPONENT_IMPLEMENTATION,
+    COMPONENT_TEST,
     `
 import React from 'react';
 import initStoryshots from '@storybook/addon-storyshots';
