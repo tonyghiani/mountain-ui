@@ -64,9 +64,6 @@ export default {
   lineHeights: ['12px', '18px', '24px', '36px', '48px', '72px', '96px'],
   radii: ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '100%'],
   space: ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '64px', '96px'],
-  sizes: {
-    header: '64px'
-  },
   shadows: [
     'none',
     '0px 8px 12px -12px rgba(0,0,0,0.15)',
