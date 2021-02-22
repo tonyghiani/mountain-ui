@@ -193,7 +193,7 @@ function addToIndex(type) {
 
   fs.unlinkSync(GROUP_ENTRYPOINT);
 
-  const groupList = fs.readdirSync(GROUP_DIR);
+  const groupList = fs.readdirSync(GROUP_DIR).filter(dir => !dir.startsWith('.'));
 
   return writeFile(
     GROUP_ENTRYPOINT,
