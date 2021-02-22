@@ -1,6 +1,5 @@
-import React from 'react';
 import styled from 'styled-components';
-import { compose, textStyle, typography } from 'styled-system'
+import { compose, textStyle, typography, variant } from 'styled-system'
 
 import { BaseElement } from '../../../BaseElement';
 
@@ -10,13 +9,19 @@ export interface TypographyProps {
   /**
    * TODO: add prop description
    */
-  firstProp: boolean;
+  wrapped: boolean;
 }
 
 /**
  * TODO: add component description headline
  */
 export const BaseTypography = styled(BaseElement)(textStyles)
+
+export const Heading = styled(BaseTypography).attrs(({ variant }) => ({ as: variant }))(
+  variant({
+    scale: 'typography'
+  })
+)
 
 BaseTypography.displayName = 'BaseTypography';
 
