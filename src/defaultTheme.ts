@@ -1,17 +1,50 @@
+/**
+ * Breakpoints
+ */
+const breakpoints = ['32em', '48em', '80em', '120em'];
+[breakpoints.mobile, breakpoints.tablet, breakpoints.desktop, breakpoints.widescreen] = breakpoints;
+
+/**
+ * Media queries
+ */
+const mediaQueries = {
+  mobile: `@media screen and (min-width: ${breakpoints.mobile})`,
+  tablet: `@media screen and (min-width: ${breakpoints.tablet})`,
+  desktop: `@media screen and (min-width: ${breakpoints.desktop})`,
+  widescreen: `@media screen and (min-width: ${breakpoints.widescreen})`
+};
+
+/**
+ * Typography
+ */
+const fontSizes = ['7px', '9px', '12px', '16px', '22px', '28px', '38px', '50px', '68px', '90px'];
+[
+  fontSizes.caption,
+  fontSizes.sub,
+  fontSizes.secondaryBody,
+  fontSizes.body,
+  fontSizes.h6,
+  fontSizes.h5,
+  fontSizes.h4,
+  fontSizes.h3,
+  fontSizes.h2,
+  fontSizes.h1
+] = fontSizes;
+
 export default {
-  breakpoints: ['32em', '48em', '80em'],
+  breakpoints,
   fonts: {
-    normal: 'Montserrat, Avenir, Lato, Nunito Sans, apple-system, sans-serif'
+    normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif'
   },
   borders: ['none', '1px', '2px'],
   colors: {
     brandDark: '#36424A',
-    brandLight: '#FFFFFF',
+    brandLight: '#0F1210',
     nightgraph: '#AED8E5',
     text: {
-      primary: '#36424A',
+      primary: '#0C0E0D',
       secondary: '#6E7A83',
-      caption: '#B6BABD'
+      caption: '#5F6661'
     },
     accent: {
       shape: '#3B88FD',
@@ -46,21 +79,7 @@ export default {
       mannheim: '#7E97A8'
     }
   },
-  fontSizes: [
-    '10px',
-    '12px',
-    '14px',
-    '16px',
-    '18px',
-    '20px',
-    '22px',
-    '24px',
-    '32px',
-    '40px',
-    '48px',
-    '60px',
-    '72px'
-  ],
+  fontSizes,
   lineHeights: ['12px', '18px', '24px', '36px', '48px', '72px', '96px'],
   radii: ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '100%'],
   space: ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '64px', '96px'],
@@ -69,5 +88,6 @@ export default {
     '0px 8px 12px -12px rgba(0,0,0,0.15)',
     '0px 8px 24px -12px rgba(0,0,0,0.2)',
     '0px 8px 24px 0px rgba(0,0,0,0.15);'
-  ]
+  ],
+  mediaQueries
 };
