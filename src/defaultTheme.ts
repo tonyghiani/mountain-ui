@@ -54,32 +54,7 @@ const colors = {
     text: '#9BC5FC'
   },
   background: {
-    pureWhite: '#FFFFFF',
-    spaceWhite: '#FAFAFA',
-    grainsboro: '#F4F4F4',
-    smokeWhite: '#F7F7F7',
-    snow: '#F9F9F9',
-    mercury: '#E2E4E5',
-    night: '#1A1D1F',
-    lightBlue: '#B5DDE8',
-    positive: '#86D9C536',
-    temporary: '#fbb86d36',
-    negative: '#ef8b8b36',
-    moscow: 'rgba(168, 200, 254, 0.5)'
-  },
-  feeling: {
-    positive: '#86D9C5',
-    temporary: '#FBB86D',
-    negative: '#EF8B8B',
-    neutral: '#6E7A83'
-  },
-  support: {
-    manchester: '#FA8499',
-    marseille: '#9EDCF6',
-    miami: '#89EBDD',
-    marrakesh: '#FAC496',
-    moscow: '#A8C8FE',
-    mannheim: '#7E97A8'
+    pureWhite: '#FFFFFF'
   }
 };
 
@@ -102,42 +77,46 @@ export default {
     '0px 8px 24px 0px rgba(0,0,0,0.15);'
   ],
   mediaQueries,
-  typography: {
-    h1: {
-      color: colors.text.primary,
-      fontSize: fontSizes.h1,
-      lineHeight: lineHeights.short,
-      fontWeight: fontWeights.bold
-    },
-    h2: {
-      color: colors.text.primary,
-      fontSize: fontSizes.h2,
-      lineHeight: lineHeights.short,
-      fontWeight: fontWeights.bold
-    },
-    h3: {
-      color: colors.text.primary,
-      fontSize: fontSizes.h3,
-      lineHeight: lineHeights.short,
-      fontWeight: fontWeights.bold
-    },
-    h4: {
-      color: colors.text.primary,
-      fontSize: fontSizes.h4,
-      lineHeight: lineHeights.normal,
-      fontWeight: fontWeights.bold
-    },
-    h5: {
-      color: colors.text.primary,
-      fontSize: fontSizes.h5,
-      lineHeight: lineHeights.normal,
-      fontWeight: fontWeights.bold
-    },
-    h6: {
-      color: colors.text.primary,
-      fontSize: fontSizes.h6,
-      lineHeight: lineHeights.normal,
-      fontWeight: fontWeights.bold
+  variants: {
+    typography: {
+      heading: {
+        h1: {
+          color: colors.text.primary,
+          fontSize: fontSizes.h1,
+          lineHeight: lineHeights.short,
+          fontWeight: fontWeights.bold
+        },
+        h2: {
+          color: colors.text.primary,
+          fontSize: fontSizes.h2,
+          lineHeight: lineHeights.short,
+          fontWeight: fontWeights.bold
+        },
+        h3: {
+          color: colors.text.primary,
+          fontSize: fontSizes.h3,
+          lineHeight: lineHeights.short,
+          fontWeight: fontWeights.bold
+        },
+        h4: {
+          color: colors.text.primary,
+          fontSize: fontSizes.h4,
+          lineHeight: lineHeights.normal,
+          fontWeight: fontWeights.bold
+        },
+        h5: {
+          color: colors.text.primary,
+          fontSize: fontSizes.h5,
+          lineHeight: lineHeights.normal,
+          fontWeight: fontWeights.bold
+        },
+        h6: {
+          color: colors.text.primary,
+          fontSize: fontSizes.h6,
+          lineHeight: lineHeights.normal,
+          fontWeight: fontWeights.bold
+        }
+      }
     }
   }
 };

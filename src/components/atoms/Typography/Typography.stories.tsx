@@ -1,43 +1,27 @@
 import React from 'react'
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { BaseTypography, Heading as HeadingComponent, TypographyProps } from './Typography';
+import { BaseTypography, Heading as HeadingComponent, HeadingProps, TypographyProps } from './Typography';
 
 export default {
   title: 'Atoms/Typography',
   component: BaseTypography,
   argTypes: {
-    variant: {
-      control: {
-        type: 'select',
-        options: [
-          'h1',
-          'h2',
-          'h3',
-          'h4',
-          'h5',
-          'h6',
-        ],
-      },
-    }
+
   }
 } as Meta;
 
-const Template: Story<TypographyProps> = args => <BaseTypography {...args}>Mountain UI</BaseTypography>;
+const HeadingTemplate: Story<HeadingProps> = args => <HeadingComponent {...args} />
 
-export const Basic = Template.bind({});
+export const Heading = () => <>
+  {['h1', 'h2', 'h3', 'h4', 'h5', 'h6'].map(variant => <HeadingTemplate key={variant} variant={variant}>Mountain UI component library</HeadingTemplate>)}
+</>
 
-Basic.args = {};
-
-const HeadingTemplate = args => <HeadingComponent {...args}>Mountain UI</HeadingComponent>;
-
-export const Heading = HeadingTemplate.bind({});
 
 Heading.args = {
-  variant: 'h1'
 };
 
 
-Basic.parameters = {
+Heading.parameters = {
   jest: ['Typography.test.js'],
 };

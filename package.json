@@ -49,8 +49,6 @@
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
-    "@types/styled-components": "^5.1.7",
-    "@types/styled-system": "^5.1.10",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5"
   },
@@ -71,6 +69,8 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.20",
+    "@types/styled-components": "^5.1.7",
+    "@types/styled-system": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",
     "babel-loader": "^8.2.2",
