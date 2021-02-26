@@ -1,49 +1,20 @@
+/**
+ * Theme settings
+ */
+const theme = {} as DefaultTheme;
+
+export default theme;
+
+/**
+ * Theme Types
+ */
 export type ThemeScale<Type, Aliases extends string> = Array<Type> & Record<Aliases, Type>;
-/**
- * Layout
- */
-export type SizeAlias = 'mobile' | 'tablet' | 'desktop';
-
-const sizes = ['32em', '44em', '72em'] as ThemeScale<string, SizeAlias>;
-[sizes.mobile, sizes.tablet, sizes.desktop] = sizes;
-
-/**
- * Breakpoints
- */
+export type BorderRadius = string;
+export type BorderWidth = string;
+export type BoxShadow = string;
 export type BreakpointAlias = 'mobile' | 'tablet' | 'desktop' | 'widescreen';
-
-const breakpoints = ['32em', '48em', '80em', '120em'] as ThemeScale<string, BreakpointAlias>;
-[breakpoints.mobile, breakpoints.tablet, breakpoints.desktop, breakpoints.widescreen] = breakpoints;
-
-/**
- * Media queries
- */
-export type MediaQuery = string;
-export interface MediaQueries {
-  mobile: MediaQuery;
-  tablet: MediaQuery;
-  desktop: MediaQuery;
-  widescreen: MediaQuery;
-}
-
-const mediaQueries: MediaQueries = {
-  mobile: `@media screen and (min-width: ${breakpoints.mobile})`,
-  tablet: `@media screen and (min-width: ${breakpoints.tablet})`,
-  desktop: `@media screen and (min-width: ${breakpoints.desktop})`,
-  widescreen: `@media screen and (min-width: ${breakpoints.widescreen})`
-};
-
-/**
- * Typography
- */
 export type Font = string;
-export interface Fonts {
-  normal: Font;
-}
-const fonts: Fonts = {
-  normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif'
-};
-
+export type FontScaleAlias = 'majorSecond' | 'minorThird' | 'majorThird' | 'perfectFourth';
 export type FontSizeAlias =
   | 'caption'
   | 'sub'
@@ -55,46 +26,133 @@ export type FontSizeAlias =
   | 'h3'
   | 'h2'
   | 'h1';
+export type FontWeightAlias = 'light' | 'normal' | 'semiBold' | 'bold';
+export type LineHeightAlias = 'short' | 'normal' | 'tall' | 'double';
+export type MediaQuery = string;
+export type SizeAlias = 'mobile' | 'tablet' | 'desktop';
+export type Space = string;
 
-const fontSizes = [
-  '7px',
-  '9px',
-  '12px',
-  '16px',
-  '22px',
-  '28px',
-  '38px',
-  '50px',
-  '68px',
-  '90px'
+/**
+ * Theme Interfaces
+ */
+export interface DefaultTheme {
+  borders: BorderWidth[];
+  breakpoints: ThemeScale<string, BreakpointAlias>;
+  colors: any;
+  fonts: Fonts;
+  fontScales: ThemeScale<string, FontScaleAlias>;
+  fontSizes: ThemeScale<string, FontSizeAlias>;
+  fontWeights: ThemeScale<number, FontWeightAlias>;
+  lineHeights: ThemeScale<string, LineHeightAlias>;
+  mediaQueries: MediaQueries;
+  radii: BorderRadius[];
+  shadows: BoxShadow[];
+  sizes: ThemeScale<string, SizeAlias>;
+  space: Space[];
+}
+export interface Fonts {
+  normal: Font;
+}
+
+export interface MediaQueries {
+  mobile: MediaQuery;
+  tablet: MediaQuery;
+  desktop: MediaQuery;
+  widescreen: MediaQuery;
+}
+
+/**************************/
+/**
+ * Layout
+ */
+
+theme.sizes = ['32em', '44em', '72em'] as ThemeScale<string, SizeAlias>;
+[theme.sizes.mobile, theme.sizes.tablet, theme.sizes.desktop] = theme.sizes;
+
+/**
+ * Breakpoints
+ */
+
+theme.breakpoints = ['32em', '48em', '80em', '120em'] as ThemeScale<string, BreakpointAlias>;
+[
+  theme.breakpoints.mobile,
+  theme.breakpoints.tablet,
+  theme.breakpoints.desktop,
+  theme.breakpoints.widescreen
+] = theme.breakpoints;
+
+/**
+ * Media queries
+ */
+
+theme.mediaQueries = {
+  mobile: `@media screen and (min-width: ${theme.breakpoints.mobile})`,
+  tablet: `@media screen and (min-width: ${theme.breakpoints.tablet})`,
+  desktop: `@media screen and (min-width: ${theme.breakpoints.desktop})`,
+  widescreen: `@media screen and (min-width: ${theme.breakpoints.widescreen})`
+};
+
+/**
+ * Typography
+ */
+
+theme.fonts = {
+  normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif'
+};
+
+theme.fontScales = ['1.125', '1.2', '1.25', '1.333'] as ThemeScale<string, FontScaleAlias>;
+[
+  theme.fontScales.majorSecond,
+  theme.fontScales.minorThird,
+  theme.fontScales.majorThird,
+  theme.fontScales.perfectFourth
+] = theme.fontScales;
+
+theme.fontSizes = [
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: -3 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: -2 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: -1 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 0 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 1 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 2 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 3 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 4 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 5 }),
+  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 6 })
 ] as ThemeScale<string, FontSizeAlias>;
 [
-  fontSizes.caption,
-  fontSizes.sub,
-  fontSizes.secondaryBody,
-  fontSizes.body,
-  fontSizes.h6,
-  fontSizes.h5,
-  fontSizes.h4,
-  fontSizes.h3,
-  fontSizes.h2,
-  fontSizes.h1
-] = fontSizes;
+  theme.fontSizes.caption,
+  theme.fontSizes.sub,
+  theme.fontSizes.secondaryBody,
+  theme.fontSizes.body,
+  theme.fontSizes.h6,
+  theme.fontSizes.h5,
+  theme.fontSizes.h4,
+  theme.fontSizes.h3,
+  theme.fontSizes.h2,
+  theme.fontSizes.h1
+] = theme.fontSizes;
 
-export type FontWeightAlias = 'light' | 'normal' | 'semiBold' | 'bold';
+theme.fontWeights = [300, 400, 600, 700] as ThemeScale<number, FontWeightAlias>;
+[
+  theme.fontWeights.light,
+  theme.fontWeights.normal,
+  theme.fontWeights.semiBold,
+  theme.fontWeights.bold
+] = theme.fontWeights;
 
-const fontWeights = [300, 400, 600, 700] as ThemeScale<number, FontWeightAlias>;
-[fontWeights.light, fontWeights.normal, fontWeights.semiBold, fontWeights.bold] = fontWeights;
-
-export type LineHeightAlias = 'short' | 'normal' | 'tall' | 'double';
-
-const lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, LineHeightAlias>;
-[lineHeights.short, lineHeights.normal, lineHeights.tall, lineHeights.double] = lineHeights;
+theme.lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, LineHeightAlias>;
+[
+  theme.lineHeights.short,
+  theme.lineHeights.normal,
+  theme.lineHeights.tall,
+  theme.lineHeights.double
+] = theme.lineHeights;
 
 /**
  * Colors
  */
-const colors = {
+theme.colors = {
   brandDark: '#36424A',
   brandLight: '#0F1210',
   transparent: 'transparent',
@@ -115,39 +173,36 @@ const colors = {
 /**
  * Space
  */
-export type Space = string;
-const space: Space[] = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '64px', '96px'];
+theme.space = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '64px', '96px'];
 
 /**
  * Border
  */
-export type BorderWidth = string;
-export type BorderRadius = string;
-const borders: BorderWidth[] = ['none', '1px', '2px'];
-const radii: BorderRadius[] = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '100%'];
+theme.borders = ['none', '1px', '2px'];
+theme.radii = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '100%'];
 
 /**
  * Shadows
  */
-export type BoxShadow = string;
-const shadows: BoxShadow[] = [
+theme.shadows = [
   'none',
   '0px 8px 12px -12px rgba(0,0,0,0.15)',
   '0px 8px 24px -12px rgba(0,0,0,0.2)',
   '0px 8px 24px 0px rgba(0,0,0,0.15);'
 ];
 
-export default {
-  borders,
-  breakpoints,
-  colors,
-  fonts,
-  fontSizes,
-  fontWeights,
-  lineHeights,
-  sizes,
-  mediaQueries,
-  radii,
-  shadows,
-  space
-};
+function calcScaleStr({
+  fontSize,
+  fontScale,
+  step
+}: {
+  fontSize: string;
+  fontScale: string;
+  step: number;
+}): string {
+  const sign = step >= 0 ? ' * ' : ' / ';
+
+  return `calc(${[fontSize, Array(Math.abs(step)).fill(fontScale).join(sign)]
+    .filter(Boolean)
+    .join(sign)})`;
+}
