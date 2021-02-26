@@ -2,12 +2,13 @@ import css from '@styled-system/css';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle(
-  css({
+  css(theme => ({
     '*': {
       boxSizing: 'border-box',
     },
     html: {
-      fontSize: 'body',
+      '--font-scale': [theme.fontScales.minorThird, theme.fontScales.perfectFourth],
+      '--font-base': 16,
       fontFamily: 'normal',
       color: 'text.primary',
       backgroundColor: 'background.pureWhite',
@@ -61,8 +62,5 @@ export const GlobalStyles = createGlobalStyle(
       textDecoration: 'none',
       cursor: 'pointer',
     },
-  }),
-  {
-    html: { lineHeight: 1.5 },
-  }
+  }))
 );
