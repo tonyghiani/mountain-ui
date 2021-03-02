@@ -14,7 +14,6 @@ export type BorderWidth = string;
 export type BoxShadow = string;
 export type BreakpointAlias = 'mobile' | 'tablet' | 'desktop' | 'widescreen';
 export type Font = string;
-export type FontScaleAlias = 'majorSecond' | 'minorThird' | 'majorThird' | 'perfectFourth';
 export type FontSizeAlias =
   | 'caption'
   | 'sub'
@@ -40,7 +39,6 @@ export interface DefaultTheme {
   breakpoints: ThemeScale<string, BreakpointAlias>;
   colors: any;
   fonts: Fonts;
-  fontScales: ThemeScale<string, FontScaleAlias>;
   fontSizes: ThemeScale<string, FontSizeAlias>;
   fontWeights: ThemeScale<number, FontWeightAlias>;
   lineHeights: ThemeScale<string, LineHeightAlias>;
@@ -100,25 +98,17 @@ theme.fonts = {
   normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif'
 };
 
-theme.fontScales = ['1.125', '1.2', '1.25', '1.333'] as ThemeScale<string, FontScaleAlias>;
-[
-  theme.fontScales.majorSecond,
-  theme.fontScales.minorThird,
-  theme.fontScales.majorThird,
-  theme.fontScales.perfectFourth
-] = theme.fontScales;
-
 theme.fontSizes = [
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: -3 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: -2 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: -1 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 0 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 1 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 2 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 3 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 4 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 5 }),
-  calcScaleStr({ fontSize: 'var(--font-base)', fontScale: 'var(--font-scale)', step: 6 })
+  '0.5rem',
+  '0.75rem',
+  '0.875rem',
+  '1rem',
+  '1.25rem',
+  '1.5rem',
+  '2rem',
+  '2.5rem',
+  '3rem',
+  '4rem'
 ] as ThemeScale<string, FontSizeAlias>;
 [
   theme.fontSizes.caption,
@@ -153,8 +143,8 @@ theme.lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, L
  * Colors
  */
 theme.colors = {
-  brandDark: '#36424A',
-  brandLight: '#0F1210',
+  dark: '#36424A',
+  light: '#0F1210',
   transparent: 'transparent',
   text: {
     primary: '#0C0E0D',
@@ -190,19 +180,3 @@ theme.shadows = [
   '0px 8px 24px -12px rgba(0,0,0,0.2)',
   '0px 8px 24px 0px rgba(0,0,0,0.15);'
 ];
-
-function calcScaleStr({
-  fontSize,
-  fontScale,
-  step
-}: {
-  fontSize: string;
-  fontScale: string;
-  step: number;
-}): string {
-  const sign = step >= 0 ? ' * ' : ' / ';
-
-  return `calc(${[fontSize, Array(Math.abs(step)).fill(fontScale).join(sign)]
-    .filter(Boolean)
-    .join(sign)})`;
-}
