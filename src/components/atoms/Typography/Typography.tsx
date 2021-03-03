@@ -1,68 +1,139 @@
-import styled from 'styled-components';
-import { compose, textStyle, typography, variant } from 'styled-system'
+import styled, { css } from 'styled-components';
+import { compose, textStyle, TextStyleProps, typography, TypographyProps as TypoProps, variant } from 'styled-system'
 
 import { BaseElement, BaseElementProps } from '../../../BaseElement';
 
+type TextProps = TypoProps & TextStyleProps
+
 const textStyles = compose(typography, textStyle)
 
-export interface TypographyProps extends BaseElementProps {
+export type TypographyProps = BaseElementProps & TextProps & {
   /**
    * Text should be wrapped in ellipsis
    */
-  wrapped: boolean;
+  wrapped?: boolean;
+  /**
+   * Text should be clamped to specified line count
+   */
+  lineClamp?: number;
 }
 
-export interface HeadingProps extends TypographyProps {
+export type HeadingProps = TypographyProps & {
   /**
-   * Heading variant 
+   * Heading variant
    */
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
 }
 
+const wrapped = css`
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+`;
+
+const lineClamp = css`
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+`;
+
 /**
  * TODO: add component description headline
  */
-export const BaseTypography = styled(BaseElement)(textStyles)
+const BaseTypography = styled(BaseElement) <TypographyProps>`
+  ${textStyles}
+  ${p => p.wrapped && wrapped}
+  ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
+`
+export default BaseTypography
 
-export const Heading = styled(BaseTypography)<HeadingProps>(
+export const Heading = styled(BaseTypography).attrs((p: HeadingProps) => ({ as: p.as || p.variant }))<HeadingProps>(
   variant({
     scale: 'variants.typography.heading',
     variants: {
       h1: {
-        color: 'colors.text.primary',
-        fontSize: 'fontSizes.h1',
-        lineHeight: 'lineHeights.short',
-        fontWeight: 'fontWeights.bold'
+        color: 'text.primary',
+        fontSize: 'h1',
+        lineHeight: 'short',
+        fontWeight: 'bold'
       },
       h2: {
-        color: 'colors.text.primary',
-        fontSize: 'fontSizes.h2',
-        lineHeight: 'lineHeights.short',
-        fontWeight: 'fontWeights.bold'
+        color: 'text.primary',
+        fontSize: 'h2',
+        lineHeight: 'short',
+        fontWeight: 'bold'
       },
       h3: {
-        color: 'colors.text.primary',
-        fontSize: 'fontSizes.h3',
-        lineHeight: 'lineHeights.short',
-        fontWeight: 'fontWeights.bold'
+        color: 'text.primary',
+        fontSize: 'h3',
+        lineHeight: 'short',
+        fontWeight: 'bold'
       },
       h4: {
-        color: 'colors.text.primary',
-        fontSize: 'fontSizes.h4',
-        lineHeight: 'lineHeights.normal',
-        fontWeight: 'fontWeights.bold'
+        color: 'text.primary',
+        fontSize: 'h4',
+        lineHeight: 'normal',
+        fontWeight: 'bold'
       },
       h5: {
-        color: 'colors.text.primary',
-        fontSize: 'fontSizes.h5',
-        lineHeight: 'lineHeights.normal',
-        fontWeight: 'fontWeights.bold'
+        color: 'text.primary',
+        fontSize: 'h5',
+        lineHeight: 'normal',
+        fontWeight: 'bold'
       },
       h6: {
-        color: 'colors.text.primary',
-        fontSize: 'fontSizes.h6',
-        lineHeight: 'lineHeights.normal',
-        fontWeight: 'fontWeights.bold'
+        color: 'text.primary',
+        fontSize: 'h6',
+        lineHeight: 'normal',
+        fontWeight: 'bold'
+      }
+    }
+  })
+)
+
+Heading.defaultProps = {
+  variant: 'h1'
+}
+
+export const Text = styled(BaseTypography).attrs((p: HeadingProps) => ({ as: p.variant }))<HeadingProps>(
+  variant({
+    scale: 'variants.typography.heading',
+    variants: {
+      h1: {
+        color: 'text.primary',
+        fontSize: 'h1',
+        lineHeight: 'short',
+        fontWeight: 'bold'
+      },
+      h2: {
+        color: 'text.primary',
+        fontSize: 'h2',
+        lineHeight: 'short',
+        fontWeight: 'bold'
+      },
+      h3: {
+        color: 'text.primary',
+        fontSize: 'h3',
+        lineHeight: 'short',
+        fontWeight: 'bold'
+      },
+      h4: {
+        color: 'text.primary',
+        fontSize: 'h4',
+        lineHeight: 'normal',
+        fontWeight: 'bold'
+      },
+      h5: {
+        color: 'text.primary',
+        fontSize: 'h5',
+        lineHeight: 'normal',
+        fontWeight: 'bold'
+      },
+      h6: {
+        color: 'text.primary',
+        fontSize: 'h6',
+        lineHeight: 'normal',
+        fontWeight: 'bold'
       }
     }
   })
@@ -73,5 +144,3 @@ Heading.defaultProps = {
 }
 
 BaseTypography.displayName = 'BaseTypography';
-
-export default BaseTypography;
