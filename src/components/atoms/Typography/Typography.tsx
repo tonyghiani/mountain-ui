@@ -1,13 +1,21 @@
 import styled, { css } from 'styled-components';
-import { compose, textStyle, TextStyleProps, typography, TypographyProps as TypoProps, variant } from 'styled-system'
+import { compose, system, textStyle, TextStyleProps, typography, TypographyProps as TypoProps, variant } from 'styled-system'
 
 import { BaseElement, BaseElementProps } from '../../../BaseElement';
 
-type TextProps = TypoProps & TextStyleProps
+type TextBasicProps = TypoProps & TextStyleProps
 
 const textStyles = compose(typography, textStyle)
 
-export type TypographyProps = BaseElementProps & TextProps & {
+export type TypographyProps = BaseElementProps & TextBasicProps & {
+  /**
+   * Text should be unselectable
+   */
+  unselectable?: boolean;
+  /**
+   * Text should be bold
+   */
+  strong?: boolean;
   /**
    * Text should be wrapped in ellipsis
    */
@@ -16,6 +24,10 @@ export type TypographyProps = BaseElementProps & TextProps & {
    * Text should be clamped to specified line count
    */
   lineClamp?: number;
+  /**
+   * Text should be underlined
+   */
+  underline?: boolean;
 }
 
 export type HeadingProps = TypographyProps & {
@@ -37,14 +49,32 @@ const lineClamp = css`
   overflow-y: hidden;
 `;
 
+const strong = css`
+  font-weight: ${p => p.theme.fontWeights.bold};
+`;
+
+const underline = css`
+  text-decoration: underline;
+`;
+
+const unselectable = css`
+  user-select: none;
+`;
+
 /**
  * TODO: add component description headline
  */
 const BaseTypography = styled(BaseElement) <TypographyProps>`
   ${textStyles}
+  ${system({ userSelect: true })}
   ${p => p.wrapped && wrapped}
+  ${p => p.strong && strong}
   ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
+  ${p => p.underline && underline}
+  ${p => p.unselectable && unselectable}
 `
+BaseTypography.displayName = 'BaseTypography';
+
 export default BaseTypography
 
 export const Heading = styled(BaseTypography).attrs((p: HeadingProps) => ({ as: p.as || p.variant }))<HeadingProps>(
@@ -91,56 +121,47 @@ export const Heading = styled(BaseTypography).attrs((p: HeadingProps) => ({ as: 
   })
 )
 
+Heading.displayName = 'Heading'
 Heading.defaultProps = {
   variant: 'h1'
 }
 
-export const Text = styled(BaseTypography).attrs((p: HeadingProps) => ({ as: p.variant }))<HeadingProps>(
+export type TextProps = TypographyProps & {
+  /**
+   * Heading variant
+   */
+  variant: 'primary' | 'secondary' | 'caption'
+}
+
+export const Text = styled(BaseTypography).attrs((p: TextProps) => ({ as: p.as || 'span' }))<TextProps>(
   variant({
     scale: 'variants.typography.heading',
     variants: {
-      h1: {
+      primary: {
         color: 'text.primary',
-        fontSize: 'h1',
-        lineHeight: 'short',
-        fontWeight: 'bold'
-      },
-      h2: {
-        color: 'text.primary',
-        fontSize: 'h2',
-        lineHeight: 'short',
-        fontWeight: 'bold'
-      },
-      h3: {
-        color: 'text.primary',
-        fontSize: 'h3',
-        lineHeight: 'short',
-        fontWeight: 'bold'
-      },
-      h4: {
-        color: 'text.primary',
-        fontSize: 'h4',
+        fontSize: 'body',
         lineHeight: 'normal',
-        fontWeight: 'bold'
+        fontWeight: 'normal'
       },
-      h5: {
-        color: 'text.primary',
-        fontSize: 'h5',
+      secondary: {
+        color: 'text.secondary',
+        fontSize: 'secondaryBody',
         lineHeight: 'normal',
-        fontWeight: 'bold'
+        fontWeight: 'normal'
       },
-      h6: {
-        color: 'text.primary',
-        fontSize: 'h6',
+      caption: {
+        color: 'text.caption',
+        fontSize: 'caption',
         lineHeight: 'normal',
-        fontWeight: 'bold'
+        fontWeight: 'normal'
       }
     }
   })
 )
 
-Heading.defaultProps = {
-  variant: 'h1'
-}
+Text.displayName = 'Text'
 
-BaseTypography.displayName = 'BaseTypography';
+export const Paragraph = styled(Text) <TextProps>``
+
+Paragraph.defaultProps = { as: 'p' }
+Paragraph.displayName = 'Paragraph'
