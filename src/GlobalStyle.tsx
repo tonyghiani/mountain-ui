@@ -34,16 +34,10 @@ export const GlobalStyles = createGlobalStyle(
       borderStyle: 'none',
     },
     'sub, pub': {
-      fontSize: '0.8em',
-    },
-    sub: {
-      bottom: '-0.2em',
-    },
-    sup: {
-      top: '0.2em',
+      fontSize: 'secondaryBody',
     },
     'b, em': {
-      fontWeight: '700',
+      fontWeight: 'semiBold',
     },
     svg: {
       verticalAlign: 'middle',
@@ -55,7 +49,6 @@ export const GlobalStyles = createGlobalStyle(
       margin: 0,
     },
     a: {
-      textDecoration: 'none',
       cursor: 'pointer',
     }
   })
