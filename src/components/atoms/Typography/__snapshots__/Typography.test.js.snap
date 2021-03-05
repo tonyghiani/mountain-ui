@@ -1,114 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Atoms/Button Outline 1`] = `
-<button
-  className="sc-bdfBwQ sc-iBPRYJ  cRIFdX"
+<div
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
-  Click
-</button>
+  <button
+    className="sc-bdfBwQ sc-gsTCUz  BanWB"
+  >
+    Click
+  </button>
+</div>
 `;
 
 exports[`Storyshots Atoms/Button Primary 1`] = `
-<button
-  className="sc-bdfBwQ sc-iBPRYJ  eVfKFT"
+<div
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
-  Click
-</button>
+  <button
+    className="sc-bdfBwQ sc-gsTCUz  kqSVpZ"
+  >
+    Click
+  </button>
+</div>
 `;
 
 exports[`Storyshots Atoms/Layout Container 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz bFhuNW kNNlrj"
-  height="100vh"
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
-  This is a responsive container
+  <div
+    className="sc-bdfBwQ sc-dlfnbm bFhuNW jeiKUw"
+    height="100vh"
+  >
+    This is a responsive container
+  </div>
 </div>
 `;
 
 exports[`Storyshots Atoms/Layout Grid 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm bFhuNW dYmuJF"
-  height="100vh"
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
-  This is a responsive Grid
+  <div
+    className="sc-bdfBwQ sc-hKgILt bFhuNW cTA-dhf"
+    height="100vh"
+  >
+    This is a responsive Grid
+  </div>
 </div>
 `;
 
-exports[`Storyshots Atoms/Typography Heading 1`] = `
+exports[`Storyshots Atoms/Typography/Heading Heading 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
   <h1
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV kEjxqG"
+    className="sc-bdfBwQ sc-eCssSg sc-jSgupP  kVzVMq kXaXpn"
   >
     Mountain UI library
   </h1>
-  <h2
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV jAzxnd"
-  >
-    Mountain UI library
-  </h2>
-  <h3
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV jmGPhr"
-  >
-    Mountain UI library
-  </h3>
-  <h4
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV gzQKTa"
-  >
-    Mountain UI library
-  </h4>
-  <h5
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV jMLdHy"
-  >
-    Mountain UI library
-  </h5>
-  <h6
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV dROxyE"
-  >
-    Mountain UI library
-  </h6>
 </div>
 `;
 
-exports[`Storyshots Atoms/Typography Paragraph 1`] = `
+exports[`Storyshots Atoms/Typography/Paragraph Paragraph 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
   <p
-    className="sc-bdfBwQ sc-hKgILt sc-jSgupP sc-gKsewC  ehKRaV cWJeWj"
-  >
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </p>
-  <p
-    className="sc-bdfBwQ sc-hKgILt sc-jSgupP sc-gKsewC  ehKRaV fQiQhu"
-  >
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-  </p>
-  <p
-    className="sc-bdfBwQ sc-hKgILt sc-jSgupP sc-gKsewC  ehKRaV gRhFSc"
+    className="sc-bdfBwQ sc-eCssSg sc-gKsewC sc-iBPRYJ  kVzVMq kQQGOS"
   >
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   </p>
 </div>
 `;
 
-exports[`Storyshots Atoms/Typography Text 1`] = `
+exports[`Storyshots Atoms/Typography/Text Text 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-dlfnbm  jeiKUw"
 >
   <span
-    className="sc-bdfBwQ sc-hKgILt sc-jSgupP  ehKRaV cWJeWj"
-  >
-    Mountain UI library
-  </span>
-  <span
-    className="sc-bdfBwQ sc-hKgILt sc-jSgupP  ehKRaV fQiQhu"
-  >
-    Mountain UI library
-  </span>
-  <span
-    className="sc-bdfBwQ sc-hKgILt sc-jSgupP  ehKRaV gRhFSc"
+    className="sc-bdfBwQ sc-eCssSg sc-gKsewC  kVzVMq kQQGOS"
   >
     Mountain UI library
   </span>

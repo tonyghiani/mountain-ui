@@ -7,18 +7,12 @@ export default {
   component: Text
 };
 
-export const TextStory = ({ text }) => (
-  <>
-    <Text variant='primary'>{text}</Text>
-    <Text variant='secondary'>{text}</Text>
-    <Text variant='caption'>{text}</Text>
-  </>
-);
+export const TextStory = args => <Text {...args} />;
 
 TextStory.storyName = 'Text';
 
 TextStory.args = {
-  text: 'Mountain UI library'
+  children: 'Mountain UI library'
 };
 
 TextStory.parameters = {

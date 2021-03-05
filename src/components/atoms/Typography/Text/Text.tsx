@@ -29,6 +29,10 @@ const Text = styled(BaseTypography).attrs<TextProps>(p => ({ as: p.as || 'span' 
   })
 )
 
+Text.defaultProps = {
+  variant: 'primary'
+}
+
 Text.displayName = 'Text'
 
 export default Text

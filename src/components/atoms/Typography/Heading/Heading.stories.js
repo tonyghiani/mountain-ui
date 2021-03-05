@@ -4,16 +4,15 @@ import Heading from './Heading';
 
 export default {
   title: 'Atoms/Typography/Heading',
-  component: Heading,
-  argTypes: {}
+  component: Heading
 };
 
-export const HeadingStory = ({ text, ...args }) => <Heading {...args}>{text}</Heading>;
+export const HeadingStory = args => <Heading {...args} />;
 
 HeadingStory.storyName = 'Heading';
 
 HeadingStory.args = {
-  text: 'Mountain UI library'
+  children: 'Mountain UI library'
 };
 
 HeadingStory.parameters = {

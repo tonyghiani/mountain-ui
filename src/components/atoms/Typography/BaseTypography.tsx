@@ -6,8 +6,8 @@ import { BaseElement, BaseElementProps } from '../../../BaseElement';
 const textStyles = compose(typography, textStyle)
 
 export type BaseTypographyProps = BaseElementProps & TypographyProps & TextStyleProps & {
-  /* Text should be unselectable */
-  unselectable?: boolean;
+  /* Text should be uncopyable */
+  uncopyable?: boolean;
   /* Text should be bold */
   strong?: boolean;
   /* Text should be wrapped in ellipsis */
@@ -38,7 +38,7 @@ const underline = css`
   text-decoration: underline;
 `;
 
-const unselectable = css`
+const uncopyable = css`
   user-select: none;
 `;
 
@@ -52,14 +52,7 @@ const BaseTypography = styled(BaseElement) <BaseTypographyProps>`
   ${p => p.strong && strong}
   ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
   ${p => p.underline && underline}
-  ${p => p.unselectable && unselectable}
-  ${p => `
-    ${p.wrapped && wrapped}
-    ${p.strong && strong}
-    ${p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp}`}
-    ${p.underline && underline}
-    ${p.unselectable && unselectable}
-  `}
+  ${p => p.uncopyable && uncopyable}
 `
 BaseTypography.displayName = 'BaseTypography';
 
