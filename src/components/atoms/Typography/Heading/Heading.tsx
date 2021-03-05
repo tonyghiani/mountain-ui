@@ -13,37 +13,31 @@ const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({ as: p.as || p
     scale: 'variants.typography.heading',
     variants: {
       h1: {
-        color: 'text.primary',
         fontSize: 'h1',
         lineHeight: 'short',
         fontWeight: 'bold'
       },
       h2: {
-        color: 'text.primary',
         fontSize: 'h2',
         lineHeight: 'short',
         fontWeight: 'bold'
       },
       h3: {
-        color: 'text.primary',
         fontSize: 'h3',
         lineHeight: 'short',
         fontWeight: 'bold'
       },
       h4: {
-        color: 'text.primary',
         fontSize: 'h4',
         lineHeight: 'normal',
         fontWeight: 'bold'
       },
       h5: {
-        color: 'text.primary',
         fontSize: 'h5',
         lineHeight: 'normal',
         fontWeight: 'bold'
       },
       h6: {
-        color: 'text.primary',
         fontSize: 'h6',
         lineHeight: 'normal',
         fontWeight: 'bold'
@@ -54,6 +48,7 @@ const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({ as: p.as || p
 
 Heading.displayName = 'Heading'
 Heading.defaultProps = {
+  color: 'text.primary',
   variant: 'h1'
 }
 

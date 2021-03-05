@@ -5,10 +5,10 @@ import BaseTypography, { BaseTypographyProps } from "../BaseTypography"
 
 export type TextProps = BaseTypographyProps & {
   /* Text variant */
-  variant: 'primary' | 'secondary' | 'caption'
+  variant?: 'primary' | 'secondary' | 'caption'
 }
 
-const Text = styled(BaseTypography).attrs<TextProps>(p => ({ as: p.as || 'span' }))<TextProps>(
+const Text = styled(BaseTypography)<TextProps>(
   variant({
     scale: 'variants.typography.heading',
     variants: {
@@ -23,14 +23,13 @@ const Text = styled(BaseTypography).attrs<TextProps>(p => ({ as: p.as || 'span' 
       caption: {
         color: 'text.caption',
         fontSize: 'caption',
-
       }
     }
   })
 )
 
 Text.defaultProps = {
-  variant: 'primary'
+  as: 'span'
 }
 
 Text.displayName = 'Text'

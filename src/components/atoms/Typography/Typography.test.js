@@ -66,7 +66,7 @@ describe('Typography', () => {
 
   describe('Text', () => {
     it('should render the corrent variant html tag and style', () => {
-      render(<TextStory>Mountain UI</TextStory>);
+      render(<TextStory variant='primary'>Mountain UI</TextStory>);
       const textNode = screen.getByText('Mountain UI');
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('SPAN');
