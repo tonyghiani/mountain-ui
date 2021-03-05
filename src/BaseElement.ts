@@ -30,7 +30,8 @@ export type BaseElementProps = BackgroundProps &
   PositionProps &
   ShadowProps &
   SpaceProps & {
-    as?: any;
+    /* HTML tag or component to use for finally render the */
+    as?: string;
   };
 
 const styleProps = compose(
