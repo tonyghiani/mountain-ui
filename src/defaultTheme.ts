@@ -99,7 +99,6 @@ theme.fonts = {
 };
 
 theme.fontSizes = [
-  '0.5rem',
   '0.75rem',
   '0.875rem',
   '1rem',
@@ -112,7 +111,6 @@ theme.fontSizes = [
 ] as ThemeScale<string, FontSizeAlias>;
 [
   theme.fontSizes.caption,
-  theme.fontSizes.sub,
   theme.fontSizes.secondaryBody,
   theme.fontSizes.body,
   theme.fontSizes.h6,
