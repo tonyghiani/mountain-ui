@@ -1,22 +1,18 @@
-import css from '@styled-system/css';
+import css, { SystemCssProperties } from '@styled-system/css';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle(
-  css(theme => ({
+  css({
     '*': {
       boxSizing: 'border-box',
     },
     html: {
-      '--font-scale': [theme.fontScales.minorThird, theme.fontScales.perfectFourth],
-      '--font-base': 16,
-      fontFamily: 'normal',
-      color: 'text.primary',
-      backgroundColor: 'background.pureWhite',
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale',
-      textRendering: 'optimizeLegibility',
-      WebkitTapHighlightColor: 'brandLight',
-      WebkitOverflowSrolling: 'touch',
+      fontSize: ['16px', '18px'],
+      fontFamily: 'normal' as SystemCssProperties,
+      color: 'text.primary' as SystemCssProperties,
+      backgroundColor: 'background.pureWhite' as SystemCssProperties,
+      WebkitFontSmoothing: 'antialiased' as SystemCssProperties,
+      textRendering: 'optimizeLegibility' as SystemCssProperties,
     },
     body: {
       margin: 0,
@@ -61,6 +57,6 @@ export const GlobalStyles = createGlobalStyle(
     a: {
       textDecoration: 'none',
       cursor: 'pointer',
-    },
-  }))
+    }
+  })
 );
