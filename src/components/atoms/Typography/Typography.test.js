@@ -62,6 +62,23 @@ describe('Typography', () => {
         font-weight: 700;
       `);
     });
+
+    it('should propagate additional style props', () => {
+      render(
+        <HeadingStory variant='h3' color='#F0F0F0'>
+          Mountain UI
+        </HeadingStory>
+      );
+      const textNode = screen.getByRole('heading');
+      expect(textNode).toBeInTheDocument();
+      expect(textNode.tagName).toEqual('H3');
+      expect(textNode).toHaveStyle(`
+        color: #F0F0F0;
+        font-size: 2.5rem;
+        line-height: 1.25em;
+        font-weight: 700;
+      `);
+    });
   });
 
   describe('Text', () => {
@@ -75,6 +92,16 @@ describe('Typography', () => {
         font-size: 1rem;
       `);
     });
+
+    it('should propagate additional style props', () => {
+      render(<TextStory fontSize='2rem'>Mountain UI</TextStory>);
+      const textNode = screen.getByText('Mountain UI');
+      expect(textNode).toBeInTheDocument();
+      expect(textNode.tagName).toEqual('SPAN');
+      expect(textNode).toHaveStyle(`
+        font-size: 2rem;
+      `);
+    });
   });
 
   describe('Paragraph', () => {
@@ -86,6 +113,16 @@ describe('Typography', () => {
       expect(textNode).toHaveStyle(`
         color: #6E7A83;
         font-size: 0.875rem;
+      `);
+    });
+
+    it('should propagate additional style props', () => {
+      render(<ParagraphStory fontSize='1rem'>Mountain UI</ParagraphStory>);
+      const textNode = screen.getByText('Mountain UI');
+      expect(textNode).toBeInTheDocument();
+      expect(textNode.tagName).toEqual('P');
+      expect(textNode).toHaveStyle(`
+        font-size: 1rem;
       `);
     });
   });
