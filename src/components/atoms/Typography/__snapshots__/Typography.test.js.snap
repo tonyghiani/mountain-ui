@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Atoms/Button Outline 1`] = `
+<button
+  className="sc-bdfBwQ sc-iBPRYJ  cRIFdX"
+>
+  Click
+</button>
+`;
+
+exports[`Storyshots Atoms/Button Primary 1`] = `
+<button
+  className="sc-bdfBwQ sc-iBPRYJ  eVfKFT"
+>
+  Click
+</button>
+`;
+
 exports[`Storyshots Atoms/Layout Container 1`] = `
 <div
   className="sc-bdfBwQ sc-gsTCUz bFhuNW kNNlrj"
@@ -23,58 +39,78 @@ exports[`Storyshots Atoms/Typography Heading 1`] = `
   className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
 >
   <h1
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  cTxziC kEjxqG"
+    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV kEjxqG"
   >
     Mountain UI library
   </h1>
   <h2
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  cTxziC jAzxnd"
+    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV jAzxnd"
   >
     Mountain UI library
   </h2>
   <h3
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  cTxziC jmGPhr"
+    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV jmGPhr"
   >
     Mountain UI library
   </h3>
   <h4
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  cTxziC gzQKTa"
+    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV gzQKTa"
   >
     Mountain UI library
   </h4>
   <h5
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  cTxziC jMLdHy"
+    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV jMLdHy"
   >
     Mountain UI library
   </h5>
   <h6
-    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  cTxziC dROxyE"
+    className="sc-bdfBwQ sc-hKgILt sc-eCssSg  ehKRaV dROxyE"
   >
     Mountain UI library
   </h6>
-  <div
-    className="sc-bdfBwQ sc-hKgILt  eIleIv"
-    fontSize="body"
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography Paragraph 1`] = `
+<div
+  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+>
+  <p
+    className="sc-bdfBwQ sc-hKgILt sc-jSgupP sc-gKsewC  ehKRaV cWJeWj"
+  >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+  <p
+    className="sc-bdfBwQ sc-hKgILt sc-jSgupP sc-gKsewC  ehKRaV fQiQhu"
+  >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+  <p
+    className="sc-bdfBwQ sc-hKgILt sc-jSgupP sc-gKsewC  ehKRaV gRhFSc"
+  >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography Text 1`] = `
+<div
+  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+>
+  <span
+    className="sc-bdfBwQ sc-hKgILt sc-jSgupP  ehKRaV cWJeWj"
   >
     Mountain UI library
-  </div>
-  <div
-    className="sc-bdfBwQ sc-hKgILt  dIKksG"
-    fontSize="secondaryBody"
+  </span>
+  <span
+    className="sc-bdfBwQ sc-hKgILt sc-jSgupP  ehKRaV fQiQhu"
   >
     Mountain UI library
-  </div>
-  <div
-    className="sc-bdfBwQ sc-hKgILt  laatu"
-    fontSize="sub"
+  </span>
+  <span
+    className="sc-bdfBwQ sc-hKgILt sc-jSgupP  ehKRaV gRhFSc"
   >
     Mountain UI library
-  </div>
-  <div
-    className="sc-bdfBwQ sc-hKgILt  XsOPt"
-    fontSize="caption"
-  >
-    Mountain UI library
-  </div>
+  </span>
 </div>
 `;

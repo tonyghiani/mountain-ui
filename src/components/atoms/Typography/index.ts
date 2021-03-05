@@ -1,2 +1,3 @@
-export { default } from './Typography';
-export * from './Typography';
+export * from './Heading';
+export * from './Text';
+export * from './Paragraph';
