@@ -14,6 +14,7 @@ export type BorderWidth = string;
 export type BoxShadow = string;
 export type BreakpointAlias = 'mobile' | 'tablet' | 'desktop' | 'widescreen';
 export type Font = string;
+export type FontScale = number;
 export type FontSizeAlias =
   | 'caption'
   | 'sub'
@@ -39,6 +40,7 @@ export interface DefaultTheme {
   breakpoints: ThemeScale<string, BreakpointAlias>;
   colors: any;
   fonts: Fonts;
+  fontScale: FontScale;
   fontSizes: ThemeScale<string, FontSizeAlias>;
   fontWeights: ThemeScale<number, FontWeightAlias>;
   lineHeights: ThemeScale<string, LineHeightAlias>;
@@ -98,16 +100,18 @@ theme.fonts = {
   normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif'
 };
 
+theme.fontScale = 1.25;
+
 theme.fontSizes = [
-  '0.75rem',
-  '0.875rem',
-  '1rem',
-  '1.25rem',
-  '1.5rem',
-  '2rem',
-  '2.5rem',
-  '3rem',
-  '4rem'
+  `${Math.round(theme.fontScale ** -2 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** -1 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 0 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 1 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 2 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 3 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 4 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 5 * 10) / 10}rem`,
+  `${Math.round(theme.fontScale ** 6 * 10) / 10}rem`
 ] as ThemeScale<string, FontSizeAlias>;
 [
   theme.fontSizes.caption,
