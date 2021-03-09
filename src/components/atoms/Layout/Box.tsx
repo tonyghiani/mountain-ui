@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { BaseElement, BaseElementProps } from '../../../BaseElement';
+import { BaseElement, BaseElementProps } from '../../BaseElement';
 
 export type BoxProps = BaseElementProps
 

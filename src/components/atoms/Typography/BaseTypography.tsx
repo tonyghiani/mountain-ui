@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { compose, system, textStyle, TextStyleProps, typography, TypographyProps } from 'styled-system'
 
-import { BaseElement, BaseElementProps } from '../../../BaseElement';
+import { BaseElement, BaseElementProps } from '../../BaseElement';
 
 const textStyles = compose(typography, textStyle)
 

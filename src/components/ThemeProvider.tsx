@@ -2,7 +2,8 @@ import React from 'react';
 import merge from 'deepmerge';
 import { ThemeProvider as StyledProvider } from 'styled-components';
 
-import defaultTheme, { DefaultTheme } from './defaultTheme';
+import defaultTheme, { DefaultTheme } from '../defaultTheme';
+
 import { GlobalStyles } from './GlobalStyle';
 
 interface ProviderProps {

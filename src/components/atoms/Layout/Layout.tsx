@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { grid } from 'styled-system';
 
-import { BaseElement, BaseElementProps } from '../../../BaseElement';
+import { BaseElement, BaseElementProps } from '../../BaseElement';
 
 export type LayoutProps = BaseElementProps
 
