@@ -2,10 +2,10 @@
 
 exports[`Storyshots Atoms/Button Outline 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <button
-    className="sc-bdfBwQ sc-hKgILt  iGvDCY"
+    className="sc-bdfBwQ sc-eCssSg  kCPa-Dr"
   >
     Click
   </button>
@@ -14,48 +14,110 @@ exports[`Storyshots Atoms/Button Outline 1`] = `
 
 exports[`Storyshots Atoms/Button Primary 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <button
-    className="sc-bdfBwQ sc-hKgILt  hxYeM"
+    className="sc-bdfBwQ sc-eCssSg  gVnhJL"
   >
     Click
   </button>
 </div>
 `;
 
-exports[`Storyshots Atoms/Layout Container 1`] = `
+exports[`Storyshots Atoms/Layout/Container Container 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <div
-    className="sc-bdfBwQ sc-gsTCUz bFhuNW kNNlrj"
+    className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm gyNwPp lmdWPR"
     height="100vh"
   >
-    This is a responsive container
+    This is the content of a container component
   </div>
 </div>
 `;
 
-exports[`Storyshots Atoms/Layout Grid 1`] = `
+exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <div
-    className="sc-bdfBwQ sc-dlfnbm bFhuNW dYmuJF"
-    height="100vh"
+    className="sc-bdfBwQ sc-gsTCUz sc-hKgILt  lmdWPR DQSAR"
   >
-    This is a responsive Grid
+    <div
+      className="sc-bdfBwQ sc-gsTCUz sc-hKgILt  lmdWPR gPJcYl"
+    >
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+    </div>
+    <div
+      className="sc-bdfBwQ sc-gsTCUz sc-hKgILt  lmdWPR laWpva"
+    >
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+    </div>
+    <div
+      className="sc-bdfBwQ sc-gsTCUz sc-hKgILt  lmdWPR xqYqw"
+    >
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-gsTCUz hBRVxd lmdWPR"
+        height={150}
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`Storyshots Atoms/Typography/Heading Heading 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <h1
-    className="sc-bdfBwQ sc-eCssSg sc-jSgupP gYDVUp kVzVMq heeOhy"
+    className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf kWykmG"
     color="text.primary"
   >
     Mountain UI library
@@ -65,10 +127,10 @@ exports[`Storyshots Atoms/Typography/Heading Heading 1`] = `
 
 exports[`Storyshots Atoms/Typography/Paragraph Paragraph 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <p
-    className="sc-bdfBwQ sc-eCssSg sc-gKsewC sc-iBPRYJ  kVzVMq"
+    className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ sc-fubCfw  jJYlhf"
   >
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   </p>
@@ -77,10 +139,10 @@ exports[`Storyshots Atoms/Typography/Paragraph Paragraph 1`] = `
 
 exports[`Storyshots Atoms/Typography/Text Text 1`] = `
 <div
-  className="sc-bdfBwQ sc-gsTCUz  kNNlrj"
+  className="sc-bdfBwQ sc-gsTCUz sc-dlfnbm QQPef lmdWPR"
 >
   <span
-    className="sc-bdfBwQ sc-eCssSg sc-gKsewC  kVzVMq"
+    className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf"
   >
     Mountain UI library
   </span>
