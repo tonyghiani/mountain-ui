@@ -201,7 +201,6 @@ function addToIndex(type) {
       (list, name) =>
         list.concat(
           `
-export { default as ${name} } from './${name}';
 export * from './${name}';  
   `
         ),
