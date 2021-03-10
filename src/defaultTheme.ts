@@ -26,10 +26,9 @@ export type FontSizeAlias =
   | 'h3'
   | 'h2'
   | 'h1';
-export type FontWeightAlias = 'light' | 'normal' | 'semiBold' | 'bold';
+export type FontWeightAlias = 'light' | 'normal' | 'semiBold' | 'bold' | 'ultraBold';
 export type LineHeightAlias = 'short' | 'normal' | 'tall' | 'double';
 export type MediaQuery = string;
-export type SizeAlias = 'mobile' | 'tablet' | 'desktop';
 export type Space = string;
 
 /**
@@ -47,7 +46,6 @@ export interface DefaultTheme {
   mediaQueries: MediaQueries;
   radii: BorderRadius[];
   shadows: BoxShadow[];
-  sizes: ThemeScale<string, SizeAlias>;
   space: Space[];
 }
 export interface Fonts {
@@ -62,12 +60,6 @@ export interface MediaQueries {
 }
 
 /**************************/
-/**
- * Layout
- */
-
-theme.sizes = ['32em', '44em', '72em'] as ThemeScale<string, SizeAlias>;
-[theme.sizes.mobile, theme.sizes.tablet, theme.sizes.desktop] = theme.sizes;
 
 /**
  * Breakpoints
@@ -125,12 +117,13 @@ theme.fontSizes = [
   theme.fontSizes.h1
 ] = theme.fontSizes;
 
-theme.fontWeights = [300, 400, 600, 700] as ThemeScale<number, FontWeightAlias>;
+theme.fontWeights = [300, 400, 600, 700, 900] as ThemeScale<number, FontWeightAlias>;
 [
   theme.fontWeights.light,
   theme.fontWeights.normal,
   theme.fontWeights.semiBold,
-  theme.fontWeights.bold
+  theme.fontWeights.bold,
+  theme.fontWeights.ultraBold
 ] = theme.fontWeights;
 
 theme.lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, LineHeightAlias>;
@@ -144,14 +137,17 @@ theme.lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, L
 /**
  * Colors
  */
+theme.colors = {};
+theme.colors.dark = '#36424A';
+theme.colors.light = '#FDFDFD';
+theme.colors.transparent = 'transparent';
 theme.colors = {
-  dark: '#36424A',
-  light: '#0F1210',
-  transparent: 'transparent',
+  ...theme.colors,
   text: {
     primary: '#0C0E0D',
     secondary: '#6E7A83',
-    caption: '#5F6661'
+    caption: '#5F6661',
+    light: theme.colors.light
   },
   accent: {
     shape: '#3B88FD',

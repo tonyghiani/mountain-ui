@@ -8,7 +8,7 @@ import Box, { BoxProps } from "../Box"
 const Container = styled(Box) <BoxProps>``
 
 Container.defaultProps = {
-  maxWidth: ['mobile', 'tablet', 'desktop'],
+  maxWidth: ['32em', '44em', '72em'],
   px: 3,
   mx: 'auto',
 }

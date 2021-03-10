@@ -1,16 +1,23 @@
-import '@testing-library/jest-dom/extend-expect';
-
 import React from 'react';
 import initStoryshots from '@storybook/addon-storyshots';
 import { render } from '@testing-library/react';
 
-import { Basic } from './Button.stories';
+import { Outline, Primary } from './Button.stories';
 
 initStoryshots();
 
 describe('Button', () => {
-  it('should render correctly on mount', () => {
-    const { container } = render(<Basic {...Basic.args} />);
-    expect(container).toBeInTheDocument();
+  describe('primary variant', () => {
+    it('should render correctly on mount', () => {
+      const { container } = render(<Primary {...Primary.args} />);
+      expect(container).toBeInTheDocument();
+    });
+  });
+
+  describe('outline variant', () => {
+    it('should render correctly on mount', () => {
+      const { container } = render(<Outline {...Outline.args} />);
+      expect(container).toBeInTheDocument();
+    });
   });
 });
