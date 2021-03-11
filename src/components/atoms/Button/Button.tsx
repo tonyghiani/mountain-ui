@@ -2,19 +2,19 @@ import css from '@styled-system/css';
 import styled from 'styled-components'
 import { variant } from 'styled-system';
 
-import { BaseElement, BaseElementProps } from '../../BaseElement';
+import { BaseElementProps, styleProps } from '../../BaseElement';
 
 export type ButtonProps = BaseElementProps & {
   /**
    * Button variant
    */
-  variant: 'primary' | 'outline' | 'success' | 'error'
+  variant: 'primary' | 'outline' | 'success' | 'warning' | 'error'
 }
 
 /**
  * Primary UI component for user interaction
  */
-const Button = styled(BaseElement)<ButtonProps>(
+const Button = styled.button<ButtonProps>(
   css({
     color: 'text.light',
     fontWeight: 'ultraBold',
@@ -31,11 +31,26 @@ const Button = styled(BaseElement)<ButtonProps>(
   variant({
     scale: 'variants.button',
     variants: {
+      primary: {
+        background: 'linear-gradient(30deg, rgba(38,228,95,1) 0%, rgba(171,246,193,1) 100%)',
+      },
       success: {
-        background: 'linear-gradient(30deg, rgba(38,228,95,1) 0%, rgba(118,241,156,1) 60%, rgba(171,246,193,1) 100%)',
+        background: 'linear-gradient(30deg, rgba(28,218,85,1) 0%, rgba(161,236,183,1) 100%)',
+        ':hover': {
+          background: 'linear-gradient(30deg, rgba(18,208,75,1) 0%, rgba(151,226,173,1) 100%)',
+        }
+      },
+      warning: {
+        background: 'linear-gradient(30deg, rgba(255,196,69,1) 0%, rgba(255,220,145,1) 100%)',
+        ':hover': {
+          background: 'linear-gradient(30deg, rgba(245,186,59,1) 0%, rgba(245,210,135,1) 100%)',
+        }
       },
       error: {
-        background: 'linear-gradient(30deg, rgba(247,77,77,1) 0%, rgba(251,97,97,1) 60%, rgba(255,124,124,1) 100%)',
+        background: 'linear-gradient(30deg, rgba(247,77,77,1) 0%, rgba(255,124,124,1) 100%)',
+        ':hover': {
+          background: 'linear-gradient(30deg, rgba(237,67,67,1) 0%, rgba(245,114,114,1) 100%)',
+        }
       },
       outline: {
         color: 'text.primary',
@@ -47,12 +62,12 @@ const Button = styled(BaseElement)<ButtonProps>(
         boxShadow: 0
       },
     }
-  })
+  }),
+  styleProps
 )
 
 Button.defaultProps = {
-  variant: 'primary',
-  as: 'button'
+  variant: 'primary'
 }
 
 Button.displayName = 'Button'

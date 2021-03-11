@@ -13,12 +13,6 @@ Primary.args = {
   variant: 'success'
 };
 
-export const Outline = args => <Button {...args}>Click</Button>;
-
-Outline.args = {
-  variant: 'outline'
-};
-
-Primary.parameters = Outline.parameters = {
+Primary.parameters = {
   jest: ['Button.test.js']
 };

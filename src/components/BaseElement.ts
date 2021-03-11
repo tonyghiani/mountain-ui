@@ -34,7 +34,7 @@ export type BaseElementProps = BackgroundProps &
     as?: string;
   };
 
-const styleProps = compose(
+export const styleProps = compose(
   background,
   border,
   color,
