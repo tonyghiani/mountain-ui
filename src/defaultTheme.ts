@@ -154,7 +154,24 @@ theme.colors = {
     text: '#9BC5FC'
   },
   background: {
-    pureWhite: '#FFFFFF'
+    primary: theme.colors.light
+  },
+  feeling: {
+    success: {
+      dark: '#12D04B',
+      light: '#A1ECB7',
+      normal: '#1CDA55'
+    },
+    warning: {
+      dark: '#F5BA3B',
+      light: '#FFDC91',
+      normal: '#FFC445'
+    },
+    error: {
+      dark: '#ED4343',
+      light: '#FF7C7C',
+      normal: '#F74D4D'
+    }
   }
 };
 
