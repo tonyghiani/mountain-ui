@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { Grid } from '../Layout';
+import { Text } from '../Typography';
+
 import Button from './Button';
 
 export default {
@@ -7,12 +10,27 @@ export default {
   component: Button
 };
 
-export const Primary = args => <Button {...args}>Click</Button>;
+export const All = () => (
+  <Grid gridTemplateRows='repeat(2, 1fr)' gridAutoFlow='column' gridGap={2} alignItems='center'>
+    <Text strong textAlign='center'>
+      Primary
+    </Text>
+    <Button variant='primary'>Click</Button>
+    <Text strong textAlign='center'>
+      Success
+    </Text>
+    <Button variant='success'>Click</Button>
+    <Text strong textAlign='center'>
+      Warning
+    </Text>
+    <Button variant='warning'>Click</Button>
+    <Text strong textAlign='center'>
+      Error
+    </Text>
+    <Button variant='error'>Click</Button>
+  </Grid>
+);
 
-Primary.args = {
-  variant: 'success'
-};
-
-Primary.parameters = {
+All.parameters = {
   jest: ['Button.test.js']
 };
