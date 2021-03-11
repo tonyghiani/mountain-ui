@@ -150,8 +150,11 @@ theme.colors = {
     light: theme.colors.light
   },
   accent: {
-    shape: '#3B88FD',
-    text: '#9BC5FC'
+    primary: {
+      dark: '#2461BC',
+      normal: '#3F81E5',
+      light: '#86B5FB'
+    }
   },
   background: {
     primary: theme.colors.light

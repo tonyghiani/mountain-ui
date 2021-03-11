@@ -32,7 +32,10 @@ const Button = styled.button<ButtonProps>`
   scale: 'variants.button',
   variants: {
     primary: {
-      background: 'linear-gradient(30deg, rgba(38,228,95,1) 0%, rgba(171,246,193,1) 100%)',
+      background: `linear-gradient(30deg, ${theme.colors.accent.primary.normal} 0%, ${theme.colors.accent.primary.light} 100%)`,
+      ':hover': {
+        background: `linear-gradient(30deg, ${theme.colors.accent.primary.dark} 0%, ${theme.colors.accent.primary.light} 100%)`,
+      }
     },
     success: {
       background: `linear-gradient(30deg, ${theme.colors.feeling.success.normal} 0%, ${theme.colors.feeling.success.light} 100%)`,
