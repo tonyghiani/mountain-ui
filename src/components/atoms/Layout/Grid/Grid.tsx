@@ -1,12 +1,14 @@
 import styled from "styled-components"
-import { grid } from "styled-system"
+import { grid, GridProps as GProps } from "styled-system"
 
 import Box, { BoxProps } from "../Box"
+
+export type GridProps = BoxProps & GProps
 
 /**
  * Grid component
  */
-const Grid = styled(Box) <BoxProps>`
+const Grid = styled(Box) <GridProps>`
   ${grid}
   display: grid;
 `

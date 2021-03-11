@@ -2,10 +2,12 @@ import styled from "styled-components"
 
 import Box, { BoxProps } from "../Box"
 
+export type ContainerProps = BoxProps
+
 /**
  * Container component
  */
-const Container = styled(Box) <BoxProps>``
+const Container = styled(Box) <ContainerProps>``
 
 Container.defaultProps = {
   maxWidth: ['32em', '44em', '72em'],
