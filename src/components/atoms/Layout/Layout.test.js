@@ -1,10 +1,7 @@
 import React from 'react';
-import initStoryshots from '@storybook/addon-storyshots';
 import { render } from '@testing-library/react';
 
 import { Box, Container, Grid } from './index';
-
-initStoryshots();
 
 describe('Layout', () => {
   describe('Box', () => {

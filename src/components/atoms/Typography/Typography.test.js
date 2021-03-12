@@ -1,13 +1,10 @@
 import React from 'react';
-import initStoryshots from '@storybook/addon-storyshots';
 import { render, screen } from 'mui-testing-tools';
 
 import { HeadingStory } from './Heading/Heading.stories';
 import { ParagraphStory } from './Paragraph/Paragraph.stories';
 import { TextStory } from './Text/Text.stories';
 import BaseTypography from './BaseTypography';
-
-initStoryshots();
 
 describe('Typography', () => {
   it('should render correctly on mount', () => {
