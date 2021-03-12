@@ -15,55 +15,60 @@ export type ButtonProps = BaseElementProps & {
  * Primary UI component for user interaction
  */
 const Button = styled.button<ButtonProps>`
-  ${css({
+  ${css(theme => ({
+  border: 0,
+  borderRadius: 3,
+  boxShadow: 1,
   color: 'text.light',
   fontWeight: 'ultraBold',
-  textShadow: '1px 1px 6px rgb(0 0 0 / 20%)',
   padding: 3,
-  borderRadius: 3,
-  border: 0,
-  boxShadow: 1,
-  transition: 'box-shadow .3s ease',
+  textShadow: '1px 1px 6px rgb(0 0 0 / 20%)',
+  transition: 'all .3s ease',
   ':hover': {
     boxShadow: 2,
+  },
+  ':disabled, :disabled:hover': {
+    color: 'text.secondary',
+    background: `linear-gradient(30deg, ${theme.colors.text.caption.concat('66')}, ${theme.colors.text.secondary.concat('33')})`,
+    cursor: 'not-allowed',
   }
-})}
+}))}
   ${({ theme }) => variant({
   scale: 'variants.button',
   variants: {
     primary: {
-      background: `linear-gradient(30deg, ${theme.colors.accent.primary.normal} 0%, ${theme.colors.accent.primary.light} 100%)`,
+      background: `linear-gradient(30deg, ${theme.colors.accent.primary.normal}, ${theme.colors.accent.primary.light})`,
       ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.accent.primary.dark} 0%, ${theme.colors.accent.primary.light} 100%)`,
-      }
-    },
-    success: {
-      background: `linear-gradient(30deg, ${theme.colors.feeling.success.normal} 0%, ${theme.colors.feeling.success.light} 100%)`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.feeling.success.dark} 0%, ${theme.colors.feeling.success.light} 100%)`,
-      }
-    },
-    warning: {
-      background: `linear-gradient(30deg, ${theme.colors.feeling.warning.normal} 0%, ${theme.colors.feeling.warning.light} 100%)`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.feeling.warning.dark} 0%, ${theme.colors.feeling.warning.light} 100%)`,
-      }
-    },
-    error: {
-      background: `linear-gradient(30deg, ${theme.colors.feeling.error.normal} 0%, ${theme.colors.feeling.error.light} 100%)`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.feeling.error.dark} 0%, ${theme.colors.feeling.error.light} 100%)`,
+        background: `linear-gradient(30deg, ${theme.colors.accent.primary.dark}, ${theme.colors.accent.primary.light})`,
       }
     },
     outline: {
-      color: 'text.primary',
       backgroundColor: 'transparent',
-      padding: 3,
-      border: '2px solid',
-      borderColor: 'text.primary',
-      borderRadius: 3,
-      boxShadow: 0
+      boxShadow: 'inset 0 0 0 3px;',
+      color: 'accent.primary.normal',
+      ':hover': {
+        backgroundColor: theme.colors.accent.primary.normal.concat('26'),
+        boxShadow: 'inset 0 0 0 3px;'
+      }
     },
+    success: {
+      background: `linear-gradient(30deg, ${theme.colors.feeling.success.normal}, ${theme.colors.feeling.success.light})`,
+      ':hover': {
+        background: `linear-gradient(30deg, ${theme.colors.feeling.success.dark}, ${theme.colors.feeling.success.light})`,
+      }
+    },
+    warning: {
+      background: `linear-gradient(30deg, ${theme.colors.feeling.warning.normal}, ${theme.colors.feeling.warning.light})`,
+      ':hover': {
+        background: `linear-gradient(30deg, ${theme.colors.feeling.warning.dark}, ${theme.colors.feeling.warning.light})`,
+      }
+    },
+    error: {
+      background: `linear-gradient(30deg, ${theme.colors.feeling.error.normal}, ${theme.colors.feeling.error.light})`,
+      ':hover': {
+        background: `linear-gradient(30deg, ${theme.colors.feeling.error.dark}, ${theme.colors.feeling.error.light})`,
+      }
+    }
   }
 })}
   ${styleProps}

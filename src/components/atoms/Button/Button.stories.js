@@ -17,6 +17,10 @@ export const All = () => (
     </Text>
     <Button variant='primary'>Click</Button>
     <Text strong textAlign='center'>
+      Outline
+    </Text>
+    <Button variant='outline'>Click</Button>
+    <Text strong textAlign='center'>
       Success
     </Text>
     <Button variant='success'>Click</Button>
@@ -28,6 +32,12 @@ export const All = () => (
       Error
     </Text>
     <Button variant='error'>Click</Button>
+    <Text strong textAlign='center'>
+      Disabled
+    </Text>
+    <Button variant='primary' disabled>
+      Click
+    </Button>
   </Grid>
 );
 
