@@ -198,3 +198,11 @@ theme.shadows = [
   '0px 8px 24px -12px rgba(0,0,0,0.2)',
   '0px 8px 24px 0px rgba(0,0,0,0.15);'
 ];
+
+// Utils
+export const hexToRgb = (hex: string) =>
+  hex
+    .replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, (_m, r, g, b) => '#' + r + r + g + g + b + b)
+    .substring(1)
+    .match(/.{2}/g)
+    .map(x => parseInt(x, 16));
