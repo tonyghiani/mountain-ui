@@ -169,12 +169,9 @@ function createTest(name) {
     COMPONENT_TEST,
     `
 import React from 'react';
-import initStoryshots from '@storybook/addon-storyshots';
 import { render } from '@testing-library/react';
 
 import { Basic } from './${name}.stories';
-
-initStoryshots();
 
 describe('${name}', () => {
   it('should render correctly on mount', () => {
