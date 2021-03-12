@@ -3,7 +3,7 @@ module.exports = {
   coverageReporters: ['json'],
   moduleDirectories: ['node_modules', 'tests'],
   setupFilesAfterEnv: ['./tests/jest.setup.js'],
-  testMatch: ['<rootDir>/src/**/*.test.js'],
+  testMatch: ['<rootDir>/{src,tests}/**/*.test.js'],
   transform: {
     '.(js|ts|tsx)': '<rootDir>/node_modules/ts-jest'
   },

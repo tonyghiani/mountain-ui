@@ -1,26 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Atoms/Button Outline 1`] = `
+exports[`Storyshots Atoms/Button All 1`] = `
 <div
   className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
 >
-  <button
-    className="sc-bdfBwQ sc-gsTCUz  BanWB"
+  <div
+    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg jqYRjY dtVUxq cbGuuR"
   >
-    Click
-  </button>
-</div>
-`;
-
-exports[`Storyshots Atoms/Button Primary 1`] = `
-<div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
->
-  <button
-    className="sc-bdfBwQ sc-gsTCUz  kqSVpZ"
-  >
-    Click
-  </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+    >
+      Primary
+    </span>
+    <button
+      className="sc-gsTCUz fgyMuL"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+    >
+      Outline
+    </span>
+    <button
+      className="sc-gsTCUz cqUrwy"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+    >
+      Success
+    </span>
+    <button
+      className="sc-gsTCUz eVQZuV"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+    >
+      Warning
+    </span>
+    <button
+      className="sc-gsTCUz ekkonk"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+    >
+      Error
+    </span>
+    <button
+      className="sc-gsTCUz kgMwgX"
+    >
+      Click
+    </button>
+  </div>
 </div>
 `;
 
@@ -48,15 +85,15 @@ exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
       className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq ehdhyK"
     >
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
     </div>
@@ -64,19 +101,19 @@ exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
       className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq lllEAR"
     >
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
     </div>
@@ -84,27 +121,27 @@ exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
       className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq cEGeNL"
     >
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm hBRVxd dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
         height={150}
       />
     </div>
