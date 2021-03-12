@@ -48,9 +48,9 @@ const uncopyable = css`
 const BaseTypography = styled(BaseElement) <BaseTypographyProps>`
   ${textStyles}
   ${system({ userSelect: true })}
+  ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
   ${p => p.wrapped && wrapped}
   ${p => p.strong && strong}
-  ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
   ${p => p.underline && underline}
   ${p => p.uncopyable && uncopyable}
 `
