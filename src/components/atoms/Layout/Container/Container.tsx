@@ -10,7 +10,7 @@ export type ContainerProps = BoxProps
 const Container = styled(Box) <ContainerProps>``
 
 Container.defaultProps = {
-  maxWidth: ['32em', '44em', '72em'],
+  maxWidth: [512, 720, 1152],
   px: 3,
   mx: 'auto',
 }
