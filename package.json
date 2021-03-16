@@ -25,6 +25,7 @@
     "release": "semantic-release",
     "storybook": "yarn test:json && start-storybook -p 6006",
     "test": "NODE_ENV=testing jest",
+    "test:ci": "NODE_ENV=ci jest",
     "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
     "test:watch": "yarn test --watch"
   },

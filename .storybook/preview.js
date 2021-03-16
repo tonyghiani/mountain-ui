@@ -1,6 +1,22 @@
 import React from 'react';
 import { withTests } from '@storybook/addon-jest';
-import results from '../coverage/.jest-test-results.json';
+
+let results = null;
+try {
+  if (process.env.NODE_ENV === 'testing') {
+    results = require('../coverage/.jest-test-results.json');
+  }
+} catch (error) {
+  console.warn(`
+  It is possible you did not generate a static report for your tests.
+  Try to run the script
+
+    yarn test:json
+
+  to fix this issue.
+  `);
+}
+
 import { Container, ThemeProvider } from '../src';
 
 export const parameters = {
@@ -8,7 +24,7 @@ export const parameters = {
 };
 
 export const decorators = [
-  withTests({ results }),
+  results && withTests({ results }),
   Story => (
     <ThemeProvider>
       <Container>
@@ -16,4 +32,4 @@ export const decorators = [
       </Container>
     </ThemeProvider>
   )
-];
+].filter(Boolean);
