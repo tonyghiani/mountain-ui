@@ -1,10 +1,8 @@
 import React from 'react';
 import { render, screen } from 'mui-testing-tools';
 
-import { HeadingStory } from './Heading/Heading.stories';
-import { ParagraphStory } from './Paragraph/Paragraph.stories';
-import { TextStory } from './Text/Text.stories';
 import BaseTypography from './BaseTypography';
+import { Heading, Paragraph, Text } from './index';
 
 describe('Typography', () => {
   it('should render correctly on mount', () => {
@@ -48,7 +46,7 @@ describe('Typography', () => {
 
   describe('Heading', () => {
     it('should render the corrent variant html tag and style', () => {
-      render(<HeadingStory variant='h3'>Mountain UI</HeadingStory>);
+      render(<Heading variant='h3'>Mountain UI</Heading>);
       const textNode = screen.getByRole('heading');
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('H3');
@@ -62,9 +60,9 @@ describe('Typography', () => {
 
     it('should propagate additional style props', () => {
       render(
-        <HeadingStory variant='h3' color='#F0F0F0'>
+        <Heading variant='h3' color='#F0F0F0'>
           Mountain UI
-        </HeadingStory>
+        </Heading>
       );
       const textNode = screen.getByRole('heading');
       expect(textNode).toBeInTheDocument();
@@ -80,7 +78,7 @@ describe('Typography', () => {
 
   describe('Text', () => {
     it('should render the corrent variant html tag and style', () => {
-      render(<TextStory variant='primary'>Mountain UI</TextStory>);
+      render(<Text variant='primary'>Mountain UI</Text>);
       const textNode = screen.getByText('Mountain UI');
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('SPAN');
@@ -91,7 +89,7 @@ describe('Typography', () => {
     });
 
     it('should propagate additional style props', () => {
-      render(<TextStory fontSize='2rem'>Mountain UI</TextStory>);
+      render(<Text fontSize='2rem'>Mountain UI</Text>);
       const textNode = screen.getByText('Mountain UI');
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('SPAN');
@@ -103,7 +101,7 @@ describe('Typography', () => {
 
   describe('Paragraph', () => {
     it('should render the corrent variant html tag and style', () => {
-      render(<ParagraphStory variant='secondary'>Mountain UI</ParagraphStory>);
+      render(<Paragraph variant='secondary'>Mountain UI</Paragraph>);
       const textNode = screen.getByText('Mountain UI');
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('P');
@@ -114,7 +112,7 @@ describe('Typography', () => {
     });
 
     it('should propagate additional style props', () => {
-      render(<ParagraphStory fontSize='1rem'>Mountain UI</ParagraphStory>);
+      render(<Paragraph fontSize='1rem'>Mountain UI</Paragraph>);
       const textNode = screen.getByText('Mountain UI');
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('P');

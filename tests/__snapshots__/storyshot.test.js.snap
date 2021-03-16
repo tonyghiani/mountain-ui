@@ -2,58 +2,69 @@
 
 exports[`Storyshots Atoms/Button All 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt iUmXRz bOlbef"
 >
   <div
-    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg jqYRjY dtVUxq cbGuuR"
+    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg jqYRjY bOlbef cbGuuR"
   >
     <span
-      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
     >
       Primary
     </span>
     <button
-      className="sc-gsTCUz fgyMuL"
+      className="sc-gsTCUz cXyrQj"
     >
       Click
     </button>
     <span
-      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
     >
       Outline
     </span>
     <button
-      className="sc-gsTCUz cqUrwy"
+      className="sc-gsTCUz dBsIUB"
     >
       Click
     </button>
     <span
-      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
     >
       Success
     </span>
     <button
-      className="sc-gsTCUz eVQZuV"
+      className="sc-gsTCUz fylZZp"
     >
       Click
     </button>
     <span
-      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
     >
       Warning
     </span>
     <button
-      className="sc-gsTCUz ekkonk"
+      className="sc-gsTCUz bxZPYc"
     >
       Click
     </button>
     <span
-      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  flRtIg"
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
     >
       Error
     </span>
     <button
-      className="sc-gsTCUz kgMwgX"
+      className="sc-gsTCUz iIyUtb"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Disabled
+    </span>
+    <button
+      className="sc-gsTCUz cXyrQj"
+      disabled={true}
     >
       Click
     </button>
@@ -63,10 +74,10 @@ exports[`Storyshots Atoms/Button All 1`] = `
 
 exports[`Storyshots Atoms/Layout/Container Container 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt iUmXRz bOlbef"
 >
   <div
-    className="sc-bdfBwQ sc-dlfnbm sc-hKgILt gyNwPp dtVUxq"
+    className="sc-bdfBwQ sc-dlfnbm sc-hKgILt hdcUfF bOlbef"
     height="100vh"
   >
     This is the content of a container component
@@ -76,72 +87,72 @@ exports[`Storyshots Atoms/Layout/Container Container 1`] = `
 
 exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt iUmXRz bOlbef"
 >
   <div
-    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq jhIYme"
+    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef jhIYme"
   >
     <div
-      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq ehdhyK"
+      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef ehdhyK"
     >
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
     </div>
     <div
-      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq lllEAR"
+      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef lllEAR"
     >
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
     </div>
     <div
-      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  dtVUxq cEGeNL"
+      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef cEGeNL"
     >
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
       <div
-        className="sc-bdfBwQ sc-dlfnbm OppVF dtVUxq"
+        className="sc-bdfBwQ sc-dlfnbm OppVF bOlbef"
         height={150}
       />
     </div>
@@ -151,20 +162,108 @@ exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
 
 exports[`Storyshots Atoms/Typography/Heading Heading 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt iUmXRz bOlbef"
 >
-  <h1
-    className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf kWykmG"
-    color="text.primary"
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
   >
-    Mountain UI library
-  </h1>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+    >
+      <span
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf jSPfrp"
+      >
+        H1 - 3.8rem - bold
+      </span>
+      <h1
+        className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp icBLzW kWykmG"
+        color="text.primary"
+      >
+        Mountain UI library
+      </h1>
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+    >
+      <span
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf jSPfrp"
+      >
+        H2 - 3.1rem - bold
+      </span>
+      <h2
+        className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf cEDXGj"
+        color="text.primary"
+      >
+        Mountain UI library
+      </h2>
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+    >
+      <span
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf jSPfrp"
+      >
+        H3 - 2.4rem - bold
+      </span>
+      <h3
+        className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf cYmhZr"
+        color="text.primary"
+      >
+        Mountain UI library
+      </h3>
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+    >
+      <span
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf jSPfrp"
+      >
+        H4 - 2rem - bold
+      </span>
+      <h4
+        className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf fQHOsn"
+        color="text.primary"
+      >
+        Mountain UI library
+      </h4>
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+    >
+      <span
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf jSPfrp"
+      >
+        H5 - 1.6rem - bold
+      </span>
+      <h5
+        className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf ctLYeE"
+        color="text.primary"
+      >
+        Mountain UI library
+      </h5>
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+    >
+      <span
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf jSPfrp"
+      >
+        H6 - 1.3rem - bold
+      </span>
+      <h6
+        className="sc-bdfBwQ sc-jSgupP sc-gKsewC gYDVUp jJYlhf cfgtgd"
+        color="text.primary"
+      >
+        Mountain UI library
+      </h6>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Atoms/Typography/Paragraph Paragraph 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt iUmXRz bOlbef"
 >
   <p
     className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ sc-fubCfw  jJYlhf"
@@ -176,7 +275,7 @@ exports[`Storyshots Atoms/Typography/Paragraph Paragraph 1`] = `
 
 exports[`Storyshots Atoms/Typography/Text Text 1`] = `
 <div
-  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt QQPef dtVUxq"
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt iUmXRz bOlbef"
 >
   <span
     className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf"
