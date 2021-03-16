@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
+    "deepmerge": "^4.2.2",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5"
   },
