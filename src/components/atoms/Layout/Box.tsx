@@ -9,6 +9,7 @@ export type BoxProps = BaseElementProps
  */
 const Box = styled(BaseElement) <BoxProps>`
   box-sizing: border-box;
+  width: 100%;
 `
 Box.displayName = 'Box';
 
