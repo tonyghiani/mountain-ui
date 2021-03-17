@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-03-17)
+
+
+### Bug Fixes
+
+* **meta:** 🐛 add build to release config ([fbe2e69](https://github.com/tonyghiani/mountain-ui/commit/fbe2e6993e4599f957c24bf502c94ab8ad863f30))
+
 # 1.0.0-alpha.1 (2021-03-17)
 
 
