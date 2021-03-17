@@ -1,6 +1,6 @@
 {
   "name": "mountain-ui",
-  "version": "0.0.0",
+  "version": "1.0.0-alpha.1",
   "private": false,
   "description": "React components library based on mountain ui",
   "repository": "https://github.com/tonyghiani/mountain-ui",
