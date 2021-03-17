@@ -28,6 +28,8 @@ jobs:
         run: yarn
       - name: Verify tests
         run: yarn test
+      - name: Build
+        run: yarn build
       - name: Publish
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_GITHUB_TOKEN }}
