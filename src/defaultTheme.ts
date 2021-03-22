@@ -50,6 +50,7 @@ export interface DefaultTheme {
 }
 export interface Fonts {
   normal: Font;
+  code: Font;
 }
 
 export interface MediaQueries {
@@ -89,10 +90,11 @@ theme.mediaQueries = {
  */
 
 theme.fonts = {
-  normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif'
+  normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif',
+  code: "Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace"
 };
 
-theme.fontScale = 1.25;
+theme.fontScale = 1.2;
 
 theme.fontSizes = [
   `${Math.round(theme.fontScale ** -2 * 10) / 10}rem`,
@@ -137,51 +139,44 @@ theme.lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, L
 /**
  * Colors
  */
-theme.colors = {};
-theme.colors.dark = '#36424A';
-theme.colors.light = '#FDFDFD';
-theme.colors.transparent = 'transparent';
 theme.colors = {
-  ...theme.colors,
+  transparent: 'var(--c-transparent, transparent)',
   text: {
-    primary: '#0C0E0D',
-    secondary: '#6E7A83',
-    caption: '#5F6661',
-    light: theme.colors.light
-  },
-  accent: {
-    primary: {
-      dark: '#2461BC',
-      normal: '#3F81E5',
-      light: '#86B5FB'
-    }
+    primary: 'var(--c-text-primary, #161A1E)',
+    secondary: 'var(--c-text-secondary, #868786)',
+    caption: 'var(--c-text-caption, #6D6E6E)',
+    light: 'var(--c-text-light, #FDFDFD)',
+    button: 'var(--c-text-button, #FDFDFD)',
+    code: 'var(--c-text-code, #063289)'
   },
   background: {
-    primary: theme.colors.light
+    body: 'var(--bg-primary, #FDFDFD)',
+    editor: 'var(--bg-editor, #F9FCFF)',
+    editorFocus: 'var(--bg-editor-focus, #B6E4FF4C)'
+  },
+  primary: {
+    dark: 'var(--c-primary-100, #3267B7)',
+    main: 'var(--c-primary-200, #3F81E5)',
+    light: 'var(--c-primary-300, #8CB3EF)'
   },
   feeling: {
-    success: {
-      dark: '#12D04B',
-      light: '#A1ECB7',
-      normal: '#1CDA55'
-    },
-    warning: {
-      dark: '#F5BA3B',
-      light: '#FFDC91',
-      normal: '#FFC445'
-    },
-    error: {
-      dark: '#ED4343',
-      light: '#FF7C7C',
-      normal: '#F74D4D'
-    }
+    success: 'var(--c-success, #19C44D)',
+    warning: 'var(--c-warning, #FFC445)',
+    error: 'var(--c-error, #F74D4D)'
+  },
+  gradient: {
+    primary: 'var(--c-gradient-primary, linear-gradient(30deg, #3F81E5, #3F81E599))',
+    success: 'var(--c-gradient-success, linear-gradient(30deg, #19C44D, #19C44D99))',
+    warning: 'var(--c-gradient-warning, linear-gradient(30deg, #FFC445, #FFC44599))',
+    error: 'var(--c-gradient-error, linear-gradient(30deg, #F74D4D, #F74D4D99))',
+    disabled: 'var(--c-gradient-disabled, linear-gradient(30deg, #6D6E6E66, #6D6E6E33))'
   }
 };
 
 /**
  * Space
  */
-theme.space = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '64px', '96px'];
+theme.space = ['0', '3px', '6px', '12px', '18px', '24px', '36px', '48px', '72px', '96px'];
 
 /**
  * Border
