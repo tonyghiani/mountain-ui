@@ -16,58 +16,64 @@ export type ButtonProps = BaseElementProps & {
  */
 const Button = styled.button<ButtonProps>`
   ${css(theme => ({
+  position: 'relative',
   border: 0,
   borderRadius: 3,
   boxShadow: 1,
-  color: 'text.light',
+  color: 'text.button',
   fontWeight: 'ultraBold',
   padding: 3,
   textShadow: '1px 1px 6px rgb(0 0 0 / 20%)',
   transition: 'all .3s ease',
   ':hover': {
-    boxShadow: 2,
+    boxShadow: 3,
   },
   ':disabled, :disabled:hover': {
     color: 'text.secondary',
-    background: `linear-gradient(30deg, ${theme.colors.text.caption.concat('66')}, ${theme.colors.text.secondary.concat('33')})`,
+    background: theme.colors.gradient.disabled,
     cursor: 'not-allowed',
+    boxShadow: 1,
   }
 }))}
   ${({ theme }) => variant({
   scale: 'variants.button',
   variants: {
     primary: {
-      background: `linear-gradient(30deg, ${theme.colors.accent.primary.normal}, ${theme.colors.accent.primary.light})`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.accent.primary.dark}, ${theme.colors.accent.primary.light})`,
-      }
+      background: theme.colors.gradient.primary,
     },
     outline: {
       backgroundColor: 'transparent',
       boxShadow: 'inset 0 0 0 3px;',
-      color: 'accent.primary.normal',
+      color: 'primary.main',
       ':hover': {
-        backgroundColor: theme.colors.accent.primary.normal.concat('26'),
-        boxShadow: 'inset 0 0 0 3px;'
+        color: 'text.button'
+      },
+      '::before, :hover::before': {
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        height: '100%',
+        width: '100%',
+        transitionDuration: '0.25s',
+        boxShadow: 'inset 0 0 0 3px',
+        borderRadius: 3,
+        color: 'primary.main',
+        zIndex: -1
+      },
+      ':hover::before': {
+        boxShadow: 'inset 0 0 0 30px',
+        borderRadius: 3,
       }
     },
     success: {
-      background: `linear-gradient(30deg, ${theme.colors.feeling.success.normal}, ${theme.colors.feeling.success.light})`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.feeling.success.dark}, ${theme.colors.feeling.success.light})`,
-      }
+      background: theme.colors.gradient.success,
     },
     warning: {
-      background: `linear-gradient(30deg, ${theme.colors.feeling.warning.normal}, ${theme.colors.feeling.warning.light})`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.feeling.warning.dark}, ${theme.colors.feeling.warning.light})`,
-      }
+      background: theme.colors.gradient.warning,
     },
     error: {
-      background: `linear-gradient(30deg, ${theme.colors.feeling.error.normal}, ${theme.colors.feeling.error.light})`,
-      ':hover': {
-        background: `linear-gradient(30deg, ${theme.colors.feeling.error.dark}, ${theme.colors.feeling.error.light})`,
-      }
+      background: theme.colors.gradient.error,
     }
   }
 })}

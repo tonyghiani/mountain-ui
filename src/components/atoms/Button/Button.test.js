@@ -10,7 +10,6 @@ describe('Button', () => {
     const buttonNode = screen.getByRole('button');
     expect(buttonNode).toBeInTheDocument();
     expect(buttonNode).toHaveStyle(`
-      color: #FDFDFD;
       text-shadow: 1px 1px 6px rgb(0 0 0 / 20%);
       border-radius: 12px;
       box-shadow: ${theme.shadows[1]};
@@ -23,7 +22,7 @@ describe('Button', () => {
       render(<Button variant='primary'>Mountain UI</Button>);
       const buttonNode = screen.getByRole('button');
       expect(buttonNode).toHaveStyle(
-        `background: linear-gradient(30deg, ${theme.colors.accent.primary.normal}, ${theme.colors.accent.primary.light})`
+        `background: var(--c-gradient-primary, linear-gradient(30deg, #3F81E5, #3F81E599))`
       );
     });
 
@@ -31,7 +30,7 @@ describe('Button', () => {
       render(<Button variant='success'>Mountain UI</Button>);
       const buttonNode = screen.getByRole('button');
       expect(buttonNode).toHaveStyle(
-        `background: linear-gradient(30deg, ${theme.colors.feeling.success.normal}, ${theme.colors.feeling.success.light})`
+        `background: var(--c-gradient-success, linear-gradient(30deg, #19C44D, #19C44D99))`
       );
     });
 
@@ -39,7 +38,7 @@ describe('Button', () => {
       render(<Button variant='warning'>Mountain UI</Button>);
       const buttonNode = screen.getByRole('button');
       expect(buttonNode).toHaveStyle(
-        `background: linear-gradient(30deg, ${theme.colors.feeling.warning.normal}, ${theme.colors.feeling.warning.light})`
+        `background: var(--c-gradient-warning, linear-gradient(30deg, #FFC445, #FFC44599))`
       );
     });
 
@@ -47,7 +46,7 @@ describe('Button', () => {
       render(<Button variant='error'>Mountain UI</Button>);
       const buttonNode = screen.getByRole('button');
       expect(buttonNode).toHaveStyle(
-        `background: linear-gradient(30deg, ${theme.colors.feeling.error.normal}, ${theme.colors.feeling.error.light})`
+        `background: var(--c-gradient-error, linear-gradient(30deg, #F74D4D, #F74D4D99))`
       );
     });
   });
