@@ -162,7 +162,7 @@ function createTest(name) {
     COMPONENT_TEST,
     `
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from 'mui-testing-tools';
 
 import ${name} from './${name}';
 
