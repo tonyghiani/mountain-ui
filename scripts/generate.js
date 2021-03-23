@@ -98,7 +98,7 @@ function createIndex(name) {
   return writeFile(
     COMPONENT_ENTRY,
     `
-export { default } from './${name}'
+export { default as ${name} } from './${name}'
 export * from './${name}';
 `
   );
@@ -133,28 +133,21 @@ export default ${name};
 }
 
 function createStory(name, type) {
-  const COMPONENT_STORY = `${COMPONENT_DIR}/${name}.stories.tsx`;
+  const COMPONENT_STORY = `${COMPONENT_DIR}/${name}.stories.js`;
   const group = pluralize(capitalize(type));
   return writeFile(
     COMPONENT_STORY,
     `
 import React from 'react'
-import { Meta, Story } from '@storybook/react/types-6-0';
 
-import ${name}, { ${name}Props } from './${name}';
+import ${name} from './${name}';
 
 export default {
   title: '${group}/${name}',
-  component: ${name},
-  argTypes: {}
-} as Meta;
+  component: ${name}
+};
 
-const Template: Story<${name}Props> = args => <${name} {...args} />;
-
-export const Basic = Template.bind({});
-
-Basic.args = {};
-
+export const Basic = args => <${name} {...args} />;
 
 Basic.parameters = {
   jest: ['${name}.test.js'],
@@ -169,13 +162,13 @@ function createTest(name) {
     COMPONENT_TEST,
     `
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from 'mui-testing-tools';
 
-import { Basic } from './${name}.stories';
+import ${name} from './${name}';
 
 describe('${name}', () => {
   it('should render correctly on mount', () => {
-    const { container } = render(<Basic {...Basic.args} />);
+    const { container } = render(<${name} />);
     expect(container).toBeInTheDocument();
   });
 });  

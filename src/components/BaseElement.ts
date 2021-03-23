@@ -1,3 +1,4 @@
+import { SystemCssProperties } from '@styled-system/css';
 import styled from 'styled-components';
 import {
   background,
@@ -18,7 +19,8 @@ import {
   shadow,
   ShadowProps,
   space,
-  SpaceProps
+  SpaceProps,
+  system
 } from 'styled-system';
 
 export type BaseElementProps = BackgroundProps &
@@ -29,15 +31,21 @@ export type BaseElementProps = BackgroundProps &
   OpacityProps &
   PositionProps &
   ShadowProps &
+  SystemCssProperties &
   SpaceProps & {
     /* HTML tag or component to use for finally render the */
     as?: string;
   };
 
+const custom = system({
+  cursor: true
+});
+
 export const styleProps = compose(
   background,
   border,
   color,
+  custom,
   flexbox,
   layout,
   opacity,

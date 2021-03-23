@@ -20,6 +20,7 @@ try {
 import { Container, ThemeProvider } from '../src';
 
 export const parameters = {
+  layout: 'fullscreen',
   actions: { argTypesRegex: '^on[A-Z].*' }
 };
 
@@ -27,7 +28,7 @@ export const decorators = [
   results && withTests({ results }),
   Story => (
     <ThemeProvider>
-      <Container>
+      <Container marginTop={6}>
         <Story />
       </Container>
     </ThemeProvider>

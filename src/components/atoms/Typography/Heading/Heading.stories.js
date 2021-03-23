@@ -11,32 +11,32 @@ export default {
 };
 
 export const HeadingStory = args => (
-  <Box gap={3}>
+  <>
     <Box>
-      <Text variant='secondary'>H1 - 3.8rem - bold</Text>
-      <Heading {...args} variant='h1' wrapped />
+      <Text variant='secondary'>H1 - 3rem - bold</Text>
+      <Heading {...args} variant='h1' />
     </Box>
     <Box>
-      <Text variant='secondary'>H2 - 3.1rem - bold</Text>
+      <Text variant='secondary'>H2 - 2.5rem - bold</Text>
       <Heading {...args} variant='h2' />
     </Box>
     <Box>
-      <Text variant='secondary'>H3 - 2.4rem - bold</Text>
+      <Text variant='secondary'>H3 - 2.1rem - bold</Text>
       <Heading {...args} variant='h3' />
     </Box>
     <Box>
-      <Text variant='secondary'>H4 - 2rem - bold</Text>
+      <Text variant='secondary'>H4 - 1.7rem - bold</Text>
       <Heading {...args} variant='h4' />
     </Box>
     <Box>
-      <Text variant='secondary'>H5 - 1.6rem - bold</Text>
+      <Text variant='secondary'>H5 - 1.4rem - bold</Text>
       <Heading {...args} variant='h5' />
     </Box>
     <Box>
-      <Text variant='secondary'>H6 - 1.3rem - bold</Text>
+      <Text variant='secondary'>H6 - 1.2rem - bold</Text>
       <Heading {...args} variant='h6' />
     </Box>
-  </Box>
+  </>
 );
 
 HeadingStory.storyName = 'Heading';
