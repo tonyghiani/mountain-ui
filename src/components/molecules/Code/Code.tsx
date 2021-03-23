@@ -40,11 +40,19 @@ interface LineTokenArgs {
   [otherProp: string]: any;
 };
 
+type GetLineTokenProps = (args: LineTokenArgs) => LineTokenProps
+
 interface CodeLineProps {
-  getLineProps: (args: LineTokenArgs) => LineTokenProps
-  getTokenProps: (args: LineTokenArgs) => LineTokenProps
+  getLineProps: GetLineTokenProps
+  getTokenProps: GetLineTokenProps
   line: Token[]
   standalone?: boolean
+};
+
+interface RenderProps {
+  getLineProps: GetLineTokenProps
+  getTokenProps: GetLineTokenProps
+  tokens: Token[][]
 };
 
 const CodeBox = styled(Box)(css({
@@ -137,7 +145,7 @@ function Code({ children, syntax, className, ...props }: CodeProps) {
   const language = syntax || className.replace(/language-/, '') as Language;
   return (
     <Highlight {...defaultProps} theme={theme} code={children} language={language}>
-      {({ tokens, getLineProps, getTokenProps }) => {
+      {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
         const isMultiline = tokens.length > 1;
         const firstLine = tokens[0]
 
