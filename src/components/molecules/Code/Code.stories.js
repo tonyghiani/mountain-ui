@@ -21,9 +21,8 @@ export const Basic = args => (
 
 Basic.args = {
   children: `function Code({ children, syntax, className, ...props }: CodeProps) {
-  const language = syntax || className.replace(/language-/, '') as Language;
   return (
-    <Highlight {...defaultProps} theme={theme} code={children} language={language}>
+    <Highlight {...defaultProps} theme={theme} code={children} language={syntax}>
       {({ tokens, getLineProps, getTokenProps }) => (
         <CodeBox {...props}>
           <Pre as="pre" margin={0} overflow="auto" padding={5} tabIndex={0}>
