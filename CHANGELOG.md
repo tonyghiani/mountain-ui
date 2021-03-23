@@ -1,3 +1,18 @@
+# [1.0.0-alpha.3](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-03-23)
+
+
+### Bug Fixes
+
+* **molecules:** 🐛 add Code render props tpe ([c2a2768](https://github.com/tonyghiani/mountain-ui/commit/c2a27685ffcd517f11b2a689a4720578a7b63cfc))
+
+
+### Features
+
+* **generic:** 🎸 add theme rules ([674ff63](https://github.com/tonyghiani/mountain-ui/commit/674ff63e8dd90607ea512d48ac13691eacf4b694))
+* **molecules:** 🎸 code component mvp ([4f72d6c](https://github.com/tonyghiani/mountain-ui/commit/4f72d6cd72abf55b9393a9f960c26c905ed181bd))
+* **molecules:** 🎸 finished Code component first iteration ([c4a9956](https://github.com/tonyghiani/mountain-ui/commit/c4a99564fc1b8729a7e609368fdcb217e5cb0292))
+* **molecules:** 🎸 improve Code component design ([8600892](https://github.com/tonyghiani/mountain-ui/commit/8600892aae19e710bdf0be6b57f19dd068629398))
+
 # [1.0.0-alpha.2](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-03-17)
 
 
