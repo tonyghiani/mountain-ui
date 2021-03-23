@@ -52,6 +52,7 @@
   "dependencies": {
     "@styled-system/css": "^5.1.5",
     "deepmerge": "^4.2.2",
+    "prism-react-renderer": "^1.2.0",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5"
   },
@@ -105,7 +106,6 @@
   },
   "peerDependencies": {
     "@types/react": "^16.8.6 || ^17.0.0",
-    "prism-react-renderer": "^1.2.0",
     "react": "^16.8.0 || ^17.0.0",
     "react-dom": "^16.8.0 || ^17.0.0"
   },
