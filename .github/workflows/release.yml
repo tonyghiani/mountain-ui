@@ -3,9 +3,6 @@ name: Release
 on:
   push:
     branches:
-      - alpha
-  pull_request:
-    branches:
       - master
       - beta
       - alpha
