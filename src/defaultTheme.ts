@@ -151,7 +151,7 @@ theme.colors = {
   },
   background: {
     body: 'var(--bg-primary, #FDFDFD)',
-    editor: 'var(--bg-editor, #F9FCFF)',
+    editor: 'var(--bg-editor, #F6FCFF)',
     editorFocus: 'var(--bg-editor-focus, #B6E4FF4C)'
   },
   primary: {

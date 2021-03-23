@@ -11,7 +11,7 @@ export default {
 };
 
 export const HeadingStory = args => (
-  <Box gap={3}>
+  <>
     <Box>
       <Text variant='secondary'>H1 - 3rem - bold</Text>
       <Heading {...args} variant='h1' />
@@ -36,7 +36,7 @@ export const HeadingStory = args => (
       <Text variant='secondary'>H6 - 1.2rem - bold</Text>
       <Heading {...args} variant='h6' />
     </Box>
-  </Box>
+  </>
 );
 
 HeadingStory.storyName = 'Heading';

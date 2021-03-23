@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useCallback, useState } from 'react';
 import css from '@styled-system/css';
 import Highlight, { defaultProps, Language } from 'prism-react-renderer';
 import theme from "prism-react-renderer/themes/duotoneLight";
@@ -8,13 +9,43 @@ import { Box } from '../../atoms/Layout';
 import { Text } from '../../atoms/Typography';
 
 export interface CodeProps {
-  /* Syntax to use when highlighing the code block */
-  syntax: Language;
   /* Code to show inside the block */
   children: string;
   /* Class name passed to the code block */
   className: string;
+  /* Syntax to use when highlighing the code block */
+  syntax: Language;
 }
+
+interface Token {
+  content: string;
+  empty?: boolean;
+  types: string[];
+};
+
+interface LineTokenProps {
+  children?: string;
+  className: string;
+  key?: React.Key;
+  style?: Record<string, string | number | null>;
+  [otherProp: string]: any;
+}
+
+interface LineTokenArgs {
+  className?: string;
+  key?: React.Key;
+  line?: Token[];
+  style?: Record<string, string | number | null>;
+  token?: Token;
+  [otherProp: string]: any;
+};
+
+interface CodeLineProps {
+  getLineProps: (args: LineTokenArgs) => LineTokenProps
+  getTokenProps: (args: LineTokenArgs) => LineTokenProps
+  line: Token[]
+  standalone?: boolean
+};
 
 const CodeBox = styled(Box)(css({
   borderRadius: 4,
@@ -23,54 +54,25 @@ const CodeBox = styled(Box)(css({
   position: 'relative',
 }))
 
-const Pre = styled(Text)`
+const Pre = styled(Text).attrs({ as: 'pre' })`
   background-color: ${p => p.theme.colors.background.editor};
+  margin: ${p => p.theme.space[0]};
+  overflow: auto;
+  padding: ${p => p.theme.space[5]};
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   transition: background-color .3s ease;
   ::-webkit-scrollbar {
     display: none
   }
   :focus {
+    outline: none;
+  }
+  :focus-visible {
     background-color: ${p => p.theme.colors.background.editorFocus};
     outline: none;
   }
 `
-
-/**
- * The `Code` component is used to represent blocks of code.
- */
-function Code({ children, syntax, className, ...props }: CodeProps) {
-  const language = syntax || className.replace(/language-/, '') as Language;
-  return (
-    <Highlight {...defaultProps} theme={theme} code={children} language={language}>
-      {({ tokens, getLineProps, getTokenProps }) => (
-        <CodeBox {...props}>
-          <MetaList>
-            <Meta>
-              {language}
-            </Meta>
-            <Divider />
-            <Meta>
-              copy
-            </Meta>
-          </MetaList>
-          <Pre as="pre" margin={0} overflow="overlay" padding={5} tabIndex={0}>
-            {tokens.map((line, i) => (
-              <div key={i} {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span key={key} {...getTokenProps({ token, key })} />
-                ))}
-              </div>
-            ))}
-          </Pre>
-        </CodeBox>
-      )}
-    </Highlight>
-  );
-};
-
-Code.defaultProps = {
-  syntax: 'jsx',
-};
 
 const MetaList = styled.ul`
   display: flex;
@@ -85,19 +87,80 @@ const MetaList = styled.ul`
 })}
 `
 
-const Meta = styled.li(css({
-  paddingY: 2,
-  paddingX: 3,
+const Meta = styled(Box).attrs({ as: 'li' }) <{ uppercase?: boolean }>`
+  text-transform: ${p => p.uppercase && 'uppercase'};
+  ${css({
   color: 'text.code',
-  textTransform: 'uppercase',
+  fontSize: 'caption',
   fontWeight: 'bold',
-  fontSize: 'caption'
-}))
+  paddingX: 3,
+  paddingY: 2
+})}
+`
 
 const Divider = styled.li(css({
-  width: 1,
-  backgroundColor: 'background.editorFocus'
+  backgroundColor: 'background.editorFocus',
+  width: 1
 }))
+
+const STANDALONE_STYLE = {
+  backgroundColor: 'background.editor',
+  borderRadius: 2,
+  boxShadow: 1,
+  display: 'inline',
+  padding: 1
+}
+
+const CodeLine = ({ standalone = false, line, getTokenProps, getLineProps }: CodeLineProps) => {
+  const styles = standalone ? STANDALONE_STYLE : {}
+  return <Text as="code" display="block" {...styles} {...getLineProps({ line })}>
+    {line.map((token, key) => (
+      <span key={key} {...getTokenProps({ token, key })} />
+    ))}
+  </Text >
+}
+
+/**
+ * The `Code` component is used to represent blocks of code.
+ */
+function Code({ children, syntax, className, ...props }: CodeProps) {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopy = useCallback(() => {
+    if (!navigator.clipboard) return;
+    navigator.clipboard.writeText(children).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    })
+  }, [children])
+
+  const language = syntax || className.replace(/language-/, '') as Language;
+  return (
+    <Highlight {...defaultProps} theme={theme} code={children} language={language}>
+      {({ tokens, getLineProps, getTokenProps }) => {
+        const isMultiline = tokens.length > 1;
+        const firstLine = tokens[0]
+
+        if (!isMultiline) return <CodeLine standalone line={firstLine} getTokenProps={getTokenProps} getLineProps={getLineProps} />
+
+        return <CodeBox {...props}>
+          <MetaList role="list">
+            <Meta cursor="pointer" role="presentation" onClick={handleCopy}>{copied ? 'Copied!' : 'Copy'}</Meta>
+            <Divider />
+            <Meta uppercase>{language}</Meta>
+          </MetaList>
+          <Pre tabIndex={0}>
+            {tokens.map((line, i) => <CodeLine key={i} line={line} getTokenProps={getTokenProps} getLineProps={getLineProps} />)}
+          </Pre>
+        </CodeBox>
+      }}
+    </Highlight>
+  );
+};
+
+Code.defaultProps = {
+  syntax: 'jsx',
+};
 
 Code.displayName = 'Code';
 

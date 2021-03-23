@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Paragraph } from '../../atoms';
+
 import Code from './Code';
 
 export default {
@@ -7,25 +9,37 @@ export default {
   component: Code
 };
 
-export const Basic = args => <Code {...args} />;
+export const Basic = args => (
+  <>
+    <Code {...args} mb={6} />
+    <Paragraph>
+      The following function is inside a code tag <Code>const sumTwo = num =&gt; num + 2</Code> and
+      is inlined with some text.
+    </Paragraph>
+  </>
+);
 
 Basic.args = {
-  children: `<Highlight {...defaultProps} code={children} language={language}>
-  {({ tokens, getLineProps, getTokenProps }) => (
-    <Box position="relative">
-      <SyntaxLabel strong color="light" position="absolute" top="-2rem" right="1.5rem" bg="dark" padding={2} borderTopLeftRadius={2} borderTopRightRadius={2}>{language}</SyntaxLabel>
-      <Pre as="pre" padding={4} borderRadius={4} bg="dark" boxShadow={3} >
-        {tokens.map((line, i) => (
-          <div key={i} {...getLineProps({ line, key: i })}>
-            {line.map((token, key) => (
-              <Text key={key} {...getTokenProps({ token, key })} {...props} />
+  children: `function Code({ children, syntax, className, ...props }: CodeProps) {
+  const language = syntax || className.replace(/language-/, '') as Language;
+  return (
+    <Highlight {...defaultProps} theme={theme} code={children} language={language}>
+      {({ tokens, getLineProps, getTokenProps }) => (
+        <CodeBox {...props}>
+          <Pre as="pre" margin={0} overflow="auto" padding={5} tabIndex={0}>
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token, key })} />
+                ))}
+              </div>
             ))}
-          </div>
-        ))}
-      </Pre>
-    </Box>
-  )}
-</Highlight>`
+          </Pre>
+        </CodeBox>
+      )}
+    </Highlight>
+  );
+};`
 };
 
 Basic.parameters = {
