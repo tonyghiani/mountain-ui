@@ -62,7 +62,7 @@ const CodeBox = styled(Box)(css({
   position: 'relative',
 }))
 
-const Pre = styled(Text).attrs({ as: 'pre' })`
+const Pre = styled(Text)`
   background-color: ${p => p.theme.colors.background.editor};
   margin: ${p => p.theme.space[0]};
   overflow: auto;
@@ -131,7 +131,7 @@ const CodeLine = ({ standalone = false, line, getTokenProps, getLineProps }: Cod
 /**
  * The `Code` component is used to represent blocks of code.
  */
-function Code({ children, syntax, className, ...props }: CodeProps) {
+const Code = ({ children, syntax, className, ...props }: CodeProps) => {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = useCallback(() => {
@@ -157,7 +157,7 @@ function Code({ children, syntax, className, ...props }: CodeProps) {
             <Divider />
             <Meta uppercase>{language}</Meta>
           </MetaList>
-          <Pre tabIndex={0}>
+          <Pre as="pre" tabIndex={0}>
             {tokens.map((line, i) => <CodeLine key={i} line={line} getTokenProps={getTokenProps} getLineProps={getLineProps} />)}
           </Pre>
         </CodeBox>

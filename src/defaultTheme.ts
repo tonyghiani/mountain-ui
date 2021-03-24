@@ -189,7 +189,7 @@ theme.radii = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '100%'
  */
 theme.shadows = [
   'none',
-  '0px 8px 12px -12px rgba(0,0,0,0.15)',
-  '0px 8px 24px -12px rgba(0,0,0,0.2)',
-  '0px 8px 24px 0px rgba(0,0,0,0.15);'
+  '0px 6px 12px -12px rgba(0,0,0,0.15)',
+  '0px 6px 24px -12px rgba(0,0,0,0.2)',
+  '0px 6px 24px 0px rgba(0,0,0,0.15);'
 ];

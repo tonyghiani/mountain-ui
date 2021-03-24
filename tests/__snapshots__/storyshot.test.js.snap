@@ -13,7 +13,7 @@ exports[`Storyshots Atoms/Button All 1`] = `
       Primary
     </span>
     <button
-      className="sc-gsTCUz dSfObb"
+      className="sc-gsTCUz fIvIlF"
     >
       Click
     </button>
@@ -23,7 +23,7 @@ exports[`Storyshots Atoms/Button All 1`] = `
       Outline
     </span>
     <button
-      className="sc-gsTCUz BdvQD"
+      className="sc-gsTCUz ioxTWR"
     >
       Click
     </button>
@@ -33,7 +33,7 @@ exports[`Storyshots Atoms/Button All 1`] = `
       Success
     </span>
     <button
-      className="sc-gsTCUz rKBpE"
+      className="sc-gsTCUz eXmAeK"
     >
       Click
     </button>
@@ -43,7 +43,7 @@ exports[`Storyshots Atoms/Button All 1`] = `
       Warning
     </span>
     <button
-      className="sc-gsTCUz clkexh"
+      className="sc-gsTCUz lhIDPz"
     >
       Click
     </button>
@@ -53,7 +53,7 @@ exports[`Storyshots Atoms/Button All 1`] = `
       Error
     </span>
     <button
-      className="sc-gsTCUz dyXyPT"
+      className="sc-gsTCUz doSWVd"
     >
       Click
     </button>
@@ -63,7 +63,7 @@ exports[`Storyshots Atoms/Button All 1`] = `
       Disabled
     </span>
     <button
-      className="sc-gsTCUz dSfObb"
+      className="sc-gsTCUz fIvIlF"
       disabled={true}
     >
       Click
@@ -286,10 +286,10 @@ exports[`Storyshots Molecules/Code Basic 1`] = `
   className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
 >
   <div
-    className="sc-bdfBwQ sc-dlfnbm sc-pFZIQ iZRTZE bOlbef lcnMsL"
+    className="sc-bdfBwQ sc-dlfnbm sc-pFZIQ iZRTZE bOlbef dBgYJN"
   >
     <ul
-      className="sc-kEjbxe eFSPOc"
+      className="sc-kEjbxe dSIwqC"
       role="list"
     >
       <li
@@ -2509,7 +2509,7 @@ exports[`Storyshots Molecules/Code Basic 1`] = `
   >
     The following function is inside a code tag 
     <code
-      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ hlvagW jJYlhf token-line"
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ hUNiLI jJYlhf token-line"
       display="inline"
       style={
         Object {
