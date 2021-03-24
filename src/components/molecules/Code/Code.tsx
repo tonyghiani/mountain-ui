@@ -63,10 +63,16 @@ const CodeBox = styled(Box)(css({
 }))
 
 const Pre = styled(Text)`
-  background-color: ${p => p.theme.colors.background.editor};
-  margin: ${p => p.theme.space[0]};
+${css({
+  backgroundColor: 'background.editor',
+  margin: 0,
+  padding: 5,
+  ':focus-visible': {
+    backgroundColor: 'background.editorFocus',
+    outline: 'none'
+  }
+})}
   overflow: auto;
-  padding: ${p => p.theme.space[5]};
   -ms-overflow-style: none;
   scrollbar-width: none;
   transition: background-color .3s ease;
@@ -74,10 +80,6 @@ const Pre = styled(Text)`
     display: none
   }
   :focus {
-    outline: none;
-  }
-  :focus-visible {
-    background-color: ${p => p.theme.colors.background.editorFocus};
     outline: none;
   }
 `
@@ -122,9 +124,7 @@ const STANDALONE_STYLE = {
 const CodeLine = ({ standalone = false, line, getTokenProps, getLineProps }: CodeLineProps) => {
   const styles = standalone ? STANDALONE_STYLE : {}
   return <Text as="code" display="block" {...styles} {...getLineProps({ line })}>
-    {line.map((token, key) => (
-      <span key={key} {...getTokenProps({ token, key })} />
-    ))}
+    {line.map((token, key) => <span key={key} {...getTokenProps({ token, key })} />)}
   </Text >
 }
 
