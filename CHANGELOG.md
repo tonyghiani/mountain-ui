@@ -1,3 +1,10 @@
+# [1.0.0-alpha.4](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-03-24)
+
+
+### Bug Fixes
+
+* **molecules:** 🐛 switch Code to arrow functions ([c2e4643](https://github.com/tonyghiani/mountain-ui/commit/c2e46433750adb6bf409ddb1972277d16e3a1cbc))
+
 # [1.0.0-alpha.3](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-03-23)
 
 
