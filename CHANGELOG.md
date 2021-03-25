@@ -1,3 +1,10 @@
+# [1.0.0-alpha.7](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.6...v1.0.0-alpha.7) (2021-03-25)
+
+
+### Bug Fixes
+
+* **meta:** 🐛 wrong peer dep ([0f1d72c](https://github.com/tonyghiani/mountain-ui/commit/0f1d72c4903f1eb55a40106dc58c7f01d2314957))
+
 # [1.0.0-alpha.6](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-03-25)
 
 
