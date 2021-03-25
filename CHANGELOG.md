@@ -1,3 +1,10 @@
+# [1.0.0-alpha.5](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-03-24)
+
+
+### Bug Fixes
+
+* **molecules:** 🐛 update css rules for Code ([5c0a2bd](https://github.com/tonyghiani/mountain-ui/commit/5c0a2bd80112930629394f4f64ac0421d7751a73))
+
 # [1.0.0-alpha.4](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.3...v1.0.0-alpha.4) (2021-03-24)
 
 
