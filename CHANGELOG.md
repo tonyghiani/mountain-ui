@@ -1,3 +1,10 @@
+# [1.0.0-alpha.6](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.5...v1.0.0-alpha.6) (2021-03-25)
+
+
+### Bug Fixes
+
+* **meta:** 🐛 move peer dependencies ([f3f6e0a](https://github.com/tonyghiani/mountain-ui/commit/f3f6e0aac6f435bbb98adc163decf62c1e150dd6))
+
 # [1.0.0-alpha.5](https://github.com/tonyghiani/mountain-ui/compare/v1.0.0-alpha.4...v1.0.0-alpha.5) (2021-03-24)
 
 
