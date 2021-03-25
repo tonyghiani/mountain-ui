@@ -142,9 +142,9 @@ const Code = ({ children, syntax, className, ...props }: CodeProps) => {
     })
   }, [children])
 
-  const language = syntax || className.replace(/language-/, '') as Language;
+  const language = className?.replace(/language-/, '') || syntax;
   return (
-    <Highlight {...defaultProps} theme={theme} code={children} language={language}>
+    <Highlight {...defaultProps} theme={theme} code={children} language={language as Language}>
       {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
         const isMultiline = tokens.length > 1;
         const firstLine = tokens[0]
