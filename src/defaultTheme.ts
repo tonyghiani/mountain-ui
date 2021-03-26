@@ -119,7 +119,7 @@ theme.fontSizes = [
   theme.fontSizes.h1
 ] = theme.fontSizes;
 
-theme.fontWeights = [300, 400, 600, 700, 900] as ThemeScale<number, FontWeightAlias>;
+theme.fontWeights = [300, 400, 500, 700, 900] as ThemeScale<number, FontWeightAlias>;
 [
   theme.fontWeights.light,
   theme.fontWeights.normal,

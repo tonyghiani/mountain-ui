@@ -10,7 +10,7 @@ export type TextProps = BaseTypographyProps & {
 
 const Text = styled(BaseTypography)<TextProps>(
   variant({
-    scale: 'variants.typography.heading',
+    scale: 'variants.typography.text',
     variants: {
       primary: {
         color: 'text.primary',
