@@ -5,7 +5,7 @@ module.exports = {
     es2021: true,
     jest: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier', 'prettier/react'],
+  extends: ['eslint:recommended', 'prettier'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -14,7 +14,7 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module'
   },
-  plugins: ['react', '@typescript-eslint', 'import', 'simple-import-sort'],
+  plugins: ['@typescript-eslint', 'import', 'simple-import-sort'],
   rules: {
     'prefer-const': 'error',
     'import/first': 'error',
@@ -22,7 +22,6 @@ module.exports = {
     'import/no-duplicates': 'error',
     'import/prefer-default-export': 'off',
     'import/order': 'off',
-    'react/prop-types': 'off',
     'simple-import-sort/imports': [
       'error',
       {
@@ -48,7 +47,6 @@ module.exports = {
     '@typescript-eslint/no-unused-params': 'off'
   },
   settings: {
-    react: { version: 'detect' },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx']
   }
 };
