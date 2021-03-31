@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, screen } from 'mui-testing-tools';
 
-import theme from './../../../defaultTheme';
+import theme from '../../../defaultTheme';
+
 import Button from './Button';
 
 describe('Button', () => {
