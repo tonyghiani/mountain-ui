@@ -12,7 +12,7 @@ export interface CodeProps {
   /* Code to show inside the block */
   children: string;
   /* Class name passed to the code block */
-  className: string;
+  className?: string;
   /* Syntax to use when highlighing the code block */
   syntax: Language;
 }

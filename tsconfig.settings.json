@@ -17,7 +17,7 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "target": "ES2018",
-    "types": ["jest", "node"]
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
-  "exclude": ["node_modules", "dist", ".vscode"]
+  "exclude": ["node_modules", "dist", ".vscode", ".husky"]
 }

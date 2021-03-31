@@ -22,7 +22,6 @@
     "import/no-duplicates": "error",
     "import/prefer-default-export": "off",
     "import/order": "off",
-    "react/prop-types": "off",
     "simple-import-sort/imports": [
       "error",
       {
@@ -43,12 +42,18 @@
           ["^.+\\.s?css$"]
         ]
       }
-    ],
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-unused-params": "off"
+    ]
   },
   "settings": {
     "react": { "version": "detect" },
     "import/extensions": [".js", ".jsx", ".ts", ".tsx"]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ]
 }

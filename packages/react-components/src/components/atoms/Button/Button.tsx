@@ -5,10 +5,8 @@ import { variant } from 'styled-system';
 import { BaseElementProps, styleProps } from '../../BaseElement';
 
 export type ButtonProps = BaseElementProps & {
-  /**
-   * Button variant
-   */
-  variant: 'primary' | 'outline' | 'success' | 'warning' | 'error'
+  /** Button variant */
+  variant?: 'primary' | 'outline' | 'success' | 'warning' | 'error'
 }
 
 /**
