@@ -1,5 +1,5 @@
 {
-  "package.json": "yarn lint:package",
-  "*.{js,ts,tsx}": "yarn lint --cache --fix",
+  "package.json": "yarn workspaces run lint:package",
+  "*.{js,ts,tsx}": "yarn workspaces run lint",
   "*.{js,ts,tsx,md}": "prettier --write --ignore-unknown"
 }

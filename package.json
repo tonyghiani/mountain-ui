@@ -1,17 +1,17 @@
 {
   "version": "0.0.0",
-  "description": "",
   "private": true,
+  "description": "",
+  "homepage": "https://github.com/mountain-ui/mountain-ui#readme",
+  "bugs": {
+    "url": "https://github.com/mountain-ui/mountain-ui/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mountain-ui/mountain-ui.git"
   },
-  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mountain-ui/mountain-ui/issues"
-  },
-  "homepage": "https://github.com/mountain-ui/mountain-ui#readme",
+  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
   "workspaces": [
     "packages/*"
   ],
@@ -19,9 +19,17 @@
     "build": "lerna run build --concurrency 2 --stream",
     "install:clean": "yarn lerna exec 'rm -rf node_modules yarn.lock' --stream && rm -rf node_modules yarn.lock && yarn install",
     "commit": "git cz",
-    "lint:package": "lerna run lint:package --concurrency 2 --stream",
     "lint": "lerna run lint --concurrency 2 --stream",
+    "lint:package": "lerna run lint:package --concurrency 2 --stream",
     "test": "lerna run test --concurrency 2 --stream"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "dependencies": {
+    "lint-staged": "^10.5.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
@@ -48,11 +56,6 @@
     "semantic-release": "^17.4.2",
     "sort-package-json": "^1.49.0",
     "ts-jest": "^26.5.4"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
   },
   "engines": {
     "node": ">=12.6.0",
