@@ -30,7 +30,7 @@
     "build:esm": "BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.test.tsx,src/**/*.stories.tsx ./src --out-dir dist/esm",
     "build:types": "tsc --project ./tsconfig.types.json",
     "clean:build": "rimraf dist *.tsbuildinfo",
-    "co": "git cz",
+    "commit": "git cz",
     "generate": "node scripts/generate.js",
     "lint": "eslint",
     "lint:package": "sort-package-json",
