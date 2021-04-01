@@ -21,6 +21,7 @@ process.stdin.on('keypress', (_, { name }) => name === 'escape' && process.exit(
 
   COMPONENT_DIR = `${BASE_DIR}/src/components/${componentTypeFolder}/${componentName}`;
 
+  console.log(`┏━━━ 🏗 Creating ${componentName} component ━━━━━━━━━━━━━━━━━━━┛`);
   await Promise.all([
     createIndex(componentName),
     createComponent(componentName),
