@@ -7,5 +7,8 @@ module.exports = {
   setupFilesAfterEnv: ['./tests/jest.setup.js'],
   moduleDirectories: ['node_modules', 'tests'],
   name: packageJson.name,
-  displayName: packageJson.name
+  displayName: packageJson.name,
+  moduleNameMapper: {
+    'mui-testing-tools': '<rootDir>/tests/mui-testing-tools.js'
+  }
 };

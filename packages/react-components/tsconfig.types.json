@@ -8,5 +8,5 @@
     "noEmit": false
   },
   "include": ["./src/**/*.ts*"],
-  "exclude": ["src/**/*.{test,spec}.ts*", "src/**/*.stories.tsx*"]
+  "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]
 }

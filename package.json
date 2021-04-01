@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "build": "lerna run build --concurrency 2 --stream",
-    "install:clean": "yarn lerna exec 'rm -rf node_modules yarn.lock' --stream && rm -rf node_modules yarn.lock && yarn install",
+    "install:clean": "lerna clean --yes && rm -rf node_modules yarn.lock && yarn install",
     "commit": "git cz",
     "lint": "lerna run lint --concurrency 2 --stream",
     "lint:package": "lerna run lint:package --concurrency 2 --stream",
@@ -27,9 +27,6 @@
     "commitizen": {
       "path": "git-cz"
     }
-  },
-  "dependencies": {
-    "lint-staged": "^10.5.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
@@ -51,6 +48,7 @@
     "jest": "^26.6.3",
     "lerna": "^4.0.0",
     "lerna-changelog": "^1.0.1",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^17.4.2",

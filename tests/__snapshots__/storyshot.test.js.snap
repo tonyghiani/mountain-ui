@@ -1,0 +1,2620 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Button All 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg jqYRjY bOlbef iSkCFP"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Primary
+    </span>
+    <button
+      className="sc-gsTCUz fIvIlF"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Outline
+    </span>
+    <button
+      className="sc-gsTCUz ioxTWR"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Success
+    </span>
+    <button
+      className="sc-gsTCUz eXmAeK"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Warning
+    </span>
+    <button
+      className="sc-gsTCUz lhIDPz"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Error
+    </span>
+    <button
+      className="sc-gsTCUz doSWVd"
+    >
+      Click
+    </button>
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  iNtkGE"
+    >
+      Disabled
+    </span>
+    <button
+      className="sc-gsTCUz fIvIlF"
+      disabled={true}
+    >
+      Click
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Layout/Container Container 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm sc-hKgILt hdcUfF bOlbef"
+    height="100vh"
+  >
+    This is the content of a container component
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Layout/Grid Grid 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef hPHjUY"
+  >
+    <div
+      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef irmrKA"
+    >
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef kHcZxb"
+    >
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+    </div>
+    <div
+      className="sc-bdfBwQ sc-dlfnbm sc-eCssSg  bOlbef hYmPLl"
+    >
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+      <div
+        className="sc-bdfBwQ sc-dlfnbm kTMdFs bOlbef"
+        height={150}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography/Heading Heading 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf cqWbzA"
+    >
+      H1 - 3rem - bold
+    </span>
+    <h1
+      className="sc-bdfBwQ sc-jSgupP sc-gKsewC eRydby jJYlhf fokXVk"
+      color="text.primary"
+    >
+      Mountain UI library
+    </h1>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf cqWbzA"
+    >
+      H2 - 2.5rem - bold
+    </span>
+    <h2
+      className="sc-bdfBwQ sc-jSgupP sc-gKsewC eRydby jJYlhf gEEOzO"
+      color="text.primary"
+    >
+      Mountain UI library
+    </h2>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf cqWbzA"
+    >
+      H3 - 2.1rem - bold
+    </span>
+    <h3
+      className="sc-bdfBwQ sc-jSgupP sc-gKsewC eRydby jJYlhf hBHcFm"
+      color="text.primary"
+    >
+      Mountain UI library
+    </h3>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf cqWbzA"
+    >
+      H4 - 1.7rem - bold
+    </span>
+    <h4
+      className="sc-bdfBwQ sc-jSgupP sc-gKsewC eRydby jJYlhf biefaF"
+      color="text.primary"
+    >
+      Mountain UI library
+    </h4>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf cqWbzA"
+    >
+      H5 - 1.4rem - bold
+    </span>
+    <h5
+      className="sc-bdfBwQ sc-jSgupP sc-gKsewC eRydby jJYlhf gLWgzy"
+      color="text.primary"
+    >
+      Mountain UI library
+    </h5>
+  </div>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm  bOlbef"
+  >
+    <span
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf cqWbzA"
+    >
+      H6 - 1.2rem - bold
+    </span>
+    <h6
+      className="sc-bdfBwQ sc-jSgupP sc-gKsewC eRydby jJYlhf dqOmkc"
+      color="text.primary"
+    >
+      Mountain UI library
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography/Paragraph Paragraph 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <p
+    className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ sc-fubCfw  jJYlhf"
+  >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography/Text Text 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <span
+    className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ  jJYlhf"
+  >
+    Mountain UI library
+  </span>
+</div>
+`;
+
+exports[`Storyshots Molecules/Code Basic 1`] = `
+<div
+  className="sc-bdfBwQ sc-dlfnbm sc-hKgILt kEZWqX bOlbef"
+>
+  <div
+    className="sc-bdfBwQ sc-dlfnbm sc-pFZIQ iZRTZE bOlbef dBgYJN"
+  >
+    <ul
+      className="sc-kEjbxe dSIwqC"
+      role="list"
+    >
+      <li
+        className="sc-bdfBwQ sc-dlfnbm sc-iqHYGH dPjMaQ bOlbef inqUzJ"
+        cursor="pointer"
+        onClick={[Function]}
+        role="presentation"
+      >
+        Copy
+      </li>
+      <li
+        className="sc-crrsfI lhkMsj"
+      />
+      <li
+        className="sc-bdfBwQ sc-dlfnbm sc-iqHYGH  bOlbef bCxFAP"
+      >
+        jsx
+      </li>
+    </ul>
+    <pre
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ sc-jrAGrp  jJYlhf fDbdPU"
+      tabIndex={0}
+    >
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token keyword"
+          style={
+            Object {
+              "color": "#728fcb",
+            }
+          }
+        >
+          function
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token function"
+          style={
+            Object {
+              "color": "#b29762",
+            }
+          }
+        >
+          Code
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token parameter"
+        >
+           children
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           syntax
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           className
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           
+        </span>
+        <span
+          className="token parameter operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token parameter"
+        >
+          props 
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token parameter operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          :
+        </span>
+        <span
+          className="token parameter"
+        >
+           CodeProps
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+            
+        </span>
+        <span
+          className="token keyword"
+          style={
+            Object {
+              "color": "#728fcb",
+            }
+          }
+        >
+          return
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+              
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          Highlight
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token tag spread attr-value"
+          style={
+            Object {
+              "color": "#728fcb",
+            }
+          }
+        >
+          defaultProps
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          theme
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          theme
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          code
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          children
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          language
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          syntax
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token parameter"
+        >
+           tokens
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           getLineProps
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           getTokenProps 
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          =&gt;
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                  
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          CodeBox
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token tag spread attr-value"
+          style={
+            Object {
+              "color": "#728fcb",
+            }
+          }
+        >
+          props
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                    
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          Pre
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          as
+        </span>
+        <span
+          className="token tag attr-value punctuation attr-equals"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag attr-value"
+          style={
+            Object {
+              "color": "#728fcb",
+            }
+          }
+        >
+          pre
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          margin
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript number"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          0
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          overflow
+        </span>
+        <span
+          className="token tag attr-value punctuation attr-equals"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag attr-value"
+          style={
+            Object {
+              "color": "#728fcb",
+            }
+          }
+        >
+          auto
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          padding
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript number"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          5
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            Object {
+              "color": "#896724",
+            }
+          }
+        >
+          tabIndex
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript number"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          0
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                      
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          tokens
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          .
+        </span>
+        <span
+          className="token function"
+          style={
+            Object {
+              "color": "#b29762",
+            }
+          }
+        >
+          map
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter"
+        >
+          line
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           i
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          =&gt;
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                        
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token plain"
+        >
+          div key
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          i
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token function"
+          style={
+            Object {
+              "color": "#b29762",
+            }
+          }
+        >
+          getLineProps
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+           line
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token plain"
+        >
+           key
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          :
+        </span>
+        <span
+          className="token plain"
+        >
+           i 
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                          
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          line
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          .
+        </span>
+        <span
+          className="token function"
+          style={
+            Object {
+              "color": "#b29762",
+            }
+          }
+        >
+          map
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter"
+        >
+          token
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+        >
+           key
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          =&gt;
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                            
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token plain"
+        >
+          span key
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          key
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token function"
+          style={
+            Object {
+              "color": "#b29762",
+            }
+          }
+        >
+          getTokenProps
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+           token
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token plain"
+        >
+           key 
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          /
+        </span>
+        <span
+          className="token operator"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                          
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                        
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          div
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                      
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                    
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          Pre
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                  
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          CodeBox
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+              
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            Object {
+              "color": "#063289",
+            }
+          }
+        >
+          Highlight
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+            
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ;
+        </span>
+        <span
+          className="token plain"
+        >
+          
+        </span>
+      </code>
+      <code
+        className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ gDzAlS jJYlhf token-line"
+        display="block"
+        style={
+          Object {
+            "backgroundColor": null,
+            "color": "#728fcb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+          
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            Object {
+              "color": "#b6ad9a",
+            }
+          }
+        >
+          ;
+        </span>
+      </code>
+    </pre>
+  </div>
+  <p
+    className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ sc-fubCfw  jJYlhf"
+  >
+    The following function is inside a code tag 
+    <code
+      className="sc-bdfBwQ sc-jSgupP sc-iBPRYJ hUNiLI jJYlhf token-line"
+      display="inline"
+      style={
+        Object {
+          "backgroundColor": null,
+          "color": "#728fcb",
+        }
+      }
+    >
+      <span
+        className="token keyword"
+        style={
+          Object {
+            "color": "#728fcb",
+          }
+        }
+      >
+        const
+      </span>
+      <span
+        className="token plain"
+      >
+         
+      </span>
+      <span
+        className="token function-variable function"
+        style={
+          Object {
+            "color": "#b29762",
+          }
+        }
+      >
+        sumTwo
+      </span>
+      <span
+        className="token plain"
+      >
+         
+      </span>
+      <span
+        className="token operator"
+        style={
+          Object {
+            "color": "#063289",
+          }
+        }
+      >
+        =
+      </span>
+      <span
+        className="token plain"
+      >
+         
+      </span>
+      <span
+        className="token parameter"
+      >
+        num
+      </span>
+      <span
+        className="token plain"
+      >
+         
+      </span>
+      <span
+        className="token operator"
+        style={
+          Object {
+            "color": "#063289",
+          }
+        }
+      >
+        =&gt;
+      </span>
+      <span
+        className="token plain"
+      >
+         num 
+      </span>
+      <span
+        className="token operator"
+        style={
+          Object {
+            "color": "#063289",
+          }
+        }
+      >
+        +
+      </span>
+      <span
+        className="token plain"
+      >
+         
+      </span>
+      <span
+        className="token number"
+        style={
+          Object {
+            "color": "#063289",
+          }
+        }
+      >
+        2
+      </span>
+    </code>
+     and is inlined with some text.
+  </p>
+</div>
+`;

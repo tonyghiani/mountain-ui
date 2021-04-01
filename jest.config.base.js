@@ -6,5 +6,6 @@ module.exports = {
   coverageDirectory: '<rootDir>/coverage/',
   transform: {
     '.(js|ts|tsx)': ['ts-jest']
-  }
+  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 };

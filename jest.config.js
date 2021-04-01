@@ -11,8 +11,6 @@ const packages = readdirSync(basePath).filter(name => {
 module.exports = {
   ...baseConfig,
   roots: ['<rootDir>'],
-  preset: 'ts-jest',
-  testEnvironment: 'node',
   projects: packages.map(name => `<rootDir>/packages/${name}`),
   moduleNameMapper: packages.reduce(
     (acc, name) => ({

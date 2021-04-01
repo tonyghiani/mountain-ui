@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render } from 'mui-testing-tools';
 
 import { Box, Container, Grid } from './index';
 
@@ -22,7 +22,7 @@ describe('Layout', () => {
       expect(box).toHaveStyle(`
         background-color: #F0F0F0;
         color: #F0F0F0;
-        padding: 8px;
+        padding: 6px;
       `);
     });
   });
@@ -45,8 +45,8 @@ describe('Layout', () => {
       expect(container).toHaveStyle(`
         background-color: #F0F0F0;
         color: #F0F0F0;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
       `);
     });
   });
