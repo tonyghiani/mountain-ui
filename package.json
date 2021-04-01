@@ -17,21 +17,16 @@
   ],
   "scripts": {
     "build": "lerna run build --concurrency 2 --stream",
+    "install:clean": "yarn lerna exec 'rm -rf node_modules yarn.lock' --stream && rm -rf node_modules yarn.lock && yarn install",
     "commit": "git cz",
     "lint:package": "lerna run lint:package --concurrency 2 --stream",
     "lint": "lerna run lint --concurrency 2 --stream",
     "test": "lerna run test --concurrency 2 --stream"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.14",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-typescript": "^7.13.0",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@commitlint/config-lerna-scopes": "^12.0.1",
-    "@jest/types": "^26.6.2",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@types/jest": "^26.0.22",
@@ -52,8 +47,7 @@
     "rimraf": "^3.0.2",
     "semantic-release": "^17.4.2",
     "sort-package-json": "^1.49.0",
-    "ts-jest": "^26.5.4",
-    "typescript": "^4.2.3"
+    "ts-jest": "^26.5.4"
   },
   "config": {
     "commitizen": {
