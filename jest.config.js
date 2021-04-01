@@ -1,12 +1,22 @@
+const path = require('path');
+const { lstatSync, readdirSync } = require('fs');
+
+const baseConfig = require('./jest.config.base');
+
+const basePath = path.resolve(__dirname, 'packages');
+const packages = readdirSync(basePath).filter(name => {
+  return lstatSync(path.join(basePath, name)).isDirectory();
+});
+
 module.exports = {
-  collectCoverage: true,
-  coverageReporters: ['json'],
-  moduleDirectories: ['node_modules', 'tests'],
-  setupFilesAfterEnv: ['./tests/jest.setup.js'],
-  testMatch: ['<rootDir>/{src,tests}/**/*.test.js'],
-  transform: {
-    '.(js|ts|tsx)': '<rootDir>/node_modules/ts-jest'
-  },
-  testPathIgnorePatterns: ['/node_modules/', '<rootDir>/dist/'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+  ...baseConfig,
+  roots: ['<rootDir>'],
+  projects: packages.map(name => `<rootDir>/packages/${name}`),
+  moduleNameMapper: packages.reduce(
+    (acc, name) => ({
+      ...acc,
+      [`@mountain-ui/${name}(.*)$`]: `<rootDir>/packages/./${name}/src/$1`
+    }),
+    {}
+  )
 };
