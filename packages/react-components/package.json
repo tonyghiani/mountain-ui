@@ -90,5 +90,8 @@
     "react-dom": "^16.8.0 || ^17.0.0",
     "styled-components": ">=5",
     "styled-system": ">=5"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
