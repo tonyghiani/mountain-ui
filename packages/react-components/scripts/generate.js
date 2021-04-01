@@ -1,6 +1,7 @@
 const fs = require('fs');
 const fse = require('fs-extra');
 const inquirer = require('inquirer');
+const printHeader = require('../../../scripts/printHeader');
 
 const BASE_DIR = process.cwd();
 let COMPONENT_DIR;
@@ -21,7 +22,7 @@ process.stdin.on('keypress', (_, { name }) => name === 'escape' && process.exit(
 
   COMPONENT_DIR = `${BASE_DIR}/src/components/${componentTypeFolder}/${componentName}`;
 
-  console.log(`┏━━━ 🏗 Creating ${componentName} component ━━━━━━━━━━━━━━━━━━━┛`);
+  printHeader(`🏗 Creating ${componentName} component`);
   await Promise.all([
     createIndex(componentName),
     createComponent(componentName),
@@ -134,7 +135,7 @@ export default ${name};
 }
 
 function createStory(name, type) {
-  const COMPONENT_STORY = `${COMPONENT_DIR}/${name}.stories.js`;
+  const COMPONENT_STORY = `${COMPONENT_DIR}/${name}.stories.tsx`;
   const group = pluralize(capitalize(type));
   return writeFile(
     COMPONENT_STORY,
@@ -158,7 +159,7 @@ Basic.parameters = {
 }
 
 function createTest(name) {
-  const COMPONENT_TEST = `${COMPONENT_DIR}/${name}.test.js`;
+  const COMPONENT_TEST = `${COMPONENT_DIR}/${name}.test.tsx`;
   return writeFile(
     COMPONENT_TEST,
     `

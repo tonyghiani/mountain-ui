@@ -21,6 +21,7 @@
     "commit": "git cz",
     "lint": "lerna run lint --concurrency 2 --stream",
     "lint:package": "lerna run lint:package --concurrency 2 --stream",
+    "release": "lerna run release --concurrency --stream",
     "test": "lerna run test --concurrency 2 --stream"
   },
   "config": {
