@@ -1,7 +1,6 @@
 {
   "name": "@mountain-ui/react-components",
   "version": "1.0.0-alpha.1",
-  "private": false,
   "description": "React components library based on mountain ui",
   "keywords": [
     "mountain-ui",
@@ -13,6 +12,7 @@
     "styled-components",
     "styled-system"
   ],
+  "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/react-components#readme",
   "repository": "https://github.com/tonyghiani/mountain-ui",
   "license": "MIT",
   "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
