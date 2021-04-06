@@ -82,7 +82,6 @@ web_modules/
 
 # Optional eslint cache
 .eslintcache
-.husky
 
 # Microbundle cache
 .rpt2_cache/

@@ -1,0 +1,2 @@
+node scripts/printHeader.js "📌 Verify Commit Conventions"
+yarn commitlint --edit $1
