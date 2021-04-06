@@ -1,7 +1,7 @@
 <h1 align="center">Mountain UI 🏔 </h1>
 <p>
-  <a href="https://www.npmjs.com/package/mountain-ui" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/npm/v/mountain-ui?style=for-the-badge" />
+  <a href="https://www.npmjs.com/package/@mountain-ui/react-components" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/npm/v/@mountain-ui/react-components?style=for-the-badge" />
   </a>
   <img src="https://img.shields.io/badge/node-%3E%3D12.6.0-blue.svg?style=for-the-badge" />
   <img src="https://img.shields.io/badge/yarn-%3E%3D1.22.0-blue.svg?style=for-the-badge" />
