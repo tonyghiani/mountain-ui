@@ -17,6 +17,7 @@ module.exports = api => {
           useESModules: !cjs
         }
       ]
-    ].filter(Boolean)
+    ].filter(Boolean),
+    ignore: ['**/*.test.js', '**/*.test.ts', '**/*.test.tsx']
   };
 };

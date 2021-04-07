@@ -16,6 +16,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "stripInternal": true,
+    "suppressImplicitAnyIndexErrors": true,
     "target": "ES2018",
     "types": ["jest", "node", "@testing-library/jest-dom"]
   },
