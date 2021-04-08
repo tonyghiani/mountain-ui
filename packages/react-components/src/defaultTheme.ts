@@ -35,18 +35,19 @@ export type Space = string;
  * Theme Interfaces
  */
 export interface DefaultTheme {
-  borders: BorderWidth[];
-  breakpoints: ThemeScale<string, BreakpointAlias>;
-  colors: any;
-  fonts: Fonts;
-  fontScale: FontScale;
-  fontSizes: ThemeScale<string, FontSizeAlias>;
-  fontWeights: ThemeScale<number, FontWeightAlias>;
-  lineHeights: ThemeScale<string, LineHeightAlias>;
-  mediaQueries: MediaQueries;
-  radii: BorderRadius[];
-  shadows: BoxShadow[];
-  space: Space[];
+  borders?: BorderWidth[];
+  breakpoints?: ThemeScale<string, BreakpointAlias>;
+  colors?: any;
+  fonts?: Fonts;
+  fontScale?: FontScale;
+  fontSizes?: ThemeScale<string, FontSizeAlias>;
+  fontWeights?: ThemeScale<number, FontWeightAlias>;
+  lineHeights?: ThemeScale<string, LineHeightAlias>;
+  mediaQueries?: MediaQueries;
+  radii?: BorderRadius[];
+  shadows?: BoxShadow[];
+  space?: Space[];
+  [key: string]: any;
 }
 export interface Fonts {
   normal: Font;
