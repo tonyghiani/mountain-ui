@@ -1,6 +1,8 @@
 import isBareObject from '../isBareObject';
 
-type BareObject = Record<string, unknown>;
+interface BareObject {
+  [key: string]: BareObject;
+}
 
 function deepMergeObjects(target: BareObject | unknown, source: BareObject | unknown): BareObject {
   if (![target, source].every(isBareObject))
