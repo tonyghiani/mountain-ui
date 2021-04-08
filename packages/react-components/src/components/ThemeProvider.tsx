@@ -1,5 +1,5 @@
 import React from 'react';
-import merge from 'deepmerge'
+import { deepMerge } from '@mountain-ui/utils';
 import { ThemeProvider as StyledProvider } from 'styled-components';
 
 import defaultTheme, { DefaultTheme } from '../defaultTheme';
@@ -8,21 +8,16 @@ import { GlobalStyles } from './GlobalStyle';
 
 interface ProviderProps {
   /* Provider children */
-  children: React.ReactNode
+  children: React.ReactNode;
   /* Theme to inject in the provider */
-  theme: DefaultTheme
+  theme?: DefaultTheme;
 }
-
-type List = Array<string | number>
 
 /**
  * A `ThemeProvider` component which merges the default theme with custom theme props.
  */
 export function ThemeProvider({ theme = defaultTheme, children, ...props }: ProviderProps) {
-  const customTheme = React.useMemo(
-    () => merge(defaultTheme, theme, { arrayMerge: (_: List, sourceArray: List) => sourceArray }),
-    [theme]
-  );
+  const customTheme = React.useMemo(() => deepMerge(defaultTheme, theme), [theme]);
 
   return (
     <StyledProvider theme={customTheme} {...props}>
@@ -30,6 +25,6 @@ export function ThemeProvider({ theme = defaultTheme, children, ...props }: Prov
       {children}
     </StyledProvider>
   );
-};
+}
 
-ThemeProvider.displayName = 'ThemeProvider'
+ThemeProvider.displayName = 'ThemeProvider';
