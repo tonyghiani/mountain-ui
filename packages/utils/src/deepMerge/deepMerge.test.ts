@@ -1,9 +1,9 @@
-import deepMerge from './deepMerge';
+import deepMerge, { BareObject } from './deepMerge';
 
 describe('deepMerge', () => {
-  let obj1: Record<string, unknown>;
-  let obj2: Record<string, unknown>;
-  let obj3: Record<string, unknown>;
+  let obj1: BareObject;
+  let obj2: BareObject;
+  let obj3: BareObject;
 
   beforeEach(() => {
     obj1 = { a: 1, b: 2 };

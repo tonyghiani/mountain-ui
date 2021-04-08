@@ -1,7 +1,7 @@
 import isBareObject from '../isBareObject';
 
-interface BareObject {
-  [key: string]: BareObject;
+export interface BareObject {
+  [key: string]: unknown | BareObject;
 }
 
 function deepMergeObjects(target: BareObject | unknown, source: BareObject | unknown): BareObject {
