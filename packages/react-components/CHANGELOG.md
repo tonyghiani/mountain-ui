@@ -11,8 +11,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 # 1.0.0-alpha.1 (2021-04-01)
 
-# 1.0.0-alpha.1 (2021-04-01)
-
 ### Bug Fixes
 
 - **atoms:** 🐛 pass missing types to grid ([849f09b](https://github.com/tonyghiani/mountain-ui/commit/849f09beeba35ab87b18450c30c4ec5615fa5ebe))
