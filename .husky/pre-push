@@ -1,0 +1,2 @@
+node scripts/printHeader.js "🧪 Verify Test Integrity"
+yarn test

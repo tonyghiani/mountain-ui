@@ -1,0 +1,2 @@
+node scripts/printHeader.js "🔬 Validate Code Style Consistency"
+yarn lint-staged
