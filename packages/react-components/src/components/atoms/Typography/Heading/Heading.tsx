@@ -1,15 +1,18 @@
-import styled from "styled-components"
-import { variant } from "styled-system"
+import styled from 'styled-components';
+import { variant } from 'styled-system';
 
-import BaseTypography, { BaseTypographyProps } from "../BaseTypography"
+import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
 
 export type HeadingProps = BaseTypographyProps & {
   /* Heading variant */
-  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
-}
+  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+};
 
-const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({ as: p.as || p.variant }))<HeadingProps>(
-  variant({
+const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({
+  as: p.as || p.variant
+}))<HeadingProps>`
+  letter-spacing: 0.5px;
+  ${variant({
     scale: 'variants.typography.heading',
     variants: {
       h1: {
@@ -43,13 +46,13 @@ const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({ as: p.as || p
         fontWeight: 'bold'
       }
     }
-  })
-)
+  })}
+`;
 
-Heading.displayName = 'Heading'
+Heading.displayName = 'Heading';
 Heading.defaultProps = {
   color: 'text.primary',
   variant: 'h1'
-}
+};
 
-export default Heading
+export default Heading;
