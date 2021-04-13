@@ -33,10 +33,10 @@ jobs:
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
-      - name: Verify tests
-        run: yarn test
       - name: Build
         run: yarn build
+      - name: Verify tests
+        run: yarn test
       - name: Publish
         run: yarn release
         env:
