@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.1.0...@mountain-ui/react-components@0.1.1) (2021-04-14)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 pass letter-spacing ([834ef9c](https://github.com/tonyghiani/mountain-ui/commit/834ef9c80240113392add2c8fbf441fd4e565584))
+
+
+
+
+
 # 0.1.0 (2021-04-12)
 
 ### Bug Fixes
