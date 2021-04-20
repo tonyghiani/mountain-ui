@@ -1,4 +1,8 @@
 {
   "files": [],
-  "references": [{ "path": "./packages/react-components" }, { "path": "./packages/utils" }]
+  "references": [
+    { "path": "./packages/react-components" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/icons" }
+  ]
 }
