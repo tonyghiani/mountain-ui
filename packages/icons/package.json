@@ -1,0 +1,68 @@
+{
+  "name": "@mountain-ui/icons",
+  "version": "0.0.0",
+  "description": "Icon components set for Mountain UI",
+  "keywords": [
+    "react",
+    "react-components",
+    "icons",
+    "svg",
+    "mountain-ui",
+    "assets"
+  ],
+  "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/icons#readme",
+  "bugs": {
+    "url": "https://github.com/mountain-ui/mountain-ui/issues"
+  },
+  "repository": "https://github.com/tonyghiani/mountain-ui",
+  "license": "MIT",
+  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean:build && yarn convert && yarn build:cjs && yarn build:esm",
+    "build-storybook": "build-storybook",
+    "build:cjs": "BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/cjs",
+    "build:esm": "BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/esm",
+    "clean:build": "rimraf dist *.tsbuildinfo",
+    "commit": "git cz",
+    "convert": "rimraf src/icons && svgr --ext 'tsx' --ignore-existing --out-dir src/icons --config-file ./svgr.config.js ./assets",
+    "lint": "eslint",
+    "lint:package": "sort-package-json",
+    "storybook": "start-storybook -p 6006",
+    "test": "NODE_ENV=testing jest"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@mountain-ui/react-components": "^0.1.1",
+    "@mountain-ui/utils": "^0.1.1",
+    "@storybook/addon-a11y": "^6.1.17",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-jest": "^6.1.17",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/react": "^6.1.15",
+    "@styled-system/css": "^5.1.5",
+    "@svgr/cli": "^5.5.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "eslint-plugin-react": "^7.22.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.2.3"
+  }
+}
