@@ -1,3 +1,4 @@
+import React from 'react';
 import { SystemCssProperties } from '@styled-system/css';
 import styled from 'styled-components';
 import {
@@ -34,11 +35,12 @@ export type BaseElementProps = BackgroundProps &
   SystemCssProperties &
   SpaceProps & {
     /* HTML tag or component to use for finally render the */
-    as?: string;
+    as?: React.ElementType;
   };
 
 const custom = system({
-  cursor: true
+  cursor: true,
+  placeItems: true
 });
 
 export const styleProps = compose(
