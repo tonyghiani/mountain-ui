@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.0...@mountain-ui/react-components@0.2.1) (2021-04-23)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 add icon link variant ([a7e893f](https://github.com/tonyghiani/mountain-ui/commit/a7e893f4adeb0fb81fe29208c64ecfb8d525dfc9))
+
+
+
+
+
 # [0.2.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.1.1...@mountain-ui/react-components@0.2.0) (2021-04-23)
 
 ### Bug Fixes
