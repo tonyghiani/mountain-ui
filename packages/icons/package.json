@@ -36,7 +36,7 @@
     "lint": "eslint",
     "lint:package": "sort-package-json",
     "storybook": "start-storybook -p 6006",
-    "test": "NODE_ENV=testing jest"
+    "test": "NODE_ENV=testing jest --passWithNoTests"
   },
   "config": {
     "commitizen": {
