@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-components",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "React components library based on mountain ui",
   "keywords": [
     "mountain-ui",
@@ -48,7 +48,7 @@
     }
   },
   "dependencies": {
-    "@mountain-ui/utils": "^0.1.1"
+    "@mountain-ui/utils": "^0.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
