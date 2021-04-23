@@ -69,5 +69,8 @@
   },
   "peerDependencies": {
     "@mountain-ui/react-components": ">=0.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
