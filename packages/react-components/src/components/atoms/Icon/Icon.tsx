@@ -8,7 +8,7 @@ export type IconRef = HTMLButtonElement | HTMLSpanElement | null;
 
 export interface IconProps extends BaseElementProps {
   /* Variant version of the icon */
-  variant?: 'icon' | 'button';
+  variant?: 'icon' | 'button' | 'link';
   /* Variant version of the icon */
   onClick?: React.MouseEvent<IconRef>;
   /* Transition on style changes */
@@ -44,13 +44,14 @@ const StyledIcon = styled.span<IconProps>`
 
 const VARIANT_TAGS = {
   button: 'button',
-  icon: 'span'
+  icon: 'span',
+  link: 'a'
 };
 
 /**
- * TODO: add component description headline
+ * Icon component wrapper for svg icons
  */
-export const Icon = React.forwardRef(function Icon(
+const Icon = React.forwardRef(function Icon(
   { children, variant, ...props }: IconProps,
   ref: React.Ref<IconRef>
 ) {
