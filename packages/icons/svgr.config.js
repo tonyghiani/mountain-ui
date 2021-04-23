@@ -1,14 +1,18 @@
-const { indexTemplate } = require('./lib/conversion-tools.js');
+const { indexTemplate, template } = require('./lib/conversion-tools.js');
 
 module.exports = {
   dimensions: true,
+  ext: 'tsx',
   icon: true,
+  expandProps: false,
   memo: true,
-  ref: true,
   prettier: true,
+  ref: true,
   typescript: true,
   svgProps: {
-    preserveAspectRatio: 'xMidYMid meet'
+    preserveAspectRatio: 'xMidYMid meet',
+    fill: 'currentColor'
   },
-  indexTemplate
+  indexTemplate,
+  template
 };
