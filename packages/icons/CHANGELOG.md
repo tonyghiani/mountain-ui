@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@0.1.0...@mountain-ui/icons@0.1.1) (2021-04-23)
+
+
+### Bug Fixes
+
+* **icons:** 🐛 match dep version ([8774e8f](https://github.com/tonyghiani/mountain-ui/commit/8774e8f696890795e3696023df929835f0d48568))
+
+
+
+
+
 # 0.1.0 (2021-04-23)
 
 

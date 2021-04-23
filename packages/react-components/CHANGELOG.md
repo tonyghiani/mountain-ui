@@ -15,6 +15,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * **react-components:** 🎸 add icon component ([cbdb1cc](https://github.com/tonyghiani/mountain-ui/commit/cbdb1ccc8ec73ec7043db59c025b1e20a7375aca))
 * **react-components:** 🎸 add useTheme hook ([d63a0f9](https://github.com/tonyghiani/mountain-ui/commit/d63a0f9d9697e3e5e2dc78bbfadee0c167908d00))
+* **react-components:** 🎸 bump dependencies ([4842feb](https://github.com/tonyghiani/mountain-ui/commit/4842febfa03c70edd38540b123b773fa51b234cb))
+* **react-components:** 🎸 force minor ([89ae2d0](https://github.com/tonyghiani/mountain-ui/commit/89ae2d093a982dafebf5cdfda460d2b3b7c2f1ba))
+* **react-components:** 🎸 force minor release ([c51b19b](https://github.com/tonyghiani/mountain-ui/commit/c51b19b7f736241c5844e5d7bd473d13cf112879))
+
+
+
+
+
+# [0.2.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.1.1...@mountain-ui/react-components@0.2.0) (2021-04-23)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 remove dependency cycle ([fbe1964](https://github.com/tonyghiani/mountain-ui/commit/fbe1964d15e964b12053ff41db749ee151da0699))
+
+
+### Features
+
+* **react-components:** 🎸 add icon component ([cbdb1cc](https://github.com/tonyghiani/mountain-ui/commit/cbdb1ccc8ec73ec7043db59c025b1e20a7375aca))
+* **react-components:** 🎸 add useTheme hook ([d63a0f9](https://github.com/tonyghiani/mountain-ui/commit/d63a0f9d9697e3e5e2dc78bbfadee0c167908d00))
 
 
 
