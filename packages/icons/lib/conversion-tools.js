@@ -76,7 +76,7 @@ function addImports(t, imports) {
   return [
     ...imports,
     makeImport(t, { name: 'Icon', path: '@mountain-ui/react-components' }),
-    makeImport(t, { name: 'IconPresetProps', path: '../icon.types' })
+    makeImport(t, { name: 'IconPresetProps', path: '../icons.types' })
   ];
 }
 

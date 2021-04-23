@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Icon } from '@mountain-ui/react-components';
 
-import { IconPresetProps } from '../icon.types';
+import { IconPresetProps } from '../icons.types';
 
 function SvgThumbsDown(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
   return (
