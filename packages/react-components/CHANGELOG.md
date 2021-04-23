@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.1...@mountain-ui/react-components@0.2.2) (2021-04-23)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 remove box width ([2d1655a](https://github.com/tonyghiani/mountain-ui/commit/2d1655a0d906af1a61d521b9aad9a080247380e8))
+
+
+
+
+
 ## [0.2.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.0...@mountain-ui/react-components@0.2.1) (2021-04-23)
 
 
