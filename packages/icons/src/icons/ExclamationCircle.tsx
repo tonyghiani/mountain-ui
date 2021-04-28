@@ -23,5 +23,4 @@ function SvgExclamationCircle(props: IconPresetProps, svgRef?: React.Ref<SVGSVGE
 }
 
 const ForwardRef = React.forwardRef(SvgExclamationCircle);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

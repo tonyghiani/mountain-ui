@@ -22,5 +22,4 @@ function SvgArrowsHAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>
 }
 
 const ForwardRef = React.forwardRef(SvgArrowsHAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

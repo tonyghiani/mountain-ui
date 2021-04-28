@@ -23,5 +23,4 @@ function SvgSanitizerAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElemen
 }
 
 const ForwardRef = React.forwardRef(SvgSanitizerAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

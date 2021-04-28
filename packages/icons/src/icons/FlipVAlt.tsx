@@ -22,5 +22,4 @@ function SvgFlipVAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) 
 }
 
 const ForwardRef = React.forwardRef(SvgFlipVAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -23,5 +23,4 @@ function SvgGlassMartiniAltSlash(props: IconPresetProps, svgRef?: React.Ref<SVGS
 }
 
 const ForwardRef = React.forwardRef(SvgGlassMartiniAltSlash);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

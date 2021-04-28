@@ -22,5 +22,4 @@ function SvgVerticalAlignBottom(props: IconPresetProps, svgRef?: React.Ref<SVGSV
 }
 
 const ForwardRef = React.forwardRef(SvgVerticalAlignBottom);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

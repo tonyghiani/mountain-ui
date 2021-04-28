@@ -23,5 +23,4 @@ function SvgLiraSign(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) 
 }
 
 const ForwardRef = React.forwardRef(SvgLiraSign);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

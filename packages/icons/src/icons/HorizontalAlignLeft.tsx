@@ -22,5 +22,4 @@ function SvgHorizontalAlignLeft(props: IconPresetProps, svgRef?: React.Ref<SVGSV
 }
 
 const ForwardRef = React.forwardRef(SvgHorizontalAlignLeft);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

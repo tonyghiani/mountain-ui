@@ -22,5 +22,4 @@ function SvgMapMarkerMinus(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElem
 }
 
 const ForwardRef = React.forwardRef(SvgMapMarkerMinus);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

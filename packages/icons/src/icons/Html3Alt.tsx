@@ -23,5 +23,4 @@ function SvgHtml3Alt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) 
 }
 
 const ForwardRef = React.forwardRef(SvgHtml3Alt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

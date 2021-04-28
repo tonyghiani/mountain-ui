@@ -22,5 +22,4 @@ function SvgFolderQuestion(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElem
 }
 
 const ForwardRef = React.forwardRef(SvgFolderQuestion);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

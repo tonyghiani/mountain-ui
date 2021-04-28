@@ -22,5 +22,4 @@ function SvgPentagon(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) 
 }
 
 const ForwardRef = React.forwardRef(SvgPentagon);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

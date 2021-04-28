@@ -23,5 +23,4 @@ function SvgRightToLeftTextDirection(props: IconPresetProps, svgRef?: React.Ref<
 }
 
 const ForwardRef = React.forwardRef(SvgRightToLeftTextDirection);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

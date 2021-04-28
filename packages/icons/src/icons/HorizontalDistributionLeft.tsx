@@ -22,5 +22,4 @@ function SvgHorizontalDistributionLeft(props: IconPresetProps, svgRef?: React.Re
 }
 
 const ForwardRef = React.forwardRef(SvgHorizontalDistributionLeft);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

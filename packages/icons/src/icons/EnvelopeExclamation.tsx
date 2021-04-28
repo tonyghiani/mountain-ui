@@ -23,5 +23,4 @@ function SvgEnvelopeExclamation(props: IconPresetProps, svgRef?: React.Ref<SVGSV
 }
 
 const ForwardRef = React.forwardRef(SvgEnvelopeExclamation);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

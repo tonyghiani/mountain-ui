@@ -22,5 +22,4 @@ function SvgCommentAltExclamation(props: IconPresetProps, svgRef?: React.Ref<SVG
 }
 
 const ForwardRef = React.forwardRef(SvgCommentAltExclamation);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

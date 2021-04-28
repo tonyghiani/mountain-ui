@@ -22,5 +22,4 @@ function SvgArrowResizeDiagonal(props: IconPresetProps, svgRef?: React.Ref<SVGSV
 }
 
 const ForwardRef = React.forwardRef(SvgArrowResizeDiagonal);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -5,7 +5,6 @@ module.exports = {
   ext: 'tsx',
   icon: true,
   expandProps: false,
-  memo: true,
   prettier: true,
   ref: true,
   typescript: true,

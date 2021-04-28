@@ -23,5 +23,4 @@ function SvgClosedCaptioning(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEl
 }
 
 const ForwardRef = React.forwardRef(SvgClosedCaptioning);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

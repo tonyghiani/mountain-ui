@@ -23,5 +23,4 @@ function SvgAssistiveListeningSystems(props: IconPresetProps, svgRef?: React.Ref
 }
 
 const ForwardRef = React.forwardRef(SvgAssistiveListeningSystems);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

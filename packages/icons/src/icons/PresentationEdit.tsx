@@ -22,5 +22,4 @@ function SvgPresentationEdit(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEl
 }
 
 const ForwardRef = React.forwardRef(SvgPresentationEdit);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;
