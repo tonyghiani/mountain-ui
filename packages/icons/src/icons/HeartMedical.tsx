@@ -23,5 +23,4 @@ function SvgHeartMedical(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElemen
 }
 
 const ForwardRef = React.forwardRef(SvgHeartMedical);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -22,5 +22,4 @@ function SvgCompressLines(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEleme
 }
 
 const ForwardRef = React.forwardRef(SvgCompressLines);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

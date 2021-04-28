@@ -22,5 +22,4 @@ function SvgCommentAltSearch(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEl
 }
 
 const ForwardRef = React.forwardRef(SvgCommentAltSearch);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

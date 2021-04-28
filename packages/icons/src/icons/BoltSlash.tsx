@@ -22,5 +22,4 @@ function SvgBoltSlash(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>)
 }
 
 const ForwardRef = React.forwardRef(SvgBoltSlash);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

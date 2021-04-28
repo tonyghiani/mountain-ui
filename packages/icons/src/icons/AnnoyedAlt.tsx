@@ -23,5 +23,4 @@ function SvgAnnoyedAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>
 }
 
 const ForwardRef = React.forwardRef(SvgAnnoyedAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

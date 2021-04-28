@@ -22,5 +22,4 @@ function SvgArrow(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
 }
 
 const ForwardRef = React.forwardRef(SvgArrow);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

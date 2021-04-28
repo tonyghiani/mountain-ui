@@ -23,5 +23,4 @@ function SvgGrinTongueWinkAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGE
 }
 
 const ForwardRef = React.forwardRef(SvgGrinTongueWinkAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

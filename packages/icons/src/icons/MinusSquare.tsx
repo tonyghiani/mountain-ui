@@ -22,5 +22,4 @@ function SvgMinusSquare(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement
 }
 
 const ForwardRef = React.forwardRef(SvgMinusSquare);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -23,5 +23,4 @@ function SvgInstagram(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>)
 }
 
 const ForwardRef = React.forwardRef(SvgInstagram);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

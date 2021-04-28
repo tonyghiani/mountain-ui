@@ -23,5 +23,4 @@ function SvgEnvelopeBlock(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEleme
 }
 
 const ForwardRef = React.forwardRef(SvgEnvelopeBlock);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

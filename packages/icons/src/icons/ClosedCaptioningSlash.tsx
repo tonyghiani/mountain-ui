@@ -23,5 +23,4 @@ function SvgClosedCaptioningSlash(props: IconPresetProps, svgRef?: React.Ref<SVG
 }
 
 const ForwardRef = React.forwardRef(SvgClosedCaptioningSlash);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

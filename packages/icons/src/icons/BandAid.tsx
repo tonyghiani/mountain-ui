@@ -23,5 +23,4 @@ function SvgBandAid(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
 }
 
 const ForwardRef = React.forwardRef(SvgBandAid);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

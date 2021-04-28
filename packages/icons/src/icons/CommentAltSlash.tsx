@@ -23,5 +23,4 @@ function SvgCommentAltSlash(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEle
 }
 
 const ForwardRef = React.forwardRef(SvgCommentAltSlash);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

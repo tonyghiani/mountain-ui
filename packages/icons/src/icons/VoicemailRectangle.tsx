@@ -22,5 +22,4 @@ function SvgVoicemailRectangle(props: IconPresetProps, svgRef?: React.Ref<SVGSVG
 }
 
 const ForwardRef = React.forwardRef(SvgVoicemailRectangle);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

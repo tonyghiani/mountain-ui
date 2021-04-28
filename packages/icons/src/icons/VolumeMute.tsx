@@ -22,5 +22,4 @@ function SvgVolumeMute(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>
 }
 
 const ForwardRef = React.forwardRef(SvgVolumeMute);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

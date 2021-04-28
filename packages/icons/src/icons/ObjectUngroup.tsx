@@ -22,5 +22,4 @@ function SvgObjectUngroup(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEleme
 }
 
 const ForwardRef = React.forwardRef(SvgObjectUngroup);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

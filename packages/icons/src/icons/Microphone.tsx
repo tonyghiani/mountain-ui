@@ -22,5 +22,4 @@ function SvgMicrophone(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>
 }
 
 const ForwardRef = React.forwardRef(SvgMicrophone);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

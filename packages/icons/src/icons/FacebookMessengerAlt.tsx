@@ -23,5 +23,4 @@ function SvgFacebookMessengerAlt(props: IconPresetProps, svgRef?: React.Ref<SVGS
 }
 
 const ForwardRef = React.forwardRef(SvgFacebookMessengerAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

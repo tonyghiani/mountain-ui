@@ -23,5 +23,4 @@ function SvgCopyright(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>)
 }
 
 const ForwardRef = React.forwardRef(SvgCopyright);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

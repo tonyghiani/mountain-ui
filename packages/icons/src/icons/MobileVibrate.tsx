@@ -23,5 +23,4 @@ function SvgMobileVibrate(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEleme
 }
 
 const ForwardRef = React.forwardRef(SvgMobileVibrate);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

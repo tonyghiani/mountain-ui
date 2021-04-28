@@ -22,5 +22,4 @@ function SvgSyncExclamation(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEle
 }
 
 const ForwardRef = React.forwardRef(SvgSyncExclamation);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

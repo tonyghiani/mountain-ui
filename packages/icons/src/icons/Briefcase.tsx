@@ -23,5 +23,4 @@ function SvgBriefcase(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>)
 }
 
 const ForwardRef = React.forwardRef(SvgBriefcase);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

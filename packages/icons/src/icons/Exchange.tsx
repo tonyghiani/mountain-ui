@@ -22,5 +22,4 @@ function SvgExchange(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) 
 }
 
 const ForwardRef = React.forwardRef(SvgExchange);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

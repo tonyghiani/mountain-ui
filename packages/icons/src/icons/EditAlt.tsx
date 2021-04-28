@@ -22,5 +22,4 @@ function SvgEditAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
 }
 
 const ForwardRef = React.forwardRef(SvgEditAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

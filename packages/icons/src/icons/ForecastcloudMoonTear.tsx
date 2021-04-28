@@ -22,5 +22,4 @@ function SvgForecastcloudMoonTear(props: IconPresetProps, svgRef?: React.Ref<SVG
 }
 
 const ForwardRef = React.forwardRef(SvgForecastcloudMoonTear);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

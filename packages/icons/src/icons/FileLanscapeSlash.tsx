@@ -23,5 +23,4 @@ function SvgFileLanscapeSlash(props: IconPresetProps, svgRef?: React.Ref<SVGSVGE
 }
 
 const ForwardRef = React.forwardRef(SvgFileLanscapeSlash);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

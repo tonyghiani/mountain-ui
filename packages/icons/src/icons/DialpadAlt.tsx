@@ -22,5 +22,4 @@ function SvgDialpadAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>
 }
 
 const ForwardRef = React.forwardRef(SvgDialpadAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

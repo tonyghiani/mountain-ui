@@ -22,5 +22,4 @@ function SvgBan(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
 }
 
 const ForwardRef = React.forwardRef(SvgBan);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

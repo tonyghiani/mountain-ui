@@ -22,5 +22,4 @@ function SvgLocationArrowAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEl
 }
 
 const ForwardRef = React.forwardRef(SvgLocationArrowAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

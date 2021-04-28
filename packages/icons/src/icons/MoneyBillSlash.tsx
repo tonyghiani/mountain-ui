@@ -23,5 +23,4 @@ function SvgMoneyBillSlash(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElem
 }
 
 const ForwardRef = React.forwardRef(SvgMoneyBillSlash);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

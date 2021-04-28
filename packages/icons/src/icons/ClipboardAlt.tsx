@@ -23,5 +23,4 @@ function SvgClipboardAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElemen
 }
 
 const ForwardRef = React.forwardRef(SvgClipboardAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

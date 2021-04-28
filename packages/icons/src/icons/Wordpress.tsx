@@ -22,5 +22,4 @@ function SvgWordpress(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>)
 }
 
 const ForwardRef = React.forwardRef(SvgWordpress);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

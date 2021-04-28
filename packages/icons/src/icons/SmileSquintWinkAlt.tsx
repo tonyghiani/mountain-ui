@@ -23,5 +23,4 @@ function SvgSmileSquintWinkAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSVG
 }
 
 const ForwardRef = React.forwardRef(SvgSmileSquintWinkAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

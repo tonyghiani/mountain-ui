@@ -22,5 +22,4 @@ function SvgTemperatureQuarter(props: IconPresetProps, svgRef?: React.Ref<SVGSVG
 }
 
 const ForwardRef = React.forwardRef(SvgTemperatureQuarter);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

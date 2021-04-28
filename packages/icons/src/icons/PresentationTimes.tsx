@@ -22,5 +22,4 @@ function SvgPresentationTimes(props: IconPresetProps, svgRef?: React.Ref<SVGSVGE
 }
 
 const ForwardRef = React.forwardRef(SvgPresentationTimes);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

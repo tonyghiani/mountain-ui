@@ -23,5 +23,4 @@ function Svg13Plus(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
 }
 
 const ForwardRef = React.forwardRef(Svg13Plus);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

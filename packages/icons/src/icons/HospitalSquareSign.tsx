@@ -23,5 +23,4 @@ function SvgHospitalSquareSign(props: IconPresetProps, svgRef?: React.Ref<SVGSVG
 }
 
 const ForwardRef = React.forwardRef(SvgHospitalSquareSign);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

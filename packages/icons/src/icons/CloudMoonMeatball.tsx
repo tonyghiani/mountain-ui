@@ -22,5 +22,4 @@ function SvgCloudMoonMeatball(props: IconPresetProps, svgRef?: React.Ref<SVGSVGE
 }
 
 const ForwardRef = React.forwardRef(SvgCloudMoonMeatball);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

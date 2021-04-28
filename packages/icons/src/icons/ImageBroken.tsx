@@ -22,5 +22,4 @@ function SvgImageBroken(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement
 }
 
 const ForwardRef = React.forwardRef(SvgImageBroken);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

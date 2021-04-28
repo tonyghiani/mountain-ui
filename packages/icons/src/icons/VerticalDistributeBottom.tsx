@@ -22,5 +22,4 @@ function SvgVerticalDistributeBottom(props: IconPresetProps, svgRef?: React.Ref<
 }
 
 const ForwardRef = React.forwardRef(SvgVerticalDistributeBottom);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -22,5 +22,4 @@ function SvgServerConnection(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEl
 }
 
 const ForwardRef = React.forwardRef(SvgServerConnection);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

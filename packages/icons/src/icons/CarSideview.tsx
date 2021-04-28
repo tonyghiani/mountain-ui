@@ -22,5 +22,4 @@ function SvgCarSideview(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement
 }
 
 const ForwardRef = React.forwardRef(SvgCarSideview);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -22,5 +22,4 @@ function SvgAdjustCircle(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElemen
 }
 
 const ForwardRef = React.forwardRef(SvgAdjustCircle);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

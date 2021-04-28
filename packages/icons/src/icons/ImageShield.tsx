@@ -22,5 +22,4 @@ function SvgImageShield(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement
 }
 
 const ForwardRef = React.forwardRef(SvgImageShield);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

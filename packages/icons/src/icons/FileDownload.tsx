@@ -22,5 +22,4 @@ function SvgFileDownload(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElemen
 }
 
 const ForwardRef = React.forwardRef(SvgFileDownload);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -22,5 +22,4 @@ function SvgCommentAltCheck(props: IconPresetProps, svgRef?: React.Ref<SVGSVGEle
 }
 
 const ForwardRef = React.forwardRef(SvgCommentAltCheck);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

@@ -23,5 +23,4 @@ function SvgLaptopCloud(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement
 }
 
 const ForwardRef = React.forwardRef(SvgLaptopCloud);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

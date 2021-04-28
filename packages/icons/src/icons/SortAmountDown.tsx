@@ -23,5 +23,4 @@ function SvgSortAmountDown(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElem
 }
 
 const ForwardRef = React.forwardRef(SvgSortAmountDown);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

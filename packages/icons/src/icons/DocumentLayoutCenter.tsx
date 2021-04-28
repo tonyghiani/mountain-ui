@@ -22,5 +22,4 @@ function SvgDocumentLayoutCenter(props: IconPresetProps, svgRef?: React.Ref<SVGS
 }
 
 const ForwardRef = React.forwardRef(SvgDocumentLayoutCenter);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

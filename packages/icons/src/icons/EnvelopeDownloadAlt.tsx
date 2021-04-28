@@ -23,5 +23,4 @@ function SvgEnvelopeDownloadAlt(props: IconPresetProps, svgRef?: React.Ref<SVGSV
 }
 
 const ForwardRef = React.forwardRef(SvgEnvelopeDownloadAlt);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;

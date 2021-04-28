@@ -22,5 +22,4 @@ function SvgImageResizeLandscape(props: IconPresetProps, svgRef?: React.Ref<SVGS
 }
 
 const ForwardRef = React.forwardRef(SvgImageResizeLandscape);
-const MemoForwardRef = React.memo(ForwardRef);
-export default MemoForwardRef;
+export default ForwardRef;
