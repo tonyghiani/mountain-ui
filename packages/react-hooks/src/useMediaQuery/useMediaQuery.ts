@@ -10,7 +10,6 @@ function useMediaQuery(...queries: string[]): boolean {
     typeof window !== 'undefined' && typeof window.matchMedia !== 'undefined';
 
   const [match, setMatch] = useState(false);
-  console.log(queries);
 
   useEffect(() => {
     let active = true;
