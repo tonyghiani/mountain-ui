@@ -1,0 +1,75 @@
+{
+  "name": "@mountain-ui/react-hooks",
+  "version": "0.0.0",
+  "description": "Mountain UI hooks library",
+  "keywords": [
+    "react",
+    "react-hooks",
+    "hooks",
+    "mountain-ui"
+  ],
+  "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/react-hooks#readme",
+  "bugs": {
+    "url": "https://github.com/mountain-ui/mountain-ui/issues"
+  },
+  "repository": "https://github.com/tonyghiani/mountain-ui",
+  "license": "MIT",
+  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean:build && yarn build:cjs && yarn build:esm && yarn build:types",
+    "build-storybook": "build-storybook",
+    "build:cjs": "BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/cjs",
+    "build:esm": "BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/esm",
+    "build:types": "tsc --project ./tsconfig.types.json",
+    "clean:build": "rimraf dist *.tsbuildinfo",
+    "commit": "git cz",
+    "lint": "eslint",
+    "lint:package": "sort-package-json",
+    "storybook": "start-storybook -p 6006",
+    "test": "NODE_ENV=testing jest --passWithNoTests",
+    "test:ci": "NODE_ENV=ci jest --no-cache",
+    "test:coverage": "yarn test --coverage",
+    "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
+    "test:watch": "yarn test --watch"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@mountain-ui/react-components": "^0.2.2",
+    "@storybook/addon-a11y": "^6.1.17",
+    "@storybook/addon-actions": "^6.1.15",
+    "@storybook/addon-essentials": "^6.1.15",
+    "@storybook/addon-jest": "^6.1.17",
+    "@storybook/addon-links": "^6.1.15",
+    "@storybook/react": "^6.1.15",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/react-hooks": "^5.1.2",
+    "eslint-plugin-react": "^7.22.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typescript": "^4.2.3"
+  },
+  "peerDependencies": {
+    "@mountain-ui/react-components": ">=0.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
