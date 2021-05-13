@@ -15,6 +15,8 @@
 ## 📦 Packages
 
 - ### [React components](https://github.com/mountain-ui/mountain-ui/tree/master/packages/react-components)
+- ### [React hooks](https://github.com/mountain-ui/mountain-ui/tree/master/packages/react-hooks)
+- ### [React icons](https://github.com/mountain-ui/mountain-ui/tree/master/packages/icons)
 - ### [Utils](https://github.com/mountain-ui/mountain-ui/tree/master/packages/utils)
 
 ## Author
