@@ -12,7 +12,7 @@ export type ThemeScale<Type, Aliases extends string> = Array<Type> & Record<Alia
 export type BorderRadius = string;
 export type BorderWidth = string;
 export type BoxShadow = string;
-export type BreakpointAlias = 'mobile' | 'tablet' | 'desktop' | 'widescreen';
+export type BreakpointAlias = 'mobile' | 'tablet' | 'desktop';
 export type Font = string;
 export type FontScale = number;
 export type FontSizeAlias =
@@ -58,7 +58,6 @@ export interface MediaQueries {
   mobile: MediaQuery;
   tablet: MediaQuery;
   desktop: MediaQuery;
-  widescreen: MediaQuery;
 }
 
 /**************************/
@@ -66,24 +65,21 @@ export interface MediaQueries {
 /**
  * Breakpoints
  */
-
-theme.breakpoints = ['32em', '48em', '80em', '120em'] as ThemeScale<string, BreakpointAlias>;
-[
-  theme.breakpoints.mobile,
-  theme.breakpoints.tablet,
-  theme.breakpoints.desktop,
-  theme.breakpoints.widescreen
-] = theme.breakpoints;
+const breakpoints = [512, 768, 1280] as ThemeScale<number, BreakpointAlias>;
+[breakpoints.mobile, breakpoints.tablet, breakpoints.desktop] = breakpoints;
+theme.breakpoints = breakpoints.map(el => el + 'px') as ThemeScale<string, BreakpointAlias>;
+[theme.breakpoints.mobile, theme.breakpoints.tablet, theme.breakpoints.desktop] = theme.breakpoints;
 
 /**
  * Media queries
  */
 
 theme.mediaQueries = {
-  mobile: `@media screen and (min-width: ${theme.breakpoints.mobile})`,
-  tablet: `@media screen and (min-width: ${theme.breakpoints.tablet})`,
-  desktop: `@media screen and (min-width: ${theme.breakpoints.desktop})`,
-  widescreen: `@media screen and (min-width: ${theme.breakpoints.widescreen})`
+  mobile: `screen and (min-width: 0px) and (max-width: ${breakpoints.mobile - 1}px)`,
+  tablet: `screen and (min-width: ${breakpoints.mobile}px) and (max-width: ${
+    breakpoints.tablet - 1
+  }px)`,
+  desktop: `screen and (min-width: ${breakpoints.tablet}px)`
 };
 
 /**
