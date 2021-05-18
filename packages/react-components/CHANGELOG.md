@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.3...@mountain-ui/react-components@0.2.4) (2021-05-18)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 update theme breakpoints ([5723c8c](https://github.com/tonyghiani/mountain-ui/commit/5723c8c05d54e8a56209ed05404bda6654d5913a))
+
+
+
+
+
 ## [0.2.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.2...@mountain-ui/react-components@0.2.3) (2021-05-13)
 
 
