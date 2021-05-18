@@ -65,7 +65,7 @@ export interface MediaQueries {
 /**
  * Breakpoints
  */
-const breakpoints = [512, 768, 1280] as ThemeScale<number, BreakpointAlias>;
+const breakpoints = [512, 864, 1152] as ThemeScale<number, BreakpointAlias>;
 [breakpoints.mobile, breakpoints.tablet, breakpoints.desktop] = breakpoints;
 theme.breakpoints = breakpoints.map(el => el + 'px') as ThemeScale<string, BreakpointAlias>;
 [theme.breakpoints.mobile, theme.breakpoints.tablet, theme.breakpoints.desktop] = theme.breakpoints;
