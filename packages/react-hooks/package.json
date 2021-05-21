@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-hooks",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Mountain UI hooks library",
   "keywords": [
     "react",
@@ -51,7 +51,7 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@mountain-ui/react-components": "^0.2.4",
+    "@mountain-ui/react-components": "^0.3.0",
     "@storybook/addon-a11y": "^6.1.17",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",

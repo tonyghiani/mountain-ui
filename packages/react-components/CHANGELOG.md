@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.4...@mountain-ui/react-components@0.3.0) (2021-05-21)
+
+
+### Features
+
+* **react-components:** 🎸 add RangeInput component ([94c92d3](https://github.com/tonyghiani/mountain-ui/commit/94c92d31c707cd5e55b1e5a6442e0ebd04f6cb2a))
+
+
+
+
+
 ## [0.2.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.2.3...@mountain-ui/react-components@0.2.4) (2021-05-18)
 
 
