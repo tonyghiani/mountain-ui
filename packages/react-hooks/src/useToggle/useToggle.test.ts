@@ -22,7 +22,7 @@ describe('useToggle hook', () => {
   });
 
   it('should toggle the value when no value is passed to the updater function', () => {
-    const { result } = renderHook(() => useToggle());
+    const { result } = renderHook(() => useToggle(true));
     const [, toggle] = result.current;
 
     expect(result.current[0]).toBe(false);
@@ -67,11 +67,13 @@ describe('useToggle hook', () => {
     expect(result.current[0]).toBe(false);
 
     act(() => {
+      // @ts-ignore
       toggle('false');
     });
     expect(result.current[0]).toBe(true);
 
     act(() => {
+      // @ts-ignore
       toggle(213);
     });
     expect(result.current[0]).toBe(false);

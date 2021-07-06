@@ -27,8 +27,10 @@ export const Basic = () => {
             {value.toString().toUpperCase()}
           </Paragraph>
         </Box>
-        <Box onClick={toggle} p={3}>
-          <Button>Toggle</Button>
+        <Box p={3}>
+          <Button onClick={toggle} width={1}>
+            Toggle
+          </Button>
         </Box>
       </Box>
     </Container>
