@@ -35,15 +35,13 @@ export const Basic = () => {
               overflow='hidden'
             >
               <Box bg='primary.light' p={2}>
-                <Paragraph strong textAlign='center'>
+                <Paragraph fontSize={3} strong textAlign='center' color='text.light'>
                   {name}
                 </Paragraph>
               </Box>
-              <Box p={2}>
-                <Paragraph strong textAlign='center'>
-                  {medias[name].toString()}
-                </Paragraph>
-              </Box>
+              <Paragraph strong textAlign='center' p={2}>
+                {medias[name].toString()}
+              </Paragraph>
             </Box>
           </Box>
         ))}
