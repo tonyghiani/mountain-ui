@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.2.0...@mountain-ui/react-hooks@0.2.1) (2021-07-07)
+
+**Note:** Version bump only for package @mountain-ui/react-hooks
+
+
+
+
+
 # [0.2.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.1.3...@mountain-ui/react-hooks@0.2.0) (2021-07-07)
 
 
