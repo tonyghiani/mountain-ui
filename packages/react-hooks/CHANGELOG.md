@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.1.3...@mountain-ui/react-hooks@0.2.0) (2021-07-07)
+
+
+### Features
+
+* **react-hooks:** 🎸 add useBoolean hook ([404d3e3](https://github.com/tonyghiani/mountain-ui/commit/404d3e36b57a88ef1e4417bb8226f7b9c325f7c0))
+* **react-hooks:** 🎸 add useToggle hook ([68d4c31](https://github.com/tonyghiani/mountain-ui/commit/68d4c310f959487622cc6ba200d1ce68e24523ca))
+* **react-hooks:** 🎸 add useToggle implementation ([1722c12](https://github.com/tonyghiani/mountain-ui/commit/1722c12df186430a9c111a9824be6770c15e48c4))
+
+
+
+
+
 ## [0.1.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.1.2...@mountain-ui/react-hooks@0.1.3) (2021-05-21)
 
 **Note:** Version bump only for package @mountain-ui/react-hooks
