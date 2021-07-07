@@ -25,17 +25,17 @@ describe('useToggle hook', () => {
     const { result } = renderHook(() => useToggle(true));
     const [, toggle] = result.current;
 
-    expect(result.current[0]).toBe(false);
-
-    act(() => {
-      toggle();
-    });
     expect(result.current[0]).toBe(true);
 
     act(() => {
       toggle();
     });
     expect(result.current[0]).toBe(false);
+
+    act(() => {
+      toggle();
+    });
+    expect(result.current[0]).toBe(true);
   });
 
   it('should set the value to the passed argument if it is a boolean', () => {
