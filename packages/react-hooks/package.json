@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-hooks",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Mountain UI hooks library",
   "keywords": [
     "react",
@@ -45,7 +45,7 @@
     }
   },
   "dependencies": {
-    "@mountain-ui/utils": "^0.2.0"
+    "@mountain-ui/utils": "^0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
@@ -54,7 +54,7 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@mountain-ui/react-components": "^0.3.2",
+    "@mountain-ui/react-components": "^0.3.3",
     "@storybook/addon-a11y": "^6.1.17",
     "@storybook/addon-actions": "^6.1.15",
     "@storybook/addon-essentials": "^6.1.15",

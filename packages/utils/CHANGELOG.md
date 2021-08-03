@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/utils@0.2.0...@mountain-ui/utils@0.3.0) (2021-08-03)
+
+
+### Features
+
+* **utils:** 🎸 add hasWindow utility ([0306407](https://github.com/tonyghiani/mountain-ui/commit/030640761f1f0138ed80cc9a526397b02f36f878))
+
+
+
+
+
 # 0.2.0 (2021-04-23)
 
 
