@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.2.1...@mountain-ui/react-hooks@0.3.0) (2021-08-03)
+
+
+### Features
+
+* **react-hooks:** 🎸 add useDarkMode hook ([80041af](https://github.com/tonyghiani/mountain-ui/commit/80041aff5db4a3b7561b69f77817ee49e55d95ad))
+* **react-hooks:** 🎸 add useFontSize hook ([5ac9506](https://github.com/tonyghiani/mountain-ui/commit/5ac95067e6d5de8de118eda5b14d90a0d28d98cd))
+* **react-hooks:** 🎸 add useLocalStorage hook ([52755be](https://github.com/tonyghiani/mountain-ui/commit/52755be6c10cab948e9d20bd0b69431defe91368))
+* **react-hooks:** 🎸 add usePrefersDarkMode hook ([c19a220](https://github.com/tonyghiani/mountain-ui/commit/c19a220461ac2d469477bf9ae51b58c291afb3f9))
+
+
+
+
+
 ## [0.2.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.2.0...@mountain-ui/react-hooks@0.2.1) (2021-07-07)
 
 **Note:** Version bump only for package @mountain-ui/react-hooks
