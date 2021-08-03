@@ -4,7 +4,7 @@ import { act, renderHook } from '@testing-library/react-hooks';
 
 import useLocalStorage from './useLocalStorage';
 
-describe.only('useLocalStorage hook', () => {
+describe('useLocalStorage hook', () => {
   afterEach(() => {
     localStorage.clear();
     jest.clearAllMocks();
