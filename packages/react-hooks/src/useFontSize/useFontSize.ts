@@ -27,7 +27,7 @@ export function useFontSize({
   const [storedFontSize, storeFontSize] = useLocalStorage(storageKey, initialSize);
 
   function init(initialValue: string) {
-    if (hasWindow()) return initialValue;
+    if (!hasWindow()) return initialValue;
     if (storedFontSize) applyPropToDocument(variableName, storedFontSize);
     return storedFontSize || getDocumentProp(variableName);
   }
