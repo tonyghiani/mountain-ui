@@ -6,5 +6,7 @@ module.exports = {
   testEnvironment: 'jsdom',
   moduleDirectories: ['node_modules', 'tests'],
   name: packageJson.name,
-  displayName: packageJson.name
+  displayName: packageJson.name,
+  resetMocks: false,
+  setupFiles: ['jest-localstorage-mock']
 };
