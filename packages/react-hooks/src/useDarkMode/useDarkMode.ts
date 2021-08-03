@@ -10,7 +10,7 @@ export interface UseDarkModeProps {
 
 /**
  *
- * @returns {boolean}
+ * @param {UseDarkModeProps} options
  */
 function useDarkMode({
   darkModeClassName = 'dark-mode',
