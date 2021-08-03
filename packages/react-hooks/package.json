@@ -44,6 +44,9 @@
       "path": "git-cz"
     }
   },
+  "dependencies": {
+    "@mountain-ui/utils": "^0.2.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.13.14",
     "@babel/core": "^7.13.14",

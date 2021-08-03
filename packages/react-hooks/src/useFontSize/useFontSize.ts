@@ -1,4 +1,5 @@
 import { useReducer } from 'react';
+import { hasWindow } from '@mountain-ui/utils';
 
 import useLocalStorage from '../useLocalStorage';
 
@@ -7,8 +8,6 @@ export interface UseFontSizeProps {
   initialSize?: string;
   variableName?: string;
 }
-
-const isServer = () => typeof window === 'undefined';
 
 const applyPropToDocument = (variableName: string, storedFontSize: string) =>
   document.documentElement.style.setProperty(variableName, storedFontSize);
@@ -28,7 +27,7 @@ export function useFontSize({
   const [storedFontSize, storeFontSize] = useLocalStorage(storageKey, initialSize);
 
   function init(initialValue: string) {
-    if (isServer()) return initialValue;
+    if (hasWindow()) return initialValue;
     if (storedFontSize) applyPropToDocument(variableName, storedFontSize);
     return storedFontSize || getDocumentProp(variableName);
   }
