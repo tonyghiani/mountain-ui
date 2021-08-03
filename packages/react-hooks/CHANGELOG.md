@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.3.0...@mountain-ui/react-hooks@0.3.1) (2021-08-03)
+
+
+### Bug Fixes
+
+* **react-hooks:** 🐛 add missing exports ([50734ad](https://github.com/tonyghiani/mountain-ui/commit/50734ada675a39ff89e11016c17952d869ec1526))
+
+
+
+
+
 # [0.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.2.1...@mountain-ui/react-hooks@0.3.0) (2021-08-03)
 
 
