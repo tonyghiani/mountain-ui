@@ -1,3 +1,4 @@
+import css from '@styled-system/css';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -8,8 +9,9 @@ export type TextProps = BaseTypographyProps & {
   variant?: 'primary' | 'secondary' | 'caption';
 };
 
-const Text = styled(BaseTypography)<TextProps>(
-  variant({
+const Text = styled(BaseTypography)<TextProps>`
+  ${css({ color: 'text.primary' })}
+  ${variant({
     scale: 'variants.typography.text',
     variants: {
       primary: {
@@ -25,12 +27,11 @@ const Text = styled(BaseTypography)<TextProps>(
         fontSize: 'caption'
       }
     }
-  })
-);
+  })}
+`;
 
 Text.defaultProps = {
-  as: 'span',
-  variant: 'primary'
+  as: 'span'
 };
 
 Text.displayName = 'Text';
