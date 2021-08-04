@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.3...@mountain-ui/react-components@0.3.4) (2021-08-04)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 set default color ([5d88865](https://github.com/tonyghiani/mountain-ui/commit/5d88865e04dc2c1fcfd12daceb6495118ddfc7c8))
+* **react-components:** 🐛 set default text variant ([24198eb](https://github.com/tonyghiani/mountain-ui/commit/24198ebbd72fd4ef462820611adc3af666426fe6))
+
+
+
+
+
 ## [0.3.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.2...@mountain-ui/react-components@0.3.3) (2021-08-03)
 
 **Note:** Version bump only for package @mountain-ui/react-components
