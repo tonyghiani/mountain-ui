@@ -6,6 +6,7 @@ import usePrefersDarkMode from '../usePrefersDarkMode';
 export interface UseDarkModeProps {
   darkModeClassName?: string;
   storageKey?: string;
+  node?: HTMLElement;
 }
 
 /**
@@ -14,7 +15,8 @@ export interface UseDarkModeProps {
  */
 function useDarkMode({
   darkModeClassName = 'dark-mode',
-  storageKey = 'prefers-dark-mode'
+  storageKey = 'prefers-dark-mode',
+  node
 }: UseDarkModeProps = {}) {
   const [isDarkMode, setDarkMode] = useLocalStorage(storageKey);
 
@@ -23,7 +25,7 @@ function useDarkMode({
   const isEnabled = typeof isDarkMode !== 'undefined' ? isDarkMode : prefersDarkMode;
 
   useEffect(() => {
-    const element = window.document.body;
+    const element = node || window.document.body;
     const classAction = isEnabled ? 'add' : 'remove';
     element.classList[classAction](darkModeClassName);
   }, [isEnabled]);
