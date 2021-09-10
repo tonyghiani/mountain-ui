@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.3.4...@mountain-ui/react-hooks@0.4.0) (2021-09-10)
+
+
+### Features
+
+* **react-hooks:** 🎸 add useEventListener hook ([ffef0b2](https://github.com/tonyghiani/mountain-ui/commit/ffef0b258ea0619ba43688512bf54965a4807cc0))
+
+
+
+
+
 ## [0.3.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.3.3...@mountain-ui/react-hooks@0.3.4) (2021-08-04)
 
 
