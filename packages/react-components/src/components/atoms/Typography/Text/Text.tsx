@@ -1,4 +1,3 @@
-import css from '@styled-system/css';
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 
@@ -10,7 +9,6 @@ export type TextProps = BaseTypographyProps & {
 };
 
 const Text = styled(BaseTypography)<TextProps>`
-  ${css({ color: 'text.primary' })}
   ${variant({
     scale: 'variants.typography.text',
     variants: {
@@ -31,6 +29,7 @@ const Text = styled(BaseTypography)<TextProps>`
 `;
 
 Text.defaultProps = {
+  color: 'text.primary',
   as: 'span'
 };
 
