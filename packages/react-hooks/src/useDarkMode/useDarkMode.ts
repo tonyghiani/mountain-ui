@@ -28,7 +28,7 @@ function useDarkMode({
     const element = node || window.document.body;
     const classAction = isEnabled ? 'add' : 'remove';
     element.classList[classAction](darkModeClassName);
-  }, [isEnabled]);
+  }, [isEnabled, node]);
 
   return [isEnabled, setDarkMode];
 }
