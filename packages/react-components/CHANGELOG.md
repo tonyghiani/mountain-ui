@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.6...@mountain-ui/react-components@0.3.7) (2021-09-28)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 add missing gradient property typograp ([6b1ec33](https://github.com/tonyghiani/mountain-ui/commit/6b1ec33aa24cbd02eb231ecb9f8f7d76a5dfec97))
+
+
+
+
+
 ## [0.3.6](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.5...@mountain-ui/react-components@0.3.6) (2021-09-28)
 
 
