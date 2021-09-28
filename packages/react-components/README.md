@@ -42,7 +42,7 @@ yarn test
 
 👤 **Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>**
 
-- Website: https://distilled.me/marco
+- Website: https://marcoghiani.com
 - Twitter: [@tonyghiani](https://twitter.com/tonyghiani)
 - Github: [@tonyghiani](https://github.com/tonyghiani)
 
