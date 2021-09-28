@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
-import { useLocalStorage } from '@mountain-ui/react-hooks';
 import { hasWindow } from '@mountain-ui/utils';
+
+import useLocalStorage from '../useLocalStorage';
 
 export interface UseFontSizeProps {
   storageKey?: string;
