@@ -23,11 +23,11 @@ function useMediaQuery(...queries: string[]): boolean {
     }
 
     updateMatch();
-    queryList.addEventListener('change', updateMatch);
+    queryList.addListener(updateMatch);
 
     return () => {
       active = false;
-      queryList.removeEventListener('change', updateMatch);
+      queryList.removeListener(updateMatch);
     };
   }, [queries, supportMatchMedia]);
 
