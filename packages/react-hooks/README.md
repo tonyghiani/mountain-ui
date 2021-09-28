@@ -1,11 +1,3 @@
-# `react-hooks`
+# Mountain UI React Hooks
 
-> TODO: description
-
-## Usage
-
-```
-const reactHooks = require('react-hooks');
-
-// TODO: DEMONSTRATE API
-```
+> A library of custom React Hooks.
