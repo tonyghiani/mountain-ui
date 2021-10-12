@@ -111,21 +111,22 @@ function createComponent(name) {
   return writeFile(
     COMPONENT_IMPLEMENTATION,
     `
-import React from 'react';
+import styled from 'styled-components';
 
-export interface ${name}Props {
-  /**
-   * TODO: add prop description
-   */
-  firstProp: boolean;
+import { BaseElement, BaseElementProps } from '../../BaseElement';
+
+export type ${name}Props = BaseElementProps & {
+
 }
 
 /**
  * TODO: add component description headline
  */
-export const ${name}: React.FC<${name}Props> = () => {
-  return <span>Here goes the implementation</span>
-};
+const ${name} = styled(BaseElement) <${name}Props>\`\`
+
+${name}.defaultProps = {
+   
+}
 
 ${name}.displayName = '${name}';
 
@@ -149,9 +150,11 @@ export default {
   component: ${name}
 };
 
-export const Basic = args => <${name} {...args} />;
+export const ${name}Story = args => <${name} {...args} />;
 
-Basic.parameters = {
+${name}Story.storyName = '${name}'
+
+${name}Story.parameters = {
   jest: ['${name}.test.js'],
 };
 `
