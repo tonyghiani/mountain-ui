@@ -11,7 +11,7 @@ export default {
 
 export const ListItemStory = ({ children, ...args }: ListItemProps) => {
   return (
-    <ListItem {...args}>
+    <ListItem {...args} icon={<div>📚</div>}>
       <Text>{children}</Text>
     </ListItem>
   );

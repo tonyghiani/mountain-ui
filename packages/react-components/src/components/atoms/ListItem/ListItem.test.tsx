@@ -8,9 +8,4 @@ describe('ListItem', () => {
     const { container } = render(<ListItem>Hello</ListItem>);
     expect(container).toBeInTheDocument();
   });
-
-  it('should hide the icon when the hideIcon property is true', () => {
-    const { queryByLabelText } = render(<ListItem hideIcon>Hello</ListItem>);
-    expect(queryByLabelText('Item icon')).toBeNull();
-  });
 });

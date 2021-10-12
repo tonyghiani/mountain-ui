@@ -16,7 +16,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --concurrency 1 --stream",
+    "build": "lerna run build --concurrency 2 --stream",
     "commit": "git cz",
     "install:clean": "lerna clean --yes && rm -rf node_modules yarn.lock && yarn install",
     "lint": "lerna run lint --concurrency 2 --stream",
