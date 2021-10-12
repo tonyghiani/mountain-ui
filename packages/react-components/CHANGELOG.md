@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.7...@mountain-ui/react-components@0.4.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 remove dependency cycle ([c60e9ac](https://github.com/tonyghiani/mountain-ui/commit/c60e9ac0c73b5297f5f83cb84a2bfdb712d6cc10))
+
+
+### Features
+
+* **react-components:** 🎸 add List component ([49af5e4](https://github.com/tonyghiani/mountain-ui/commit/49af5e4733f2464dc219d455fdff9d857d17f6e3))
+* **react-components:** 🎸 add ListItem component ([a9da73d](https://github.com/tonyghiani/mountain-ui/commit/a9da73d721ecfc118bddfe73297b2e70ccaeea8f))
+
+
+
+
+
 ## [0.3.7](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.6...@mountain-ui/react-components@0.3.7) (2021-09-28)
 
 
