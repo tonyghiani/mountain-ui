@@ -47,10 +47,6 @@
       "path": "git-cz"
     }
   },
-  "dependencies": {
-    "@mountain-ui/icons": "^0.1.14",
-    "@mountain-ui/utils": "^0.3.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
@@ -58,6 +54,8 @@
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
     "@babel/preset-typescript": "^7.13.0",
+    "@mountain-ui/icons": "^0.1.14",
+    "@mountain-ui/utils": "^0.3.0",
     "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
@@ -85,6 +83,8 @@
     "typescript": "^4.2.4"
   },
   "peerDependencies": {
+    "@mountain-ui/icons": "^0.1.14",
+    "@mountain-ui/utils": "^0.3.0",
     "@styled-system/css": ">=5",
     "@types/react": "^17.0.3",
     "prism-react-renderer": "^1.2.0",
