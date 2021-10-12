@@ -48,6 +48,7 @@
     }
   },
   "dependencies": {
+    "@mountain-ui/icons": "^0.1.14",
     "@mountain-ui/utils": "^0.3.0"
   },
   "devDependencies": {
