@@ -1,5 +1,7 @@
 export * from './Button';
 
+export * from './Code';
+
 export * from './Icon';
 
 export * from './Layout';
