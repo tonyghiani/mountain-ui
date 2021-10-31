@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.4.0...@mountain-ui/react-components@0.5.0) (2021-10-31)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 wrong import ([e64c3b0](https://github.com/tonyghiani/mountain-ui/commit/e64c3b0feca8100b7953ad7ebdc1cc83b549c6b5))
+
+
+### Features
+
+* **react-components:** 🎸 add Code component ([428ac0b](https://github.com/tonyghiani/mountain-ui/commit/428ac0b5b4c41d0a0f5e7f266bd723c2182d07c3))
+* **react-components:** 🎸 add native prop ([b581eb2](https://github.com/tonyghiani/mountain-ui/commit/b581eb2bbfc001ee287c8786d2ea034edc73d516))
+
+
+
+
+
 # [0.4.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.3.7...@mountain-ui/react-components@0.4.0) (2021-10-12)
 
 
