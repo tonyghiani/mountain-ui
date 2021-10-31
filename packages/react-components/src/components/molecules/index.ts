@@ -1,3 +1,3 @@
-export * from './Code';
+export * from './CodeBlock';
 
 export * from './RangeInput';

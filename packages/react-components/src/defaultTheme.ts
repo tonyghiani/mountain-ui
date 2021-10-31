@@ -143,13 +143,13 @@ theme.colors = {
     secondary: 'var(--c-text-secondary, #868786)',
     caption: 'var(--c-text-caption, #6D6E6E)',
     light: 'var(--c-text-light, #FDFDFD)',
-    button: 'var(--c-text-button, #FDFDFD)',
-    code: 'var(--c-text-code, #063289)'
+    button: 'var(--c-text-button, #FDFDFD)'
   },
   background: {
     body: 'var(--bg-primary, #FDFDFD)',
-    editor: 'var(--bg-editor, #F6FCFF)',
-    editorFocus: 'var(--bg-editor-focus, #B6E4FF4C)'
+    code: 'var(--bg-code, #22324D)',
+    codeblock: 'var(--bg-codeblock, #22324D)',
+    codeblockInfo: 'var(--bg-codeblock-info, #000E26)'
   },
   primary: {
     dark: 'var(--c-primary-100, #3267B7)',

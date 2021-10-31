@@ -40,7 +40,9 @@ export type BaseElementProps = BackgroundProps &
 
 const custom = system({
   cursor: true,
-  placeItems: true
+  placeItems: true,
+  transform: true,
+  transition: true
 });
 
 export const styleProps = compose(
