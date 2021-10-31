@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'mui-testing-tools';
 
-import Code from './Code';
+import CodeBlock from './CodeBlock';
 
-describe('Code', () => {
+describe('CodeBlock', () => {
   it('should render correctly on mount', () => {
-    const { container } = render(<Code>Code here</Code>);
+    const { container } = render(<CodeBlock>CodeBlock here</CodeBlock>);
     expect(container).toBeInTheDocument();
   });
 });
