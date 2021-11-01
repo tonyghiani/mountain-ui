@@ -13,6 +13,7 @@ Code.defaultProps = {
   backgroundColor: 'background.code',
   borderRadius: 2,
   fontWeight: 'bold',
+  fontSize: 'secondaryBody',
   color: 'text.light',
   display: 'inline',
   paddingX: 2,

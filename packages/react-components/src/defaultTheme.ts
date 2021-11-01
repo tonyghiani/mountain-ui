@@ -27,7 +27,7 @@ export type FontSizeAlias =
   | 'h2'
   | 'h1';
 export type FontWeightAlias = 'light' | 'normal' | 'semiBold' | 'bold' | 'ultraBold';
-export type LineHeightAlias = 'short' | 'normal' | 'tall' | 'double';
+export type LineHeightAlias = 'short' | 'normal' | 'tall' | 'ultraTall' | 'double';
 export type MediaQuery = string;
 export type Space = string;
 
@@ -125,11 +125,15 @@ theme.fontWeights = [300, 400, 500, 700, 900] as ThemeScale<number, FontWeightAl
   theme.fontWeights.ultraBold
 ] = theme.fontWeights;
 
-theme.lineHeights = ['1.25em', '1.5em', '1.75em', '2em'] as ThemeScale<string, LineHeightAlias>;
+theme.lineHeights = ['1.25em', '1.5em', '1.625em', '1.75em', '2em'] as ThemeScale<
+  string,
+  LineHeightAlias
+>;
 [
   theme.lineHeights.short,
   theme.lineHeights.normal,
   theme.lineHeights.tall,
+  theme.lineHeights.ultraTall,
   theme.lineHeights.double
 ] = theme.lineHeights;
 

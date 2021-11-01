@@ -30,6 +30,7 @@ const Text = styled(BaseTypography)<TextProps>`
 
 Text.defaultProps = {
   color: 'text.primary',
+  lineHeight: 'tall',
   as: 'span'
 };
 
