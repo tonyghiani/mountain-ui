@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.5.1...@mountain-ui/react-components@0.6.0) (2021-11-12)
+
+
+### Features
+
+* **react-components:** 🎸 add color palette ([61bb3a7](https://github.com/tonyghiani/mountain-ui/commit/61bb3a7cab315393d41d8e1167bc3c5df7b13807))
+* **react-components:** 🎸 restructure defaultTheme ([61cf414](https://github.com/tonyghiani/mountain-ui/commit/61cf4141e1914b6f3aff7280abcd3ef2b527333b))
+
+
+
+
+
 ## [0.5.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.5.0...@mountain-ui/react-components@0.5.1) (2021-11-01)
 
 
