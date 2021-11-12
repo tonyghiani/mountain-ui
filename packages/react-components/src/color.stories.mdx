@@ -1,0 +1,24 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { decorators } from '../.storybook/preview';
+import { ThemeProvider } from './components/ThemeProvider';
+
+import { defaultTheme } from './defaultTheme';
+
+<Meta title='Design System/Colors' />
+
+# Colors
+
+<ThemeProvider>
+  <ColorPalette>
+    <ColorItem
+      title='White/Black'
+      colors={[defaultTheme.colors.white, defaultTheme.colors.black]}
+    />
+    <ColorItem title='Gray' colors={Object.values(defaultTheme.colors.gray)} />
+    <ColorItem title='Blue' colors={Object.values(defaultTheme.colors.blue)} />
+    <ColorItem title='Green' colors={Object.values(defaultTheme.colors.green)} />
+    <ColorItem title='Red' colors={Object.values(defaultTheme.colors.red)} />
+    <ColorItem title='Yellow' colors={Object.values(defaultTheme.colors.yellow)} />
+    <ColorItem title='Purple' colors={Object.values(defaultTheme.colors.purple)} />
+  </ColorPalette>
+</ThemeProvider>
