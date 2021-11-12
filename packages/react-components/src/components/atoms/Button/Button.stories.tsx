@@ -11,7 +11,7 @@ export default {
 };
 
 export const All = () => (
-  <Grid gridTemplateRows='repeat(2, 1fr)' gridAutoFlow='column' gridGap={2} alignItems='center'>
+  <Grid gridTemplateRows='repeat(2, 1fr)' gridAutoFlow='column' gridGap={4} alignItems='center'>
     <Text strong textAlign='center'>
       Primary
     </Text>

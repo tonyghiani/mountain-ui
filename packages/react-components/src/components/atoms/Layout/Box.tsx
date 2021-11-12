@@ -7,9 +7,8 @@ export type BoxProps = BaseElementProps;
 /**
  * Box used to define Layout components
  */
-const Box = styled(BaseElement)<BoxProps>`
-  box-sizing: border-box;
-`;
+const Box = styled(BaseElement)<BoxProps>``;
+
 Box.displayName = 'Box';
 
 export default Box;

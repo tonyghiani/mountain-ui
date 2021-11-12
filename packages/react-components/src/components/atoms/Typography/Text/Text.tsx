@@ -13,15 +13,15 @@ const Text = styled(BaseTypography)<TextProps>`
     scale: 'variants.typography.text',
     variants: {
       primary: {
-        color: 'text.primary',
+        color: 'black',
         fontSize: 'body'
       },
       secondary: {
-        color: 'text.secondary',
+        color: 'gray.800',
         fontSize: 'secondaryBody'
       },
       caption: {
-        color: 'text.caption',
+        color: 'gray.600',
         fontSize: 'caption'
       }
     }
@@ -29,7 +29,7 @@ const Text = styled(BaseTypography)<TextProps>`
 `;
 
 Text.defaultProps = {
-  color: 'text.primary',
+  color: 'black',
   lineHeight: 'tall',
   as: 'span'
 };

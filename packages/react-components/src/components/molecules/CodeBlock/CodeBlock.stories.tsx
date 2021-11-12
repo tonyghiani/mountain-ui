@@ -10,7 +10,10 @@ export default {
 export const Basic = args => <CodeBlock {...args} />;
 
 Basic.args = {
-  children: `function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
+  children: `/**
+* The CodeBlock component is used to represent blocks of code.
+*/
+function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
   return (
     <Highlight {...defaultProps} theme={theme} code={children} language={syntax}>
       {({ tokens, getLineProps, getTokenProps }) => (

@@ -22,7 +22,7 @@ describe('Layout', () => {
       expect(box).toHaveStyle(`
         background-color: #F0F0F0;
         color: #F0F0F0;
-        padding: 6px;
+        padding: 4px;
       `);
     });
   });
@@ -45,8 +45,8 @@ describe('Layout', () => {
       expect(container).toHaveStyle(`
         background-color: #F0F0F0;
         color: #F0F0F0;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 8px;
+        padding-right: 8px;
       `);
     });
   });

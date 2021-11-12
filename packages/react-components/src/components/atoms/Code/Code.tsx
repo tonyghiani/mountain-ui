@@ -10,14 +10,14 @@ const Code = styled(Text)<CodeProps>``;
 
 Code.defaultProps = {
   as: 'code',
-  backgroundColor: 'background.code',
-  borderRadius: 2,
+  backgroundColor: 'blue.900',
+  borderRadius: 3,
   fontWeight: 'bold',
   fontSize: 'secondaryBody',
-  color: 'text.light',
+  color: 'white',
   display: 'inline',
   paddingX: 2,
-  paddingY: 1
+  paddingY: 2
 };
 
 Code.displayName = 'Code';

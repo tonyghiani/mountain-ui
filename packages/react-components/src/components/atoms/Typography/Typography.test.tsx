@@ -51,7 +51,6 @@ describe('Typography', () => {
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('H3');
       expect(textNode).toHaveStyle(`
-        font-size: 2.1rem;
         line-height: 1.25em;
         font-weight: 700;
       `);
@@ -68,7 +67,6 @@ describe('Typography', () => {
       expect(textNode.tagName).toEqual('H3');
       expect(textNode).toHaveStyle(`
         color: #F0F0F0;
-        font-size: 2.1rem;
         line-height: 1.25em;
         font-weight: 700;
       `);
@@ -104,7 +102,7 @@ describe('Typography', () => {
       expect(textNode).toBeInTheDocument();
       expect(textNode.tagName).toEqual('P');
       expect(textNode).toHaveStyle(`
-        font-size: 0.8rem;
+        font-size: 0.875rem;
       `);
     });
 

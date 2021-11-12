@@ -40,6 +40,7 @@ export type BaseElementProps = BackgroundProps &
 
 const custom = system({
   cursor: true,
+  gap: true,
   placeItems: true,
   transform: true,
   transition: true

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from 'mui-testing-tools';
 
-import theme from '../../../defaultTheme';
+import { defaultTheme } from '../../../defaultTheme';
 
 import Button from './Button';
 
@@ -12,8 +12,8 @@ describe('Button', () => {
     expect(buttonNode).toBeInTheDocument();
     expect(buttonNode).toHaveStyle(`
       text-shadow: 1px 1px 6px rgb(0 0 0 / 20%);
-      border-radius: 12px;
-      box-shadow: ${theme.shadows[1]};
+      border-radius: 8px;
+      box-shadow: ${defaultTheme.shadows[1]};
       transition: all .3s ease;
     `);
   });
