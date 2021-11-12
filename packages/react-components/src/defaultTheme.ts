@@ -1,9 +1,158 @@
-/**
- * Theme settings
- */
-const theme = {} as DefaultTheme;
+import { deepMerge } from '@mountain-ui/utils';
 
-export default theme;
+export const defaultTheme = {
+  breakpoints: [512, 1024, 1536],
+  colors: {
+    white: 'hsl(0, 0%, 98%)',
+    black: 'hsl(240, 10%, 10%)',
+    gray: {
+      50: 'hsl(210, 12%, 95%)',
+      100: 'hsl(210, 10.5%, 86%)',
+      200: 'hsl(210, 9%, 77%)',
+      300: 'hsl(210, 7.5%, 68%)',
+      400: 'hsl(210, 6%, 59%)',
+      500: 'hsl(210, 7.5%, 50%)',
+      600: 'hsl(210, 9%, 41%)',
+      700: 'hsl(210, 10.5%, 32%)',
+      800: 'hsl(210, 12%, 23%)',
+      900: 'hsl(210, 13.5%, 14%)'
+    },
+    blue: getColorScale(206),
+    green: getColorScale(155),
+    red: getColorScale(7),
+    yellow: getColorScale(50),
+    purple: getColorScale(255)
+  },
+  fonts: {
+    normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif',
+    code: "Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace"
+  },
+  fontSizes: [
+    '0.75rem',
+    '0.875rem',
+    '1rem',
+    '1rem',
+    'clamp(1.2rem, 8vw - 1.9rem, 1.5rem)',
+    'clamp(1.3rem, 8vw - 1.8rem, 1.6rem)',
+    'clamp(1.4rem, 8vw - 1.7rem, 1.8rem)',
+    'clamp(1.6rem, 8vw - 1.5rem, 2.2rem)',
+    'clamp(2.1rem, 8vw - 1rem, 3rem)'
+  ],
+  fontWeights: [300, 400, 500, 700, 900],
+  lineHeights: ['1.25em', '1.5em', '1.625em', '1.75em', '2em'],
+  radii: ['0', '2px', '4px', '8px', '12px', '16px', '24px', '32px', '100%'],
+  space: [
+    '0',
+    '2px',
+    '4px',
+    '8px',
+    '12px',
+    '16px',
+    '24px',
+    '32px',
+    '40px',
+    '48px',
+    '64px',
+    '80px',
+    '96px'
+  ],
+  shadows: [
+    'none',
+    '0 1px 3px 0 hsla(210,13.5%,14%,0.2),0 1px 1px 0 hsla(210,12%,23%,0.15),0 2px 1px -1px hsla(210,10.5%,32%,0.1)',
+    '0 5px 5px -3px hsla(210, 13.5%, 14%, 0.2), 0 8px 10px 1px hsla(210, 12%, 23%, 0.15), 0 3px 14px 2px hsla(210, 10.5%, 32%, 0.1)'
+  ]
+};
+
+export function generateTheme(customTheme: DefaultTheme = {}) {
+  const theme: DefaultTheme = deepMerge(defaultTheme, customTheme);
+  const breakpoints = getBreakpoints(theme.breakpoints);
+  const fontSizes = getFontSizes(theme.fontSizes);
+  const fontWeights = getfontWeights(theme.fontWeights);
+  const lineHeights = getLineHeights(theme.lineHeights);
+  const mediaQueries = getMediaQueries(theme.breakpoints);
+
+  return {
+    ...theme,
+    breakpoints,
+    fontSizes,
+    fontWeights,
+    lineHeights,
+    mediaQueries
+  };
+}
+
+/**
+ * Theme utils
+ */
+function getMediaQueries(breakpoints: ThemeScale<number, BreakpointAlias>) {
+  const queries = [];
+  const ranges = ['mobile', 'tablet', 'desktop', 'wideScreen'];
+  for (let i = -1; i < breakpoints.length; i++) {
+    const point = breakpoints[i] || 0;
+    const nextPoint = breakpoints[i + 1];
+    const query = [
+      'screen',
+      `(min-width: ${point}px)`,
+      nextPoint && `(max-width: ${nextPoint - 1}px)`
+    ]
+      .filter(Boolean)
+      .join(' and ');
+    queries.push(query);
+  }
+
+  return queries.reduce((res, query, pos) => ({ ...res, [ranges[pos] || pos]: query }), {});
+}
+
+function getFontSizes(fontSizes: ThemeScale<string, FontSizeAlias>) {
+  const aliases = ['caption', 'secondaryBody', 'body', 'h6', 'h5', 'h4', 'h3', 'h2', 'h1'];
+
+  setAliases(fontSizes, aliases);
+
+  return fontSizes;
+}
+
+function getBreakpoints(points: ThemeScale<number, BreakpointAlias>) {
+  const aliases = ['mobile', 'tablet', 'desktop', 'wideScreen'];
+
+  const breakpoints = points.map(point => point + 'px');
+  setAliases(breakpoints, aliases);
+
+  return breakpoints;
+}
+
+function getLineHeights(lineHeights: ThemeScale<string, LineHeightAlias>) {
+  const aliases = ['short', 'normal', 'tall', 'ultraTall', 'double'];
+
+  setAliases(lineHeights, aliases);
+
+  return lineHeights;
+}
+
+function getfontWeights(fontWeights: ThemeScale<number, FontWeightAlias>) {
+  const aliases = ['light', 'normal', 'semiBold', 'bold', 'ultraBold'];
+
+  setAliases(fontWeights, aliases);
+
+  return fontWeights;
+}
+
+function getColorScale(baseColor: number) {
+  const stages = [0.5, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let saturation = 104;
+  let luminosity = 105;
+
+  return stages.reduce(
+    (palette, stage) => ({
+      ...palette,
+      [stage * 100]: `hsl(${baseColor}, ${(saturation -= 4)}%, ${(luminosity -= 9)}%)`
+    }),
+    {}
+  );
+}
+
+function setAliases(list: Array<string | number>, aliases: string[]) {
+  list.forEach((item, pos) => (list[aliases[pos] || pos] = item));
+}
 
 /**
  * Theme Types
@@ -35,8 +184,7 @@ export type Space = string;
  * Theme Interfaces
  */
 export interface DefaultTheme {
-  borders?: BorderWidth[];
-  breakpoints?: ThemeScale<string, BreakpointAlias>;
+  breakpoints?: ThemeScale<number, BreakpointAlias>;
   colors?: any;
   fonts?: Fonts;
   fontScale?: FontScale;
@@ -59,138 +207,3 @@ export interface MediaQueries {
   tablet: MediaQuery;
   desktop: MediaQuery;
 }
-
-/**************************/
-
-/**
- * Breakpoints
- */
-const breakpoints = [512, 864, 1152] as ThemeScale<number, BreakpointAlias>;
-[breakpoints.mobile, breakpoints.tablet, breakpoints.desktop] = breakpoints;
-theme.breakpoints = breakpoints.map(el => el + 'px') as ThemeScale<string, BreakpointAlias>;
-[theme.breakpoints.mobile, theme.breakpoints.tablet, theme.breakpoints.desktop] = theme.breakpoints;
-
-/**
- * Media queries
- */
-
-theme.mediaQueries = {
-  mobile: `screen and (min-width: 0px) and (max-width: ${breakpoints.mobile - 1}px)`,
-  tablet: `screen and (min-width: ${breakpoints.mobile}px) and (max-width: ${
-    breakpoints.tablet - 1
-  }px)`,
-  desktop: `screen and (min-width: ${breakpoints.tablet}px)`
-};
-
-/**
- * Typography
- */
-
-theme.fonts = {
-  normal: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif',
-  code: "Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace"
-};
-
-theme.fontScale = 1.2;
-
-theme.fontSizes = [
-  `${Math.round(theme.fontScale ** -2 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** -1 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 0 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 1 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 2 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 3 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 4 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 5 * 10) / 10}rem`,
-  `${Math.round(theme.fontScale ** 6 * 10) / 10}rem`
-] as ThemeScale<string, FontSizeAlias>;
-[
-  theme.fontSizes.caption,
-  theme.fontSizes.secondaryBody,
-  theme.fontSizes.body,
-  theme.fontSizes.h6,
-  theme.fontSizes.h5,
-  theme.fontSizes.h4,
-  theme.fontSizes.h3,
-  theme.fontSizes.h2,
-  theme.fontSizes.h1
-] = theme.fontSizes;
-
-theme.fontWeights = [300, 400, 500, 700, 900] as ThemeScale<number, FontWeightAlias>;
-[
-  theme.fontWeights.light,
-  theme.fontWeights.normal,
-  theme.fontWeights.semiBold,
-  theme.fontWeights.bold,
-  theme.fontWeights.ultraBold
-] = theme.fontWeights;
-
-theme.lineHeights = ['1.25em', '1.5em', '1.625em', '1.75em', '2em'] as ThemeScale<
-  string,
-  LineHeightAlias
->;
-[
-  theme.lineHeights.short,
-  theme.lineHeights.normal,
-  theme.lineHeights.tall,
-  theme.lineHeights.ultraTall,
-  theme.lineHeights.double
-] = theme.lineHeights;
-
-/**
- * Colors
- */
-theme.colors = {
-  transparent: 'var(--c-transparent, transparent)',
-  text: {
-    primary: 'var(--c-text-primary, #161A1E)',
-    secondary: 'var(--c-text-secondary, #868786)',
-    caption: 'var(--c-text-caption, #6D6E6E)',
-    light: 'var(--c-text-light, #FDFDFD)',
-    button: 'var(--c-text-button, #FDFDFD)'
-  },
-  background: {
-    body: 'var(--bg-primary, #FDFDFD)',
-    code: 'var(--bg-code, #22324D)',
-    codeblock: 'var(--bg-codeblock, #22324D)',
-    codeblockInfo: 'var(--bg-codeblock-info, #000E26)'
-  },
-  primary: {
-    dark: 'var(--c-primary-100, #3267B7)',
-    main: 'var(--c-primary-200, #3F81E5)',
-    light: 'var(--c-primary-300, #8CB3EF)'
-  },
-  feeling: {
-    success: 'var(--c-success, #19C44D)',
-    warning: 'var(--c-warning, #FFC445)',
-    error: 'var(--c-error, #F74D4D)'
-  },
-  gradient: {
-    primary: 'var(--c-gradient-primary, linear-gradient(30deg, #3F81E5, #3F81E599))',
-    success: 'var(--c-gradient-success, linear-gradient(30deg, #19C44D, #19C44D99))',
-    warning: 'var(--c-gradient-warning, linear-gradient(30deg, #FFC445, #FFC44599))',
-    error: 'var(--c-gradient-error, linear-gradient(30deg, #F74D4D, #F74D4D99))',
-    disabled: 'var(--c-gradient-disabled, linear-gradient(30deg, #6D6E6E66, #6D6E6E33))'
-  }
-};
-
-/**
- * Space
- */
-theme.space = ['0', '3px', '6px', '12px', '18px', '24px', '36px', '48px', '72px', '96px'];
-
-/**
- * Border
- */
-theme.borders = ['none', '1px', '2px'];
-theme.radii = ['0', '4px', '8px', '12px', '16px', '24px', '32px', '48px', '100%'];
-
-/**
- * Shadows
- */
-theme.shadows = [
-  'none',
-  '0px 6px 12px -12px rgba(0,0,0,0.15)',
-  '0px 6px 24px -12px rgba(0,0,0,0.2)',
-  '0px 6px 24px 0px rgba(0,0,0,0.15);'
-];
