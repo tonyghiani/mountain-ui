@@ -1,6 +1,8 @@
 import React from 'react';
 import { withTests } from '@storybook/addon-jest';
 
+import { Container, ThemeProvider } from '../src';
+
 let results = null;
 try {
   if (process.env.NODE_ENV === 'testing') {
@@ -16,8 +18,6 @@ try {
   to fix this issue.
   `);
 }
-
-import { Container, ThemeProvider } from '../src';
 
 export const parameters = {
   layout: 'fullscreen',
