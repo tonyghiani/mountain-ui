@@ -38,7 +38,7 @@ const wrapped = css`
 const lineClamp = css`
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  overflow-y: hidden;
+  overflow: hidden;
 `;
 
 const strong = css`

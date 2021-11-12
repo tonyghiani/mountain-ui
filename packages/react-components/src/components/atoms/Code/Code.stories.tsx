@@ -11,7 +11,9 @@ export default {
 
 export const CodeStory = args => (
   <Paragraph>
-    The <Code {...args}>Code</Code> component is used to hightlight code keywords.
+    The <Code {...args}>Code</Code> component is used to hightlight code keywords. The{' '}
+    <Code {...args}>Code</Code> component is used to hightlight code keywords. The{' '}
+    <Code {...args}>Code</Code> component is used to hightlight code keywords.
   </Paragraph>
 );
 

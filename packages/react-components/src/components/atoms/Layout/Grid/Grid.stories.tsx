@@ -13,17 +13,17 @@ export const GridStory = args => (
   <Grid {...args}>
     <Grid gridTemplateColumns='repeat(3, 1fr)' {...args}>
       {[...Array(3)].map((_el, id) => (
-        <BaseLayout key={id} height={150} bg='primary.main' borderRadius={3} />
+        <BaseLayout key={id} height={150} bg='blue.400' borderRadius={3} />
       ))}
     </Grid>
     <Grid gridTemplateColumns='repeat(4, 1fr)' {...args}>
       {[...Array(4)].map((_el, id) => (
-        <BaseLayout key={id} height={150} bg='primary.main' borderRadius={3} />
+        <BaseLayout key={id} height={150} bg='blue.400' borderRadius={3} />
       ))}
     </Grid>
     <Grid gridTemplateColumns='repeat(6, 1fr)' {...args}>
       {[...Array(6)].map((_el, id) => (
-        <BaseLayout key={id} height={150} bg='primary.main' borderRadius={3} />
+        <BaseLayout key={id} height={150} bg='blue.400' borderRadius={3} />
       ))}
     </Grid>
   </Grid>
@@ -32,7 +32,7 @@ export const GridStory = args => (
 GridStory.storyName = 'Grid';
 
 GridStory.args = {
-  gridGap: 2
+  gridGap: 3
 };
 
 GridStory.parameters = {

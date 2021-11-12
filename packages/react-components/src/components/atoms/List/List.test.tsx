@@ -5,7 +5,7 @@ import { ListItem } from '../index';
 
 import List, { ListProps } from './List';
 
-const renderList = (props?: Pick<ListProps, 'dense'>) =>
+const renderList = (props?: Pick<ListProps, 'dense' | 'horizontal'>) =>
   render(
     <List {...props}>
       <ListItem>Mountain-ui</ListItem>
@@ -20,23 +20,27 @@ describe('List', () => {
     expect(container).toBeInTheDocument();
   });
 
-  it('should add a margin to every list item, expect the last one', () => {
-    const { getAllByRole } = renderList();
+  it('should add a gap between every list item', () => {
+    const { getByRole } = renderList();
 
-    const listItems = getAllByRole('listitem');
+    const list = getByRole('list');
 
-    expect(listItems[0]).toHaveStyle(`margin-bottom: 18px;`);
-    expect(listItems[1]).toHaveStyle(`margin-bottom: 18px;`);
-    expect(listItems[2]).not.toHaveStyle(`margin-bottom: 18px;`);
+    expect(list).toHaveStyle(`gap: 16px;`);
   });
 
-  it('should remove the bottom margin from list items if the property dense is true', () => {
-    const { getAllByRole } = renderList({ dense: true });
+  it('should remove the gap from list items if the property dense is true', () => {
+    const { getByRole } = renderList({ dense: true });
 
-    const listItems = getAllByRole('listitem');
+    const list = getByRole('list');
 
-    expect(listItems[0]).not.toHaveStyle(`margin-bottom: 18px;`);
-    expect(listItems[1]).not.toHaveStyle(`margin-bottom: 18px;`);
-    expect(listItems[2]).not.toHaveStyle(`margin-bottom: 18px;`);
+    expect(list).not.toHaveStyle(`gap: 16px;`);
+  });
+
+  it('should render the list horizontally when the horizontal property is true', () => {
+    const { getByRole } = renderList({ horizontal: true });
+
+    const list = getByRole('list');
+
+    expect(list).toHaveStyle(`flex-direction: row;`);
   });
 });

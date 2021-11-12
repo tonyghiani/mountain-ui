@@ -60,7 +60,7 @@ const CodeBlockContainer = styled(Box)``;
 CodeBlockContainer.defaultProps = {
   borderRadius: 4,
   border: '3px solid',
-  borderColor: 'background.codeblock',
+  borderColor: 'blue.900',
   boxShadow: 3,
   overflow: 'hidden',
   position: 'relative'
@@ -76,9 +76,9 @@ const Pre = styled(Text)`
 `;
 
 Pre.defaultProps = {
-  backgroundColor: 'background.codeblock',
+  backgroundColor: 'blue.900',
   margin: 0,
-  padding: 4
+  padding: 5
 };
 
 const Syntax = styled(Text)`
@@ -87,15 +87,15 @@ const Syntax = styled(Text)`
 
 Syntax.defaultProps = {
   position: 'absolute',
-  top: 2,
-  right: 2,
-  paddingX: 3,
-  paddingY: 2,
+  top: 4,
+  right: 4,
+  paddingX: 4,
+  paddingY: 3,
   borderRadius: 3,
   fontSize: 'caption',
   fontWeight: 'bold',
-  color: 'text.light',
-  backgroundColor: 'background.codeblockInfo'
+  color: 'white',
+  backgroundColor: 'blue.800'
 };
 
 const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps) => {
@@ -107,6 +107,11 @@ const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps
     </Text>
   );
 };
+
+/**
+ * Edit theme colors
+ */
+theme.styles[3].style.color = 'hsl(210, 6%, 59%)'; // Edit comments color
 
 /**
  * The `CodeBlock` component is used to represent blocks of code.

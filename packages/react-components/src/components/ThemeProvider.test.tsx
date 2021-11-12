@@ -14,23 +14,23 @@ describe('ThemeProvider', () => {
   it('should pass the default theme properties to the children', () => {
     const { getByTestId } = render(
       <ThemeProvider theme={theme}>
-        <Box data-testid='test' backgroundColor='background.body' />
+        <Box data-testid='test' backgroundColor='gray.900' />
       </ThemeProvider>
     );
     const box = getByTestId('test');
 
-    expect(box).toHaveStyleRule('background-color', 'var(--bg-primary,#FDFDFD)');
+    expect(box).toHaveStyleRule('background-color', 'hsl(210,13.5%,14%)');
   });
 
   it('should merge the received theme properties with the default theme', () => {
     const { getByTestId } = render(
       <ThemeProvider theme={theme}>
-        <Box data-testid='test' color='testColor' backgroundColor='background.body' />
+        <Box data-testid='test' color='testColor' backgroundColor='gray.900' />
       </ThemeProvider>
     );
     const box = getByTestId('test');
 
-    expect(box).toHaveStyleRule('background-color', 'var(--bg-primary,#FDFDFD)');
+    expect(box).toHaveStyleRule('background-color', 'hsl(210,13.5%,14%)');
     expect(box).toHaveStyleRule('color', '#aaaaaa');
   });
 });

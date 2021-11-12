@@ -29,8 +29,8 @@ const RangeInput = ({ children, trackProps, ...inputProps }: RangeInputProps) =>
           {...props}
           width={1}
           height={4}
-          borderRadius={6}
-          backgroundImage={theme.colors.gradient.primary}
+          borderRadius={1}
+          backgroundImage={`linear-gradient(90deg, ${theme.colors.blue[400]}, ${theme.colors.blue[200]})`}
           {...trackProps}
         >
           {trackChildren}
@@ -75,8 +75,9 @@ RangeInput.Thumb = function Thumb(props: ThumbProps) {
       width={12}
       height={12}
       borderRadius={7}
-      backgroundColor='primary.main'
+      backgroundColor='blue.400'
       css={thumbPseudoSelectors}
+      aria-label='RangeInput thumb'
       {...props}
     />
   );

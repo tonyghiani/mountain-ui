@@ -1,20 +1,20 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
-import Box, { BoxProps } from "../Box"
+import Box, { BoxProps } from '../Box';
 
-export type ContainerProps = BoxProps
+export type ContainerProps = BoxProps;
 
 /**
  * Container component
  */
-const Container = styled(Box) <ContainerProps>``
+const Container = styled(Box)<ContainerProps>``;
 
 Container.defaultProps = {
-  maxWidth: [512, 720, 1152],
+  maxWidth: 'min(100%, 1152px)',
   px: 3,
-  mx: 'auto',
-}
+  mx: 'auto'
+};
 
-Container.displayName = 'Container'
+Container.displayName = 'Container';
 
-export default Container
+export default Container;

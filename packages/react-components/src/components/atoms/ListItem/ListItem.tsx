@@ -13,7 +13,7 @@ export type ListItemProps = BaseElementProps & {
 export const StyledListItem = styled(BaseElement).attrs<BaseElementProps>({ as: 'li' })`
   display: flex;
   align-items: flex-start;
-  gap: ${p => p.theme.space[4]};
+  gap: ${p => p.theme.space[5]};
 `;
 
 /**
