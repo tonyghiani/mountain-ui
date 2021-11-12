@@ -9,27 +9,28 @@ export type TextProps = BaseTypographyProps & {
 };
 
 const Text = styled(BaseTypography)<TextProps>`
-  ${variant({
-    scale: 'variants.typography.text',
-    variants: {
-      primary: {
-        color: 'black',
-        fontSize: 'body'
-      },
-      secondary: {
-        color: 'gray.800',
-        fontSize: 'secondaryBody'
-      },
-      caption: {
-        color: 'gray.600',
-        fontSize: 'caption'
+  ${({ theme }) =>
+    variant({
+      scale: 'variants.typography.text',
+      variants: {
+        primary: {
+          color: `var(--c-text-secondary, ${theme.colors.gray[900]})`,
+          fontSize: 'body'
+        },
+        secondary: {
+          color: `var(--c-text-secondary, ${theme.colors.gray[700]})`,
+          fontSize: 'secondaryBody'
+        },
+        caption: {
+          color: `var(--c-text-caption, ${theme.colors.gray[600]})`,
+          fontSize: 'caption'
+        }
       }
-    }
-  })}
+    })}
 `;
 
 Text.defaultProps = {
-  color: 'black',
+  color: 'dark',
   lineHeight: 'tall',
   as: 'span'
 };

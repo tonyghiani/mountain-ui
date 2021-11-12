@@ -3,8 +3,8 @@ import { deepMerge } from '@mountain-ui/utils';
 export const defaultTheme = {
   breakpoints: [512, 1024, 1536],
   colors: {
-    white: 'hsl(0, 0%, 98%)',
-    black: 'hsl(240, 10%, 10%)',
+    light: 'hsl(0, 0%, 98%)',
+    dark: 'hsl(210, 14%, 9%)',
     gray: {
       50: 'hsl(210, 12%, 95%)',
       100: 'hsl(210, 10.5%, 86%)',

@@ -51,7 +51,7 @@ const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({
 
 Heading.displayName = 'Heading';
 Heading.defaultProps = {
-  color: 'text.primary',
+  color: 'gray.900',
   variant: 'h1'
 };
 
