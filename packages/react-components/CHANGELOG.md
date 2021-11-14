@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.7.1...@mountain-ui/react-components@0.7.2) (2021-11-14)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 override variant props ([833da77](https://github.com/tonyghiani/mountain-ui/commit/833da77bea7553455892d71770ba51fefd4ea2bf))
+
+
+
+
+
 ## [0.7.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.7.0...@mountain-ui/react-components@0.7.1) (2021-11-12)
 
 
