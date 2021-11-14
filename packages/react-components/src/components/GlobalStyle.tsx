@@ -44,8 +44,8 @@ export const GlobalStyles = createGlobalStyle`
     html: {
       fontSize: ['16px', '18px'],
       fontFamily: 'normal' as SystemCssProperties,
-      color: 'text.primary' as SystemCssProperties,
-      backgroundColor: 'background.pureWhite' as SystemCssProperties
+      color: 'gray.900' as SystemCssProperties,
+      backgroundColor: 'light' as SystemCssProperties
     },
 
     'pre, code': {

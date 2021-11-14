@@ -14,7 +14,7 @@ const Text = styled(BaseTypography)<TextProps>`
       scale: 'variants.typography.text',
       variants: {
         primary: {
-          color: `var(--c-text-secondary, ${theme.colors.gray[900]})`,
+          color: `var(--c-text-primary, ${theme.colors.gray[900]})`,
           fontSize: 'body'
         },
         secondary: {

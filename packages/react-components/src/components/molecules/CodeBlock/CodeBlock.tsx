@@ -1,9 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Highlight, { defaultProps, Language } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
+import nightOwlTheme from 'prism-react-renderer/themes/nightOwl';
 import styled from 'styled-components';
 
+import { useTheme } from '../../../hooks';
 import { Code } from '../../atoms';
 import { Box } from '../../atoms/Layout';
 import { Text } from '../../atoms/Typography';
@@ -87,15 +88,15 @@ const Syntax = styled(Text)`
 
 Syntax.defaultProps = {
   position: 'absolute',
-  top: 4,
-  right: 4,
-  paddingX: 4,
-  paddingY: 3,
+  top: 3,
+  right: 3,
+  paddingX: 3,
+  paddingY: 2,
   borderRadius: 3,
   fontSize: 'caption',
   fontWeight: 'bold',
   color: 'white',
-  backgroundColor: 'blue.800'
+  backgroundColor: 'blue.700'
 };
 
 const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps) => {
@@ -109,17 +110,21 @@ const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps
 };
 
 /**
- * Edit theme colors
- */
-theme.styles[3].style.color = 'hsl(210, 6%, 59%)'; // Edit comments color
-
-/**
  * The `CodeBlock` component is used to represent blocks of code.
  */
-const CodeBlock = ({ children, syntax, className, ...props }: CodeBlockProps) => {
+function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
+  const theme = useTheme();
   const language = className?.replace(/language-/, '') || syntax;
+
+  nightOwlTheme.styles[3].style.color = theme.colors.gray[400]; // Edit comments color
+
   return (
-    <Highlight {...defaultProps} theme={theme} code={children} language={language as Language}>
+    <Highlight
+      {...defaultProps}
+      theme={nightOwlTheme}
+      code={children}
+      language={language as Language}
+    >
       {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
         return (
           <CodeBlockContainer {...props}>
@@ -141,7 +146,7 @@ const CodeBlock = ({ children, syntax, className, ...props }: CodeBlockProps) =>
       }}
     </Highlight>
   );
-};
+}
 
 CodeBlock.defaultProps = {
   syntax: 'jsx',

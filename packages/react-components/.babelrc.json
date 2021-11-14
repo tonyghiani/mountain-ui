@@ -6,5 +6,15 @@
       "babel-plugin-styled-components",
       { "ssr": true, "displayName": true, "fileName": false, "pure": true }
     ]
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          { "ssr": true, "displayName": false, "fileName": false, "pure": true }
+        ]
+      ]
+    }
+  }
 }

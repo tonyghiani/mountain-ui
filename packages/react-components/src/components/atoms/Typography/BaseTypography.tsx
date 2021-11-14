@@ -71,6 +71,7 @@ const BaseTypography = styled(BaseElement)<BaseTypographyProps>`
   ${p => p.underline && underline}
   ${p => p.wrapped && wrapped}
 `;
+
 BaseTypography.displayName = 'BaseTypography';
 
 export default BaseTypography;
