@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.7.2...@mountain-ui/react-components@0.8.0) (2021-11-14)
+
+
+### Features
+
+* **react-components:** 🎸 add sizes Tag component ([635d52d](https://github.com/tonyghiani/mountain-ui/commit/635d52da9d451f9cdac27836e8e16e29dfe6353d))
+
+
+
+
+
 ## [0.7.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.7.1...@mountain-ui/react-components@0.7.2) (2021-11-14)
 
 
