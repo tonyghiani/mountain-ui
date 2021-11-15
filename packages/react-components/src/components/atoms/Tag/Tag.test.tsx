@@ -17,10 +17,10 @@ describe('Tag', () => {
     );
     const tag = getByTestId('tag');
     expect(tag).toHaveStyle(`
-      padding-left: 8px;
-      padding-right: 8px;
-      padding-top: 2px;
-      padding-bottom: 2px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-top: 4px;
+      padding-bottom: 4px;
     `);
   });
 });
