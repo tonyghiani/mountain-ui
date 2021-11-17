@@ -92,8 +92,8 @@ function getMediaQueries(breakpoints: ThemeScale<number, BreakpointAlias>) {
     const nextPoint = breakpoints[i + 1];
     const query = [
       'screen',
-      `(min-width: ${point}px)`,
-      nextPoint && `(max-width: ${nextPoint - 1}px)`
+      `(min-width: ${point + 1}px)`,
+      nextPoint && `(max-width: ${nextPoint}px)`
     ]
       .filter(Boolean)
       .join(' and ');

@@ -10,7 +10,7 @@ export type ContainerProps = BoxProps;
 const Container = styled(Box)<ContainerProps>``;
 
 Container.defaultProps = {
-  maxWidth: 'min(100%, 1152px)',
+  maxWidth: 'min(100%, 1024px)',
   px: 3,
   mx: 'auto'
 };
