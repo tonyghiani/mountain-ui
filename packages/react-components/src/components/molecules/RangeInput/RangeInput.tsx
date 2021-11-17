@@ -38,7 +38,7 @@ const RangeInput = ({ children, trackProps, ...inputProps }: RangeInputProps) =>
       )}
       renderThumb={({ props, value }) => {
         return (
-          <div {...props} style={{ ...props.style, outline: 'none' }}>
+          <div {...props} style={{ ...props.style, outline: 'none' }} aria-label='RangeInput Thumb'>
             {typeof children === 'function' ? children(value) : children}
           </div>
         );
@@ -77,7 +77,6 @@ RangeInput.Thumb = function Thumb(props: ThumbProps) {
       borderRadius={7}
       backgroundColor='blue.400'
       css={thumbPseudoSelectors}
-      aria-label='RangeInput thumb'
       {...props}
     />
   );
