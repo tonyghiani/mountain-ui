@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.8.1...@mountain-ui/react-components@0.8.2) (2021-11-17)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 RangeInput aria-label thumb ([3abb113](https://github.com/tonyghiani/mountain-ui/commit/3abb113f6b19e5718eb340c1a338c1bd56435681))
+
+
+
+
+
 ## [0.8.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.8.0...@mountain-ui/react-components@0.8.1) (2021-11-15)
 
 
