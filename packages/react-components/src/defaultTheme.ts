@@ -18,6 +18,7 @@ export const defaultTheme = {
       900: 'hsl(210, 13.5%, 14%)'
     },
     blue: getColorScale(206),
+    cyan: getColorScale(187),
     green: getColorScale(155),
     red: getColorScale(7),
     yellow: getColorScale(50),
