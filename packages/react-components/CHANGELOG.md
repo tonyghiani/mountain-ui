@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.8.3...@mountain-ui/react-components@0.9.0) (2021-12-08)
+
+
+### Features
+
+* **react-components:** 🎸 add cyan color ([a5a0bef](https://github.com/tonyghiani/mountain-ui/commit/a5a0bef21549cd58e6e3b14085443ed226a5fa01))
+
+
+
+
+
 ## [0.8.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.8.2...@mountain-ui/react-components@0.8.3) (2021-11-17)
 
 
