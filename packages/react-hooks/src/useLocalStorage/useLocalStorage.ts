@@ -3,6 +3,8 @@ import { hasWindow } from '@mountain-ui/utils';
 
 import useEventListener from '../useEventListener';
 
+const LOCAL_STORAGE_KEY = 'localStorage';
+
 /**
  *
  * @param key string
@@ -67,16 +69,21 @@ function useLocalStorage(key: string, initialValue?: unknown) {
 
   useEffect(() => {
     window.dispatchEvent(
-      new CustomEvent('localStorage', {
+      new CustomEvent(LOCAL_STORAGE_KEY, {
         detail: { key, newValue: storedValue }
       })
     );
   }, [storedValue]);
 
-  useEventListener('localStorage', (event: CustomEvent) => {
-    const { newValue, key: eventKey } = event.detail || {};
-    if (eventKey === key && newValue) setValue(newValue);
-  });
+  const handleStorageChange = (event: CustomEvent & StorageEvent) => {
+    const eventKey = event.key || event.detail?.key;
+    const eventValue = event.newValue || event.detail?.newValue;
+
+    if (eventKey === key) setValue(eventValue);
+  };
+
+  useEventListener(LOCAL_STORAGE_KEY, handleStorageChange);
+  useEventListener('storage', handleStorageChange);
 
   return [storedValue, setValue];
 }
