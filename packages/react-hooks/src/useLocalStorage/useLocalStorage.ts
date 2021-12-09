@@ -68,14 +68,14 @@ function useLocalStorage(key: string, initialValue?: unknown) {
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent('localStorage', {
-        detail: { newValue: storedValue }
+        detail: { key, newValue: storedValue }
       })
     );
   }, [storedValue]);
 
   useEventListener('localStorage', (event: CustomEvent) => {
-    const { newValue } = event.detail || {};
-    if (newValue) setValue(newValue);
+    const { newValue, key: eventKey } = event.detail || {};
+    if (eventKey === key && newValue) setValue(newValue);
   });
 
   return [storedValue, setValue];
