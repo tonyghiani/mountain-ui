@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.6.0...@mountain-ui/react-hooks@0.6.1) (2021-12-09)
+
+
+### Bug Fixes
+
+* **react-hooks:** 🐛 use same key when setting localStorage ([9130285](https://github.com/tonyghiani/mountain-ui/commit/91302852ea2d3199ee25122df841373c660d8be7))
+
+
+
+
+
 # [0.6.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.5.15...@mountain-ui/react-hooks@0.6.0) (2021-12-09)
 
 
