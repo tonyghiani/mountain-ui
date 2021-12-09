@@ -18,9 +18,8 @@ function useDarkMode({
   storageKey = 'prefers-dark-mode',
   node
 }: UseDarkModeProps = {}) {
-  const [isDarkMode, setDarkMode] = useLocalStorage(storageKey);
-
   const prefersDarkMode = usePrefersDarkMode();
+  const [isDarkMode, setDarkMode] = useLocalStorage(storageKey, prefersDarkMode);
 
   const isEnabled = typeof isDarkMode !== 'undefined' ? isDarkMode : prefersDarkMode;
 

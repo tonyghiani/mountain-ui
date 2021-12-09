@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { hasWindow } from '@mountain-ui/utils';
 
+import useEventListener from '../useEventListener';
+
 /**
  *
  * @param key string
@@ -49,8 +51,9 @@ function useLocalStorage(key: string, initialValue?: unknown) {
 
     try {
       const valueToStore = typeof value === 'function' ? value(storedValue) : value;
+      const valueToStoreSerialized = JSON.stringify(valueToStore);
 
-      window.localStorage.setItem(key, JSON.stringify(valueToStore));
+      window.localStorage.setItem(key, valueToStoreSerialized);
 
       setStoredValue(valueToStore);
     } catch (error) {
@@ -61,6 +64,19 @@ function useLocalStorage(key: string, initialValue?: unknown) {
   useEffect(() => {
     setStoredValue(loadStoredValue());
   }, []);
+
+  useEffect(() => {
+    window.dispatchEvent(
+      new CustomEvent('localStorage', {
+        detail: { newValue: storedValue }
+      })
+    );
+  }, [storedValue]);
+
+  useEventListener('localStorage', (event: CustomEvent) => {
+    const { newValue } = event.detail || {};
+    if (newValue) setValue(newValue);
+  });
 
   return [storedValue, setValue];
 }
