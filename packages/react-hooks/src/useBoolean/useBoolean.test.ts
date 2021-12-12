@@ -5,7 +5,7 @@ import useBoolean from './useBoolean';
 describe('useBoolean hook', () => {
   afterEach(cleanup);
 
-  it('should return an array. The first element is should be a boolean, the second element is an object which should contain three functions: "on", "off" and "toggle"', () => {
+  it('should return an array. The first element should be a boolean, the second element is an object which should contain three functions: "on", "off" and "toggle"', () => {
     const { result } = renderHook(() => useBoolean());
     const [value, handlers] = result.current;
 
