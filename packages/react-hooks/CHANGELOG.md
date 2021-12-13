@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.6.2...@mountain-ui/react-hooks@0.7.0) (2021-12-13)
+
+
+### Features
+
+* **react-hooks:** 🎸 add useOutsideClick hook ([e22e658](https://github.com/tonyghiani/mountain-ui/commit/e22e6582cfd03f9aa6068af363406b88e66481e4))
+
+
+
+
+
 ## [0.6.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.6.1...@mountain-ui/react-hooks@0.6.2) (2021-12-09)
 
 
