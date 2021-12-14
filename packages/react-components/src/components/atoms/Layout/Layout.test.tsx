@@ -45,8 +45,8 @@ describe('Layout', () => {
       expect(container).toHaveStyle(`
         background-color: #F0F0F0;
         color: #F0F0F0;
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
       `);
     });
   });

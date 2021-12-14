@@ -11,7 +11,7 @@ const Container = styled(Box)<ContainerProps>``;
 
 Container.defaultProps = {
   maxWidth: 'min(100%, 1024px)',
-  px: 3,
+  px: 5,
   mx: 'auto'
 };
 
