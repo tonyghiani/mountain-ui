@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.1...@mountain-ui/react-components@0.9.2) (2021-12-26)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 remove empty lines from codeblock ([9ddc3b8](https://github.com/tonyghiani/mountain-ui/commit/9ddc3b80bdfa2ea80d4cbe72bc5e965544faa460))
+* **react-components:** 🐛 update Code display prop ([915f0ba](https://github.com/tonyghiani/mountain-ui/commit/915f0ba8724ea864629d976b7e5a8950d9941d78))
+
+
+
+
+
 ## [0.9.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.0...@mountain-ui/react-components@0.9.1) (2021-12-14)
 
 **Note:** Version bump only for package @mountain-ui/react-components
