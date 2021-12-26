@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizelegibility;
   }
 
-  body, h1, h2, h3, h4, h5, h6, p, input, button, select, textarea, ul {
+  body, h1, h2, h3, h4, h5, h6, p, input, button, select, textarea, ul, ol, figure, blockquote {
     margin: 0;
     padding: 0;
   }
