@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.2...@mountain-ui/react-components@0.9.3) (2021-12-26)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 add missing global style ([6549905](https://github.com/tonyghiani/mountain-ui/commit/65499050bdee9593a2160653e2c25a27f14a214f))
+
+
+
+
+
 ## [0.9.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.1...@mountain-ui/react-components@0.9.2) (2021-12-26)
 
 
