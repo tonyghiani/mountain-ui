@@ -15,9 +15,8 @@ Code.defaultProps = {
   fontWeight: 'bold',
   fontSize: 'secondaryBody',
   color: 'white',
-  display: 'inline',
-  paddingX: 2,
-  paddingY: 2
+  display: 'inline-block',
+  paddingX: 2
 };
 
 Code.displayName = 'Code';

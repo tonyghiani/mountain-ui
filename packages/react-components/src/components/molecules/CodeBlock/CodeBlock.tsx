@@ -112,7 +112,7 @@ const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps
 /**
  * The `CodeBlock` component is used to represent blocks of code.
  */
-function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
+function CodeBlock({ children = '', syntax, className, ...props }: CodeBlockProps) {
   const theme = useTheme();
   const language = className?.replace(/language-/, '') || syntax;
 
@@ -122,7 +122,7 @@ function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
     <Highlight
       {...defaultProps}
       theme={nightOwlTheme}
-      code={children}
+      code={children.trim()}
       language={language as Language}
     >
       {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
