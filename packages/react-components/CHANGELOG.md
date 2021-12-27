@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.3...@mountain-ui/react-components@0.9.4) (2021-12-27)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 update base font ([38fcb43](https://github.com/tonyghiani/mountain-ui/commit/38fcb43eb6bcd40f4ecbc2060f15ce98979c07f5))
+
+
+
+
+
 ## [0.9.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.2...@mountain-ui/react-components@0.9.3) (2021-12-26)
 
 

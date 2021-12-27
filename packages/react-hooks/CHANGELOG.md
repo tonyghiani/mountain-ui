@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.5](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.7.4...@mountain-ui/react-hooks@0.7.5) (2021-12-27)
+
+
+### Bug Fixes
+
+* **react-hooks:** 🐛 update useFontSize initial size ([5bc5b37](https://github.com/tonyghiani/mountain-ui/commit/5bc5b37447cc5bd643ea341a360fe6b92c1139f6))
+
+
+
+
+
 ## [0.7.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.7.3...@mountain-ui/react-hooks@0.7.4) (2021-12-26)
 
 **Note:** Version bump only for package @mountain-ui/react-hooks
