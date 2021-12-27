@@ -27,7 +27,7 @@ const getDocumentProp = (variableName: string) =>
  */
 export function useFontSize({
   storageKey = 'f_s',
-  initialSize = '16px',
+  initialSize = '20px',
   variableName = '--font-size'
 }: UseFontSizeProps = {}) {
   /**
