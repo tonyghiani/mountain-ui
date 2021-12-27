@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
   html {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
+    font-size: 20px;
   }
 
   body, h1, h2, h3, h4, h5, h6, p, input, button, select, textarea, ul, ol, figure, blockquote {
@@ -42,7 +43,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   ${css({
     html: {
-      fontSize: ['16px', '18px'],
       fontFamily: 'normal' as SystemCssProperties,
       color: 'gray.900' as SystemCssProperties,
       backgroundColor: 'light' as SystemCssProperties
