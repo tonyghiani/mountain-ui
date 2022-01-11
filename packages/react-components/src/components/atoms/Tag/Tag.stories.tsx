@@ -11,11 +11,11 @@ export default {
 
 export const TagStory = args => (
   <Box display='flex' gap={4}>
-    <Tag {...args} size='XS' />
-    <Tag {...args} size='S' />
-    <Tag {...args} size='M' />
-    <Tag {...args} size='L' />
-    <Tag {...args} size='XL' />
+    <Tag {...args} size='XS' status='success' onClick={() => {}} />
+    <Tag {...args} size='S' status='success' />
+    <Tag {...args} size='M' status='success' />
+    <Tag {...args} size='L' status='success' />
+    <Tag {...args} size='XL' status='success' />
   </Box>
 );
 

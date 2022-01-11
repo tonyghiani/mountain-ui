@@ -1,66 +1,121 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import styled from 'styled-components';
 
-import { useTheme } from '../../../hooks';
 import { Box, BoxProps, Text } from '..';
+
+const STATUS_COLOR = {
+  success: 'green.300',
+  warning: 'yellow.300',
+  error: 'red.300'
+};
 
 const SIZES = {
   XS: {
     fontSize: 0,
+    statusSize: 10,
     px: 3,
     py: 1
   },
   S: {
     fontSize: 1,
+    statusSize: 12,
     px: 4,
     py: 2
   },
   M: {
     fontSize: 2,
+    statusSize: 14,
     px: 4,
     py: 2
   },
   L: {
     fontSize: 4,
+    statusSize: 16,
     px: 4,
     py: 2
   },
   XL: {
     fontSize: 5,
+    statusSize: 18,
     px: 5,
     py: 3
   }
 };
 
+const TagContainer = styled(Box)`
+  cursor: ${p => (p.onClick ? 'pointer' : 'default')};
+  background: linear-gradient(
+    15deg,
+    ${p => p.theme.colors.blue[500]},
+    ${p => p.theme.colors.blue[200]}
+  );
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.03);
+    background: linear-gradient(
+      15deg,
+      ${p => p.theme.colors.blue[500]},
+      ${p => p.theme.colors.blue[300]}
+    );
+  }
+`;
+
 export type TagProps = BoxProps & {
   /* Tag text children */
   children: React.ReactNode;
-  /* Tag text children */
+  /* Tag size */
   size?: keyof typeof SIZES;
+  /* Tag status */
+  status?: keyof typeof STATUS_COLOR;
+};
+
+type TagStatusProps = {
+  /* Tag status size */
+  size: number;
+  /* Tag status */
+  status: keyof typeof STATUS_COLOR;
 };
 
 /**
  * The `Tag` component is used to render small chips of information
  */
-function Tag({ children, size = 'M', ...props }: TagProps) {
-  const theme = useTheme();
-
-  const { fontSize, px, py } = SIZES[size];
+function Tag({ children, size = 'M', status, ...props }: TagProps) {
+  const { fontSize, px, py, statusSize } = SIZES[size];
 
   return (
-    <Box
+    <TagContainer
       display='inline-flex'
+      position='relative'
       height='min-content'
       borderRadius={7}
       px={px}
       py={py}
-      background={`linear-gradient(15deg, ${theme.colors.blue[500]}, ${theme.colors.blue[200]})`}
       {...props}
     >
       <Text strong color='white' fontSize={fontSize}>
         {children}
       </Text>
-    </Box>
+      {!!status && <TagStatus status={status} size={statusSize} />}
+    </TagContainer>
+  );
+}
+
+function TagStatus({ status, size }: TagStatusProps) {
+  return (
+    <Box
+      borderRadius={8}
+      bg={STATUS_COLOR[status]}
+      width={size}
+      height={size}
+      position='absolute'
+      top={-1}
+      right={-1}
+      borderWidth={2}
+      borderStyle='solid'
+      borderColor='light'
+    />
   );
 }
 
