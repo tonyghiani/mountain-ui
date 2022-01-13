@@ -19,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
 
   input, button, select, textarea {
     font-family: inherit;
-    font-size: inherit,
+    font-size: inherit;
     font-weight: normal;
     color: inherit;
     outline: none;

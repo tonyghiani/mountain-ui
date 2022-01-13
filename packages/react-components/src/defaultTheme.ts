@@ -6,7 +6,8 @@ export const defaultTheme = {
     light: 'hsl(0, 0%, 98%)',
     dark: 'hsl(210, 14%, 9%)',
     gray: {
-      50: 'hsl(210, 12%, 95%)',
+      25: 'hsla(210, 12%, 95%, 0.5)',
+      50: 'hsla(210, 12%, 95%)',
       100: 'hsl(210, 10.5%, 86%)',
       200: 'hsl(210, 9%, 77%)',
       300: 'hsl(210, 7.5%, 68%)',
@@ -147,7 +148,7 @@ function getColorScale(baseColor: number) {
       ...palette,
       [stage * 100]: `hsl(${baseColor}, ${(saturation -= 4)}%, ${(luminosity -= 9)}%)`
     }),
-    {}
+    { 25: `hsla(${baseColor}, ${saturation - 4}%, ${luminosity - 9}%, 0.5)` }
   );
 }
 
