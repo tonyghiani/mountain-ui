@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.4...@mountain-ui/react-components@0.10.0) (2022-01-13)
+
+
+### Features
+
+* **react-components:** 🎸 add Input component ([e14c53e](https://github.com/tonyghiani/mountain-ui/commit/e14c53e73d831957e80d47a51b3c4f0d341684ac))
+* **react-components:** 🎸 add status to tag component ([798bfd6](https://github.com/tonyghiani/mountain-ui/commit/798bfd69ae7f4a45ffae73f674199ef78dbc97f8))
+
+
+
+
+
 ## [0.9.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.3...@mountain-ui/react-components@0.9.4) (2021-12-27)
 
 
