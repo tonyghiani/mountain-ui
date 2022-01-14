@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.10.0...@mountain-ui/react-components@0.10.1) (2022-01-14)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 fixed size tag and input ([7b107e4](https://github.com/tonyghiani/mountain-ui/commit/7b107e4eb1ce4aa708b8a18e54a72a7dcbefe1ee))
+
+
+
+
+
 # [0.10.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.9.4...@mountain-ui/react-components@0.10.0) (2022-01-13)
 
 
