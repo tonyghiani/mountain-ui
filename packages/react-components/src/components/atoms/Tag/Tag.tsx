@@ -12,30 +12,35 @@ const STATUS_COLOR = {
 
 const SIZES = {
   XS: {
+    height: 30,
     fontSize: 0,
     statusSize: 10,
     px: 3,
     py: 1
   },
   S: {
+    height: 36,
     fontSize: 1,
     statusSize: 12,
     px: 4,
     py: 2
   },
   M: {
+    height: 42,
     fontSize: 2,
     statusSize: 14,
     px: 4,
     py: 2
   },
   L: {
+    height: 48,
     fontSize: 4,
     statusSize: 16,
     px: 4,
     py: 2
   },
   XL: {
+    height: 60,
     fontSize: 5,
     statusSize: 18,
     px: 5,
@@ -82,13 +87,14 @@ type TagStatusProps = {
  * The `Tag` component is used to render small chips of information
  */
 function Tag({ children, size = 'M', status, ...props }: TagProps) {
-  const { fontSize, px, py, statusSize } = SIZES[size];
+  const { height, fontSize, px, py, statusSize } = SIZES[size];
 
   return (
     <TagContainer
       display='inline-flex'
+      alignItems='center'
       position='relative'
-      height='min-content'
+      height={height}
       borderRadius={7}
       px={px}
       py={py}

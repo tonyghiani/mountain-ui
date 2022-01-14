@@ -15,22 +15,27 @@ const STATUS_COLOR = {
 
 const SIZES = {
   XS: {
+    height: 36,
     fontSize: 0,
     p: 3
   },
   S: {
+    height: 42,
     fontSize: 1,
     p: 4
   },
   M: {
+    height: 48,
     fontSize: 2,
     p: 5
   },
   L: {
+    height: 54,
     fontSize: 4,
     p: 5
   },
   XL: {
+    height: 60,
     fontSize: 5,
     p: 6
   }
@@ -86,7 +91,7 @@ const InputContainer = styled(Box)`
  * The `Input` component is used to collect information from the users
  */
 function Input({ status = 'default', size = 'M', label, caption, children, ...props }: InputProps) {
-  const { fontSize, p } = SIZES[size];
+  const { height, fontSize, p } = SIZES[size];
   const inputColor = STATUS_COLOR[status];
 
   return (
@@ -96,7 +101,7 @@ function Input({ status = 'default', size = 'M', label, caption, children, ...pr
           {label}
         </Text>
       )}
-      <InputWrapper px={p} py={p - 1}>
+      <InputWrapper px={p} py={p - 1} height={height}>
         {children}
         <StyledInput
           width={1}
