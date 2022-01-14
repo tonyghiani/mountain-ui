@@ -65,7 +65,6 @@ const InputWrapper = styled(Box)`
   border-radius: ${p => p.theme.radii[3]};
   background-color: var(--bgc-input);
   box-shadow: inset 0 0 0 2px var(--c-input);
-  height: min-content;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
