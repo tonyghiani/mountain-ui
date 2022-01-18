@@ -54,6 +54,7 @@
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
+    "@mountain-ui/react-hooks": "^0.7.8",
     "@mountain-ui/utils": "^0.3.0",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
@@ -83,6 +84,7 @@
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
+    "@mountain-ui/react-hooks": "^0.7.8",
     "@mountain-ui/utils": "^0.3.0",
     "@styled-system/css": ">=5",
     "@types/react": "^17.0.34",
