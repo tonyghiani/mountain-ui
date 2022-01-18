@@ -1,6 +1,6 @@
 import React from 'react';
 import { withTests } from '@storybook/addon-jest';
-import { Container, ThemeProvider } from '@mountain-ui/react-components';
+import { Container } from '@mountain-ui/doc-tools';
 
 let results = null;
 try {
@@ -26,10 +26,8 @@ export const parameters = {
 export const decorators = [
   results && withTests({ results }),
   Story => (
-    <ThemeProvider>
-      <Container marginTop={6}>
-        <Story />
-      </Container>
-    </ThemeProvider>
+    <Container marginTop={32}>
+      <Story />
+    </Container>
   )
 ].filter(Boolean);

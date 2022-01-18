@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Icon } from '@mountain-ui/react-components';
 
-import { IconPresetProps } from '../icons.types';
+import { Icon, IconPresetProps } from '../Icon';
 
 function SvgPrint(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
   return (
