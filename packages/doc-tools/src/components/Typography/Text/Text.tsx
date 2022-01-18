@@ -29,6 +29,7 @@ const Text = styled(BaseTypography)<TextProps>`
 `;
 
 Text.defaultProps = {
+  fontFamily: 'Avenir, Lato, Nunito Sans, apple-system, Helvetica, sans-serif',
   color: 'hsl(210, 14%, 9%)',
   lineHeight: 1.5,
   as: 'span'
