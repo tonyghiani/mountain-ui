@@ -11,6 +11,8 @@ import {
   compose,
   flexbox,
   FlexboxProps,
+  grid,
+  GridProps,
   layout,
   LayoutProps,
   opacity,
@@ -28,6 +30,7 @@ export type BaseElementProps = BackgroundProps &
   BorderProps &
   ColorProps &
   FlexboxProps &
+  GridProps &
   LayoutProps &
   OpacityProps &
   PositionProps &
@@ -56,6 +59,7 @@ export const styleProps = compose(
   color,
   custom,
   flexbox,
+  grid,
   layout,
   opacity,
   position,
