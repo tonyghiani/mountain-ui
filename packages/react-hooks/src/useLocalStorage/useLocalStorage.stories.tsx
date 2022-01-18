@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Grid, Paragraph } from '@mountain-ui/react-components';
+import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
 
 import useLocalStorage from './useLocalStorage';
 
@@ -16,55 +16,55 @@ export const Basic = () => {
     <Container padding={4} display='flex' gap={4}>
       <Box
         display='flex'
-        borderRadius={3}
+        borderRadius={12}
         border='1px solid'
         flexDirection='column'
-        borderColor='blue.400'
+        borderColor='hsl(206, 84%, 60%)'
         overflow='hidden'
         width={300}
       >
-        <Box bg='blue.400' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='light'>
+        <Box bg='hsl(206, 84%, 60%)' p={2}>
+          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
             Stored value: {value1}
           </Paragraph>
-          <Paragraph fontSize={0} strong textAlign='center' color='light'>
+          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
             Refresh the page to retrieve your stored value.
           </Paragraph>
         </Box>
-        <Grid gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
+        <Box display='grid' gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
           <Button onClick={() => setValue1('🍕')} width={1}>
             Store a 🍕
           </Button>
           <Button onClick={() => setValue1('🍔')} width={1}>
             Store a 🍔
           </Button>
-        </Grid>
+        </Box>
       </Box>
       <Box
         display='flex'
-        borderRadius={3}
+        borderRadius={12}
         border='1px solid'
         flexDirection='column'
-        borderColor='blue.400'
+        borderColor='hsl(206, 84%, 60%)'
         overflow='hidden'
         width={300}
       >
-        <Box bg='blue.400' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='light'>
+        <Box bg='hsl(206, 84%, 60%)' p={2}>
+          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
             Stored value: {value2}
           </Paragraph>
-          <Paragraph fontSize={0} strong textAlign='center' color='light'>
+          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
             Refresh the page to retrieve your stored value.
           </Paragraph>
         </Box>
-        <Grid gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
+        <Box display='grid' gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
           <Button onClick={() => setValue2('🥐')} width={1}>
             Store a 🥐
           </Button>
           <Button onClick={() => setValue2('🥘')} width={1}>
             Store a 🥘
           </Button>
-        </Grid>
+        </Box>
       </Box>
     </Container>
   );
