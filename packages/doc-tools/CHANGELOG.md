@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2022-01-18)
+
+
+### Bug Fixes
+
+* **doc-tools:** 🐛 add grid to BaseElement ([5a211c3](https://github.com/tonyghiani/mountain-ui/commit/5a211c3ad2e3121f37565067e51332944c3e7b46))
+* **doc-tools:** 🐛 add missing font-family ([d72c4ad](https://github.com/tonyghiani/mountain-ui/commit/d72c4adb5ca68ff4e9ead55597dd928b15361fb0))
+* **doc-tools:** 🐛 update button color ([b941e81](https://github.com/tonyghiani/mountain-ui/commit/b941e8175852eeb424ee8a8cb50c8e67775a7917))
+
+
+### Features
+
+* **doc-tools:** 🎸 initial commit ([ac4c778](https://github.com/tonyghiani/mountain-ui/commit/ac4c778b9510b1b90f24259ac260957eab50961a))
+
+
+
+
+
 ## [0.10.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.10.1...@mountain-ui/react-components@0.10.2) (2022-01-14)
 
 ### Bug Fixes

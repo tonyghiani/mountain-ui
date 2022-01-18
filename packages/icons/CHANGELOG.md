@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@0.1.33...@mountain-ui/icons@0.2.0) (2022-01-18)
+
+
+### Features
+
+* **icons:** 🎸 switch to doc-tools ([6b9eb1f](https://github.com/tonyghiani/mountain-ui/commit/6b9eb1f49039d16bec51ede74720091aeecf1d32))
+
+
+
+
+
 ## [0.1.33](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@0.1.32...@mountain-ui/icons@0.1.33) (2022-01-14)
 
 **Note:** Version bump only for package @mountain-ui/icons

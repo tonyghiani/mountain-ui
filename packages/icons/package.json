@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/icons",
-  "version": "0.1.33",
+  "version": "0.2.0",
   "description": "Icon components set for Mountain UI",
   "keywords": [
     "react",
@@ -50,7 +50,7 @@
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.12.13",
     "@babel/preset-typescript": "^7.13.0",
-    "@mountain-ui/doc-tools": "^0.1.0",
+    "@mountain-ui/doc-tools": "^0.2.0",
     "@mountain-ui/utils": "^0.3.0",
     "@storybook/addon-a11y": "^6.1.17",
     "@storybook/addon-actions": "^6.1.15",
