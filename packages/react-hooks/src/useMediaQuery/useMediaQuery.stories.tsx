@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Grid, Paragraph, useTheme } from '@mountain-ui/react-components';
+import { Box, Container, Paragraph } from '@mountain-ui/doc-tools';
 
 import useMediaQuery from './useMediaQuery';
 
@@ -9,7 +9,12 @@ export default {
 };
 
 export const Basic = () => {
-  const { mediaQueries } = useTheme();
+  const mediaQueries = {
+    mobile: 'screen and (min-width: 1px) and (max-width: 512px)',
+    tablet: 'screen and (min-width: 513px) and (max-width: 1024px)',
+    desktop: 'screen and (min-width: 1025px) and (max-width: 1536px)',
+    wideScreen: 'screen and (min-width: 1537px)'
+  };
 
   const medias = {
     isMobile: useMediaQuery(mediaQueries.mobile),
@@ -23,19 +28,25 @@ export const Basic = () => {
       <Paragraph mb={2} fontStyle='oblique'>
         Try to resize the window to see the flags changing.
       </Paragraph>
-      <Grid gridGap={2} gridTemplateColumns={['1fr', '1fr 1fr 1fr', '1fr 1fr 1fr 1fr']} mt={3}>
+      <Box
+        display='grid'
+        gridGap={2}
+        gridTemplateColumns={['1fr', '1fr 1fr 1fr', '1fr 1fr 1fr 1fr']}
+        mt={3}
+      >
         {Object.keys(medias).map((name, i) => (
           <Box key={i}>
             <Box
               display='flex'
-              borderRadius={3}
+              borderRadius={12}
               border='1px solid'
               flexDirection='column'
-              borderColor='primary.light'
+              borderColor='hsl(206, 84%, 60%)'
               overflow='hidden'
+              width={300}
             >
-              <Box bg='primary.light' p={2}>
-                <Paragraph fontSize={3} strong textAlign='center' color='text.light'>
+              <Box bg='hsl(206, 84%, 60%)' p={2}>
+                <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
                   {name}
                 </Paragraph>
               </Box>
@@ -45,7 +56,7 @@ export const Basic = () => {
             </Box>
           </Box>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 };

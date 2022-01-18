@@ -73,16 +73,12 @@ function wrapWithIcon(t, jsx) {
 }
 
 function addImports(t, imports) {
-  return [
-    ...imports,
-    makeImport(t, { name: 'Icon', path: '@mountain-ui/react-components' }),
-    makeImport(t, { name: 'IconPresetProps', path: '../icons.types' })
-  ];
+  return [...imports, makeImport(t, { names: ['Icon', 'IconPresetProps'], path: '../Icon' })];
 }
 
-function makeImport(t, { name, path }) {
+function makeImport(t, { names, path }) {
   return t.importDeclaration(
-    [t.importSpecifier(t.identifier(name), t.identifier(name))],
+    names.map(name => t.importSpecifier(t.identifier(name), t.identifier(name))),
     t.stringLiteral(path)
   );
 }

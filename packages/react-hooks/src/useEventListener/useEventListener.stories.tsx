@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Box, Container, Heading } from '@mountain-ui/react-components';
+import { Box, Container, Heading } from '@mountain-ui/doc-tools';
 
 import useEventListener from './useEventListener';
 
@@ -17,13 +17,11 @@ export const Basic = () => {
   return (
     <Container padding={4}>
       <Box width={1} height='100vh' overflow='hidden' justifyContent='center' alignItems='center'>
-        <Heading variant='h1' mb={3}>
-          Interact with the page to trigger events
-        </Heading>
-        <Heading variant='h5' mb={3} as='h2'>
+        <Heading mb={3}>Interact with the page to trigger events</Heading>
+        <Heading mb={3} as='h2'>
           Click anywhere to run the event callback attached to window!
         </Heading>
-        <Heading ref={textRef} variant='h5' as='h2'>
+        <Heading ref={textRef} as='h2'>
           Click this text to run the event callback attached to it!
         </Heading>
       </Box>

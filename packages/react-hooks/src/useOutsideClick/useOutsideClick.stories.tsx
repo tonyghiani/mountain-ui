@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Box, Container, Text } from '@mountain-ui/react-components';
+import { Box, Container, Text } from '@mountain-ui/doc-tools';
 
 import useOutsideClick from './useOutsideClick';
 
@@ -21,11 +21,11 @@ export const Basic = () => {
         alignItems='center'
         width={400}
         height={200}
-        backgroundColor='blue.300'
-        borderRadius={3}
+        backgroundColor='hsl(206, 84%, 60%)'
+        borderRadius={16}
         p={3}
       >
-        <Text strong color='light' fontSize={5}>
+        <Text strong color='#FFFFFF' fontSize={5}>
           Click anywhere outside the box to run the event callback!
         </Text>
       </Box>

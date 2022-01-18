@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Icon } from '@mountain-ui/react-components';
 
-import { IconPresetProps } from '../icons.types';
+import { Icon, IconPresetProps } from '../Icon';
 
 function SvgBagSlash(props: IconPresetProps, svgRef?: React.Ref<SVGSVGElement>) {
   return (

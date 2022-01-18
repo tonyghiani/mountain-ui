@@ -1,20 +1,25 @@
 import React from 'react';
-import { Grid, Icon, Text } from '@mountain-ui/react-components';
+import { Box, Text } from '@mountain-ui/doc-tools';
 import styled from 'styled-components';
 
-import { IconPresetProps } from './icon.types';
+import { Icon, IconPresetProps } from './Icon';
 import * as Icons from './icons';
 
 const IconList = props => (
-  <Grid gridGap={3} gridTemplateColumns='repeat(auto-fit, minmax(215px, 1fr))' {...props} />
+  <Box
+    display='grid'
+    gridGap={3}
+    gridTemplateColumns='repeat(auto-fit, minmax(215px, 1fr))'
+    {...props}
+  />
 );
 const Card = props => (
-  <Grid
-    gridGap={2}
+  <Box
+    display='grid'
     gridTemplateColumns='1fr'
-    p={4}
-    borderRadius={3}
-    boxShadow={3}
+    p={16}
+    borderRadius={16}
+    boxShadow='0px 4px 16px -4px hsl(0deg 10% 10% / 50%)'
     placeItems='center'
     maxWidth={300}
     {...props}
