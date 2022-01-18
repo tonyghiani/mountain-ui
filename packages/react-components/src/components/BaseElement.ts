@@ -46,7 +46,8 @@ const custom = system({
   },
   placeItems: true,
   transform: true,
-  transition: true
+  transition: true,
+  animation: true
 });
 
 export const styleProps = compose(
