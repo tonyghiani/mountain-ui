@@ -1,0 +1,78 @@
+{
+  "name": "@mountain-ui/doc-tools",
+  "version": "0.10.2",
+  "description": "Doc tools based on mountain ui",
+  "keywords": [
+    "mountain-ui",
+    "react",
+    "react-component",
+    "components",
+    "css-in-js",
+    "styled",
+    "styled-components",
+    "styled-system"
+  ],
+  "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/doc-tools#readme",
+  "repository": "https://github.com/tonyghiani/mountain-ui",
+  "license": "MIT",
+  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean:build && yarn build:cjs && yarn build:esm && yarn build:types",
+    "build:cjs": "NODE_ENV=production BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/cjs",
+    "build:esm": "NODE_ENV=production BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/esm",
+    "build:types": "tsc --project ./tsconfig.types.json",
+    "clean:build": "rimraf dist *.tsbuildinfo",
+    "commit": "git cz",
+    "lint": "eslint",
+    "lint:package": "sort-package-json",
+    "release": "semantic-release",
+    "test": "NODE_ENV=testing jest --passWithNoTests"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@styled-system/css": "^5.1.5",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/styled-components": "^5.1.15",
+    "@types/styled-system": "^5.1.13",
+    "@types/styled-system__css": "^5.0.16",
+    "babel-plugin-styled-components": "^1.13.3",
+    "eslint-plugin-react": "^7.27.0",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-range": "^1.8.11",
+    "styled-components": "^5.2.1",
+    "styled-system": "^5.1.5",
+    "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "@styled-system/css": ">=5",
+    "@types/react": "^17.0.34",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": ">=5",
+    "styled-system": ">=5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
