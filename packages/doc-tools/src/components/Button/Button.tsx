@@ -9,6 +9,7 @@ export type ButtonProps = BaseElementProps;
  */
 const Button = styled.button<ButtonProps>`
   position: relative;
+  background-color: hsl(206, 84%, 60%);
   border: 0;
   border-radius: 12px;
   color: #ffffff;
