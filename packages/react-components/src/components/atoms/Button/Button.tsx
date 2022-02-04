@@ -19,7 +19,7 @@ const Button = styled.button<ButtonProps>`
     borderRadius: 3,
     boxShadow: 1,
     color: 'white',
-    fontWeight: 'ultraBold',
+    fontWeight: 'semiBold',
     fontSize: 2,
     padding: 3,
     cursor: 'pointer',
