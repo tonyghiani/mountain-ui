@@ -39,6 +39,7 @@ export type BaseElementProps = BackgroundProps &
   };
 
 const custom = system({
+  clipPath: true,
   cursor: true,
   gap: {
     property: 'gap',
