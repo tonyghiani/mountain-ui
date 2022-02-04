@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.11.0...@mountain-ui/react-components@0.11.1) (2022-02-04)
+
+
+### Bug Fixes
+
+* **react-components:** 🐛 add missing clipPath property ([a60e19b](https://github.com/tonyghiani/mountain-ui/commit/a60e19bedb91c27fb747587b700e4b15d5debdb7))
+
+
+
+
+
 # [0.11.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.10.2...@mountain-ui/react-components@0.11.0) (2022-01-18)
 
 
