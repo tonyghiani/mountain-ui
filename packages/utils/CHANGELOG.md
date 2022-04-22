@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/utils@0.3.0...@mountain-ui/utils@0.4.0) (2022-04-22)
+
+
+### Features
+
+* **utils:** 🎸 implement debounce and sleep utils ([6aa8841](https://github.com/tonyghiani/mountain-ui/commit/6aa88415767ce92686f198e8588a8bd8454e4909))
+
+
+
+
+
 # [0.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/utils@0.2.0...@mountain-ui/utils@0.3.0) (2021-08-03)
 
 

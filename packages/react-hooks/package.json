@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-hooks",
-  "version": "0.7.9",
+  "version": "0.7.10",
   "description": "Mountain UI hooks library",
   "keywords": [
     "react",
@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "@mountain-ui/doc-tools": "^0.2.0",
-    "@mountain-ui/utils": "^0.3.0"
+    "@mountain-ui/utils": "^0.4.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.4",
