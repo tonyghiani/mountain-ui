@@ -54,8 +54,8 @@
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
-    "@mountain-ui/react-hooks": "^0.7.10",
-    "@mountain-ui/utils": "^0.4.0",
+    "@mountain-ui/react-hooks": "*",
+    "@mountain-ui/utils": "*",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-docs": "^6.3.12",
@@ -84,8 +84,8 @@
     "typescript": "^4.4.4"
   },
   "peerDependencies": {
-    "@mountain-ui/react-hooks": "^0.7.8",
-    "@mountain-ui/utils": "^0.3.0",
+    "@mountain-ui/react-hooks": "*",
+    "@mountain-ui/utils": "*",
     "@styled-system/css": ">=5",
     "@types/react": "^17.0.34",
     "prism-react-renderer": "^1.2.1",

@@ -16,13 +16,13 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "lerna run build --concurrency 2 --stream",
+    "build": "lerna run build",
     "commit": "git cz",
     "install:clean": "lerna clean --yes && rm -rf node_modules yarn.lock && yarn install",
-    "lint": "lerna run lint --concurrency 2 --stream",
-    "lint:package": "lerna run lint:package --concurrency 2 --stream",
+    "lint": "lerna run lint --stream",
+    "lint:package": "lerna run lint:package --stream",
     "release": "lerna publish --yes --no-verify-access",
-    "test": "lerna run test --concurrency 2 --stream"
+    "test": "lerna run test --stream"
   },
   "config": {
     "commitizen": {
@@ -46,7 +46,7 @@
     "husky": "^7.0.4",
     "jest": "^27.3.1",
     "jest-localstorage-mock": "^2.4.18",
-    "lerna": "^4.0.0",
+    "lerna": "^6.0.1",
     "lerna-changelog": "^2.2.0",
     "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
