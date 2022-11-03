@@ -19,17 +19,22 @@ function useDarkMode({
   node
 }: UseDarkModeProps = {}) {
   const prefersDarkMode = usePrefersDarkMode();
-  const [isDarkMode, setDarkMode] = useLocalStorage(storageKey, prefersDarkMode);
 
-  const isEnabled = typeof isDarkMode !== 'undefined' ? isDarkMode : prefersDarkMode;
+  const [isDarkMode, setMode] = useLocalStorage(storageKey, prefersDarkMode);
+
+  const setDarkMode = (isDark: boolean) => {
+    const element = node || window.document.body;
+    const classAction = isDark ? 'add' : 'remove';
+    element.classList[classAction](darkModeClassName);
+
+    setMode(isDark);
+  };
 
   useEffect(() => {
-    const element = node || window.document.body;
-    const classAction = isEnabled ? 'add' : 'remove';
-    element.classList[classAction](darkModeClassName);
-  }, [isEnabled, node]);
+    setDarkMode(prefersDarkMode);
+  }, [prefersDarkMode]);
 
-  return [isEnabled, setDarkMode];
+  return [isDarkMode, setDarkMode];
 }
 
 export default useDarkMode;
