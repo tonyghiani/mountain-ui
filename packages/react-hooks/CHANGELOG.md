@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.12](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.7.11...@mountain-ui/react-hooks@0.7.12) (2022-11-03)
+
+### Bug Fixes
+
+- **react-hooks:** 🐛 useDarkMode not watching preferences ([2432aa6](https://github.com/tonyghiani/mountain-ui/commit/2432aa6281310adb3b4e115dab0bcb7998e77119))
+
 ## [0.7.11](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@0.7.10...@mountain-ui/react-hooks@0.7.11) (2022-10-19)
 
 **Note:** Version bump only for package @mountain-ui/react-hooks
