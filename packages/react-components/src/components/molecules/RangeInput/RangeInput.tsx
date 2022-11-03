@@ -12,7 +12,7 @@ export type RangeInputProps = IProps &
     /* Props for the track element */
     trackProps?: ITrackProps & BaseElementProps;
     /* RangeInput children */
-    children: React.ReactNode;
+    children: React.ReactNode | ((value: number) => React.ReactNode);
   };
 
 export type ThumbProps = BaseElementProps;
