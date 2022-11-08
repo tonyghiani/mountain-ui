@@ -70,7 +70,7 @@ function useLocalStorage(key: string, initialValue?: unknown) {
   useEffect(() => {
     window.dispatchEvent(
       new CustomEvent(LOCAL_STORAGE_KEY, {
-        detail: { key, newValue: storedValue }
+        detail: { key, newValue: JSON.stringify(storedValue) }
       })
     );
   }, [storedValue]);
