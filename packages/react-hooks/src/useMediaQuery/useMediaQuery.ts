@@ -11,11 +11,12 @@ function useMediaQuery(...queries: string[]): boolean {
 
   const [match, setMatch] = useState(false);
 
+  const query = queries.join();
+
   useEffect(() => {
     let active = true;
     if (!supportMatchMedia) return undefined;
 
-    const query = queries.join();
     const queryList = window.matchMedia(query);
 
     function updateMatch() {
@@ -29,7 +30,7 @@ function useMediaQuery(...queries: string[]): boolean {
       active = false;
       queryList.removeListener(updateMatch);
     };
-  }, [queries, supportMatchMedia]);
+  }, [query, supportMatchMedia]);
 
   return match;
 }

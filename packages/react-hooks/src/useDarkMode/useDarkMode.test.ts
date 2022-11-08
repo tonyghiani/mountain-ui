@@ -5,6 +5,20 @@ import { act, renderHook } from '@testing-library/react-hooks';
 import useDarkMode from './useDarkMode';
 
 describe('useDarkMode hook', () => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn()
+    }))
+  });
+
   afterEach(() => {
     localStorage.clear();
     jest.clearAllMocks();

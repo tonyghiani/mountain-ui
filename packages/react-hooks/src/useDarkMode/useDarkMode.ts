@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { hasWindow } from '@mountain-ui/utils';
 
 import useLocalStorage from '../useLocalStorage';
 import usePrefersDarkMode from '../usePrefersDarkMode';
@@ -31,8 +32,12 @@ function useDarkMode({
   };
 
   useEffect(() => {
-    setDarkMode(prefersDarkMode);
-  }, [prefersDarkMode]);
+    if (hasWindow()) {
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', ev => setDarkMode(ev.matches));
+    }
+  }, []);
 
   return [isDarkMode, setDarkMode];
 }
