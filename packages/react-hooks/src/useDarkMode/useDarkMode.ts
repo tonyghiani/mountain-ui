@@ -23,13 +23,20 @@ function useDarkMode({
 
   const [isDarkMode, setMode] = useLocalStorage(storageKey, prefersDarkMode);
 
-  const setDarkMode = (isDark: boolean) => {
+  const setClassName = (isDark: boolean) => {
     const element = node || window.document.body;
     const classAction = isDark ? 'add' : 'remove';
     element.classList[classAction](darkModeClassName);
+  };
 
+  const setDarkMode = (isDark: boolean) => {
+    setClassName(isDark);
     setMode(isDark);
   };
+
+  useEffect(() => {
+    setClassName(isDarkMode);
+  }, [isDarkMode]);
 
   useEffect(() => {
     if (hasWindow()) {
