@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-components",
-  "version": "0.11.4",
+  "version": "0.11.5",
   "description": "React components library based on mountain ui",
   "keywords": [
     "mountain-ui",
@@ -54,7 +54,7 @@
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
-    "@mountain-ui/react-hooks": "^0.7.12",
+    "@mountain-ui/react-hooks": "^0.7.13",
     "@mountain-ui/utils": "*",
     "@storybook/addon-a11y": "^6.3.12",
     "@storybook/addon-actions": "^6.3.12",
