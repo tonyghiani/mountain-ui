@@ -46,6 +46,8 @@ export type InputProps = BaseElementProps & {
   children?: React.ReactNode;
   /* Caption text for the input */
   caption?: string;
+  /* Id for the input */
+  id?: string;
   /* Label text for the input */
   label?: string;
   /* Tag size */
@@ -89,20 +91,29 @@ const InputContainer = styled(Box)`
 /**
  * The `Input` component is used to collect information from the users
  */
-function Input({ status = 'default', size = 'M', label, caption, children, ...props }: InputProps) {
+function Input({
+  status = 'default',
+  size = 'M',
+  label,
+  caption,
+  children,
+  id,
+  ...props
+}: InputProps) {
   const { height, fontSize, p } = SIZES[size];
   const inputColor = STATUS_COLOR[status];
 
   return (
     <InputContainer color={inputColor}>
       {label && (
-        <Text as='label' color='var(--c-input)' mb={2}>
+        <Text as='label' color='var(--c-input)' mb={2} htmlFor={id}>
           {label}
         </Text>
       )}
       <InputWrapper px={p} py={p - 1} height={height}>
         {children}
         <StyledInput
+          id={id}
           width={1}
           ml={children ? p : 0}
           fontSize={fontSize}
