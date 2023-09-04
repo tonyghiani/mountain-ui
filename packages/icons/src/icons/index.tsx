@@ -1109,6 +1109,7 @@ export { default as Tumblr } from './Tumblr';
 export { default as TvRetroSlash } from './TvRetroSlash';
 export { default as TvRetro } from './TvRetro';
 export { default as TwitterAlt } from './TwitterAlt';
+export { default as TwitterX } from './TwitterX';
 export { default as Twitter } from './Twitter';
 export { default as Umbrella } from './Umbrella';
 export { default as Unamused } from './Unamused';
