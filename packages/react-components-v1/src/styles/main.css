@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-text-primary: theme('colors.dark');
+  --c-text-secondary: theme('colors.gray.600');
+  --c-text-caption: theme('colors.gray.500');
+
+  
+
+  --c-heading1: var(--c-heading, theme('colors.dark'))
+  --c-heading2: var(--c-heading, theme('colors.dark'))
+  --c-heading3: var(--c-heading, theme('colors.dark'))
+  --c-heading4: var(--c-heading, theme('colors.dark'))
+  --c-heading5: var(--c-heading, theme('colors.dark'))
+  --c-heading6: var(--c-heading, theme('colors.dark'))
+}

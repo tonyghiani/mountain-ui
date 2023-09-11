@@ -1,0 +1,99 @@
+{
+  "name": "@mountain-ui/react-components-v1",
+  "version": "0.0.0",
+  "description": "React components library based on mountain ui",
+  "type": "module",
+  "keywords": [
+    "mountain-ui",
+    "react",
+    "react-components",
+    "components"
+  ],
+  "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/react-components#readme",
+  "repository": "https://github.com/tonyghiani/mountain-ui",
+  "license": "MIT",
+  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
+  "sideEffects": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean:build && yarn build:cjs && yarn build:esm && yarn build:types",
+    "build:vite": "vite build",
+    "build-storybook": "storybook build",
+    "build:cjs": "NODE_ENV=production BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/cjs",
+    "build:esm": "NODE_ENV=production BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/esm",
+    "build:types": "tsc --project ./tsconfig.types.json",
+    "clean:build": "rimraf dist *.tsbuildinfo",
+    "commit": "git cz",
+    "generate": "node scripts/generate.js",
+    "lint": "eslint",
+    "lint:package": "sort-package-json",
+    "release": "semantic-release",
+    "storybook": "storybook dev -p 6006",
+    "test": "NODE_ENV=testing jest",
+    "test:ci": "NODE_ENV=ci jest --no-cache",
+    "test:coverage": "yarn test --coverage",
+    "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
+    "test:watch": "yarn test --watch"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "devDependencies": {
+    "@mountain-ui/react-hooks": "^0.7.15",
+    "@mountain-ui/utils": "*",
+    "@storybook/addon-essentials": "^7.4.0",
+    "@storybook/addon-interactions": "^7.4.0",
+    "@storybook/addon-links": "^7.4.0",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.4.0",
+    "@storybook/react": "^7.4.0",
+    "@storybook/react-vite": "^7.4.0",
+    "@storybook/testing-library": "^0.2.0",
+    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/react": "^12.1.2",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "eslint-plugin-storybook": "^0.6.13",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.2.0",
+    "postcss": "^8.4.29",
+    "prism-react-renderer": "1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-range": "^1.8.11",
+    "storybook": "^7.4.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-babel-macros": "^1.0.6"
+  },
+  "peerDependencies": {
+    "@mountain-ui/react-hooks": "*",
+    "@mountain-ui/utils": "*",
+    "@types/react": "^17.0.34",
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-range": "^1.8.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0"
+  }
+}
