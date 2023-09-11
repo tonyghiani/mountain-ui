@@ -12,7 +12,7 @@ const variants: Record<HeadingVariant, string> = {
   h3: 'text-h3 leading-snug text-[--c-heading3]',
   h4: 'text-h4 leading-normal text-[--c-heading4]',
   h5: 'text-h5 leading-normal text-[--c-heading5]',
-  h6: 'text-h6 leading-normal text-[--c-headin6g]'
+  h6: 'text-h6 leading-normal text-[--c-heading6]'
 }
 
 const Heading = createMntComponent<HeadingProps>(BaseTypography)((props) => ({
