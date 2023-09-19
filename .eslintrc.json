@@ -16,7 +16,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "import", "simple-import-sort"],
   "rules": {
-    "no-unused-vars": "off",
+    "no-unused-vars": 2,
     "prefer-const": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
@@ -54,7 +54,7 @@
       "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
         "react/prop-types": "off",
-        "no-undef": "off"
+        "no-undef": 2
       }
     }
   ]

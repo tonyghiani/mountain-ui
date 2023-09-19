@@ -1,7 +1,8 @@
 import React, { ForwardedRef, PropsWithChildren } from 'react'
 import clsx from 'clsx';
+import { isFunction, isString } from '@mountain-ui/utils';
 
-export type PolymorphicAs = Exclude<keyof JSX.IntrinsicElements, 'symbol' | 'object'> | React.ComponentType;
+export type PolymorphicAs = React.ElementType;
 
 interface AsProps {
   as?: PolymorphicAs
@@ -28,37 +29,28 @@ interface Config<Props extends VariantProps> extends AsProps {
 
 type ConfigOrFactory<Props> = Config<Props> | ((props: Props) => Config<Props>)
 
-type MntComponentType<Props> = (React.ComponentType<Props> | keyof JSX.IntrinsicElements) & {
+type MntComponent<Props> = React.ForwardRefExoticComponent<React.PropsWithoutRef<Props> & React.RefAttributes<HTMLElement>> & {
   _isMnt?: boolean
   _configFactory?: (props: Props) => Config<Props>
   _elementType?: MntComponentType<Props>
-};
+}
+type MntComponentType<Props> = Exclude<keyof JSX.IntrinsicElements, 'symbol' | 'object'> | MntComponent<Props>
+
 
 
 /**
  * Creates a component factory function to enhance basic capabilities of a passed component.
  *
- * @template Props - The props type for the Mnt component.
- *
- * @param {MntComponentType<Props>} ElementType - The ElementType for the Mnt component.
- *
- * @returns {(config: Config<Props>) => React.ForwardRefExoticComponent<Props, HTMLElement>}
- *   An object or function to determine the component styles.
- *
  * @example
  * // Usage example:
  * const Button = createMntComponent('button')({ baseClass: 'button-classname' });
  * const Paragraph createMntComponent(BaseTypography)({ baseClass: 'text-classname' });
- *
- * @see {@link MntComponentType}
- * @see {@link Config}
- * @see {@link React.ForwardRefExoticComponent}
  */
-export const createMntComponent = <Props extends MntProps>(elementType: MntComponentType<Props>) => (configOrFactory: ConfigOrFactory<Props>) => {
+export const createMntComponent = <Props extends MntProps>(elementType: MntComponentType<Props>) => (configOrFactory: ConfigOrFactory<Props>): MntComponent<Props> => {
   const configFactory = isFunction(configOrFactory) ? configOrFactory : () => configOrFactory
 
 
-  if (elementType._isMnt) {
+  if (!isString(elementType) && elementType._isMnt) {
     return createMntComponent(elementType._elementType)((props) => ({
       ...elementType._configFactory(props),
       ...configFactory(props)
@@ -78,15 +70,15 @@ export const createMntComponent = <Props extends MntProps>(elementType: MntCompo
 
     const classes = clsx(config.baseClass, variantClass, classFromProps, className)
 
-    const Component = As ?? config.as ?? elementType;
-    return <Component ref={ref} className={classes} {...cleanProps} />
+    const TagName = As ?? config.as ?? elementType;
+    return <TagName ref={ref} className={classes} {...cleanProps} />
   }
 
   if (hasStaticProperty(elementType, 'displayName')) {
     Component.displayName = elementType.displayName || elementType.name
   }
 
-  const MntComponent = React.forwardRef<HTMLElement, Props>(Component)
+  const MntComponent: MntComponent<Props> = React.forwardRef<HTMLElement, Props>(Component)
 
   MntComponent._isMnt = true
   MntComponent._configFactory = configFactory
@@ -95,8 +87,8 @@ export const createMntComponent = <Props extends MntProps>(elementType: MntCompo
   return MntComponent
 }
 
-function hasStaticProperty(input: any, propertyName: string): input is Record<string, any> {
-  return isFunction(input) && input.hasOwnProperty(propertyName);
+function hasStaticProperty(input: any, propertyName: string): input is Function {
+  return isFunction(input) && propertyName in input;
 }
 
 function getClassFromProps<Props>({ config, props }: { config: Config<Props>, props: Omit<Props, 'as' | 'className' | 'variant'> }) {
@@ -104,8 +96,6 @@ function getClassFromProps<Props>({ config, props }: { config: Config<Props>, pr
     ? Object.entries(config.classFromProps)
       .map(([property, classnameOrFactory]) => {
         const propValue = props[property]
-
-        if (!propValue) return null
 
         return isFunction(classnameOrFactory) ? classnameOrFactory(propValue) : classnameOrFactory
       }).filter(Boolean).join(' ')
@@ -128,6 +118,3 @@ function omitBuiltProps<Props>({ config, props }: { config: Config<Props>, props
     }, {})
 }
 
-function isFunction(input: any): input is Function {
-  return typeof input === 'function';
-}

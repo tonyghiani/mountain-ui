@@ -1,76 +1,43 @@
-import styled, { css } from 'styled-components';
-import {
-  compose,
-  system,
-  textStyle,
-  TextStyleProps,
-  typography,
-  TypographyProps
-} from 'styled-system';
+import { MntProps, createMntComponent } from '../../../internals/create_mnt_component';
 
-import { BaseElement, BaseElementProps } from '../../BaseElement';
+export interface BaseTypographyProps extends MntProps {
+  /* Text should be uncopyable */
+  uncopyable?: boolean;
+  /* Text should be bold */
+  bold?: boolean;
+  /* Text should be wrapped in ellipsis */
+  truncate?: boolean;
+  /* Text should be clamped to specified line count */
+  lineClamp?: number;
+  /* Text should be underlined */
+  underline?: boolean;
+  /* Text have gradient color */
+  gradient?: TextGradientOptions;
+}
 
-const textStyles = compose(typography, textStyle);
+export interface TextGradientOptions {
+  from: string;
+  to: string
+  direction?: 't' | 'tr' | 'r' | 'br' | 'b' | 'bl' | 'l' | 'tl'
+}
 
-export type BaseTypographyProps = BaseElementProps &
-  TypographyProps &
-  TextStyleProps & {
-    /* Text should be uncopyable */
-    uncopyable?: boolean;
-    /* Text should be bold */
-    strong?: boolean;
-    /* Text should be wrapped in ellipsis */
-    wrapped?: boolean;
-    /* Text should be clamped to specified line count */
-    lineClamp?: number;
-    /* Text should be underlined */
-    underline?: boolean;
-    /* Text have gradient color */
-    gradient?: string;
-  };
+const bold = "font-bold"
+const gradient = (opts?: TextGradientOptions) => opts ? `text-transparent bg-clip-text bg-gradient-to-${opts.direction} from-${opts.from} to-${opts.to}` : ''
+const lineClamp = (rowsCount?: number) => rowsCount > 0 ? `line-clamp-${rowsCount}` : ''
+const truncate = 'truncate'
+const uncopyable = 'select-none'
+const underline = 'underline underline-offset-2';
 
-const wrapped = css`
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-`;
-
-const lineClamp = css`
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-`;
-
-const strong = css`
-  font-weight: ${p => p.theme.fontWeights.bold};
-`;
-
-const underline = css`
-  text-decoration: underline;
-`;
-
-const uncopyable = css`
-  user-select: none;
-`;
-
-const gradientColor = css`
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-/**
- * The `BaseTypography` component works as the first brick to compose more specific text components
- */
-const BaseTypography = styled(BaseElement)<BaseTypographyProps>`
-  ${textStyles}
-  ${system({ userSelect: true })}
-  ${p => p.gradient && `background: linear-gradient(${p.gradient}); ${gradientColor} `}
-  ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
-  ${p => p.strong && strong}
-  ${p => p.uncopyable && uncopyable}
-  ${p => p.underline && underline}
-  ${p => p.wrapped && wrapped}
-`;
+const BaseTypography = createMntComponent<BaseTypographyProps>('span')({
+  classFromProps: {
+    bold,
+    gradient,
+    lineClamp,
+    truncate,
+    uncopyable,
+    underline,
+  }
+})
 
 BaseTypography.displayName = 'BaseTypography';
 

@@ -1,88 +1,48 @@
-import css from '@styled-system/css';
-import styled from 'styled-components';
-import { variant } from 'styled-system';
+import { createMntComponent } from '../../../internals/create_mnt_component';
 
-import { BaseElementProps, styleProps } from '../../BaseElement';
+type ButtonColor = 'primary' | 'accent' | 'success' | 'warning' | 'danger' | 'disabled' | 'inherit' | 'current'
+type ButtonVariant = 'shade' | 'solid' | 'outline' | 'link' | 'text'
 
-export type ButtonProps = BaseElementProps & {
-  /** Button variant */
-  variant?: 'primary' | 'outline' | 'success' | 'warning' | 'error';
-};
+export interface ButtonProps {
+  /* The color to apply for the button content */
+  color?: ButtonColor
+  /* The variant to use for the button */
+  variant?: ButtonVariant
+}
+
+
+const baseClass = 'relative border-0 rounded-lg font-medium text-body py-2 px-3 cursor-pointer transition ease duration-300 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed';
+const variants: Record<ButtonVariant, string> = {
+  shade: 'bg-opacity-20 hover:bg-opacity-30',
+  solid: 'bg-current',
+  outline: 'bg-transparent',
+  link: 'bg-transparent',
+  text: 'bg-transparent',
+}
+const colors: Record<ButtonColor, string> = {
+  primary: 'text-blue-600 bg-blue-400',
+  accent: 'text-purple-600 bg-purple-400',
+  success: 'text-green-600 bg-green-400',
+  warning: 'text-yellow-600 bg-yellow-300',
+  danger: 'text-red-600 bg-red-400',
+  disabled: 'text-gray-500 bg-gray-400',
+  inherit: 'text-inherit',
+  current: 'text-current',
+}
+
+const color = (col = 'primary') => colors[col]
 
 /**
  * Primary UI component for user interaction
  */
-const Button = styled.button<ButtonProps>`
-  ${css({
-    position: 'relative',
-    border: 0,
-    borderRadius: 3,
-    boxShadow: 1,
-    color: 'white',
-    fontWeight: 'semiBold',
-    fontSize: 2,
-    padding: 3,
-    cursor: 'pointer',
-    textShadow: '1px 1px 6px rgb(0 0 0 / 20%)',
-    transition: 'all .3s ease',
-    ':hover': {
-      boxShadow: 2
-    },
-    ':disabled, :disabled:hover': {
-      color: 'gray.700',
-      backgroundColor: 'gray.100',
-      cursor: 'not-allowed',
-      boxShadow: 1
-    }
-  })}
-  ${variant({
-    scale: 'variants.button',
-    variants: {
-      primary: {
-        backgroundColor: 'blue.400'
-      },
-      outline: {
-        backgroundColor: 'transparent',
-        boxShadow: 'inset 0 0 0 3px;',
-        color: 'blue.400',
-        ':hover': {
-          color: 'white'
-        },
-        '::before, :hover::before': {
-          content: '""',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          height: '100%',
-          width: '100%',
-          transitionDuration: '0.25s',
-          boxShadow: 'inset 0 0 0 3px',
-          borderRadius: 3,
-          color: 'blue.400',
-          zIndex: -1
-        },
-        ':hover::before': {
-          boxShadow: 'inset 0 0 0 30px',
-          borderRadius: 3
-        }
-      },
-      success: {
-        backgroundColor: 'green.400'
-      },
-      warning: {
-        backgroundColor: 'yellow.400'
-      },
-      error: {
-        backgroundColor: 'red.400'
-      }
-    }
-  })}
-  ${styleProps}
-`;
-
-Button.defaultProps = {
-  variant: 'primary'
-};
+const Button = createMntComponent<ButtonProps>('button')({
+  baseClass,
+  variants,
+  defaultVariant: 'shade',
+  classFromProps: {
+    color
+  },
+})
 
 Button.displayName = 'Button';
 

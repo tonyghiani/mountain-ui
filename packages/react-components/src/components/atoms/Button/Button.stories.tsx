@@ -1,46 +1,78 @@
 import React from 'react';
 
-import { Grid } from '../Layout';
-import { Text } from '../Typography';
-
 import Button from './Button';
+import { Meta, StoryObj } from '@storybook/react';
 
-export default {
+const meta = {
   title: 'Atoms/Button',
-  component: Button
+  component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+  tags: ['autodocs'],
+  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  argTypes: {
+    color: {
+      control: 'inline-radio', options: [
+        'primary',
+        'accent',
+        'success',
+        'warning',
+        'danger',
+        'disabled',
+        'inherit',
+        'current',
+      ]
+    },
+  },
+} satisfies Meta<typeof Button>;
+
+export default meta
+
+type Story = StoryObj<typeof meta>;
+
+// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const Shade: Story = {
+  args: {
+    variant: 'shade',
+    color: 'primary',
+    children: 'Mountain UI',
+  },
 };
 
-export const All = () => (
-  <Grid gridTemplateRows='repeat(2, 1fr)' gridAutoFlow='column' gridGap={4} alignItems='center'>
-    <Text strong textAlign='center'>
-      Primary
-    </Text>
-    <Button variant='primary'>Click</Button>
-    <Text strong textAlign='center'>
-      Outline
-    </Text>
-    <Button variant='outline'>Click</Button>
-    <Text strong textAlign='center'>
-      Success
-    </Text>
-    <Button variant='success'>Click</Button>
-    <Text strong textAlign='center'>
-      Warning
-    </Text>
-    <Button variant='warning'>Click</Button>
-    <Text strong textAlign='center'>
-      Error
-    </Text>
-    <Button variant='error'>Click</Button>
-    <Text strong textAlign='center'>
-      Disabled
-    </Text>
-    <Button variant='primary' disabled>
-      Click
-    </Button>
-  </Grid>
-);
+export const Solid: Story = {
+  args: {
+    variant: 'solid',
+    color: 'primary',
+    children: 'Mountain UI',
+  },
+};
 
-All.parameters = {
+export const Outline: Story = {
+  args: {
+    variant: 'outline',
+    color: 'primary',
+    children: 'Mountain UI',
+  },
+};
+
+export const Link: Story = {
+  args: {
+    variant: 'link',
+    color: 'primary',
+    children: 'Mountain UI',
+  },
+};
+
+export const Text: Story = {
+  args: {
+    variant: 'text',
+    color: 'primary',
+    children: 'Mountain UI',
+  },
+};
+
+Shade.parameters = {
   jest: ['Button.test.js']
 };

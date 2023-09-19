@@ -1,39 +1,23 @@
-import styled from 'styled-components';
-import { variant } from 'styled-system';
 
+import { createMntComponent } from '../../../../internals/create_mnt_component';
 import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
 
-export type TextProps = BaseTypographyProps & {
-  /* Text variant */
-  variant?: 'primary' | 'secondary' | 'caption';
-};
+export type TextVariant = 'primary' | 'secondary' | 'caption'
 
-const Text = styled(BaseTypography)<TextProps>`
-  ${({ theme }) =>
-    variant({
-      scale: 'variants.typography.text',
-      variants: {
-        primary: {
-          color: `var(--c-text-primary, ${theme.colors.gray[900]})`,
-          fontSize: 'body'
-        },
-        secondary: {
-          color: `var(--c-text-secondary, ${theme.colors.gray[700]})`,
-          fontSize: 'secondaryBody'
-        },
-        caption: {
-          color: `var(--c-text-caption, ${theme.colors.gray[600]})`,
-          fontSize: 'caption'
-        }
-      }
-    })}
-`;
+export interface TextProps extends BaseTypographyProps { };
 
-Text.defaultProps = {
-  color: 'dark',
-  lineHeight: 'tall',
-  as: 'span'
-};
+const baseClass = 'leading-relaxed'
+const variants: Record<TextVariant, string> = {
+  primary: 'text-body text-[--c-text-primary]',
+  secondary: 'text-secondaryBody text-[--c-text-secondary]',
+  caption: 'text-caption text-[--c-text-caption]'
+}
+
+const Text = createMntComponent<TextProps>(BaseTypography)({
+  baseClass,
+  variants,
+  defaultVariant: 'primary',
+})
 
 Text.displayName = 'Text';
 

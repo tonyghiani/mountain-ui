@@ -1,10 +1,10 @@
-import styled from "styled-components"
-
+import { createMntComponent } from "../../../../internals/create_mnt_component"
 import { Text, TextProps } from "../Text"
 
-const Paragraph = styled(Text) <TextProps>``
+export interface ParagraphProps extends TextProps { }
 
-Paragraph.defaultProps = { as: 'p' }
+const Paragraph = createMntComponent<ParagraphProps>(Text)({ as: 'p' })
+
 Paragraph.displayName = 'Paragraph'
 
 export default Paragraph

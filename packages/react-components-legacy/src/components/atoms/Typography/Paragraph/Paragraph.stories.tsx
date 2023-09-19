@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Paragraph, { ParagraphProps } from './Paragraph';
+import Paragraph from './Paragraph';
 
 export default {
   title: 'Atoms/Typography/Paragraph',
   component: Paragraph
 };
 
-export const ParagraphStory = (args: ParagraphProps) => <Paragraph {...args} />;
+export const ParagraphStory = args => <Paragraph {...args} />;
 
 ParagraphStory.storyName = 'Paragraph';
 

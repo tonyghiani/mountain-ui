@@ -1,66 +1,27 @@
-import styled from 'styled-components';
-import { variant } from 'styled-system';
-
-import { styleProps } from '../../../BaseElement';
+import { PolymorphicAs, createMntComponent } from '../../../../internals/create_mnt_component';
 import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
 
-export type HeadingProps = BaseTypographyProps & {
-  /* Heading variant */
-  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-};
+export interface HeadingProps extends BaseTypographyProps { }
 
-const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({
-  as: p.as || p.variant
-}))<HeadingProps>`
-  letter-spacing: 0.5px;
-  ${({ theme }) =>
-    variant({
-      scale: 'variants.typography.heading',
-      variants: {
-        h1: {
-          fontSize: 'h1',
-          lineHeight: 'short',
-          fontWeight: 'bold',
-          color: `var(--c-heading1, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h2: {
-          fontSize: 'h2',
-          lineHeight: 'short',
-          fontWeight: 'bold',
-          color: `var(--c-heading2, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h3: {
-          fontSize: 'h3',
-          lineHeight: 'short',
-          fontWeight: 'bold',
-          color: `var(--c-heading3, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h4: {
-          fontSize: 'h4',
-          lineHeight: 'normal',
-          fontWeight: 'bold',
-          color: `var(--c-heading4, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h5: {
-          fontSize: 'h5',
-          lineHeight: 'normal',
-          fontWeight: 'bold',
-          color: `var(--c-heading5, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h6: {
-          fontSize: 'h6',
-          lineHeight: 'normal',
-          fontWeight: 'bold',
-          color: `var(--c-heading6, var(--c-heading, ${theme.colors.gray[900]}))`
-        }
-      }
-    })}
-  ${styleProps}
-`;
+export type HeadingVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+
+const baseClass = 'font-bold tracking-wide'
+const variants: Record<HeadingVariant, string> = {
+  h1: 'text-h1 leading-snug text-[--c-heading1]',
+  h2: 'text-h2 leading-snug text-[--c-heading2]',
+  h3: 'text-h3 leading-snug text-[--c-heading3]',
+  h4: 'text-h4 leading-normal text-[--c-heading4]',
+  h5: 'text-h5 leading-normal text-[--c-heading5]',
+  h6: 'text-h6 leading-normal text-[--c-heading6]'
+}
+
+const Heading = createMntComponent<HeadingProps>(BaseTypography)((props) => ({
+  as: props.variant as PolymorphicAs,
+  baseClass,
+  variants,
+  defaultVariant: 'h1',
+}))
 
 Heading.displayName = 'Heading';
-Heading.defaultProps = {
-  variant: 'h1'
-};
 
 export default Heading;

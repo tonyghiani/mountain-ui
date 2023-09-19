@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Text from './Text';
+import Text, { TextProps } from './Text';
 
 export default {
   title: 'Atoms/Typography/Text',
   component: Text
 };
 
-export const TextStory = args => <Text {...args} />;
+export const TextStory = (args: TextProps) => <Text {...args} />;
 
 TextStory.storyName = 'Text';
 

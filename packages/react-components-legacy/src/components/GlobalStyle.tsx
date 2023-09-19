@@ -42,14 +42,14 @@ export const GlobalStyles = createGlobalStyle`
     cursor: pointer;
   }
   ${css({
-  html: {
-    fontFamily: 'normal' as SystemCssProperties,
-    color: 'gray.900' as SystemCssProperties,
-    backgroundColor: 'light' as SystemCssProperties
-  },
+    html: {
+      fontFamily: 'normal' as SystemCssProperties,
+      color: 'gray.900' as SystemCssProperties,
+      backgroundColor: 'light' as SystemCssProperties
+    },
 
-  'pre, code': {
-    fontFamily: 'code' as SystemCssProperties
-  }
-})}
+    'pre, code': {
+      fontFamily: 'code' as SystemCssProperties
+    }
+  })}
 `;

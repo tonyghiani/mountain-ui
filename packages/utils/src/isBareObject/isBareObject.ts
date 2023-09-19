@@ -3,7 +3,7 @@
  * @param arg
  * @returns {boolean}
  */
-function isBareObject(arg: unknown): boolean {
+function isBareObject(arg: unknown): arg is Record<string, unknown> {
   return arg?.toString() === '[object Object]';
 }
 
