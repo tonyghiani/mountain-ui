@@ -1,23 +1,24 @@
 
-import { createMntComponent } from '../../../../internals/create_mnt_component';
+import { mnt } from '../../../../internals/create_mnt_component';
 import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
 
-export type TextVariant = 'primary' | 'secondary' | 'caption'
-
-export interface TextProps extends BaseTypographyProps { };
-
 const baseClass = 'leading-relaxed'
-const variants: Record<TextVariant, string> = {
+export const TEXT_VARIANTS = {
   primary: 'text-body text-[--c-text-primary]',
   secondary: 'text-secondaryBody text-[--c-text-secondary]',
   caption: 'text-caption text-[--c-text-caption]'
 }
 
-const Text = createMntComponent<TextProps>(BaseTypography)({
-  baseClass,
-  variants,
-  defaultVariant: 'primary',
-})
+export type TextVariant = keyof typeof TEXT_VARIANTS
+
+export interface TextProps extends BaseTypographyProps {
+  variant?: TextVariant
+};
+
+const Text = mnt<TextProps>(BaseTypography)`
+  ${baseClass}
+  ${({ variant = 'primary' }) => TEXT_VARIANTS[variant]}
+`
 
 Text.displayName = 'Text';
 

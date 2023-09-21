@@ -1,7 +1,7 @@
-import React from 'react';
-
 import Button from './Button';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { BUTTON_COLORS, BUTTON_VARIANTS } from './Button';
 
 const meta = {
   title: 'Atoms/Button',
@@ -14,16 +14,10 @@ const meta = {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     color: {
-      control: 'inline-radio', options: [
-        'primary',
-        'accent',
-        'success',
-        'warning',
-        'danger',
-        'disabled',
-        'inherit',
-        'current',
-      ]
+      control: 'inline-radio', options: Object.keys(BUTTON_COLORS)
+    },
+    variant: {
+      control: 'inline-radio', options: Object.keys(BUTTON_VARIANTS)
     },
   },
 } satisfies Meta<typeof Button>;

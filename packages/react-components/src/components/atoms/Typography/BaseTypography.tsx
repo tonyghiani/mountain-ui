@@ -1,4 +1,4 @@
-import { MntProps, createMntComponent } from '../../../internals/create_mnt_component';
+import { MntProps, mnt } from '../../../internals/create_mnt_component';
 
 export interface BaseTypographyProps extends MntProps {
   /* Text should be uncopyable */
@@ -21,23 +21,14 @@ export interface TextGradientOptions {
   direction?: 't' | 'tr' | 'r' | 'br' | 'b' | 'bl' | 'l' | 'tl'
 }
 
-const bold = "font-bold"
-const gradient = (opts?: TextGradientOptions) => opts ? `text-transparent bg-clip-text bg-gradient-to-${opts.direction} from-${opts.from} to-${opts.to}` : ''
-const lineClamp = (rowsCount?: number) => rowsCount > 0 ? `line-clamp-${rowsCount}` : ''
-const truncate = 'truncate'
-const uncopyable = 'select-none'
-const underline = 'underline underline-offset-2';
-
-const BaseTypography = createMntComponent<BaseTypographyProps>('span')({
-  classFromProps: {
-    bold,
-    gradient,
-    lineClamp,
-    truncate,
-    uncopyable,
-    underline,
-  }
-})
+const BaseTypography = mnt<BaseTypographyProps>('span')`
+  ${({ bold }) => bold ? "font-bold" : ''}
+  ${({ gradient }) => gradient ? `text-transparent bg-clip-text bg-gradient-to-${gradient.direction} from-${gradient.from} to-${gradient.to}` : ''}
+  ${({ lineClamp }) => lineClamp > 0 ? `line-clamp-${lineClamp}` : ''}
+  ${({ truncate }) => truncate ? 'truncate' : ''}
+  ${({ uncopyable }) => uncopyable ? 'select-none' : ''}
+  ${({ underline }) => underline ? 'underline underline-offset-2' : ''}
+`
 
 BaseTypography.displayName = 'BaseTypography';
 

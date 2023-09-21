@@ -21,6 +21,9 @@ export default {
       colors: {
         light: 'hsl(0, 0%, 98%)',
         dark: 'hsl(210, 14%, 9%)'
+      },
+      boxShadow: {
+        'outline-button': 'inset 0 0 0 2px'
       }
     }
   },
