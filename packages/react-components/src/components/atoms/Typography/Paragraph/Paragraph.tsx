@@ -1,9 +1,9 @@
-import { mnt } from "../../../../internals/create_mnt_component"
+import { mnt } from "../../../../internals/mnt"
 import { Text, TextProps } from "../Text"
 
 export interface ParagraphProps extends TextProps { }
 
-const Paragraph = mnt<ParagraphProps>(Text).attrs(p => ({ as: 'p' }))``
+const Paragraph = mnt<ParagraphProps>(Text).attrs({ as: 'p' })``
 
 Paragraph.displayName = 'Paragraph'
 

@@ -1,7 +1,11 @@
-import Button from './Button';
+import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { BUTTON_COLORS, BUTTON_VARIANTS } from './Button';
+import Button, { BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
+import { Grid } from '../Layout';
+
+const colors = Object.keys(BUTTON_COLORS) as ButtonColor[]
+const variants = Object.keys(BUTTON_VARIANTS) as ButtonVariant[]
 
 const meta = {
   title: 'Atoms/Button',
@@ -9,15 +13,17 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    color: {
-      control: 'inline-radio', options: Object.keys(BUTTON_COLORS)
-    },
     variant: {
-      control: 'inline-radio', options: Object.keys(BUTTON_VARIANTS)
+      control: 'inline-radio', options: variants
+    },
+    color: {
+      control: 'inline-radio', options: colors
+    },
+    disabled: {
+      control: 'boolean',
+      defaultValue: false
     },
   },
 } satisfies Meta<typeof Button>;
@@ -26,46 +32,38 @@ export default meta
 
 type Story = StoryObj<typeof meta>;
 
-export const Shade: Story = {
+export const Primary: Story = {
   args: {
     variant: 'shade',
     color: 'primary',
     children: 'Mountain UI',
-  },
+  }
 };
 
-export const Solid: Story = {
+export const Variant: Story = {
   args: {
-    variant: 'solid',
     color: 'primary',
     children: 'Mountain UI',
   },
+  render: (args) => {
+    return (
+      <Grid columns={6}>
+        {variants.map(variant => <Button key={variant} {...args} variant={variant} />)}
+      </Grid>
+    )
+  }
 };
 
-export const Outline: Story = {
-  args: {
-    variant: 'outline',
-    color: 'primary',
-    children: 'Mountain UI',
-  },
+export const Color: Story = {
+  render: () => {
+    return (
+      <Grid columns={6} justifyContent='center' alignItems='center'>
+        {colors.map(color => variants.map(variant => <Button key={`${variant}-${color}`} color={color} variant={variant} >{color}</Button>))}
+      </Grid>
+    )
+  }
 };
 
-export const Link: Story = {
-  args: {
-    variant: 'link',
-    color: 'primary',
-    children: 'Mountain UI',
-  },
-};
-
-export const Text: Story = {
-  args: {
-    variant: 'text',
-    color: 'primary',
-    children: 'Mountain UI',
-  },
-};
-
-Shade.parameters = {
+Variant.parameters = {
   jest: ['Button.test.js']
 };

@@ -1,4 +1,4 @@
-import { mnt } from '../../../../internals/create_mnt_component';
+import { mnt } from '../../../../internals/mnt';
 
 export interface ContainerProps { };
 

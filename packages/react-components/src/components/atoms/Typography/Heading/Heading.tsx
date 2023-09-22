@@ -1,4 +1,4 @@
-import { mnt } from '../../../../internals/create_mnt_component';
+import { mnt } from '../../../../internals/mnt';
 import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
 
 const baseClass = 'font-bold tracking-wide'

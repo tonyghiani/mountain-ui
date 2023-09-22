@@ -1,4 +1,4 @@
-import { MntProps, mnt } from '../../../internals/create_mnt_component';
+import { MntProps, mnt } from '../../../internals/mnt';
 
 export interface BaseTypographyProps extends MntProps {
   /* Text should be uncopyable */
