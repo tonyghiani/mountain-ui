@@ -17,6 +17,7 @@ const meta = {
     backgroundColor: { control: 'color' }
   }
 } satisfies Meta<typeof Button>;
+console.log(Button);
 
 export default meta;
 type Story = StoryObj<typeof meta>;

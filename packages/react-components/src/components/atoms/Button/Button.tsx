@@ -1,6 +1,6 @@
 import { mnt } from '../../../internals/mnt';
 
-const baseClass = 'relative inline-block border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed';
+export const BUTTON_BASE_CLASS = 'relative inline-block border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed';
 export const BUTTON_COLORS = {
   primary: 'text-blue-700 bg-blue-600 from-blue-600 to-blue-400',
   accent: 'text-purple-700 bg-purple-600 from-purple-600 to-purple-400',
@@ -22,23 +22,27 @@ export type ButtonColor = keyof typeof BUTTON_COLORS
 export type ButtonVariant = keyof typeof BUTTON_VARIANTS
 
 export interface ButtonProps {
-  /* The color to apply for the button content */
+  /**
+   * The color to apply for the button content
+   */
   color?: ButtonColor
-  /* The button status */
+  /**
+   * The button status
+   */
   disabled?: boolean
-  /* The variant to use for the button */
+  /**
+   * The variant to use for the button
+   */
   variant?: ButtonVariant
 }
 
 /**
- * Primary UI component for user interaction
+ * The `Button` component is the primary element for any user interaction.
  */
-const Button = mnt<ButtonProps>('button')`
-  ${baseClass}
+export const Button = mnt<ButtonProps>('button')`
+  ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}
 `
 
 Button.displayName = 'Button';
-
-export default Button;

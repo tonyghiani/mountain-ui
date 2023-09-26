@@ -1,7 +1,7 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import Button, { BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
+import { Button, BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
 import { Grid } from '../Layout';
 
 const colors = Object.keys(BUTTON_COLORS) as ButtonColor[]
@@ -14,29 +14,17 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {
-    variant: {
-      control: 'inline-radio', options: variants
-    },
-    color: {
-      control: 'inline-radio', options: colors
-    },
-    disabled: {
-      control: 'boolean',
-      defaultValue: false
-    },
-  },
 } satisfies Meta<typeof Button>;
 
 export default meta
-
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    variant: 'shade',
-    color: 'primary',
     children: 'Mountain UI',
+    color: 'primary',
+    disabled: false,
+    variant: 'shade',
   }
 };
 
@@ -62,8 +50,4 @@ export const Color: Story = {
       </Grid>
     )
   }
-};
-
-Variant.parameters = {
-  jest: ['Button.test.js']
 };

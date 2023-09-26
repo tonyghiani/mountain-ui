@@ -1,54 +1,37 @@
 import React from 'react';
 import { render, screen } from 'mui-testing-tools';
 
-import { defaultTheme } from '../../../defaultTheme';
+import { Button, BUTTON_BASE_CLASS, BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
 
-import Button from './Button';
+const colors = Object.keys(BUTTON_COLORS) as ButtonColor[]
+const variants = Object.keys(BUTTON_VARIANTS) as ButtonVariant[]
 
-describe('Button', () => {
+describe('<Button />', () => {
   it('should render correctly on mount', () => {
     render(<Button>Mountain UI</Button>);
     const buttonNode = screen.getByRole('button');
     expect(buttonNode).toBeInTheDocument();
-    expect(buttonNode).toHaveStyle(`
-      text-shadow: 1px 1px 6px rgb(0 0 0 / 20%);
-      border-radius: 8px;
-      box-shadow: ${defaultTheme.shadows[1]};
-      transition: all .3s ease;
-    `);
   });
 
-  describe('should render the proper style when has variant', () => {
-    it('primary', () => {
-      render(<Button variant='primary'>Mountain UI</Button>);
-      const buttonNode = screen.getByRole('button');
-      expect(buttonNode).toHaveStyle(
-        `background: var(--c-gradient-primary, linear-gradient(30deg, #3F81E5, #3F81E599))`
-      );
-    });
+  describe('should render the passed variant', () => {
+    variants.forEach(variant => {
+      it(variant, () => {
+        render(<Button variant={variant}>Mountain UI</Button>);
+        const buttonNode = screen.getByRole('button');
+        expect(buttonNode).toHaveClass(BUTTON_BASE_CLASS)
+        expect(buttonNode).toHaveClass(BUTTON_VARIANTS[variant]);
+      });
+    })
+  });
 
-    it('success', () => {
-      render(<Button variant='success'>Mountain UI</Button>);
-      const buttonNode = screen.getByRole('button');
-      expect(buttonNode).toHaveStyle(
-        `background: var(--c-gradient-success, linear-gradient(30deg, #19C44D, #19C44D99))`
-      );
-    });
-
-    it('warning', () => {
-      render(<Button variant='warning'>Mountain UI</Button>);
-      const buttonNode = screen.getByRole('button');
-      expect(buttonNode).toHaveStyle(
-        `background: var(--c-gradient-warning, linear-gradient(30deg, #FFC445, #FFC44599))`
-      );
-    });
-
-    it('error', () => {
-      render(<Button variant='error'>Mountain UI</Button>);
-      const buttonNode = screen.getByRole('button');
-      expect(buttonNode).toHaveStyle(
-        `background: var(--c-gradient-error, linear-gradient(30deg, #F74D4D, #F74D4D99))`
-      );
-    });
+  describe('should render the passed color', () => {
+    colors.forEach(color => {
+      it(color, () => {
+        render(<Button color={color}>Mountain UI</Button>);
+        const buttonNode = screen.getByRole('button');
+        expect(buttonNode).toHaveClass(BUTTON_BASE_CLASS)
+        expect(buttonNode).toHaveClass(BUTTON_COLORS[color]);
+      });
+    })
   });
 });
