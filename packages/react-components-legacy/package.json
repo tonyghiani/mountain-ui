@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "yarn clean:build && yarn build:cjs && yarn build:esm && yarn build:types",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
     "build:cjs": "NODE_ENV=production BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/cjs",
     "build:esm": "NODE_ENV=production BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/esm",
     "build:types": "tsc --project ./tsconfig.types.json",
