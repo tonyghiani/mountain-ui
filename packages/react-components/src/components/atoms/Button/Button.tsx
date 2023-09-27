@@ -37,7 +37,8 @@ export interface ButtonProps {
 }
 
 /**
- * The `Button` component is the primary element for any user interaction.
+ * Button component for triggering actions or events in the UI. 
+ * Provides interactivity with styled visuals, enhancing user engagement and navigation within the application.
  */
 export const Button = mnt<ButtonProps>('button')`
   ${BUTTON_BASE_CLASS}

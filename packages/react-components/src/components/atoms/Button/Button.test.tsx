@@ -1,7 +1,7 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
 
 import { Button, BUTTON_BASE_CLASS, BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
-import { render, screen } from 'mnt-testing-tools'
 
 const colors = Object.keys(BUTTON_COLORS) as ButtonColor[]
 const variants = Object.keys(BUTTON_VARIANTS) as ButtonVariant[]

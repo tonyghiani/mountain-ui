@@ -1,54 +1,44 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
+import { HEADING_VARIANTS, Heading, HeadingVariant } from './Heading';
 import { Text } from '../Text';
-import Heading from './Heading';
+import { Box, Grid } from '../../Layout';
 
 import tailwindConfig from '../../../../../tailwind.config.cjs';
 
-export default {
+const variants = Object.keys(HEADING_VARIANTS) as HeadingVariant[];
+
+const meta = {
   title: 'Atoms/Typography/Heading',
-  component: Heading
+  component: Heading,
+  tags: ['autodocs']
+} satisfies Meta<typeof Heading>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {
+  args: {
+    children: 'Mountain UI',
+    variant: 'h1'
+  }
 };
 
-export const HeadingStory = args => {
-  const theme = tailwindConfig.theme;
-
-  return (
-    <>
-      <div>
-        <Text variant='secondary'>H1 - {theme.fontSize.h1} - bold</Text>
-        <Heading {...args} variant='h1' />
-      </div>
-      <div>
-        <Text variant='secondary'>H2 - {theme.fontSize.h2} - bold</Text>
-        <Heading {...args} variant='h2' />
-      </div>
-      <div>
-        <Text variant='secondary'>H3 - {theme.fontSize.h3} - bold</Text>
-        <Heading {...args} variant='h3' />
-      </div>
-      <div>
-        <Text variant='secondary'>H4 - {theme.fontSize.h4} - bold</Text>
-        <Heading {...args} variant='h4' />
-      </div>
-      <div>
-        <Text variant='secondary'>H5 - {theme.fontSize.h5} - bold</Text>
-        <Heading {...args} variant='h5' />
-      </div>
-      <div>
-        <Text variant='secondary'>H6 - {theme.fontSize.h6} - bold</Text>
-        <Heading {...args} variant='h6' />
-      </div>
-    </>
-  );
-};
-
-HeadingStory.storyName = 'Heading';
-
-HeadingStory.args = {
-  children: 'Mountain UI library'
-};
-
-HeadingStory.parameters = {
-  jest: ['Typography.test.js']
+export const All: Story = {
+  args: {
+    children: 'Mountain UI'
+  },
+  render: args => {
+    return (
+      <Grid className='gap-4'>
+        {variants.map(variant => (
+          <Box>
+            <Text variant='secondary'>{variant.toUpperCase()} - {tailwindConfig.theme.fontSize[variant]} - bold</Text>
+            <Heading key={variant} {...args} variant={variant} />
+          </Box>
+        ))}
+      </Grid>
+    );
+  }
 };

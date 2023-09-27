@@ -1,33 +1,52 @@
 import { MntProps, mnt } from '../../../internals/mnt';
 
-export interface BaseTypographyProps extends MntProps {
-  /* Text should be uncopyable */
-  uncopyable?: boolean;
-  /* Text should be bold */
-  bold?: boolean;
-  /* Text should be wrapped in ellipsis */
-  truncate?: boolean;
-  /* Text should be clamped to specified line count */
-  lineClamp?: number;
-  /* Text should be underlined */
-  underline?: boolean;
-  /* Text have gradient color */
-  gradient?: TextGradientOptions;
+export const TEXT_GRADIENT_DIRECTIONS = {
+  't': 'bg-gradient-to-t',
+  'tr': 'bg-gradient-to-tr',
+  'r': 'bg-gradient-to-r',
+  'br': 'bg-gradient-to-br',
+  'b': 'bg-gradient-to-b',
+  'bl': 'bg-gradient-to-bl',
+  'l': 'bg-gradient-to-l',
+  'tl': 'bg-gradient-to-tl',
 }
 
+export type TextGradientDirection = keyof typeof TEXT_GRADIENT_DIRECTIONS
 export interface TextGradientOptions {
   from: string;
-  to: string
-  direction?: 't' | 'tr' | 'r' | 'br' | 'b' | 'bl' | 'l' | 'tl'
+  to?: string
+  direction?: TextGradientDirection
+}
+
+export interface BaseTypographyProps extends MntProps {
+  /**
+   * Text should be uncopyable.
+   */
+  uncopyable?: boolean;
+  /**
+   * Text should be bold.
+   */
+  bold?: boolean;
+  /**
+   * Text should be wrapped in ellipsis.
+   */
+  truncate?: boolean;
+  /**
+   * Text should be underlined.
+   */
+  underline?: boolean;
+  /**
+   * Text have gradient color.
+   */
+  gradient?: TextGradientOptions;
 }
 
 const BaseTypography = mnt<BaseTypographyProps>('span')`
   ${({ bold }) => bold ? "font-bold" : ''}
-  ${({ gradient }) => gradient ? `text-transparent bg-clip-text bg-gradient-to-${gradient.direction} from-${gradient.from} to-${gradient.to}` : ''}
-  ${({ lineClamp }) => lineClamp > 0 ? `line-clamp-${lineClamp}` : ''}
+  ${({ gradient }) => gradient ? `text-transparent bg-clip-text ${TEXT_GRADIENT_DIRECTIONS[gradient.direction ?? 'r']} ${gradient.from} ${gradient.to ? gradient.to : ''}` : ''}
   ${({ truncate }) => truncate ? 'truncate' : ''}
   ${({ uncopyable }) => uncopyable ? 'select-none' : ''}
-  ${({ underline }) => underline ? 'underline underline-offset-2' : ''}
+  ${({ underline }) => underline ? 'underline underline-offset-4' : ''}
 `
 
 BaseTypography.displayName = 'BaseTypography';

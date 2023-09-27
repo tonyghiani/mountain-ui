@@ -1,24 +1,42 @@
-import Container from './Container';
+import { Container } from './Container';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Atoms/Layout/Container',
   component: Container,
+  tags: ['autodocs'],
 } satisfies Meta<typeof Container>;
 
 export default meta
-
 type Story = StoryObj<typeof meta>;
 
-export const ContainerStory: Story = {
+export const Article: Story = {
   args: {
-    children: 'This is the content of a container component',
-    className: 'h-screen border-4 border-dashed border-blue-600'
-  },
+    className: 'h-32 border-4 border-dashed border-blue-600',
+    size: 'article'
+  }
 };
 
-ContainerStory.storyName = 'Container';
-
-ContainerStory.parameters = {
-  jest: ['Layout.test.js']
+export const Large: Story = {
+  args: {
+    className: 'h-32 border-4 border-dashed border-blue-600',
+    size: 'large'
+  }
 };
+
+export const Wide: Story = {
+  args: {
+    className: 'h-32 border-4 border-dashed border-blue-600',
+    size: 'wide'
+  }
+};
+
+export const Ultra: Story = {
+  args: {
+    className: 'h-32 border-4 border-dashed border-blue-600',
+    size: 'ultra'
+  }
+};
+
+
+

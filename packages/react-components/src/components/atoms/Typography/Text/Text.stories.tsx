@@ -1,20 +1,27 @@
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import Text, { TextProps } from './Text';
+import { Text } from './Text';
 
-export default {
+const meta = {
   title: 'Atoms/Typography/Text',
-  component: Text
-};
+  component: Text,
+  tags: ['autodocs']
+} satisfies Meta<typeof Text>;
 
-export const TextStory = (args: TextProps) => <Text {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-TextStory.storyName = 'Text';
-
-TextStory.args = {
-  children: 'Mountain UI library'
-};
-
-TextStory.parameters = {
-  jest: ['Typography.test.js']
+export const Main: Story = {
+  args: {
+    children: "Mountain UI",
+    variant: 'primary',
+    bold: false,
+    gradient: {
+      from: 'from-red-500',
+      to: 'to-yellow-500',
+    },
+    truncate: false,
+    uncopyable: false,
+    underline: false,
+  }
 };

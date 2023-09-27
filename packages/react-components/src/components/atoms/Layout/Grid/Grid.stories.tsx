@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 const GridItem = () => <Box className='w-16 h-16 bg-blue-400 rounded' />
 
-export const Primary: Story = {
+export const Main: Story = {
   args: {
     columns: 2,
     justifyItems: 'center',
@@ -33,11 +33,16 @@ export const Primary: Story = {
   )
 }
 
-export const GridStory: Story = {
-  render: () => (
+export const Columns: Story = {
+  args: {
+    justifyItems: 'center',
+    alignItems: 'center',
+    className: 'w-full h-32'
+  },
+  render: (args) => (
     <Grid>
       {Object.keys(GRID_COLUMNS).map((cols) => {
-        return <Grid key={cols} columns={+cols as GridColumns}>
+        return <Grid key={cols} columns={+cols as GridColumns} {...args}>
           {[...Array(+cols)].map((_el, id) => (
             <GridItem key={id} />
           ))}
@@ -46,5 +51,3 @@ export const GridStory: Story = {
     </Grid >
   )
 };
-
-GridStory.storyName = 'Grid';
