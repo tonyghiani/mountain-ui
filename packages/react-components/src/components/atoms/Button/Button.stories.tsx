@@ -10,9 +10,6 @@ const variants = Object.keys(BUTTON_VARIANTS) as ButtonVariant[]
 const meta = {
   title: 'Atoms/Button',
   component: Button,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
 
@@ -35,7 +32,7 @@ export const Variant: Story = {
   },
   render: (args) => {
     return (
-      <Grid columns={6}>
+      <Grid columns={6} justifyItems='center' alignItems='center'>
         {variants.map(variant => <Button key={variant} {...args} variant={variant} />)}
       </Grid>
     )
@@ -45,7 +42,7 @@ export const Variant: Story = {
 export const Color: Story = {
   render: () => {
     return (
-      <Grid columns={6} justifyContent='center' alignItems='center'>
+      <Grid columns={6} justifyItems='center' alignItems='center'>
         {colors.map(color => variants.map(variant => <Button key={`${variant}-${color}`} color={color} variant={variant} >{color}</Button>))}
       </Grid>
     )

@@ -15,6 +15,18 @@ export type JustifyContent = keyof typeof JUSTIFY_CONTENT;
 export const justifyContent = ({ justifyContent: justify = 'normal' }) => JUSTIFY_CONTENT[justify];
 
 /**
+ * `justify-content` options
+ */
+export const JUSTIFY_ITEMS = {
+  start: 'justify-items-start',
+  end: 'justify-items-end',
+  center: 'justify-items-center',
+  stretch: 'justify-items-stretch'
+};
+export type JustifyItems = keyof typeof JUSTIFY_ITEMS;
+export const justifyItems = ({ justifyItems: justify = 'start' }) => JUSTIFY_ITEMS[justify];
+
+/**
  * `align-items` options
  */
 export const ALIGN_ITEMS = {

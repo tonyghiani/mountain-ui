@@ -1,5 +1,5 @@
 import { mnt } from "../../../../internals/mnt"
-import { AlignItems, JustifyContent, alignItems, justifyContent } from "../../../../internals/mnt_shared_props"
+import { AlignItems, JustifyItems, alignItems, justifyItems } from "../../../../internals/mnt_shared_props"
 
 export const GRID_COLUMNS = {
   2: 'grid-cols-2',
@@ -13,21 +13,28 @@ export const GRID_COLUMNS = {
 export type GridColumns = keyof typeof GRID_COLUMNS
 
 export interface GridProps {
-  /* The number of columns to split the grid */
+  /**
+   * The number of columns to split the grid
+   */
   columns?: GridColumns
-  /* Justify grid items */
-  justifyContent?: JustifyContent
-  /* Align grid items */
+  /**
+   * Justify grid items
+   */
+  justifyItems?: JustifyItems
+  /**
+   * Align grid items
+   */
   alignItems?: AlignItems
 }
 
 /**
- * Grid component
+ * Grid component for organizing content in a structured layout with rows and columns.
+ * Facilitates alignment and distribution, ideal for creating organized and aesthetically pleasing interfaces.
  */
-const Grid = mnt<GridProps>('div')`
+export const Grid = mnt<GridProps>('div')`
   grid gap-3
   ${({ columns }) => columns ? GRID_COLUMNS[columns] : ''}
-  ${justifyContent}
+  ${justifyItems}
   ${alignItems}
 `
 

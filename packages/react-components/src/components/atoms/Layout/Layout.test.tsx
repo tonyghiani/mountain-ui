@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'mui-testing-tools';
 
-import { Box, Container, Grid } from './index';
+import { Box, Container, Grid } from '.';
 
 describe('Layout', () => {
   describe('Box', () => {
