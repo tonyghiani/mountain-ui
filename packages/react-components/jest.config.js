@@ -4,12 +4,12 @@ import packageJson from './package.json' assert { type: 'json' };
 
 export default {
   ...baseConfig,
-  testEnvironment: 'jsdom',
+  testEnvironment: 'tsdom',
   setupFilesAfterEnv: ['./tests/jest.setup.js'],
   moduleDirectories: ['node_modules', 'tests'],
   name: packageJson.name,
   displayName: packageJson.name,
   moduleNameMapper: {
-    'mui-testing-tools': '<rootDir>/tests/mui-testing-tools.js'
+    'mnt-testing-tools': '<rootDir>/tests/mnt_testing_tools.ts'
   }
 };
