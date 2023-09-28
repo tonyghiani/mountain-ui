@@ -1,6 +1,10 @@
-<h1 align="center">Mountain UI 🏔 </h1>
+<h1 align="center">Mountain UI</h1>
 
-<p>
+<p align="center">
+  <a href="https://mountain-ui.com" rel="noopener" target="_blank"><img width="200" src="./assets/mnt_logo.png" alt="Mountain UI"></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/tonyghiani/mountain-ui/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" />
   </a>
