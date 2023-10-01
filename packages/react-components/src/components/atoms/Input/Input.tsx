@@ -36,20 +36,32 @@ const INPUT_SIZES = {
 export type InputSize = keyof typeof INPUT_SIZES
 export type InputStatus = keyof typeof INPUT_STATUS
 
-export interface InputProps {
-  /* Input container children */
+export type InputProps = React.ComponentProps<typeof StyledInput> & {
+  /**
+   * Children components within the input container. 
+   */
   children?: React.ReactNode;
-  /* Caption text for the input */
+  /**
+   * Caption text for the input. 
+   */
   caption?: string;
-  /* Id for the input */
+  /**
+   * Unique identifier for the input. 
+   */
   id?: string;
-  /* Label text for the input */
+  /**
+   * Label text for the input. 
+   */
   label?: string;
-  /* Tag size */
+  /**
+   * Size of the input tag. 
+   */
   size?: InputSize;
-  /* Tag status */
+  /**
+   * Status of the input tag. 
+   */
   status?: InputStatus;
-};
+}
 
 const StyledInput = mnt('input')`
   w-full font-medium border-0 bg-transparent placeholder:font-normal
