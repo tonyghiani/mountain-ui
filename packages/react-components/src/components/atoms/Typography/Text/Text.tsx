@@ -7,7 +7,7 @@ export const TEXT_VARIANTS = {
   primary: 'text-body text-[--c-text-primary]',
   secondary: 'text-secondaryBody text-[--c-text-secondary]',
   caption: 'text-caption text-[--c-text-caption]'
-}
+} as const;
 
 export type TextVariant = keyof typeof TEXT_VARIANTS
 

@@ -5,6 +5,7 @@ import { HEADING_VARIANTS, Heading, HeadingVariant } from './Heading';
 import { Text } from '../Text';
 import { Box, Grid } from '../../Layout';
 
+import { Main as TextMainStory } from '../Text/Text.stories'
 import tailwindConfig from '../../../../../tailwind.config.cjs';
 
 const variants = Object.keys(HEADING_VARIANTS) as HeadingVariant[];
@@ -20,6 +21,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   args: {
+    ...TextMainStory.args,
     children: 'Mountain UI',
     variant: 'h1'
   }

@@ -6,7 +6,7 @@ export const CONTAINER_SIZES = {
   large: 'max-w-screen-lg',
   wide: 'max-w-screen-xl',
   ultra: 'max-w-screen-2xl'
-}
+} as const;
 
 export type ContainerSize = keyof typeof CONTAINER_SIZES;
 

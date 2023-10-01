@@ -9,7 +9,7 @@ export const GRID_COLUMNS = {
   6: 'grid-cols-6',
   8: 'grid-cols-8',
   12: 'grid-cols-12',
-}
+} as const;
 
 export type GridColumns = keyof typeof GRID_COLUMNS
 

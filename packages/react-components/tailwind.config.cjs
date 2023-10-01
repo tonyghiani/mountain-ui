@@ -23,7 +23,9 @@ export default {
         dark: 'hsl(210, 14%, 9%)'
       },
       boxShadow: {
-        'outline-button': 'inset 0 0 0 2px'
+        'outline-button': 'inset 0 0 0 2px',
+        input: 'inset 0 0 0 2px var(--text-input)',
+        'input-focus': 'inset 0 0 0 3px var(--text-input)'
       }
     }
   },

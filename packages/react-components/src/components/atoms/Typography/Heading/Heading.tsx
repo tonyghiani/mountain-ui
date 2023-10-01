@@ -9,7 +9,7 @@ export const HEADING_VARIANTS = {
   h4: 'text-h4 leading-normal text-[--c-heading4]',
   h5: 'text-h5 leading-normal text-[--c-heading5]',
   h6: 'text-h6 leading-normal text-[--c-heading6]'
-}
+} as const;
 
 export type HeadingVariant = keyof typeof HEADING_VARIANTS
 

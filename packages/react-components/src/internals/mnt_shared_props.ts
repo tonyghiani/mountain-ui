@@ -10,7 +10,7 @@ export const JUSTIFY_CONTENT = {
   around: 'justify-around',
   evenly: 'justify-evenly',
   stretch: 'justify-stretch'
-};
+} as const;
 export type JustifyContent = keyof typeof JUSTIFY_CONTENT;
 export const justifyContent = ({ justifyContent: justify = 'normal' }) => JUSTIFY_CONTENT[justify];
 
@@ -22,7 +22,7 @@ export const JUSTIFY_ITEMS = {
   end: 'justify-items-end',
   center: 'justify-items-center',
   stretch: 'justify-items-stretch'
-};
+} as const;
 export type JustifyItems = keyof typeof JUSTIFY_ITEMS;
 export const justifyItems = ({ justifyItems: justify = 'start' }) => JUSTIFY_ITEMS[justify];
 
@@ -35,6 +35,6 @@ export const ALIGN_ITEMS = {
   center: 'items-center',
   baseline: 'items-baseline',
   stretch: 'items-stretch'
-};
+} as const;
 export type AlignItems = keyof typeof ALIGN_ITEMS;
 export const alignItems = ({ alignItems: alignment = 'start' }) => ALIGN_ITEMS[alignment];

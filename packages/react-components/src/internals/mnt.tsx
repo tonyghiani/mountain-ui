@@ -17,7 +17,7 @@ type ClassesFactoryOrString<Props> = ClassesFactory<Props> | string
 
 type TaggedStyle<Props> = [TemplateStringsArray, ...ClassesFactoryOrString<Props>[]]
 
-type MntComponent<Props> = React.ForwardRefExoticComponent<React.PropsWithoutRef<Props> & React.RefAttributes<HTMLElement>> & {
+type MntComponent<Props> = React.ForwardRefExoticComponent<React.PropsWithoutRef<Props> & React.RefAttributes<unknown>> & {
   _classesFactory?: ClassesFactory<Props>
   _configFactory?: MntConfigFactory<Props>
   _elementType?: MntComponentType<Props>
@@ -30,10 +30,10 @@ type MntComponentType<Props> = Exclude<keyof JSX.IntrinsicElements, 'symbol' | '
  *
  * @example
  * // Usage example:
- * const Button = createMntComponent('button')`text-blue ${props => props.disabled && text-disabled}`;
- * const Button = createMntComponent(BaseTypography)`text-blue ${props => props.disabled && text-disabled}`;
- * const Button = createMntComponent(BaseTypography).attrs({as: 'a'})`text-blue ${props => props.disabled && text-disabled}`;
- * const Button = createMntComponent(BaseTypography).attrs((props) => ({as: props.variant}))`text-blue ${props => props.disabled && text-disabled}`;
+ * const Button = mnt('button')`text-blue ${props => props.disabled && text-disabled}`;
+ * const Button = mnt(BaseTypography)`text-blue ${props => props.disabled && text-disabled}`;
+ * const Button = mnt(BaseTypography).attrs({as: 'a'})`text-blue ${props => props.disabled && text-disabled}`;
+ * const Button = mnt(BaseTypography).attrs((props) => ({as: props.variant}))`text-blue ${props => props.disabled && text-disabled}`;
  */
 export const mnt = <Props,>(elementType: MntComponentType<Props & MntProps>) => {
   const builder = (...taggedStyles: TaggedStyle<Props & MntProps>): MntComponent<Props & MntProps> => {
@@ -65,7 +65,7 @@ const componentTemplate = <Props,>(elementType: MntComponentType<MntConfig<Props
     `
   }
 
-  function Component(componentProps: MntConfig<Props>, ref: ForwardedRef<HTMLElement>) {
+  function Component(componentProps: MntConfig<Props>, ref: ForwardedRef<unknown>) {
 
     const { as: As, className, ...props } = componentProps
 
@@ -83,7 +83,7 @@ const componentTemplate = <Props,>(elementType: MntComponentType<MntConfig<Props
     Component.displayName = elementType.displayName || elementType.name
   }
 
-  const MntComponent: MntComponent<Props> = React.forwardRef<HTMLElement, MntConfig<Props>>(Component)
+  const MntComponent: MntComponent<Props> = React.forwardRef<unknown, MntConfig<Props>>(Component)
 
   MntComponent._classesFactory = classesFactory
   MntComponent._configFactory = configFactory

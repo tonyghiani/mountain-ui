@@ -8,7 +8,7 @@ export const BUTTON_COLORS = {
   warning: 'text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400',
   danger: 'text-red-700 bg-red-600 from-red-600 to-red-400',
   disabled: 'text-gray-600 bg-gray-500 from-gray-600 to-gray-400'
-}
+} as const;
 export const BUTTON_VARIANTS = {
   shade: 'bg-opacity-20 hover:bg-opacity-30',
   solid: '!text-light',
@@ -16,7 +16,7 @@ export const BUTTON_VARIANTS = {
   gradient: 'bg-gradient-to-br hover:bg-gradient-to-r !text-light',
   link: '!bg-transparent hover:underline underline-offset-4',
   text: '!bg-transparent hover:scale-105',
-}
+} as const;
 
 export type ButtonColor = keyof typeof BUTTON_COLORS
 export type ButtonVariant = keyof typeof BUTTON_VARIANTS

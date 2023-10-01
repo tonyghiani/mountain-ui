@@ -9,7 +9,7 @@ export const TEXT_GRADIENT_DIRECTIONS = {
   'bl': 'bg-gradient-to-bl',
   'l': 'bg-gradient-to-l',
   'tl': 'bg-gradient-to-tl',
-}
+} as const;
 
 export type TextGradientDirection = keyof typeof TEXT_GRADIENT_DIRECTIONS
 export interface TextGradientOptions {
