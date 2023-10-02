@@ -30,38 +30,38 @@ const INPUT_SIZES = {
   xl: {
     input: 'text-h5',
     wrapper: 'h-14 px-5 py-4'
-  },
+  }
 } as const;
 
-export type InputSize = keyof typeof INPUT_SIZES
-export type InputStatus = keyof typeof INPUT_STATUS
+export type InputSize = keyof typeof INPUT_SIZES;
+export type InputStatus = keyof typeof INPUT_STATUS;
 
 export type InputProps = React.ComponentProps<typeof StyledInput> & {
   /**
-   * Children components within the input container. 
+   * Children components within the input container.
    */
   children?: React.ReactNode;
   /**
-   * Caption text for the input. 
+   * Caption text for the input.
    */
   caption?: string;
   /**
-   * Unique identifier for the input. 
+   * Unique identifier for the input.
    */
   id?: string;
   /**
-   * Label text for the input. 
+   * Label text for the input.
    */
   label?: string;
   /**
-   * Size of the input tag. 
+   * Size of the input tag.
    */
   size?: InputSize;
   /**
-   * Status of the input tag. 
+   * Status of the input tag.
    */
   status?: InputStatus;
-}
+};
 
 const StyledInput = mnt('input')`
   w-full font-medium border-0 bg-transparent placeholder:font-normal
@@ -77,41 +77,26 @@ const InputContainer = mnt<Pick<InputProps, 'status'>>('div')`
 `;
 
 /**
- * Input component for accepting user input within a UI. 
+ * Input component for accepting user input within a UI.
  * Supports various input types and styles, enhancing user interaction and enabling data submission or manipulation.
  */
-export const Input = forwardRef(({
-  status = 'default',
-  size = 'm',
-  label,
-  caption,
-  children,
-  id,
-  ...props
-}: InputProps, ref) => {
-  const { input, wrapper } = INPUT_SIZES[size];
+export const Input = forwardRef(
+  ({ status = 'default', size = 'm', label, caption, children, id, ...props }: InputProps, ref) => {
+    const { input, wrapper } = INPUT_SIZES[size];
 
-  return (
-    <InputContainer status={status}>
-      {label && (
-        <Text as='label' className="mb-2 text-[--text-input]" htmlFor={id}>
-          {label}
-        </Text>
-      )}
-      <InputWrapper className={wrapper}>
-        {children}
-        <StyledInput
-          ref={ref}
-          id={id}
-          className={input}
-          {...props}
-        />
-      </InputWrapper>
-      {caption && (
-        <Paragraph className="text-caption text-[--text-input]">
-          {caption}
-        </Paragraph>
-      )}
-    </InputContainer>
-  );
-})
+    return (
+      <InputContainer status={status}>
+        {label && (
+          <Text as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
+            {label}
+          </Text>
+        )}
+        <InputWrapper className={wrapper}>
+          {children}
+          <StyledInput ref={ref} id={id} className={input} {...props} />
+        </InputWrapper>
+        {caption && <Paragraph className='text-caption text-[--text-input]'>{caption}</Paragraph>}
+      </InputContainer>
+    );
+  }
+);

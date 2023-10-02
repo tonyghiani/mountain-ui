@@ -4,7 +4,7 @@
     "paths": {
       "mui-testing-tools": ["./tests/mui-testing-tools"]
     },
-    "types": ["jest", "node", "@testing-library/jest-dom", "jest-styled-components"]
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
   "include": ["src"]
 }
