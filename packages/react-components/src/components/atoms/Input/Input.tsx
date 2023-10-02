@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 
 import { Paragraph, Text } from '../Typography';
-import { mnt } from '../../../internals/mnt';
+import { Assign, mnt } from '../../../internals/mnt';
 
 export const INPUT_STATUS = {
   default: '[--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]',
@@ -36,7 +36,7 @@ const INPUT_SIZES = {
 export type InputSize = keyof typeof INPUT_SIZES;
 export type InputStatus = keyof typeof INPUT_STATUS;
 
-export type InputProps = React.ComponentProps<typeof StyledInput> & {
+export type InputProps = Assign<React.ComponentProps<typeof StyledInput>, {
   /**
    * Children components within the input container.
    */
@@ -61,7 +61,7 @@ export type InputProps = React.ComponentProps<typeof StyledInput> & {
    * Status of the input tag.
    */
   status?: InputStatus;
-};
+}>;
 
 const StyledInput = mnt('input')`
   w-full font-medium border-0 bg-transparent placeholder:font-normal
@@ -80,8 +80,8 @@ const InputContainer = mnt<Pick<InputProps, 'status'>>('div')`
  * Input component for accepting user input within a UI.
  * Supports various input types and styles, enhancing user interaction and enabling data submission or manipulation.
  */
-export const Input = forwardRef(
-  ({ status = 'default', size = 'm', label, caption, children, id, ...props }: InputProps, ref) => {
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  ({ status = 'default', size = 'm', label, caption, children, id, ...props }, ref) => {
     const { input, wrapper } = INPUT_SIZES[size];
 
     return (

@@ -1,12 +1,13 @@
 import type { Preview } from '@storybook/react';
 
 import '../src/styles/main.css';
+import { excluded } from './exclude';
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
-      exclude: ['as', 'ref', 'key'],
+      exclude: ['as', 'ref', 'key', ...excluded],
       expanded: true,
       matchers: {
         date: /Date$/

@@ -8,9 +8,8 @@ export interface MntProps extends PropsWithChildren {
   className?: string
 }
 
-type MntConfig<Props> = Props & MntProps;
-type MntConfigFactory<Props> = (props: Props) => MntConfig<Props>;
-type MntConfigOrFactory<Props> = MntConfig<Props> | MntConfigFactory<Props>;
+type MntConfigFactory<Props> = (props: Props) => Props;
+type MntConfigOrFactory<Props> = Props | MntConfigFactory<Props>;
 
 type ClassesFactory<Props> = (props: Props) => string;
 type ClassesFactoryOrString<Props> = ClassesFactory<Props> | string;
@@ -33,10 +32,9 @@ type MntComponentType = SupportedHTMLElement | MntComponent;
 type MntComponentProps<
   Props,
   Target = MntComponentType,
-  TargetProps = Target extends SupportedHTMLElement ? React.ComponentPropsWithRef<Target> : {}
-> = Assign<Props, TargetProps> & MntProps;
+> = Assign<React.AllHTMLAttributes<Target>, Props> & MntProps;
 
-type Assign<A, B> = Omit<A, keyof B> & B
+export type Assign<A, B> = Omit<A, keyof B> & B
 
 /**
  * Creates a component factory function to enhance basic capabilities of a passed component.
@@ -50,12 +48,12 @@ type Assign<A, B> = Omit<A, keyof B> & B
  */
 export const mnt = <Props,>(elementType: MntComponentType) => {
   const builder = (
-    ...taggedStyles: TaggedStyle<Props & MntProps>
+    ...taggedStyles: TaggedStyle<MntComponentProps<Props, typeof elementType>>
   ): MntComponent<MntComponentProps<Props, typeof elementType>> => {
     return componentTemplate<Props, typeof elementType>(elementType)(...taggedStyles);
   };
 
-  builder.attrs = (config: MntConfigOrFactory<Props>) => {
+  builder.attrs = (config: MntConfigOrFactory<MntComponentProps<Props, typeof elementType>>) => {
     if (isBareObject(config) || isFunction(config)) {
       return componentTemplate<Props, typeof elementType>(elementType, config);
     } else {
@@ -68,10 +66,10 @@ export const mnt = <Props,>(elementType: MntComponentType) => {
 
 const componentTemplate = <Props, Target extends MntComponentType>(
   elementType: Target,
-  config: MntConfigOrFactory<Props> = (p: Props) => p
+  config: MntConfigOrFactory<MntComponentProps<Props, Target>> = (p: MntComponentProps<Props, Target>) => p
 ) =>
-  (...taggedStyles: TaggedStyle<Props>): MntComponent<Props> => {
-    const classesFactory = getClasses<MntConfig<Props>>(...taggedStyles);
+  (...taggedStyles: TaggedStyle<MntComponentProps<Props, Target>>): MntComponent<MntComponentProps<Props, Target>> => {
+    const classesFactory = getClasses<MntComponentProps<Props, Target>>(...taggedStyles);
     const configFactory = isFunction(config) ? config : () => config;
 
     if (!isString(elementType) && elementType._isMnt) {
@@ -84,7 +82,7 @@ const componentTemplate = <Props, Target extends MntComponentType>(
     `;
     }
 
-    function Component(componentProps: MntComponentProps<Props>, ref: ForwardedRef<unknown>) {
+    function Component(componentProps: MntComponentProps<Props, Target>, ref: ForwardedRef<unknown>) {
       const { as: As, className, ...props } = componentProps;
 
       const taggedClasses = classesFactory(componentProps);
@@ -101,7 +99,7 @@ const componentTemplate = <Props, Target extends MntComponentType>(
       Component.displayName = elementType.displayName || elementType.name;
     }
 
-    const MntComponent: MntComponent<MntComponentProps<Props>> = React.forwardRef<unknown, MntComponentProps<Props>>(
+    const MntComponent: MntComponent<MntComponentProps<Props, Target>> = React.forwardRef<unknown, MntComponentProps<Props, Target>>(
       Component
     );
 
