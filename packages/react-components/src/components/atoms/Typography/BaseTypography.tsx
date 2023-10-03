@@ -41,7 +41,7 @@ export interface MntBaseTypographyProps extends MntProps {
   gradient?: TextGradientOptions;
 }
 
-const MntBaseTypography = mnt<MntBaseTypographyProps>('span')`
+export const MntBaseTypography = mnt<MntBaseTypographyProps>('span')`
   ${({ bold }) => bold ? "font-bold" : ''}
   ${({ gradient }) => gradient ? `text-transparent bg-clip-text ${TEXT_GRADIENT_DIRECTIONS[gradient.direction ?? 'r']} ${gradient.from} ${gradient.to ? gradient.to : ''}` : ''}
   ${({ truncate }) => truncate ? 'truncate' : ''}

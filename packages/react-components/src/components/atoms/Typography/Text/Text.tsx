@@ -1,6 +1,6 @@
 
 import { mnt } from '../../../../internals/mnt';
-import MntBaseTypography, { MntBaseTypographyProps } from '../BaseTypography';
+import { MntBaseTypography, MntBaseTypographyProps } from '../BaseTypography';
 
 export const TEXT_BASE_CLASS = 'leading-relaxed'
 export const TEXT_VARIANTS = {
