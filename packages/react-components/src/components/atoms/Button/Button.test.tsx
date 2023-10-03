@@ -1,14 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import { Button, BUTTON_BASE_CLASS, BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
+import { MntButton, BUTTON_BASE_CLASS, BUTTON_COLORS, BUTTON_VARIANTS, MntButtonColor, MntButtonVariant } from './Button';
 
-const colors = Object.keys(BUTTON_COLORS) as ButtonColor[]
-const variants = Object.keys(BUTTON_VARIANTS) as ButtonVariant[]
+const colors = Object.keys(BUTTON_COLORS) as MntButtonColor[]
+const variants = Object.keys(BUTTON_VARIANTS) as MntButtonVariant[]
 
-describe('<Button />', () => {
+describe('<MntButton />', () => {
   it('should render correctly on mount', () => {
-    render(<Button>Mountain UI</Button>);
+    render(<MntButton>Mountain UI</MntButton>);
     const buttonNode = screen.getByRole('button');
     expect(buttonNode).toBeInTheDocument();
   });
@@ -16,7 +16,7 @@ describe('<Button />', () => {
   describe('should render the passed variant', () => {
     variants.forEach(variant => {
       it(variant, () => {
-        render(<Button variant={variant}>Mountain UI</Button>);
+        render(<MntButton variant={variant}>Mountain UI</MntButton>);
         const buttonNode = screen.getByRole('button');
         expect(buttonNode).toHaveClass(BUTTON_BASE_CLASS)
         expect(buttonNode).toHaveClass(BUTTON_VARIANTS[variant]);
@@ -27,7 +27,7 @@ describe('<Button />', () => {
   describe('should render the passed color', () => {
     colors.forEach(color => {
       it(color, () => {
-        render(<Button color={color}>Mountain UI</Button>);
+        render(<MntButton color={color}>Mountain UI</MntButton>);
         const buttonNode = screen.getByRole('button');
         expect(buttonNode).toHaveClass(BUTTON_BASE_CLASS)
         expect(buttonNode).toHaveClass(BUTTON_COLORS[color]);

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mnt } from '../../../internals/mnt';
 
-import { Text } from '../Typography';
+import { MntText } from '../Typography';
 
 const TAG_SIZES = {
   xs: {
@@ -40,9 +40,9 @@ const TAG_STATUS_SIZES = {
   xl: 'w-[18px] h-[18px] -top-0.5 -right-0.5'
 } as const;
 
-export type TagSize = keyof typeof TAG_SIZES;
-export type TagStatus = keyof typeof TAG_STATUS;
-export type TagStatusSize = keyof typeof TAG_STATUS_SIZES;
+export type MntTagSize = keyof typeof TAG_SIZES;
+export type MntTagStatus = keyof typeof TAG_STATUS;
+export type MntTagStatusSize = keyof typeof TAG_STATUS_SIZES;
 
 const TagContainer = mnt<{ onClick?: React.MouseEventHandler }>('div')`
   relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
@@ -50,7 +50,7 @@ const TagContainer = mnt<{ onClick?: React.MouseEventHandler }>('div')`
   ${({ onClick }) => (onClick ? 'cursor-pointer' : 'cursor-default')}
 `;
 
-export interface TagProps {
+export interface MntTagProps {
   /**
    * Tag text children
    */
@@ -58,36 +58,36 @@ export interface TagProps {
   /**
    * Tag size
    */
-  size?: TagSize;
+  size?: MntTagSize;
   /**
    * Tag status
    */
-  status?: TagStatus;
+  status?: MntTagStatus;
 }
 
 interface TagStatusProps {
   /**
    * Tag status size
    */
-  size: TagStatusSize;
+  size: MntTagStatusSize;
   /**
    * Tag status
    */
-  status: TagStatus;
+  status: MntTagStatus;
 }
 
 /**
  * Tag component for visually representing and categorizing items or content. 
  * Enhances organization and provides a quick way to identify or filter specific elements within a UI.
  */
-export const Tag = ({ children, size = 'm', status, ...props }: TagProps) => {
+export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) => {
   const { label, wrapper } = TAG_SIZES[size];
 
   return (
     <TagContainer className={wrapper} {...props}>
-      <Text bold className={`text-light ${label}`}>
+      <MntText bold className={`text-light ${label}`}>
         {children}
-      </Text>
+      </MntText>
       {!!status && <TagStatus status={status} size={size} />}
     </TagContainer>
   );
@@ -99,4 +99,4 @@ const TagStatus = mnt<TagStatusProps>('div')`
   ${({ status }) => TAG_STATUS[status]}
 `;
 
-Tag.displayName = 'Tag';
+MntTag.displayName = 'MntTag';

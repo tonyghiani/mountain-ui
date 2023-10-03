@@ -11,14 +11,14 @@ export const TEXT_GRADIENT_DIRECTIONS = {
   'tl': 'bg-gradient-to-tl',
 } as const;
 
-export type TextGradientDirection = keyof typeof TEXT_GRADIENT_DIRECTIONS
+export type MntTextGradientDirection = keyof typeof TEXT_GRADIENT_DIRECTIONS
 export interface TextGradientOptions {
   from: string;
   to?: string
-  direction?: TextGradientDirection
+  direction?: MntTextGradientDirection
 }
 
-export interface BaseTypographyProps extends MntProps {
+export interface MntBaseTypographyProps extends MntProps {
   /**
    * Text should be uncopyable.
    */
@@ -41,7 +41,7 @@ export interface BaseTypographyProps extends MntProps {
   gradient?: TextGradientOptions;
 }
 
-const BaseTypography = mnt<BaseTypographyProps>('span')`
+const MntBaseTypography = mnt<MntBaseTypographyProps>('span')`
   ${({ bold }) => bold ? "font-bold" : ''}
   ${({ gradient }) => gradient ? `text-transparent bg-clip-text ${TEXT_GRADIENT_DIRECTIONS[gradient.direction ?? 'r']} ${gradient.from} ${gradient.to ? gradient.to : ''}` : ''}
   ${({ truncate }) => truncate ? 'truncate' : ''}
@@ -49,6 +49,4 @@ const BaseTypography = mnt<BaseTypographyProps>('span')`
   ${({ underline }) => underline ? 'underline underline-offset-4' : ''}
 `
 
-BaseTypography.displayName = 'BaseTypography';
-
-export default BaseTypography;
+MntBaseTypography.displayName = 'MntBaseTypography';

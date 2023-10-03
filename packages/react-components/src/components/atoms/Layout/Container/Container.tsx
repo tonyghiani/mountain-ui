@@ -8,22 +8,22 @@ export const CONTAINER_SIZES = {
   ultra: 'max-w-screen-2xl'
 } as const;
 
-export type ContainerSize = keyof typeof CONTAINER_SIZES;
+export type MntContainerSize = keyof typeof CONTAINER_SIZES;
 
-export interface ContainerProps {
+export interface MntContainerProps {
   /**
    * The maximum size the container should take on the screen.
    */
-  size?: ContainerSize
+  size?: MntContainerSize
 };
 
 /**
- * Container component for wrapping and styling content within a designated area. 
+ * MntContainer component for wrapping and styling content within a designated area. 
  * Helps in organizing and managing the layout of components and elements.
  */
-export const Container = mnt<ContainerProps>('div')`
+export const MntContainer = mnt<MntContainerProps>('div')`
   ${CONTAINER_BASE_CLASS}
   ${({ size = 'large' }) => CONTAINER_SIZES[size]}
 `;
 
-Container.displayName = 'Container';
+MntContainer.displayName = 'MntContainer';

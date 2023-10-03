@@ -2,6 +2,7 @@ import React, { ForwardedRef, PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import { isBareObject, isFunction, isString } from '@mountain-ui/utils';
 import { MntConfigurationError } from './mnt_errors';
+import { supportedAttributesSet } from './mnt_attributes';
 
 export interface MntProps extends PropsWithChildren {
   as?: React.ElementType;
@@ -91,8 +92,10 @@ const componentTemplate = <Props, Target extends MntComponentType>(
 
       const config = configFactory(componentProps);
 
+      const cleanedProps = cleanProps(props)
+
       const TagName = As ?? config.as ?? elementType;
-      return <TagName ref={ref} className={classes} {...props} />;
+      return <TagName ref={ref} className={classes} {...cleanedProps} />;
     }
 
     if (hasStaticProperty(elementType, 'displayName')) {
@@ -128,6 +131,16 @@ function getClasses<Props>(...taggedStyles: TaggedStyle<Props>) {
 
     return chunks.join(' ');
   };
+}
+
+function cleanProps(props: Record<string, unknown>) {
+  const cleanedProps = {}
+
+  for (const prop in props) {
+    if (supportedAttributesSet.has(prop)) cleanedProps[prop] = props[prop]
+  }
+
+  return cleanedProps
 }
 
 function hasStaticProperty(input: any, propertyName: string): input is Function {

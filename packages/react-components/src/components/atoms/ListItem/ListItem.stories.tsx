@@ -1,15 +1,15 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Text } from '../Typography';
+import { MntText } from '../Typography';
 
-import { ListItem } from './ListItem';
+import { MntListItem } from './ListItem';
 
 const meta = {
-  title: 'Atoms/ListItem',
-  component: ListItem,
+  title: 'Atoms/MntListItem',
+  component: MntListItem,
   tags: ['autodocs']
-} satisfies Meta<typeof ListItem>;
+} satisfies Meta<typeof MntListItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -19,8 +19,8 @@ export const Main: Story = {
     children: 'Mountain UI library'
   },
   render: ({ children, ...args }) => (
-    <ListItem {...args} icon={<div>📚</div>}>
-      <Text>{children}</Text>
-    </ListItem>
+    <MntListItem {...args} icon={<div>📚</div>}>
+      <MntText>{children}</MntText>
+    </MntListItem>
   )
 };

@@ -1,5 +1,5 @@
 import { mnt } from '../../../../internals/mnt';
-import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
+import { MntBaseTypography, MntBaseTypographyProps } from '../BaseTypography';
 
 export const HEADING_BASE_CLASS = 'font-bold tracking-wide'
 export const HEADING_VARIANTS = {
@@ -11,22 +11,22 @@ export const HEADING_VARIANTS = {
   h6: 'text-h6 leading-normal text-[--c-heading6]'
 } as const;
 
-export type HeadingVariant = keyof typeof HEADING_VARIANTS
+export type MntHeadingVariant = keyof typeof HEADING_VARIANTS
 
-export interface HeadingProps extends BaseTypographyProps {
+export interface MntHeadingProps extends MntBaseTypographyProps {
   /**
    * Variant options for styling a Heading component.
    */
-  variant?: HeadingVariant
+  variant?: MntHeadingVariant
 }
 
 /**
  * Heading component for displaying text titles or headings in a styled and visually appealing manner,
  * enhancing content presentation within a UI.
  */
-export const Heading = mnt<HeadingProps>(BaseTypography).attrs(p => ({ as: p.as ?? p.variant }))`
+export const MntHeading = mnt<MntHeadingProps>(MntBaseTypography).attrs(p => ({ as: p.as ?? p.variant }))`
   ${HEADING_BASE_CLASS}
   ${({ variant = 'h1' }) => HEADING_VARIANTS[variant]}
 `
 
-Heading.displayName = 'Heading';
+MntHeading.displayName = 'MntHeading';

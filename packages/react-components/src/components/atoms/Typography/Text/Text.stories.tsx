@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Text } from './Text';
+import { MntText } from './Text';
 
 const meta = {
-  title: 'Atoms/Typography/Text',
-  component: Text,
+  title: 'Atoms/Typography/MntText',
+  component: MntText,
   tags: ['autodocs']
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof MntText>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -1,17 +1,17 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Button, BUTTON_COLORS, BUTTON_VARIANTS, ButtonColor, ButtonVariant } from './Button';
-import { Grid } from '../Layout';
+import { MntButton, BUTTON_COLORS, BUTTON_VARIANTS, MntButtonColor, MntButtonVariant } from './Button';
+import { MntGrid } from '../Layout';
 
-const colors = Object.keys(BUTTON_COLORS) as ButtonColor[]
-const variants = Object.keys(BUTTON_VARIANTS) as ButtonVariant[]
+const colors = Object.keys(BUTTON_COLORS) as MntButtonColor[]
+const variants = Object.keys(BUTTON_VARIANTS) as MntButtonVariant[]
 
 const meta = {
-  title: 'Atoms/Button',
-  component: Button,
+  title: 'Atoms/MntButton',
+  component: MntButton,
   tags: ['autodocs'],
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof MntButton>;
 
 export default meta
 type Story = StoryObj<typeof meta>;
@@ -32,9 +32,9 @@ export const Variant: Story = {
   },
   render: (args) => {
     return (
-      <Grid columns={6} justifyItems='center' alignItems='center'>
-        {variants.map(variant => <Button key={variant} {...args} variant={variant} />)}
-      </Grid>
+      <MntGrid columns={6} justifyItems='center' alignItems='center'>
+        {variants.map(variant => <MntButton key={variant} {...args} variant={variant} />)}
+      </MntGrid>
     )
   }
 };
@@ -42,9 +42,9 @@ export const Variant: Story = {
 export const Color: Story = {
   render: () => {
     return (
-      <Grid columns={6} justifyItems='center' alignItems='center'>
-        {colors.map(color => variants.map(variant => <Button key={`${variant}-${color}`} color={color} variant={variant} >{color}</Button>))}
-      </Grid>
+      <MntGrid columns={6} justifyItems='center' alignItems='center'>
+        {colors.map(color => variants.map(variant => <MntButton key={`${variant}-${color}`} color={color} variant={variant} >{color}</MntButton>))}
+      </MntGrid>
     )
   }
 };

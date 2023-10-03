@@ -3,7 +3,7 @@ import { mnt } from '../../../internals/mnt';
 
 export const LIST_ITEM_BASE_CLASS = `flex items-start gap-4`;
 
-export interface ListItemProps {
+export interface MntListItemProps {
   /**
    * ListItem content 
    */
@@ -19,9 +19,9 @@ const StyledListItem = mnt('li')`
 `
 
 /**
- * The `ListItem` serves as single item rendered in a list
+ * The `MntListItem` serves as single item rendered in a list
  */
-export const ListItem = ({ children, icon, ...props }: ListItemProps) => {
+export const MntListItem = ({ children, icon, ...props }: MntListItemProps) => {
   return (
     <StyledListItem {...props}>
       {icon}
@@ -30,4 +30,4 @@ export const ListItem = ({ children, icon, ...props }: ListItemProps) => {
   );
 }
 
-ListItem.displayName = 'ListItem';
+MntListItem.displayName = 'MntListItem';

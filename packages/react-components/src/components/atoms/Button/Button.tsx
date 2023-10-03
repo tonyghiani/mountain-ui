@@ -18,14 +18,14 @@ export const BUTTON_VARIANTS = {
   text: '!bg-transparent hover:scale-105',
 } as const;
 
-export type ButtonColor = keyof typeof BUTTON_COLORS
-export type ButtonVariant = keyof typeof BUTTON_VARIANTS
+export type MntButtonColor = keyof typeof BUTTON_COLORS
+export type MntButtonVariant = keyof typeof BUTTON_VARIANTS
 
-export interface ButtonProps {
+export interface MntButtonProps {
   /**
    * The color to apply for the button content
    */
-  color?: ButtonColor
+  color?: MntButtonColor
   /**
    * The button status
    */
@@ -33,17 +33,17 @@ export interface ButtonProps {
   /**
    * The variant to use for the button
    */
-  variant?: ButtonVariant
+  variant?: MntButtonVariant
 }
 
 /**
  * Button component for triggering actions or events in the UI. 
  * Provides interactivity with styled visuals, enhancing user engagement and navigation within the application.
  */
-export const Button = mnt<ButtonProps>('button')`
+export const MntButton = mnt<MntButtonProps>('button')`
   ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}
 `
 
-Button.displayName = 'Button';
+MntButton.displayName = 'MntButton';

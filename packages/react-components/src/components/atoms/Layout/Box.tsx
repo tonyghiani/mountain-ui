@@ -1,10 +1,10 @@
 import { mnt } from '../../../internals/mnt';
 
-interface BoxProps { };
+interface MntBoxProps { };
 
 /**
  * Box used to define Layout components
  */
-export const Box = mnt<BoxProps>('div')``;
+export const MntBox = mnt<MntBoxProps>('div')``;
 
-Box.displayName = 'Box';
+MntBox.displayName = 'MntBox';

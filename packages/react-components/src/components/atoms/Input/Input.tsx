@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 
-import { Paragraph, Text } from '../Typography';
+import { MntParagraph, MntText } from '../Typography';
 import { Assign, mnt } from '../../../internals/mnt';
 
 export const INPUT_STATUS = {
@@ -33,10 +33,10 @@ const INPUT_SIZES = {
   }
 } as const;
 
-export type InputSize = keyof typeof INPUT_SIZES;
-export type InputStatus = keyof typeof INPUT_STATUS;
+export type MntInputSize = keyof typeof INPUT_SIZES;
+export type MntInputStatus = keyof typeof INPUT_STATUS;
 
-export type InputProps = Assign<React.ComponentProps<typeof StyledInput>, {
+export type MntInputProps = Assign<React.ComponentProps<typeof StyledInput>, {
   /**
    * Children components within the input container.
    */
@@ -56,11 +56,11 @@ export type InputProps = Assign<React.ComponentProps<typeof StyledInput>, {
   /**
    * Size of the input tag.
    */
-  size?: InputSize;
+  size?: MntInputSize;
   /**
    * Status of the input tag.
    */
-  status?: InputStatus;
+  status?: MntInputStatus;
 }>;
 
 const StyledInput = mnt('input')`
@@ -71,7 +71,7 @@ const InputWrapper = mnt('div')`
   w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200
 `;
 
-const InputContainer = mnt<Pick<InputProps, 'status'>>('div')`
+const InputContainer = mnt<Pick<MntInputProps, 'status'>>('div')`
   w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20
   ${props => INPUT_STATUS[props.status]}
 `;
@@ -80,23 +80,25 @@ const InputContainer = mnt<Pick<InputProps, 'status'>>('div')`
  * Input component for accepting user input within a UI.
  * Supports various input types and styles, enhancing user interaction and enabling data submission or manipulation.
  */
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
   ({ status = 'default', size = 'm', label, caption, children, id, ...props }, ref) => {
     const { input, wrapper } = INPUT_SIZES[size];
 
     return (
       <InputContainer status={status}>
         {label && (
-          <Text as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
+          <MntText as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
             {label}
-          </Text>
+          </MntText>
         )}
         <InputWrapper className={wrapper}>
           {children}
           <StyledInput ref={ref} id={id} className={input} {...props} />
         </InputWrapper>
-        {caption && <Paragraph className='text-caption text-[--text-input]'>{caption}</Paragraph>}
+        {caption && <MntParagraph className='text-caption text-[--text-input]'>{caption}</MntParagraph>}
       </InputContainer>
     );
   }
 );
+
+MntInput.displayName = 'MntInput'

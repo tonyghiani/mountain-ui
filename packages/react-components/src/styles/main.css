@@ -23,3 +23,7 @@ select,
 textarea {
   @apply focus:outline-none;
 }
+
+* {
+  @apply dark:antialiased;
+}

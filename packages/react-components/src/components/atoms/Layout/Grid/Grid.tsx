@@ -11,13 +11,13 @@ export const GRID_COLUMNS = {
   12: 'grid-cols-12',
 } as const;
 
-export type GridColumns = keyof typeof GRID_COLUMNS
+export type MntGridColumns = keyof typeof GRID_COLUMNS
 
-export interface GridProps {
+export interface MntGridProps {
   /**
    * The number of columns to split the grid
    */
-  columns?: GridColumns
+  columns?: MntGridColumns
   /**
    * Justify grid items
    */
@@ -32,13 +32,11 @@ export interface GridProps {
  * Grid component for organizing content in a structured layout with rows and columns.
  * Facilitates alignment and distribution, ideal for creating organized and aesthetically pleasing interfaces.
  */
-export const Grid = mnt<GridProps>('div')`
+export const MntGrid = mnt<MntGridProps>('div')`
   ${GRID_BASE_CLASS}
   ${({ columns }) => columns ? GRID_COLUMNS[columns] : ''}
   ${justifyItems}
   ${alignItems}
 `
 
-Grid.displayName = 'Grid'
-
-export default Grid
+MntGrid.displayName = 'MntGrid'

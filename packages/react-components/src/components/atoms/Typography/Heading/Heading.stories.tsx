@@ -1,20 +1,20 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { HEADING_VARIANTS, Heading, HeadingVariant } from './Heading';
-import { Text } from '../Text';
-import { Box, Grid } from '../../Layout';
+import { HEADING_VARIANTS, MntHeading, MntHeadingVariant } from './Heading';
+import { MntText } from '../Text';
+import { MntBox, MntGrid } from '../../Layout';
 
 import { Main as TextMainStory } from '../Text/Text.stories'
 import tailwindConfig from '../../../../../tailwind.config.cjs';
 
-const variants = Object.keys(HEADING_VARIANTS) as HeadingVariant[];
+const variants = Object.keys(HEADING_VARIANTS) as MntHeadingVariant[];
 
 const meta = {
-  title: 'Atoms/Typography/Heading',
-  component: Heading,
+  title: 'Atoms/Typography/MntHeading',
+  component: MntHeading,
   tags: ['autodocs']
-} satisfies Meta<typeof Heading>;
+} satisfies Meta<typeof MntHeading>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -33,14 +33,14 @@ export const All: Story = {
   },
   render: args => {
     return (
-      <Grid className='gap-4'>
+      <MntGrid className='gap-4'>
         {variants.map(variant => (
-          <Box>
-            <Text variant='secondary'>{variant.toUpperCase()} - {tailwindConfig.theme.fontSize[variant]} - bold</Text>
-            <Heading key={variant} {...args} variant={variant} />
-          </Box>
+          <MntBox>
+            <MntText variant='secondary'>{variant.toUpperCase()} - {tailwindConfig.theme.fontSize[variant]} - bold</MntText>
+            <MntHeading key={variant} {...args} variant={variant} />
+          </MntBox>
         ))}
-      </Grid>
+      </MntGrid>
     );
   }
 };

@@ -1,12 +1,12 @@
 import { mnt } from "../../../../internals/mnt"
-import { Text, TextProps } from "../Text"
+import { MntText, MntTextProps } from "../Text"
 
-export interface ParagraphProps extends TextProps { }
+export interface MntParagraphProps extends MntTextProps { }
 
 /**
  * Paragraph component for displaying text content in a structured and styled manner. 
  * Enhances readability and presentation of textual information within a UI.
  */
-export const Paragraph = mnt<ParagraphProps>(Text).attrs({ as: 'p' })``
+export const MntParagraph = mnt<MntParagraphProps>(MntText).attrs({ as: 'p' })``
 
-Paragraph.displayName = 'Paragraph'
+MntParagraph.displayName = 'MntParagraph'

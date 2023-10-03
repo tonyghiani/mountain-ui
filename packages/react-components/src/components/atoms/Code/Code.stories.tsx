@@ -1,24 +1,24 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Paragraph } from '../Typography/Paragraph';
+import { MntParagraph } from '../Typography/Paragraph';
 
-import { Code } from './Code';
+import { MntCode } from './Code';
 
 const meta = {
-  title: 'Atoms/Code',
-  component: Code,
+  title: 'Atoms/MntCode',
+  component: MntCode,
   tags: ['autodocs']
-} satisfies Meta<typeof Code>;
+} satisfies Meta<typeof MntCode>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   render: () => (
-    <Paragraph>
-      Code component for displaying and styling <Code>variables names</Code>, describe some{' '}
-      <Code>keywords</Code> and much more.
-    </Paragraph>
+    <MntParagraph>
+      MntCode component for displaying and styling <MntCode>variables names</MntCode>, describe some{' '}
+      <MntCode>keywords</MntCode> and much more.
+    </MntParagraph>
   )
 };

@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Paragraph } from './Paragraph';
+import { MntParagraph } from './Paragraph';
 import { Main as TextMainStory } from '../Text/Text.stories'
 
 const meta = {
-  title: 'Atoms/Typography/Paragraph',
-  component: Paragraph,
+  title: 'Atoms/Typography/MntParagraph',
+  component: MntParagraph,
   tags: ['autodocs']
-} satisfies Meta<typeof Paragraph>;
+} satisfies Meta<typeof MntParagraph>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

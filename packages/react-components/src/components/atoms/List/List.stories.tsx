@@ -1,15 +1,15 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { List } from './List';
-import { Text } from '../Typography';
-import { ListItem } from '../ListItem';
+import { MntList } from './List';
+import { MntText } from '../Typography';
+import { MntListItem } from '../ListItem';
 
 const meta = {
-  title: 'Atoms/List',
-  component: List,
+  title: 'Atoms/MntList',
+  component: MntList,
   tags: ['autodocs']
-} satisfies Meta<typeof List>;
+} satisfies Meta<typeof MntList>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -21,19 +21,19 @@ export const Main: Story = {
     horizontal: false
   },
   render: ({ children, ...args }) => (
-    <List {...args}>
-      <ListItem>
-        <Text>{children}</Text>
-      </ListItem>
-      <ListItem>
-        <Text>{children}</Text>
-      </ListItem>
-      <ListItem>
-        <Text>{children}</Text>
-      </ListItem>
-      <ListItem>
-        <Text>{children}</Text>
-      </ListItem>
-    </List>
+    <MntList {...args}>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+    </MntList>
   )
 };

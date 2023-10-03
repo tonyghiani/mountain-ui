@@ -1,11 +1,11 @@
-import { Container } from './Container';
+import { MntContainer } from './Container';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Atoms/Layout/Container',
-  component: Container,
+  title: 'Atoms/Layout/MntContainer',
+  component: MntContainer,
   tags: ['autodocs'],
-} satisfies Meta<typeof Container>;
+} satisfies Meta<typeof MntContainer>;
 
 export default meta
 type Story = StoryObj<typeof meta>;

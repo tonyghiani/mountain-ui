@@ -1,14 +1,14 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Tag } from './Tag';
-import { Box } from '../Layout';
+import { MntTag } from './Tag';
+import { MntBox } from '../Layout';
 
 const meta = {
-  title: 'Atoms/Tag',
-  component: Tag,
+  title: 'Atoms/MntTag',
+  component: MntTag,
   tags: ['autodocs']
-} satisfies Meta<typeof Tag>;
+} satisfies Meta<typeof MntTag>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -25,13 +25,13 @@ export const Size: Story = {
     children: '#mountain-ui'
   },
   render: (args) => (
-    <Box className='flex gap-4'>
-      <Tag {...args} size='xs' />
-      <Tag {...args} size='s' />
-      <Tag {...args} size='m' />
-      <Tag {...args} size='l' />
-      <Tag {...args} size='xl' />
-    </Box>
+    <MntBox className='flex gap-4'>
+      <MntTag {...args} size='xs' />
+      <MntTag {...args} size='s' />
+      <MntTag {...args} size='m' />
+      <MntTag {...args} size='l' />
+      <MntTag {...args} size='xl' />
+    </MntBox>
   )
 };
 
@@ -40,10 +40,10 @@ export const Status: Story = {
     children: '#mountain-ui'
   },
   render: (args) => (
-    <Box className='flex gap-4'>
-      <Tag {...args} size='m' status='success' />
-      <Tag {...args} size='m' status='warning' />
-      <Tag {...args} size='m' status='error' />
-    </Box>
+    <MntBox className='flex gap-4'>
+      <MntTag {...args} size='m' status='success' />
+      <MntTag {...args} size='m' status='warning' />
+      <MntTag {...args} size='m' status='error' />
+    </MntBox>
   )
 };

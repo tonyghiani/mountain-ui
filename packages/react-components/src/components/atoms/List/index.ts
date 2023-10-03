@@ -1,1 +1,2 @@
-export * from './List';
+export { MntList } from './List';
+export type { MntListProps } from './List';

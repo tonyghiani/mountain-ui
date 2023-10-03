@@ -1,21 +1,21 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Box } from '../Box';
+import { MntBox } from '../Box';
 
-import Grid, { GRID_COLUMNS, GridColumns } from './Grid';
+import { MntGrid, GRID_COLUMNS, MntGridColumns } from './Grid';
 
 const meta = {
-  title: 'Atoms/Layout/Grid',
-  component: Grid,
+  title: 'Atoms/Layout/MntGrid',
+  component: MntGrid,
   tags: ['autodocs'],
-} satisfies Meta<typeof Grid>;
+} satisfies Meta<typeof MntGrid>;
 
 export default meta
 
 type Story = StoryObj<typeof meta>;
 
-const GridItem = () => <Box className='w-16 h-16 bg-blue-400 rounded' />
+const GridItem = () => <MntBox className='w-16 h-16 bg-blue-400 rounded' />
 
 export const Main: Story = {
   args: {
@@ -25,11 +25,11 @@ export const Main: Story = {
     className: 'w-full h-96'
   },
   render: ({ columns, ...props }) => (
-    <Grid columns={columns} {...props}>
+    <MntGrid columns={columns} {...props}>
       {[...Array(+columns)].map((_el, id) => (
         <GridItem key={id} />
       ))}
-    </Grid >
+    </MntGrid >
   )
 }
 
@@ -40,14 +40,14 @@ export const Columns: Story = {
     className: 'w-full h-32'
   },
   render: (args) => (
-    <Grid>
+    <MntGrid>
       {Object.keys(GRID_COLUMNS).map((cols) => {
-        return <Grid key={cols} columns={+cols as GridColumns} {...args}>
+        return <MntGrid key={cols} columns={+cols as MntGridColumns} {...args}>
           {[...Array(+cols)].map((_el, id) => (
             <GridItem key={id} />
           ))}
-        </Grid>
+        </MntGrid>
       })}
-    </Grid >
+    </MntGrid >
   )
 };
