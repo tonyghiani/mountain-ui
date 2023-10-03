@@ -13,6 +13,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   args: {
+    syntax: 'jsx',
     children: `/**
  * The CodeBlock component is used to represent blocks of code.
  */

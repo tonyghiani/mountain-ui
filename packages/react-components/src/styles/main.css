@@ -29,6 +29,10 @@ textarea {
 }
 
 @layer utilities {
+  .mnt-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.gray.400') transparent;
+  }
   .mnt-scrollbar::-webkit-scrollbar {
     @apply bg-transparent;
     inline-size: theme('space.4');
