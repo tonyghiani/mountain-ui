@@ -1,4 +1,4 @@
-import { mnt } from '../../../../internals/mnt';
+import { mnt } from 'mnt-internals';
 
 export const CONTAINER_BASE_CLASS = 'mx-auto px-4';
 export const CONTAINER_SIZES = {

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { MntBox } from '../Box';
 
-import { MntGrid, GRID_COLUMNS, MntGridColumns } from './Grid';
+import { GRID_COLUMNS, MntGrid, MntGridColumns } from './Grid';
 
 const meta = {
   title: 'Atoms/Layout/MntGrid',

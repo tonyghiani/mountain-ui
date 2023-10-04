@@ -1,4 +1,4 @@
-import { mnt } from '../../../internals/mnt';
+import { mnt } from 'mnt-internals';
 
 export const BUTTON_BASE_CLASS = 'relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed';
 export const BUTTON_COLORS = {

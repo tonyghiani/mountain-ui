@@ -1,8 +1,9 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { MntButton, BUTTON_COLORS, BUTTON_VARIANTS, MntButtonColor, MntButtonVariant } from './Button';
 import { MntGrid } from '../Layout';
+
+import { BUTTON_COLORS, BUTTON_VARIANTS, MntButton, MntButtonColor, MntButtonVariant } from './Button';
 
 const colors = Object.keys(BUTTON_COLORS) as MntButtonColor[]
 const variants = Object.keys(BUTTON_VARIANTS) as MntButtonVariant[]

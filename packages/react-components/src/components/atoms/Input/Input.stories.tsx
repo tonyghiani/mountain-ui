@@ -1,9 +1,9 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { MntGrid } from '../Layout';
 
 import { MntInput } from './Input';
-import { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
   title: 'Atoms/MntInput',
@@ -46,5 +46,6 @@ export const Decoration: Story = {
   render: () => <MntGrid columns={4}>
     <MntInput value={30} type="number" status='success' label="Age" caption="Your age was correctly saved" />
     <MntInput value="Marco Antonio Ghiani" status='error' label="Name" caption="Oh no, your name seems too long!" />
+    <MntInput value="Marco Antonio Ghiani" status='warning' label="Name" caption="Oh no, your name seems too long!" />
   </MntGrid>
 };

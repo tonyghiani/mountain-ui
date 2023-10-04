@@ -56,5 +56,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2021 [Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>](https://github.com/tonyghiani).<br />
+Copyright © 2023 [Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>](https://github.com/tonyghiani).<br />
 This project is [MIT](https://github.com/tonyghiani/mountain-ui/blob/master/LICENSE) licensed.

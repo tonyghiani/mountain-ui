@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { MntParagraph } from './Paragraph';
 import { Main as TextMainStory } from '../Text/Text.stories'
+
+import { MntParagraph } from './Paragraph';
 
 const meta = {
   title: 'Atoms/Typography/MntParagraph',

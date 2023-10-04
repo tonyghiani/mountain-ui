@@ -1,4 +1,4 @@
-import { mnt } from '../../../internals/mnt';
+import { mnt } from 'mnt-internals';
 
 export const CODE_BASE_CLASS = 'bg-blue-950 text-bold text-secondaryBody text-light inline-block px-1 rounded';
 

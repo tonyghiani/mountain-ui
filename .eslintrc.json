@@ -16,7 +16,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "import", "simple-import-sort"],
   "rules": {
-    "no-unused-vars": 2,
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "prefer-const": "error",
     "import/first": "error",
     "import/newline-after-import": "error",

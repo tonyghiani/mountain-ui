@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
+import { Assign, mnt } from 'mnt-internals';
 
 import { MntParagraph, MntText } from '../Typography';
-import { Assign, mnt } from '../../../internals/mnt';
 
 export const INPUT_STATUS = {
   default: '[--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]',
@@ -36,35 +36,38 @@ const INPUT_SIZES = {
 export type MntInputSize = keyof typeof INPUT_SIZES;
 export type MntInputStatus = keyof typeof INPUT_STATUS;
 
-export type MntInputProps = Assign<React.ComponentProps<typeof StyledInput>, {
-  /**
-   * Children components within the input container.
-   */
-  children?: React.ReactNode;
-  /**
-   * Caption text for the input.
-   */
-  caption?: string;
-  /**
-   * Unique identifier for the input.
-   */
-  id?: string;
-  /**
-   * Label text for the input.
-   */
-  label?: string;
-  /**
-   * Size of the input tag.
-   */
-  size?: MntInputSize;
-  /**
-   * Status of the input tag.
-   */
-  status?: MntInputStatus;
-}>;
+export type MntInputProps = Assign<
+  React.ComponentProps<typeof StyledInput>,
+  {
+    /**
+     * Children components within the input container.
+     */
+    children?: React.ReactNode;
+    /**
+     * Caption text for the input.
+     */
+    caption?: string;
+    /**
+     * Unique identifier for the input.
+     */
+    id?: string;
+    /**
+     * Label text for the input.
+     */
+    label?: string;
+    /**
+     * Size of the input tag.
+     */
+    size?: MntInputSize;
+    /**
+     * Status of the input tag.
+     */
+    status?: MntInputStatus;
+  }
+>;
 
 const StyledInput = mnt('input')`
-  w-full font-medium border-0 bg-transparent placeholder:font-normal
+  w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal
 `;
 
 const InputWrapper = mnt('div')`
@@ -84,21 +87,27 @@ export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
   ({ status = 'default', size = 'm', label, caption, children, id, ...props }, ref) => {
     const { input, wrapper } = INPUT_SIZES[size];
 
+    const inputNode = (
+      <InputWrapper className={wrapper}>
+        {children}
+        <StyledInput ref={ref} id={id} className={input} {...props} />
+      </InputWrapper>
+    );
+
     return (
       <InputContainer status={status}>
-        {label && (
+        {label ? (
           <MntText as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
             {label}
+            {inputNode}
           </MntText>
+        ) : inputNode}
+        {caption && (
+          <MntParagraph className='text-caption text-[--text-input]'>{caption}</MntParagraph>
         )}
-        <InputWrapper className={wrapper}>
-          {children}
-          <StyledInput ref={ref} id={id} className={input} {...props} />
-        </InputWrapper>
-        {caption && <MntParagraph className='text-caption text-[--text-input]'>{caption}</MntParagraph>}
       </InputContainer>
     );
   }
 );
 
-MntInput.displayName = 'MntInput'
+MntInput.displayName = 'MntInput';

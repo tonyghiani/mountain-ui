@@ -1,8 +1,9 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { MntTag } from './Tag';
 import { MntBox } from '../Layout';
+
+import { MntTag } from './Tag';
 
 const meta = {
   title: 'Atoms/MntTag',

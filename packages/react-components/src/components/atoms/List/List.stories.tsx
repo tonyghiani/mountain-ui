@@ -1,9 +1,10 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { MntList } from './List';
 import { MntText } from '../Typography';
-import { MntListItem } from '../ListItem';
+
+import { MntList } from './List';
+import { MntListItem } from './ListItem';
 
 const meta = {
   title: 'Atoms/MntList',

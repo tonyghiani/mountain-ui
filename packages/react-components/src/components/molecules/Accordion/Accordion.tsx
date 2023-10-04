@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { useToggle } from '@mountain-ui/react-hooks';
+import { mnt } from 'mnt-internals';
 
-import { mnt } from '../../../internals/mnt';
 
 export interface MntAccordionProps {
   /**
@@ -15,7 +15,7 @@ export interface MntAccordionProps {
   /**
    * Controlled handler for the accordion expansion
    */
-  onClick?: (e: React.MouseEvent<typeof StyledAccordionSummary>) => void;
+  onClick?: (_e: React.MouseEvent<typeof StyledAccordionSummary>) => void;
   /**
    * Uncontrolled default value for the accordion expansion
    */

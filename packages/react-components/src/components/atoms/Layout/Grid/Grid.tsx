@@ -1,5 +1,4 @@
-import { mnt } from "../../../../internals/mnt"
-import { AlignItems, JustifyItems, alignItems, justifyItems } from "../../../../internals/mnt_shared_props"
+import { AlignItems, alignItems, JustifyItems, justifyItems, mnt } from 'mnt-internals';
 
 export const GRID_BASE_CLASS = 'grid gap-3'
 export const GRID_COLUMNS = {

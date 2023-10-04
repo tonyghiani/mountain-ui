@@ -1,18 +1,19 @@
 import React, { ForwardedRef, PropsWithChildren } from 'react';
-import clsx from 'clsx';
 import { isBareObject, isFunction, isString } from '@mountain-ui/utils';
-import { MntConfigurationError } from './mnt_errors';
+import clsx from 'clsx';
+
 import { supportedAttributesSet } from './mnt_attributes';
+import { MntConfigurationError } from './mnt_errors';
 
 export interface MntProps extends PropsWithChildren {
   as?: React.ElementType;
   className?: string
 }
 
-type MntConfigFactory<Props> = (props: Props) => Props;
+type MntConfigFactory<Props> = (_props: Props) => Props;
 type MntConfigOrFactory<Props> = Props | MntConfigFactory<Props>;
 
-type ClassesFactory<Props> = (props: Props) => string;
+type ClassesFactory<Props> = (_props: Props) => string;
 type ClassesFactoryOrString<Props> = ClassesFactory<Props> | string;
 
 type TaggedStyle<Props> = [TemplateStringsArray, ...ClassesFactoryOrString<Props>[]];
@@ -26,7 +27,7 @@ type MntComponent<Props = any> = React.ForwardRefExoticComponent<
   _isMnt?: boolean;
 };
 
-type SupportedHTMLElement = Exclude<keyof JSX.IntrinsicElements, 'symbol' | 'object'>;
+type SupportedHTMLElement = Exclude<keyof React.JSX.IntrinsicElements, 'symbol' | 'object'>;
 
 type MntComponentType = SupportedHTMLElement | MntComponent;
 

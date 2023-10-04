@@ -1,4 +1,5 @@
-import { mnt } from "../../../../internals/mnt"
+import { mnt } from 'mnt-internals';
+
 import { MntText, MntTextProps } from "../Text"
 
 export interface MntParagraphProps extends MntTextProps { }

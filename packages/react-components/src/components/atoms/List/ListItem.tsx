@@ -1,5 +1,5 @@
 import React from 'react';
-import { mnt } from '../../../internals/mnt';
+import { mnt } from 'mnt-internals';
 
 export const LIST_ITEM_BASE_CLASS = `flex items-start gap-4`;
 

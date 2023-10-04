@@ -1,4 +1,4 @@
-import { mnt } from '../../../internals/mnt';
+import { mnt } from 'mnt-internals';
 
 export const LIST_BASE_CLASS = 'flex';
 

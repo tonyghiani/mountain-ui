@@ -1,4 +1,5 @@
-import { mnt } from '../../../../internals/mnt';
+import { mnt } from 'mnt-internals';
+
 import { MntBaseTypography, MntBaseTypographyProps } from '../BaseTypography';
 
 export const HEADING_BASE_CLASS = 'font-bold tracking-wide'

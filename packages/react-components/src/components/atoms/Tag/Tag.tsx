@@ -1,5 +1,5 @@
 import React from 'react';
-import { mnt } from '../../../internals/mnt';
+import { mnt } from 'mnt-internals';
 
 import { MntText } from '../Typography';
 

@@ -1,4 +1,5 @@
-import { MntProps, mnt } from '../../../internals/mnt';
+import { mnt } from 'mnt-internals';
+
 
 export const TEXT_GRADIENT_DIRECTIONS = {
   't': 'bg-gradient-to-t',
@@ -18,7 +19,7 @@ export interface TextGradientOptions {
   direction?: MntTextGradientDirection
 }
 
-export interface MntBaseTypographyProps extends MntProps {
+export interface MntBaseTypographyProps {
   /**
    * Text should be uncopyable.
    */

@@ -1,8 +1,9 @@
 {
   "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "mui-testing-tools": ["./tests/mui-testing-tools"]
+      "mnt-internals": ["src/internals"]
     },
     "types": ["jest", "node", "@testing-library/jest-dom"]
   },

@@ -1,5 +1,6 @@
-import { MntContainer } from './Container';
 import { Meta, StoryObj } from '@storybook/react';
+
+import { MntContainer } from './Container';
 
 const meta = {
   title: 'Atoms/Layout/MntContainer',

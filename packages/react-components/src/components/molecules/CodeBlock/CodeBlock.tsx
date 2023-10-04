@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Highlight, { defaultProps, Language } from 'prism-react-renderer';
-import nightOwlTheme from 'prism-react-renderer/themes/nightOwl';
+import { mnt } from 'mnt-internals';
+import { Highlight, Language, themes } from 'prism-react-renderer';
+import colors from 'tailwindcss/colors'
 
 import { MntText } from '../../atoms/Typography';
-import { mnt } from '../../../internals/mnt';
+
+themes.nightOwl.styles[3].style.color = colors.gray[400];
 
 export interface MntCodeBlockProps {
   /**
@@ -51,15 +53,14 @@ export const MntCodeBlock = ({ children = '', syntax = 'jsx', className, ...prop
 
   return (
     <Highlight
-      {...defaultProps}
-      theme={nightOwlTheme}
+      theme={themes.nightOwl}
       code={children.trim()}
       language={language as Language}
     >
       {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
         return (
           <CodeBlockContainer {...props}>
-            <Syntax bold className='absolute top-1 right-1 px-2 py-1.5 rounded-md uppercase text-caption text-light bg-gradient-to-br from-blue-700 to-blue-400'>{language}</Syntax>
+            <Syntax bold className='absolute top-1 right-1 px-2 py-1.5 rounded-md uppercase text-caption text-light bg-sky-700'>{language}</Syntax>
             <pre className="mnt-scrollbar overflow-auto m-0 p-4 bg-blue-950" tabIndex={0}>
               <code className="block text-body">
                 {tokens.map((line, i) => (
