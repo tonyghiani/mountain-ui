@@ -1,14 +1,20 @@
 import React from 'react';
 import { Box, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import usePrefersDarkMode from './usePrefersDarkMode';
 
-export default {
+const meta = {
   title: 'Hooks/usePrefersDarkMode',
-  component: usePrefersDarkMode
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const isDarkMode = usePrefersDarkMode();
 
   return (
@@ -35,10 +41,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['usePrefersDarkMode.test.js']
 };

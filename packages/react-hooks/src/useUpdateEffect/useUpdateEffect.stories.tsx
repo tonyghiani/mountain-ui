@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useUpdateEffect from './useUpdateEffect';
 
-export default {
+const meta = {
   title: 'Hooks/useUpdateEffect',
-  component: useUpdateEffect
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [count, setCount] = useState(0);
   const [effect, setEffect] = useState(false);
   const [updateEffect, setUpdateEffect] = useState(false);
@@ -51,10 +57,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useUpdateEffect.test.js']
 };

@@ -1,14 +1,20 @@
 import React from 'react';
 import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useToggle from './useToggle';
 
-export default {
+const meta = {
   title: 'Hooks/useToggle',
-  component: useToggle
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [value, toggle] = useToggle();
 
   return (
@@ -35,10 +41,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useToggle.test.js']
 };

@@ -1,7 +1,8 @@
-const baseConfig = require('../../jest.config.base');
-const packageJson = require('./package.json');
+import baseConfig from '../../jest.config.base';
 
-module.exports = {
+import packageJson from './package.json';
+
+export default {
   ...baseConfig,
   testEnvironment: 'jsdom',
   moduleDirectories: ['node_modules', 'tests'],

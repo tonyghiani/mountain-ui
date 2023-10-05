@@ -1,14 +1,20 @@
 import React from 'react';
 import { Box, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useMediaQuery from './useMediaQuery';
 
-export default {
+const meta = {
   title: 'Hooks/useMediaQuery',
-  component: useMediaQuery
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const mediaQueries = {
     mobile: 'screen and (min-width: 1px) and (max-width: 512px)',
     tablet: 'screen and (min-width: 513px) and (max-width: 1024px)',
@@ -59,10 +65,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useMediaQuery.test.js']
 };

@@ -1,14 +1,20 @@
 import React, { useRef } from 'react';
 import { Box, Container, Text } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useOutsideClick from './useOutsideClick';
 
-export default {
+const meta = {
   title: 'Hooks/useOutsideClick',
-  component: useOutsideClick
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const containerRef = useRef();
   useOutsideClick(containerRef, () => alert('Click outside registered'), 'mousedown');
 
@@ -31,10 +37,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useOutsideClick.test.js']
 };

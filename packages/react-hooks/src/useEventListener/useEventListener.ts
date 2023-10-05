@@ -2,15 +2,11 @@
  * Extended from Gabe Ragland implementation https://usehooks.com/useEventListener/
  * to accept multiple events with the same handler and listener options
  */
-import { useEffect, useRef } from 'react';
+import { MutableRefObject, useEffect, useRef } from 'react';
 import { hasWindow } from '@mountain-ui/utils';
 
 export type Events = string | string[];
-export type Target =
-  | null
-  | undefined
-  | (Window & { current?: Window })
-  | (HTMLElement & { current?: HTMLElement });
+export type Target = Window | MutableRefObject<HTMLElement> | null | undefined;
 
 function getElement(target: Target) {
   const targetIsRef = 'current' in target;

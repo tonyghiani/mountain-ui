@@ -1,14 +1,20 @@
 import React from 'react';
 import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useDarkMode from './useDarkMode';
 
-export default {
+const meta = {
   title: 'Hooks/useDarkMode',
-  component: useDarkMode
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [isDarkMode, setDarkMode] = useDarkMode({ darkModeClassName: 'dark-mode' });
 
   return (
@@ -38,10 +44,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useDarkMode.test.js']
 };

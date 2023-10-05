@@ -13,6 +13,7 @@ export interface UseBooleanHandlers {
 export type UseBooleanResult = [boolean, UseBooleanHandlers];
 
 /**
+ * Provides boolean state management, offering methods to toggle and turn on/off a value.
  *
  * @param initialValue boolean
  * @returns {UseBooleanResult<boolean>}

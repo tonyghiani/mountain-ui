@@ -1,14 +1,20 @@
 import React from 'react';
 import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useLocalStorage from './useLocalStorage';
 
-export default {
+const meta = {
   title: 'Hooks/useLocalStorage',
-  component: useLocalStorage
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [value1, setValue1] = useLocalStorage('my_favorite_food', '🍖');
   const [value2, setValue2] = useLocalStorage('my_favorite_food', '🧅');
 
@@ -68,10 +74,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useLocalStorage.test.js']
 };

@@ -1,14 +1,21 @@
 import React, { useRef } from 'react';
 import { Box, Container, Heading } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useEventListener from './useEventListener';
 
-export default {
+const meta = {
   title: 'Hooks/useEventListener',
-  component: useEventListener
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+
+function Demo() {
   const textRef = useRef(null);
 
   useEventListener('click', () => alert('Click anywhere'));
@@ -27,10 +34,4 @@ export const Basic = () => {
       </Box>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useEventListener.test.js']
 };

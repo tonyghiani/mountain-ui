@@ -54,7 +54,7 @@
       "files": ["**/*.ts", "**/*.tsx"],
       "rules": {
         "react/prop-types": "off",
-        "no-undef": 2
+        "no-undef": "off"
       }
     }
   ]
