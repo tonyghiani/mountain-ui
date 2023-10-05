@@ -1,6 +1,5 @@
 import React, { ForwardedRef, PropsWithChildren } from 'react';
 import { isBareObject, isFunction, isString } from '@mountain-ui/utils';
-import clsx from 'clsx';
 
 import { supportedAttributesSet } from './mnt_attributes';
 import { MntConfigurationError } from './mnt_errors';
@@ -89,7 +88,7 @@ const componentTemplate = <Props, Target extends MntComponentType>(
 
       const taggedClasses = classesFactory(componentProps);
 
-      const classes = clsx(taggedClasses, className);
+      const classes = [taggedClasses, className].join(' ');
 
       const config = configFactory(componentProps);
 
