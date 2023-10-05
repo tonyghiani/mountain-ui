@@ -2,7 +2,6 @@
   "name": "@mountain-ui/react-components",
   "version": "0.11.8",
   "description": "React components library based on mountain ui",
-  "type": "module",
   "keywords": [
     "mountain-ui",
     "react",
@@ -21,28 +20,31 @@
     "dist"
   ],
   "scripts": {
+    "build": "yarn clean:build && yarn build:vite && yarn build:types",
     "build:storybook": "storybook build",
     "build:types": "tsc --project ./tsconfig.types.json",
     "build:vite": "vite build",
-    "build": "yarn clean:build && yarn build:vite && yarn build:types",
     "clean:build": "rimraf dist *.tsbuildinfo",
     "commit": "git cz",
-    "lint:package": "sort-package-json",
     "lint": "eslint ./src",
+    "lint:package": "sort-package-json",
     "release": "semantic-release",
     "storybook": "storybook dev -p 6006",
+    "test": "NODE_ENV=testing jest",
     "test:ci": "NODE_ENV=ci jest --no-cache",
     "test:coverage": "yarn test --coverage",
     "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
     "test:storybook": "test-storybook",
-    "test:storyshots": "yarn test .storybook/storyshots.test.ts",
-    "test:watch": "yarn test --watch",
-    "test": "NODE_ENV=testing jest"
+    "test:watch": "yarn test --watch"
   },
   "config": {
     "commitizen": {
       "path": "git-cz"
     }
+  },
+  "dependencies": {
+    "clsx": "^2.0.0",
+    "react-range": "^1.8.14"
   },
   "devDependencies": {
     "@mountain-ui/react-hooks": "^0.7.15",
@@ -65,6 +67,7 @@
     "@vitejs/plugin-react": "^4.1.0",
     "autoprefixer": "^10.4.16",
     "axe-playwright": "^1.2.3",
+    "concurrently": "^8.2.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
@@ -84,16 +87,12 @@
   "peerDependencies": {
     "@mountain-ui/react-hooks": "*",
     "@mountain-ui/utils": "*",
-    "@types/react": "^17.0.34",
+    "@types/react": ">=18",
     "prism-react-renderer": "2.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "clsx": "^2.0.0",
-    "react-range": "^1.8.14"
   }
 }

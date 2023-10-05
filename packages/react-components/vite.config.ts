@@ -5,7 +5,6 @@ import macrosPlugin from 'vite-plugin-babel-macros';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 
 import packageJson from './package.json';
-// https://vitejs.dev/config/
 
 export default defineConfig(() => ({
   plugins: [react(), macrosPlugin(), viteTsconfigPaths()],

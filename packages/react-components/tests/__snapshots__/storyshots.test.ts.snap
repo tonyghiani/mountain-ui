@@ -1,0 +1,3363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Atoms/Layout/MntContainer Article 1`] = `
+<div
+  className="mx-auto px-4 max-w-4xl h-32 border-4 border-dashed border-blue-600"
+  size="article"
+/>
+`;
+
+exports[`Storyshots Atoms/Layout/MntContainer Large 1`] = `
+<div
+  className="mx-auto px-4 max-w-screen-lg h-32 border-4 border-dashed border-blue-600"
+  size="large"
+/>
+`;
+
+exports[`Storyshots Atoms/Layout/MntContainer Ultra 1`] = `
+<div
+  className="mx-auto px-4 max-w-screen-2xl h-32 border-4 border-dashed border-blue-600"
+  size="ultra"
+/>
+`;
+
+exports[`Storyshots Atoms/Layout/MntContainer Wide 1`] = `
+<div
+  className="mx-auto px-4 max-w-screen-xl h-32 border-4 border-dashed border-blue-600"
+  size="wide"
+/>
+`;
+
+exports[`Storyshots Atoms/Layout/MntGrid Columns 1`] = `
+<div
+  className="grid gap-3  justify-items-start items-start"
+>
+  <div
+    className="grid gap-3 grid-cols-2 justify-items-center items-center w-full h-32"
+  >
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+  </div>
+  <div
+    className="grid gap-3 grid-cols-3 justify-items-center items-center w-full h-32"
+  >
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+  </div>
+  <div
+    className="grid gap-3 grid-cols-4 justify-items-center items-center w-full h-32"
+  >
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+  </div>
+  <div
+    className="grid gap-3 grid-cols-6 justify-items-center items-center w-full h-32"
+  >
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+  </div>
+  <div
+    className="grid gap-3 grid-cols-8 justify-items-center items-center w-full h-32"
+  >
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+  </div>
+  <div
+    className="grid gap-3 grid-cols-12 justify-items-center items-center w-full h-32"
+  >
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+    <div
+      className="w-16 h-16 bg-blue-400 rounded"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Layout/MntGrid Main 1`] = `
+<div
+  className="grid gap-3 grid-cols-2 justify-items-center items-center w-full h-96"
+>
+  <div
+    className="w-16 h-16 bg-blue-400 rounded"
+  />
+  <div
+    className="w-16 h-16 bg-blue-400 rounded"
+  />
+</div>
+`;
+
+exports[`Storyshots Atoms/MntButton Color 1`] = `
+<div
+  className="grid gap-3 grid-cols-6 justify-items-center items-center"
+>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-opacity-20 hover:bg-opacity-30"
+    color="primary"
+  >
+    primary
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 !text-light"
+    color="primary"
+  >
+    primary
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="primary"
+  >
+    primary
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="primary"
+  >
+    primary
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 !bg-transparent hover:underline underline-offset-4"
+    color="primary"
+  >
+    primary
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 !bg-transparent hover:scale-105"
+    color="primary"
+  >
+    primary
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-purple-700 bg-purple-600 from-purple-600 to-purple-400 bg-opacity-20 hover:bg-opacity-30"
+    color="accent"
+  >
+    accent
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-purple-700 bg-purple-600 from-purple-600 to-purple-400 !text-light"
+    color="accent"
+  >
+    accent
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-purple-700 bg-purple-600 from-purple-600 to-purple-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="accent"
+  >
+    accent
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-purple-700 bg-purple-600 from-purple-600 to-purple-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="accent"
+  >
+    accent
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-purple-700 bg-purple-600 from-purple-600 to-purple-400 !bg-transparent hover:underline underline-offset-4"
+    color="accent"
+  >
+    accent
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-purple-700 bg-purple-600 from-purple-600 to-purple-400 !bg-transparent hover:scale-105"
+    color="accent"
+  >
+    accent
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-green-600 bg-green-600 from-green-600 to-green-400 bg-opacity-20 hover:bg-opacity-30"
+    color="success"
+  >
+    success
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-green-600 bg-green-600 from-green-600 to-green-400 !text-light"
+    color="success"
+  >
+    success
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-green-600 bg-green-600 from-green-600 to-green-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="success"
+  >
+    success
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-green-600 bg-green-600 from-green-600 to-green-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="success"
+  >
+    success
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-green-600 bg-green-600 from-green-600 to-green-400 !bg-transparent hover:underline underline-offset-4"
+    color="success"
+  >
+    success
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-green-600 bg-green-600 from-green-600 to-green-400 !bg-transparent hover:scale-105"
+    color="success"
+  >
+    success
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400 bg-opacity-20 hover:bg-opacity-30"
+    color="warning"
+  >
+    warning
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400 !text-light"
+    color="warning"
+  >
+    warning
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="warning"
+  >
+    warning
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="warning"
+  >
+    warning
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400 !bg-transparent hover:underline underline-offset-4"
+    color="warning"
+  >
+    warning
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-yellow-600 bg-yellow-500 from-yellow-600 to-yellow-400 !bg-transparent hover:scale-105"
+    color="warning"
+  >
+    warning
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-red-700 bg-red-600 from-red-600 to-red-400 bg-opacity-20 hover:bg-opacity-30"
+    color="danger"
+  >
+    danger
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-red-700 bg-red-600 from-red-600 to-red-400 !text-light"
+    color="danger"
+  >
+    danger
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-red-700 bg-red-600 from-red-600 to-red-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="danger"
+  >
+    danger
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-red-700 bg-red-600 from-red-600 to-red-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="danger"
+  >
+    danger
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-red-700 bg-red-600 from-red-600 to-red-400 !bg-transparent hover:underline underline-offset-4"
+    color="danger"
+  >
+    danger
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-red-700 bg-red-600 from-red-600 to-red-400 !bg-transparent hover:scale-105"
+    color="danger"
+  >
+    danger
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-600 bg-gray-500 from-gray-600 to-gray-400 bg-opacity-20 hover:bg-opacity-30"
+    color="disabled"
+  >
+    disabled
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-600 bg-gray-500 from-gray-600 to-gray-400 !text-light"
+    color="disabled"
+  >
+    disabled
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-600 bg-gray-500 from-gray-600 to-gray-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="disabled"
+  >
+    disabled
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-600 bg-gray-500 from-gray-600 to-gray-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="disabled"
+  >
+    disabled
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-600 bg-gray-500 from-gray-600 to-gray-400 !bg-transparent hover:underline underline-offset-4"
+    color="disabled"
+  >
+    disabled
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-gray-600 bg-gray-500 from-gray-600 to-gray-400 !bg-transparent hover:scale-105"
+    color="disabled"
+  >
+    disabled
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntButton Main 1`] = `
+<button
+  className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-opacity-20 hover:bg-opacity-30"
+  color="primary"
+  disabled={false}
+>
+  Mountain UI
+</button>
+`;
+
+exports[`Storyshots Atoms/MntButton Variant 1`] = `
+<div
+  className="grid gap-3 grid-cols-6 justify-items-center items-center"
+>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-opacity-20 hover:bg-opacity-30"
+    color="primary"
+  >
+    Mountain UI
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 !text-light"
+    color="primary"
+  >
+    Mountain UI
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-opacity-10 hover:bg-opacity-30 shadow-outline-button"
+    color="primary"
+  >
+    Mountain UI
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 bg-gradient-to-br hover:bg-gradient-to-r !text-light"
+    color="primary"
+  >
+    Mountain UI
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 !bg-transparent hover:underline underline-offset-4"
+    color="primary"
+  >
+    Mountain UI
+  </button>
+  <button
+    className="relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed text-blue-700 bg-blue-600 from-blue-600 to-blue-400 !bg-transparent hover:scale-105"
+    color="primary"
+  >
+    Mountain UI
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntCode Main 1`] = `
+<p
+  className="leading-relaxed text-body text-[--c-text-primary] "
+>
+  MntCode component for displaying and styling 
+  <code
+    className="bg-blue-950 text-bold text-secondaryBody text-light inline-block px-1 rounded"
+  >
+    variables names
+  </code>
+  , describe some
+   
+  <code
+    className="bg-blue-950 text-bold text-secondaryBody text-light inline-block px-1 rounded"
+  >
+    keywords
+  </code>
+   and much more.
+</p>
+`;
+
+exports[`Storyshots Atoms/MntInput Decoration 1`] = `
+<div
+  className="grid gap-3 grid-cols-4 justify-items-start items-start"
+>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.green.600)] [--bg-input:theme(colors.emerald.50)]"
+  >
+    <label
+      className=" leading-relaxed text-body text-[--c-text-primary] mb-2 text-[--text-input]"
+    >
+      Age
+      <div
+        className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+      >
+        <input
+          className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+          type="number"
+          value={30}
+        />
+      </div>
+    </label>
+    <p
+      className="leading-relaxed text-body text-[--c-text-primary]  text-caption text-[--text-input]"
+    >
+      Your age was correctly saved
+    </p>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.red.600)] [--bg-input:theme(colors.red.50)]"
+  >
+    <label
+      className=" leading-relaxed text-body text-[--c-text-primary] mb-2 text-[--text-input]"
+    >
+      Name
+      <div
+        className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+      >
+        <input
+          className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+          value="Marco Antonio Ghiani"
+        />
+      </div>
+    </label>
+    <p
+      className="leading-relaxed text-body text-[--c-text-primary]  text-caption text-[--text-input]"
+    >
+      Oh no, your name seems too long!
+    </p>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.yellow.600)] [--bg-input:theme(colors.yellow.50)]"
+  >
+    <label
+      className=" leading-relaxed text-body text-[--c-text-primary] mb-2 text-[--text-input]"
+    >
+      Name
+      <div
+        className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+      >
+        <input
+          className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+          value="Marco Antonio Ghiani"
+        />
+      </div>
+    </label>
+    <p
+      className="leading-relaxed text-body text-[--c-text-primary]  text-caption text-[--text-input]"
+    >
+      Oh no, your name seems too long!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntInput Main 1`] = `
+<div
+  className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+>
+  <label
+    className=" leading-relaxed text-body text-[--c-text-primary] mb-2 text-[--text-input]"
+  >
+    Input label
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntInput Size 1`] = `
+<div
+  className="grid gap-3  justify-items-start items-start grid-cols-5"
+>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-9 px-3 py-2"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-caption"
+        placeholder="Input with xs size"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-10 px-3 py-4"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-secondaryBody"
+        placeholder="Input with s size"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+        placeholder="Input with m size"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-12 px-5 py-4"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+        placeholder="Input with l size"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-14 px-5 py-4"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-h5"
+        placeholder="Input with xl size"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntInput Status 1`] = `
+<div
+  className="grid gap-3 grid-cols-4 justify-items-start items-start"
+>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+        placeholder="Input with default status"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.green.600)] [--bg-input:theme(colors.emerald.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+        placeholder="Input with success status"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.yellow.600)] [--bg-input:theme(colors.yellow.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+        placeholder="Input with warning status"
+      />
+    </div>
+  </div>
+  <div
+    className="w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20 [--text-input:theme(colors.red.600)] [--bg-input:theme(colors.red.50)]"
+  >
+    <div
+      className="w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200 h-11 px-4 py-3"
+    >
+      <input
+        className="w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal text-primary"
+        placeholder="Input with error status"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntList Main 1`] = `
+<ul
+  className="flex flex-col gap-4"
+>
+  <li
+    className="flex items-start gap-4"
+  >
+    <span
+      className=" leading-relaxed text-body text-[--c-text-primary]"
+    >
+      Mountain UI library
+    </span>
+  </li>
+  <li
+    className="flex items-start gap-4"
+  >
+    <span
+      className=" leading-relaxed text-body text-[--c-text-primary]"
+    >
+      Mountain UI library
+    </span>
+  </li>
+  <li
+    className="flex items-start gap-4"
+  >
+    <span
+      className=" leading-relaxed text-body text-[--c-text-primary]"
+    >
+      Mountain UI library
+    </span>
+  </li>
+  <li
+    className="flex items-start gap-4"
+  >
+    <span
+      className=" leading-relaxed text-body text-[--c-text-primary]"
+    >
+      Mountain UI library
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Atoms/MntTag Main 1`] = `
+<div
+  className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-9 px-4 py-2"
+>
+  <span
+    className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-primary"
+  >
+    #mountain-ui
+  </span>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntTag Size 1`] = `
+<div
+  className="flex gap-4"
+>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-7 px-3 py-1"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-caption"
+    >
+      #mountain-ui
+    </span>
+  </div>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-8 px-4 py-2"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-secondaryBody"
+    >
+      #mountain-ui
+    </span>
+  </div>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-9 px-4 py-2"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-primary"
+    >
+      #mountain-ui
+    </span>
+  </div>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-10 px-4 py-2"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-h5"
+    >
+      #mountain-ui
+    </span>
+  </div>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-11 px-5 py-3"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-h5"
+    >
+      #mountain-ui
+    </span>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntTag Status 1`] = `
+<div
+  className="flex gap-4"
+>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-9 px-4 py-2"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-primary"
+    >
+      #mountain-ui
+    </span>
+    <div
+      className="absolute rounded-full border-light border-solid border-2 w-3.5 h-3.5 -top-[1.5px] -right-[1.5px] bg-emerald-400"
+      size="m"
+    />
+  </div>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-9 px-4 py-2"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-primary"
+    >
+      #mountain-ui
+    </span>
+    <div
+      className="absolute rounded-full border-light border-solid border-2 w-3.5 h-3.5 -top-[1.5px] -right-[1.5px] bg-yellow-400"
+      size="m"
+    />
+  </div>
+  <div
+    className="relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
+  bg-gradient-to-br from-blue-500 to-blue-300 cursor-default h-9 px-4 py-2"
+  >
+    <span
+      className="font-bold leading-relaxed text-body text-[--c-text-primary] text-light text-primary"
+    >
+      #mountain-ui
+    </span>
+    <div
+      className="absolute rounded-full border-light border-solid border-2 w-3.5 h-3.5 -top-[1.5px] -right-[1.5px] bg-red-400"
+      size="m"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography/MntHeading All 1`] = `
+<div
+  className="grid gap-3  justify-items-start items-start gap-4"
+>
+  <div
+    className=""
+  >
+    <span
+      className=" leading-relaxed text-secondaryBody text-[--c-text-secondary]"
+    >
+      H1
+       - bold
+    </span>
+    <h1
+      className=" font-bold tracking-wide text-h1 leading-snug text-[--c-heading1]"
+    >
+      Mountain UI
+    </h1>
+  </div>
+  <div
+    className=""
+  >
+    <span
+      className=" leading-relaxed text-secondaryBody text-[--c-text-secondary]"
+    >
+      H2
+       - bold
+    </span>
+    <h2
+      className=" font-bold tracking-wide text-h2 leading-snug text-[--c-heading2]"
+    >
+      Mountain UI
+    </h2>
+  </div>
+  <div
+    className=""
+  >
+    <span
+      className=" leading-relaxed text-secondaryBody text-[--c-text-secondary]"
+    >
+      H3
+       - bold
+    </span>
+    <h3
+      className=" font-bold tracking-wide text-h3 leading-snug text-[--c-heading3]"
+    >
+      Mountain UI
+    </h3>
+  </div>
+  <div
+    className=""
+  >
+    <span
+      className=" leading-relaxed text-secondaryBody text-[--c-text-secondary]"
+    >
+      H4
+       - bold
+    </span>
+    <h4
+      className=" font-bold tracking-wide text-h4 leading-normal text-[--c-heading4]"
+    >
+      Mountain UI
+    </h4>
+  </div>
+  <div
+    className=""
+  >
+    <span
+      className=" leading-relaxed text-secondaryBody text-[--c-text-secondary]"
+    >
+      H5
+       - bold
+    </span>
+    <h5
+      className=" font-bold tracking-wide text-h5 leading-normal text-[--c-heading5]"
+    >
+      Mountain UI
+    </h5>
+  </div>
+  <div
+    className=""
+  >
+    <span
+      className=" leading-relaxed text-secondaryBody text-[--c-text-secondary]"
+    >
+      H6
+       - bold
+    </span>
+    <h6
+      className=" font-bold tracking-wide text-h6 leading-normal text-[--c-heading6]"
+    >
+      Mountain UI
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Atoms/Typography/MntHeading Main 1`] = `
+<h1
+  className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 font-bold tracking-wide text-h1 leading-snug text-[--c-heading1]"
+>
+  Mountain UI
+</h1>
+`;
+
+exports[`Storyshots Atoms/Typography/MntParagraph Main 1`] = `
+<p
+  className="leading-relaxed text-body text-[--c-text-primary] "
+>
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</p>
+`;
+
+exports[`Storyshots Atoms/Typography/MntText Main 1`] = `
+<span
+  className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500 leading-relaxed text-body text-[--c-text-primary]"
+>
+  Mountain UI
+</span>
+`;
+
+exports[`Storyshots Molecules/MntAccordion Main 1`] = `
+<div
+  className="overflow-hidden"
+>
+  <div
+    className="cursor-pointer"
+    onClick={[Function]}
+  >
+    Show more
+  </div>
+  <div
+    className="will-change-[height] transition-height ease duration-150 overflow-hidden"
+    style={
+      {
+        "height": 0,
+      }
+    }
+  >
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </div>
+</div>
+`;
+
+exports[`Storyshots Molecules/MntCodeBlock Main 1`] = `
+<div
+  className="relative overflow-hidden rounded-xl border-4 border-solid border-blue-950 shadow-xl"
+>
+  <span
+    className="font-bold leading-relaxed text-body text-[--c-text-primary] absolute top-1 right-1 px-2 py-1.5 rounded-md uppercase text-caption text-light bg-sky-700"
+  >
+    jsx
+  </span>
+  <pre
+    className="mnt-scrollbar overflow-auto m-0 p-4 bg-blue-950"
+    tabIndex={0}
+  >
+    <code
+      className="block text-body"
+    >
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token comment"
+          style={
+            {
+              "color": "#9ca3af",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          /**
+        </span>
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token comment"
+          style={
+            {
+              "color": "#9ca3af",
+              "fontStyle": "italic",
+            }
+          }
+        >
+           * The CodeBlock component is used to represent blocks of code.
+        </span>
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token comment"
+          style={
+            {
+              "color": "#9ca3af",
+              "fontStyle": "italic",
+            }
+          }
+        >
+           */
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        />
+        <span
+          className="token keyword"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          function
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token function maybe-class-name"
+          style={
+            {
+              "color": "rgb(130, 170, 255)",
+            }
+          }
+        >
+          CodeBlock
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           children
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           syntax
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           className
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           
+        </span>
+        <span
+          className="token parameter spread operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+          props 
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token parameter operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          :
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           
+        </span>
+        <span
+          className="token parameter maybe-class-name"
+          style={{}}
+        >
+          CodeBlockProps
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+            
+        </span>
+        <span
+          className="token keyword control-flow"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          return
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+              
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            {
+              "color": "rgb(255, 203, 139)",
+            }
+          }
+        >
+          Highlight
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          defaultProps
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          theme
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          theme
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          code
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          children
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          language
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          syntax
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           tokens
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           getLineProps
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           getTokenProps 
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token arrow operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          =&gt;
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                  
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            {
+              "color": "rgb(255, 203, 139)",
+            }
+          }
+        >
+          CodeBlockBox
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          props
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                    
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            {
+              "color": "rgb(255, 203, 139)",
+            }
+          }
+        >
+          Pre
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          as
+        </span>
+        <span
+          className="token tag attr-value punctuation attr-equals"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag attr-value"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          pre
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          margin
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript number"
+          style={
+            {
+              "color": "rgb(247, 140, 108)",
+            }
+          }
+        >
+          0
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          overflow
+        </span>
+        <span
+          className="token tag attr-value punctuation attr-equals"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag attr-value"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          auto
+        </span>
+        <span
+          className="token tag attr-value punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          "
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          padding
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript number"
+          style={
+            {
+              "color": "rgb(247, 140, 108)",
+            }
+          }
+        >
+          5
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          tabIndex
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript number"
+          style={
+            {
+              "color": "rgb(247, 140, 108)",
+            }
+          }
+        >
+          0
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                      
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          tokens
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          .
+        </span>
+        <span
+          className="token method function property-access"
+          style={
+            {
+              "color": "rgb(130, 170, 255)",
+            }
+          }
+        >
+          map
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+          line
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           i
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token arrow operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          =&gt;
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                        
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          div
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          key
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          i
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token tag spread method function property-access"
+          style={
+            {
+              "color": "rgb(130, 170, 255)",
+            }
+          }
+        >
+          getLineProps
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           line
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread literal-property property"
+          style={
+            {
+              "color": "rgb(128, 203, 196)",
+            }
+          }
+        >
+          key
+        </span>
+        <span
+          className="token tag spread operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          :
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           i 
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                          
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token plain"
+        >
+          line
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          .
+        </span>
+        <span
+          className="token method function property-access"
+          style={
+            {
+              "color": "rgb(130, 170, 255)",
+            }
+          }
+        >
+          map
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+          token
+        </span>
+        <span
+          className="token parameter punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token parameter"
+          style={{}}
+        >
+           key
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token arrow operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          =&gt;
+        </span>
+        <span
+          className="token plain"
+        >
+           
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                            
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          span
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag attr-name"
+          style={
+            {
+              "color": "rgb(173, 219, 103)",
+              "fontStyle": "italic",
+            }
+          }
+        >
+          key
+        </span>
+        <span
+          className="token tag script language-javascript script-punctuation punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          =
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag script language-javascript"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          key
+        </span>
+        <span
+          className="token tag script language-javascript punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread operator"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          ...
+        </span>
+        <span
+          className="token tag spread method function property-access"
+          style={
+            {
+              "color": "rgb(130, 170, 255)",
+            }
+          }
+        >
+          getTokenProps
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          (
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          {
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           token
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ,
+        </span>
+        <span
+          className="token tag spread"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           key 
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token tag spread punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+           
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          /&gt;
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                          
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                        
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag"
+          style={
+            {
+              "color": "rgb(127, 219, 202)",
+            }
+          }
+        >
+          div
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                      
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                    
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            {
+              "color": "rgb(255, 203, 139)",
+            }
+          }
+        >
+          Pre
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+                  
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            {
+              "color": "rgb(255, 203, 139)",
+            }
+          }
+        >
+          CodeBlockBox
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+                
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token plain-text"
+          style={{}}
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain-text"
+          style={{}}
+        >
+              
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &lt;/
+        </span>
+        <span
+          className="token tag class-name"
+          style={
+            {
+              "color": "rgb(255, 203, 139)",
+            }
+          }
+        >
+          Highlight
+        </span>
+        <span
+          className="token tag punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          &gt;
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        >
+            
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          )
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ;
+        </span>
+        <span
+          className="token plain"
+        />
+      </p>
+      <p
+        className="token-line"
+        style={
+          {
+            "backgroundColor": undefined,
+            "color": "#d6deeb",
+          }
+        }
+      >
+        <span
+          className="token plain"
+        />
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          }
+        </span>
+        <span
+          className="token punctuation"
+          style={
+            {
+              "color": "rgb(199, 146, 234)",
+            }
+          }
+        >
+          ;
+        </span>
+      </p>
+    </code>
+  </pre>
+</div>
+`;

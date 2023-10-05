@@ -1,7 +1,6 @@
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import tailwindConfig from '../../../../../tailwind.config.cjs';
 import { MntBox, MntGrid } from '../../Layout';
 import { MntText } from '../Text';
 import { Main as TextMainStory } from '../Text/Text.stories'
@@ -36,7 +35,7 @@ export const All: Story = {
       <MntGrid className='gap-4'>
         {variants.map(variant => (
           <MntBox key={variant}>
-            <MntText variant='secondary'>{variant.toUpperCase()} - {tailwindConfig.theme.fontSize[variant]} - bold</MntText>
+            <MntText variant='secondary'>{variant.toUpperCase()} - bold</MntText>
             <MntHeading key={variant} {...args} variant={variant} />
           </MntBox>
         ))}

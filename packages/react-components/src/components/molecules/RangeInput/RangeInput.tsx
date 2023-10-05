@@ -10,7 +10,7 @@ export interface MntRangeInputProps extends Omit<IProps, 'renderTrack' | 'render
   children: React.ReactNode | ((_value: number) => React.ReactNode);
 }
 
-const MntRangeTrack = mnt<ITrackProps>('div')`
+export const MntRangeTrack = mnt<ITrackProps>('div')`
   w-full h-3 rounded-lg	bg-gradient-to-r from-sky-400 to-sky-200 border-4 border-solid border-transparent bg-clip-content
 `;
 
