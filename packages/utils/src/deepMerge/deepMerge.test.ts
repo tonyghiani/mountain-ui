@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+//@ts-nocheck
 import deepMerge, { BareObject } from './deepMerge';
 
 describe('deepMerge', () => {
@@ -49,10 +51,9 @@ describe('deepMerge', () => {
     expect(deepMerge()).not.toStrictEqual('test');
     expect(deepMerge()).not.toStrictEqual(true);
   });
-});
 
-describe('test', () => {
-  test('dsfds', () => {
-    expect(true).toBe(true);
+  test('should throw an error if any argument is not an object', () => {
+    expect(() => deepMerge(obj1, 'foo')).toThrowError(TypeError);
+    expect(() => deepMerge(3, obj1)).toThrowError(TypeError);
   });
 });

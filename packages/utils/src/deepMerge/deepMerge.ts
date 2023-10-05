@@ -6,7 +6,7 @@ export interface BareObject {
 
 function deepMergeObjects(target: BareObject | unknown, source: BareObject | unknown): BareObject {
   if (![target, source].every(isBareObject))
-    throw new Error('Impossible to deepMerge non object items.');
+    throw new TypeError('#deepMerge cannot merge non object items.');
 
   Object.keys(source).forEach(key => {
     const value = source[key];

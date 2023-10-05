@@ -22,10 +22,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean:build && yarn build:cjs && yarn build:esm && yarn build:types",
-    "build:cjs": "BABEL_ENV=cjs babel --extensions .ts,.tsx ./src --out-dir dist/cjs",
-    "build:esm": "BABEL_ENV=esm babel --extensions .ts,.tsx ./src --out-dir dist/esm",
+    "build": "yarn clean:build && yarn build:vite && yarn build:types",
     "build:types": "tsc --project ./tsconfig.types.json",
+    "build:vite": "vite build",
     "clean:build": "rimraf dist *.tsbuildinfo",
     "commit": "git cz",
     "lint": "eslint",
@@ -43,13 +42,10 @@
     }
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.14",
-    "@babel/core": "^7.13.14",
-    "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.12",
-    "@babel/preset-react": "^7.13.13",
-    "@babel/preset-typescript": "^7.13.0",
-    "typescript": "^4.2.3"
+    "typescript": "^5.2.2",
+    "vite": "^4.4.10",
+    "vite-plugin-babel-macros": "^1.0.6",
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "publishConfig": {
     "access": "public"
