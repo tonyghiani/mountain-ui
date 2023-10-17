@@ -1,10 +1,14 @@
-## PR goal
+## 📓 Summary
 
 <! write here what this PR wants to achieve and why>
 
-## Link to related PRs
+## 🧪 How to test
 
-<! if there is anyone, link here related/dependent pull requests>
+<! write a quick note on how to reproduce the change>
+
+## 💡 Reviewer hints
+
+<! write a quick note to help the reviewer to navigate the code>
 
 ## Screenshots
 
