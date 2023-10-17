@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Button, Card, Container, Text } from '@mountain-ui/doc-tools';
 import { Meta, StoryObj } from '@storybook/react';
 
 import useUpdateEffect from './useUpdateEffect';
@@ -28,33 +28,24 @@ function Demo() {
   }, [count]);
 
   return (
-    <Container padding={4}>
-      <Box
-        display='flex'
-        borderRadius={12}
-        border='1px solid'
-        flexDirection='column'
-        borderColor='hsl(206, 84%, 60%)'
-        overflow='hidden'
-        width={300}
-      >
-        <Box bg='hsl(206, 84%, 60%)' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            {count}
-          </Paragraph>
-        </Box>
-        <Box p={3}>
+    <Container >
+      <Card heading={
+        <Text className="bold text-light">
+          {count}
+        </Text>
+      }>
+        <div className="flex flex-col gap-3 p-2 items-center justify-center">
           <Button onClick={() => setCount(prev => prev + 1)} width={1}>
             Increment
           </Button>
-        </Box>
-        <Paragraph fontSize={3} strong textAlign='center'>
-          useEffect {effect ? '✅' : '❌'}
-        </Paragraph>
-        <Paragraph fontSize={3} strong textAlign='center'>
-          useUpdateEffect {updateEffect ? '✅' : '❌'}
-        </Paragraph>
-      </Box>
-    </Container>
+          <Text>
+            useEffect {effect ? '✅' : '❌'}
+          </Text>
+          <Text>
+            useUpdateEffect {updateEffect ? '✅' : '❌'}
+          </Text>
+        </div>
+      </Card>
+    </Container >
   );
 };

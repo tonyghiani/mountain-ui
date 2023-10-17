@@ -6,4 +6,5 @@ export const excluded = new Set(supportedAttributes);
 excluded.delete('children');
 excluded.delete('color');
 excluded.delete('disabled');
+excluded.delete('type');
 excluded.delete('size');

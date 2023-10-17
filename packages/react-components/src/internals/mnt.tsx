@@ -88,7 +88,7 @@ const componentTemplate = <Props, Target extends MntComponentType>(
 
       const taggedClasses = classesFactory(componentProps);
 
-      const classes = [taggedClasses, className].join(' ');
+      const classes = [taggedClasses, className].filter(Boolean).join(' ').trim();
 
       const config = configFactory(componentProps);
 

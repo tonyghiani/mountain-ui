@@ -4,6 +4,8 @@ import { defineConfig } from 'vite';
 import macrosPlugin from 'vite-plugin-babel-macros';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 
+import packageJson from './package.json';
+
 export default defineConfig(() => ({
   plugins: [react(), macrosPlugin(), viteTsconfigPaths()],
   define: {
@@ -30,7 +32,8 @@ export default defineConfig(() => ({
           preserveModules: true,
           preserveModulesRoot: 'src'
         }
-      ]
+      ],
+      external: ['react/jsx-runtime', ...Object.keys(packageJson.peerDependencies)]
     }
   }
 }));

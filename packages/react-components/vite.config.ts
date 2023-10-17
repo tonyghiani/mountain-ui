@@ -33,7 +33,7 @@ export default defineConfig(() => ({
           preserveModulesRoot: 'src'
         }
       ],
-      external: [...Object.keys(packageJson.peerDependencies)]
+      external: ['react/jsx-runtime', ...Object.keys(packageJson.peerDependencies)]
     }
   }
 }));

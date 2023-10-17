@@ -1,7 +1,7 @@
 import type { Preview } from '@storybook/react';
 
 import { excluded } from './exclude';
-import '../src/styles/main.css';
+import '../src/styles/tailwind.base.css';
 
 const preview: Preview = {
   parameters: {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Button, Card, Container, Text } from '@mountain-ui/doc-tools';
 import { Meta, StoryObj } from '@storybook/react';
 
 import useLocalStorage from './useLocalStorage';
@@ -19,59 +19,38 @@ function Demo() {
   const [value2, setValue2] = useLocalStorage('my_favorite_food', '🧅');
 
   return (
-    <Container padding={4} display='flex' gap={4}>
-      <Box
-        display='flex'
-        borderRadius={12}
-        border='1px solid'
-        flexDirection='column'
-        borderColor='hsl(206, 84%, 60%)'
-        overflow='hidden'
-        width={300}
-      >
-        <Box bg='hsl(206, 84%, 60%)' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            Stored value: {value1}
-          </Paragraph>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            Refresh the page to retrieve your stored value.
-          </Paragraph>
-        </Box>
-        <Box display='grid' gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
+    <Container className="flex flex-col gap-2">
+      <Text>
+        Refresh the page to retrieve your stored value.
+      </Text>
+      <Card heading={
+        <Text className="bold text-light">
+          Stored value: {value1}.
+        </Text>
+      }>
+        <div className="flex gap-2 p-2">
           <Button onClick={() => setValue1('🍕')} width={1}>
             Store a 🍕
           </Button>
           <Button onClick={() => setValue1('🍔')} width={1}>
             Store a 🍔
           </Button>
-        </Box>
-      </Box>
-      <Box
-        display='flex'
-        borderRadius={12}
-        border='1px solid'
-        flexDirection='column'
-        borderColor='hsl(206, 84%, 60%)'
-        overflow='hidden'
-        width={300}
-      >
-        <Box bg='hsl(206, 84%, 60%)' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            Stored value: {value2}
-          </Paragraph>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            Refresh the page to retrieve your stored value.
-          </Paragraph>
-        </Box>
-        <Box display='grid' gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
+        </div>
+      </Card>
+      <Card heading={
+        <Text className="bold text-light">
+          Stored value: {value2}.
+        </Text>
+      }>
+        <div className="flex gap-2 p-2">
           <Button onClick={() => setValue2('🥐')} width={1}>
             Store a 🥐
           </Button>
           <Button onClick={() => setValue2('🥘')} width={1}>
             Store a 🥘
           </Button>
-        </Box>
-      </Box>
+        </div>
+      </Card>
     </Container>
   );
 };

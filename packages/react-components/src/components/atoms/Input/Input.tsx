@@ -84,11 +84,12 @@ const InputContainer = mnt<Pick<MntInputProps, 'status'>>('div')`
  * Supports various input types and styles, enhancing user interaction and enabling data submission or manipulation.
  */
 export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
-  ({ status = 'default', size = 'm', label, caption, children, id, ...props }, ref) => {
+  ({ status = 'default', size = 'm', label, caption, children, id, className, ...props }, ref) => {
     const { input, wrapper } = INPUT_SIZES[size];
+    const wrapperClasses = [wrapper, className].filter(Boolean).join(' ')
 
     const inputNode = (
-      <InputWrapper className={wrapper}>
+      <InputWrapper className={wrapperClasses}>
         {children}
         <StyledInput ref={ref} id={id} className={input} {...props} />
       </InputWrapper>

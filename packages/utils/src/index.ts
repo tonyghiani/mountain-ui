@@ -6,3 +6,5 @@ export { default as isFunction } from './isFunction';
 export { default as isString } from './isString';
 export { default as pipe } from './pipe';
 export { default as sleep } from './sleep';
+export { default as toLowerCaseFirst } from './toLowerCaseFirst';
+export { default as toUpperCaseFirst } from './toUpperCaseFirst';
