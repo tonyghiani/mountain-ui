@@ -1,6 +1,7 @@
 const fse = require('fs-extra');
 const path = require('path');
-const { toLowerCaseFirst } = require('@mountain-ui/utils');
+const { pipe, toLowerCaseFirst } = require('@mountain-ui/utils');
+const { renameHorizontal, renameVertical, shiftNumbersToEnd } = require('./conversion-tools');
 
 function createTypeToIconMap() {
   const iconsDirPath = path.join(process.cwd(), 'src', 'icons');
@@ -10,8 +11,13 @@ function createTypeToIconMap() {
     .filter(file => file !== 'index.tsx')
     .reduce((typesMap, file) => {
       const filename = file.replace(/\.[^/.]+$/, '');
-      const type = toLowerCaseFirst(filename);
-      typesMap[type] = filename;
+      const type = pipe(
+        renameHorizontal,
+        renameVertical,
+        shiftNumbersToEnd,
+        toLowerCaseFirst
+      )(filename);
+      typesMap[type] = pipe(renameHorizontal, renameVertical, shiftNumbersToEnd)(filename);
       return typesMap;
     }, {});
 

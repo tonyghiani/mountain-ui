@@ -39,3 +39,9 @@ function renameVertical(name) {
   if (!name.endsWith('V')) return name;
   return name.slice(0, -1).concat('Vertical');
 }
+
+module.exports = {
+  renameHorizontal,
+  renameVertical,
+  shiftNumbersToEnd
+};

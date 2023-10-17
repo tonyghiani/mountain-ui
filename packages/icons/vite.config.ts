@@ -14,7 +14,7 @@ export default defineConfig(() => ({
   build: {
     minify: false,
     lib: {
-      entry: resolve('src', 'index.ts'),
+      entry: [resolve('src', 'index.ts'), resolve('src', 'icons', 'index.tsx')],
       name: 'Mountain UI React icons',
       fileName: (_format, name) => `${name}.js`
     },
