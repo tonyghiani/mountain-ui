@@ -1,11 +1,6 @@
-import type { SVGProps } from 'react';
 import * as React from 'react';
 
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgSliderHRange = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgSliderHRange = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     data-name=''
@@ -14,10 +9,7 @@ const SvgSliderHRange = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> &
     height='1em'
     fill='currentColor'
     preserveAspectRatio='xMidYMid meet'
-    aria-labelledby={titleId}
-    {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path d='M21 11h-1.184a2.982 2.982 0 0 0-5.632 0H9.816a2.982 2.982 0 0 0-5.632 0H3a1 1 0 0 0 0 2h1.184a2.982 2.982 0 0 0 5.632 0h4.368a2.982 2.982 0 0 0 5.632 0H21a1 1 0 0 0 0-2ZM7 13a1 1 0 1 1 1-1 1.001 1.001 0 0 1-1 1Zm10 0a1 1 0 1 1 1-1 1.001 1.001 0 0 1-1 1Z' />
   </svg>
 );

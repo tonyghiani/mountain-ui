@@ -1,7 +1,5 @@
 //@ts-nocheck
 import React, { useState } from 'react';
-import { MntIconType, typesToIconMap } from '@mountain-ui/icons';
-import * as Icons from '@mountain-ui/icons/dist/esm/icons';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { MntInput } from '../Input';
@@ -17,6 +15,8 @@ import {
   MntIconSize,
   MntIconVariant
 } from './Icon';
+import * as Icons from './icons';
+import { MntIconType, typesToIconMap } from './typesToIconMap';
 
 const colors = Object.keys(ICON_COLORS) as MntIconColor[];
 const sizes = Object.keys(ICON_SIZES) as MntIconSize[];
@@ -44,7 +44,8 @@ export const Main: Story = {
 
 export const Variant: Story = {
   args: {
-    type: 'react'
+    type: 'react',
+    variant: 'button'
   },
   render: args => {
     return (
@@ -117,7 +118,7 @@ export const All: Story = {
                   className='w-full flex gap-4 shadow-xl p-3 rounded-lg items-center'
                   key={type}
                 >
-                  <Icon />
+                  <Icon className='text-xl' />
                   <MntText bold>{type}</MntText>
                 </MntBox>
               );

@@ -6,7 +6,10 @@
     "mountain-ui",
     "react",
     "react-components",
-    "components"
+    "components",
+    "icons",
+    "svg",
+    "css"
   ],
   "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/react-components#readme",
   "repository": "https://github.com/tonyghiani/mountain-ui",
@@ -21,11 +24,14 @@
   ],
   "scripts": {
     "build": "yarn clean:build && yarn build:vite && yarn build:types",
+    "build:icons": "yarn icons:convert && yarn icons:types-map",
     "build:storybook": "storybook build",
     "build:types": "tsc --project ./tsconfig.types.json",
     "build:vite": "vite build",
     "clean:build": "rimraf dist *.tsbuildinfo",
     "commit": "git cz",
+    "icons:convert": "svgr --out-dir ./src/components/atoms/Icon/icons --config-file ./svgr.config.js ./src/components/atoms/Icon/assets",
+    "icons:types-map": "node ./scripts/create-type-to-icon-map.js",
     "lint": "eslint ./src",
     "lint:package": "sort-package-json",
     "release": "semantic-release",
@@ -43,9 +49,8 @@
     }
   },
   "dependencies": {
-    "@mountain-ui/icons": "*",
-    "@mountain-ui/react-hooks": "*",
-    "@mountain-ui/utils": "*",
+    "@mountain-ui/react-hooks": "^0.7.15",
+    "@mountain-ui/utils": "^0.4.0",
     "prism-react-renderer": "2.1.0",
     "react-range": "^1.8.14"
   },
@@ -60,6 +65,7 @@
     "@storybook/react-vite": "^7.5.0",
     "@storybook/test-runner": "^0.13.0",
     "@storybook/testing-library": "^0.2.2",
+    "@svgr/cli": "^8.1.0",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.28",
@@ -79,7 +85,8 @@
   },
   "peerDependencies": {
     "react": ">=17",
-    "react-dom": ">=17"
+    "react-dom": ">=17",
+    "tailwindcss": ">=3"
   },
   "publishConfig": {
     "access": "public"

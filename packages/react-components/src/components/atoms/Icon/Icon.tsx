@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { MntIconType, typesToIconMap } from '@mountain-ui/icons';
 import { mnt } from 'mnt-internals';
+
+import { MntIconType, typesToIconMap } from './typesToIconMap';
 
 export const ICON_COLORS = {
   current: 'text-current',
@@ -38,16 +39,16 @@ export type MntIconColor = keyof typeof ICON_COLORS;
 export type MntIconSize = keyof typeof ICON_SIZES;
 export type MntIconVariant = keyof typeof ICON_VARIANTS;
 
-type IconElementProps = React.AnchorHTMLAttributes<HTMLAnchorElement> | React.ButtonHTMLAttributes<HTMLButtonElement> | React.HTMLAttributes<HTMLSpanElement>
+type IconElementProps =
+  | (React.ComponentProps<'button'> & { variant?: 'button' })
+  | (React.ComponentProps<'span'> & { variant?: 'icon' })
+  | (React.ComponentProps<'a'> & { variant?: 'link' });
+
 export type MntIconProps = IconElementProps & {
   /**
    * Tag version of the icon
    */
   color?: MntIconColor;
-  /**
-   * Tag version of the icon
-   */
-  variant?: MntIconVariant;
   /**
    * Icon size
    */
@@ -60,7 +61,7 @@ export type MntIconProps = IconElementProps & {
    * Transition on style changes
    */
   withTransition?: boolean;
-}
+};
 
 type BaseIconProps = Omit<MntIconProps, 'type'>;
 
@@ -73,7 +74,8 @@ export const BaseIcon = mnt<BaseIconProps>('span').attrs(props => ({
   ${({ color = 'primary' }) => ICON_COLORS[color] ?? ''}
   ${({ size = 'm' }) => ICON_SIZES[size]}
   ${({ variant = 'icon' }) => ICON_VARIANTS[variant].classes ?? ''}
-  ${({ withTransition = false }) => (withTransition ? '[&>a]:transition-all' : '')}
+  ${({ withTransition = false }) =>
+    withTransition ? '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300' : ''}
 `;
 
 export const MntIcon = React.forwardRef<IconElement, MntIconProps>(function MntIcon(
@@ -83,9 +85,12 @@ export const MntIcon = React.forwardRef<IconElement, MntIconProps>(function MntI
   const [Icon, setIcon] = useState<React.FunctionComponent | undefined>();
 
   useEffect(() => {
-    import(`./icons/${typesToIconMap[type]}.tsx`).then(module => {
-      setIcon(() => module.default);
-    });
+    const iconFilename = typesToIconMap[type];
+    if (iconFilename) {
+      import(`./icons/${iconFilename}.tsx`).then(module => {
+        setIcon(() => module.default);
+      });
+    }
   }, [type]);
 
   return (

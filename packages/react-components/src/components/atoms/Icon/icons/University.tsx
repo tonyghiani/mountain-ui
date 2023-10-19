@@ -1,11 +1,6 @@
-import type { SVGProps } from 'react';
 import * as React from 'react';
 
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgUniversity = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgUniversity = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     data-name=''
@@ -14,10 +9,7 @@ const SvgUniversity = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
     height='1em'
     fill='currentColor'
     preserveAspectRatio='xMidYMid meet'
-    aria-labelledby={titleId}
-    {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path d='M21 10a1 1 0 0 0 1-1V6a.999.999 0 0 0-.684-.948l-9-3a1.002 1.002 0 0 0-.632 0l-9 3A.999.999 0 0 0 2 6v3a1 1 0 0 0 1 1h1v7.184A2.995 2.995 0 0 0 2 20v2a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1v-2a2.995 2.995 0 0 0-2-2.816V10Zm-1 11H4v-1a1.001 1.001 0 0 1 1-1h14a1.001 1.001 0 0 1 1 1ZM6 17v-7h2v7Zm4 0v-7h4v7Zm6 0v-7h2v7ZM4 8V6.72l8-2.666 8 2.667V8Z' />
   </svg>
 );

@@ -1,11 +1,6 @@
-import type { SVGProps } from 'react';
 import * as React from 'react';
 
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgArrowUp = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgArrowUp = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     data-name=''
@@ -14,10 +9,7 @@ const SvgArrowUp = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGR
     height='1em'
     fill='currentColor'
     preserveAspectRatio='xMidYMid meet'
-    aria-labelledby={titleId}
-    {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path d='m17.71 11.29-5-5a1 1 0 0 0-.33-.21 1 1 0 0 0-.76 0 1 1 0 0 0-.33.21l-5 5a1 1 0 0 0 1.42 1.42L11 9.41V17a1 1 0 0 0 2 0V9.41l3.29 3.3a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42Z' />
   </svg>
 );

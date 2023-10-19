@@ -2,11 +2,8 @@
 import React from 'react';
 import { mnt } from 'mnt-internals';
 import { Highlight, Language, themes } from 'prism-react-renderer';
-import colors from 'tailwindcss/colors'
 
 import { MntText } from '../../atoms/Typography';
-
-themes.nightOwl.styles[3].style.color = colors.gray[400];
 
 export interface MntCodeBlockProps {
   /**

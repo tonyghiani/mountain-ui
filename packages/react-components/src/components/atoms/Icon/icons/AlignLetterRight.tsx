@@ -1,11 +1,6 @@
-import type { SVGProps } from 'react';
 import * as React from 'react';
 
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgAlignLetterRight = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgAlignLetterRight = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -14,10 +9,7 @@ const SvgAlignLetterRight = ({ title, titleId, ...props }: SVGProps<SVGSVGElemen
     data-name=''
     fill='currentColor'
     preserveAspectRatio='xMidYMid meet'
-    aria-labelledby={titleId}
-    {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path d='M10 4h11a1 1 0 0 0 0-2H10a1 1 0 0 0 0 2Zm11 16H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0-14H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Zm0 10H11a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2Zm0-6H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2Z' />
   </svg>
 );

@@ -1,11 +1,6 @@
-import type { SVGProps } from 'react';
 import * as React from 'react';
 
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgCrockery = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgCrockery = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 24 24'
@@ -14,10 +9,7 @@ const SvgCrockery = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVG
     data-name=''
     fill='currentColor'
     preserveAspectRatio='xMidYMid meet'
-    aria-labelledby={titleId}
-    {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path d='M18 12.15V3a1 1 0 0 0-2 0v9.15a4.16 4.16 0 0 0-3 4c0 2.05 1.52 5.8 4 5.8s4-3.75 4-5.8a4.16 4.16 0 0 0-3-4ZM17 20c-.8 0-2-2.27-2-3.8a2.11 2.11 0 0 1 2-2.2 2.11 2.11 0 0 1 2 2.2c0 1.53-1.2 3.8-2 3.8ZM10 2a1 1 0 0 0-1 1v5.46l-1 .67V3a1 1 0 0 0-2 0v6.13l-1-.67V3a1 1 0 0 0-2 0v6a1 1 0 0 0 .45.83L6 11.54V21a1 1 0 0 0 2 0v-9.46l2.55-1.71A1 1 0 0 0 11 9V3a1 1 0 0 0-1-1Z' />
   </svg>
 );

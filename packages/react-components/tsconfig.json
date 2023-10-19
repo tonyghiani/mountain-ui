@@ -3,7 +3,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "mnt-internals": ["src/internals"]
+      "mnt-internals": ["./src/internals"],
+      "@mountain-ui/react-hooks": ["../react-hooks/src"],
+      "@mountain-ui/react-hooks/*": ["../react-hooks/*"],
+      "@mountain-ui/utils": ["../utils/src"],
+      "@mountain-ui/utils/*": ["../utils/*"]
     },
     "types": ["jest", "node", "@testing-library/jest-dom"]
   },

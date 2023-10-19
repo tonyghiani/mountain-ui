@@ -1,11 +1,6 @@
-import type { SVGProps } from 'react';
 import * as React from 'react';
 
-interface SVGRProps {
-  title?: string;
-  titleId?: string;
-}
-const SvgPercentage = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & SVGRProps) => (
+const SvgPercentage = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     data-name=''
@@ -14,10 +9,7 @@ const SvgPercentage = ({ title, titleId, ...props }: SVGProps<SVGSVGElement> & S
     height='1em'
     fill='currentColor'
     preserveAspectRatio='xMidYMid meet'
-    aria-labelledby={titleId}
-    {...props}
   >
-    {title ? <title id={titleId}>{title}</title> : null}
     <path d='M7.758 10.758a3 3 0 1 0-3-3 3.003 3.003 0 0 0 3 3Zm0-4a1 1 0 1 1-1 1 1 1 0 0 1 1-1Zm8.484 6.484a3 3 0 1 0 3 3 3.003 3.003 0 0 0-3-3Zm0 4a1 1 0 1 1 1-1 1 1 0 0 1-1 1Zm3.465-12.949a1 1 0 0 0-1.414 0l-14 14a1 1 0 1 0 1.414 1.414l14-14a1 1 0 0 0 0-1.414Z' />
   </svg>
 );
