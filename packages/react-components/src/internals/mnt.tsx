@@ -125,7 +125,7 @@ function getClasses<Props>(...taggedStyles: TaggedStyle<Props>) {
       if (i < dynamics.length) {
         const classBuilder = dynamics[i];
         const dynamicClass = isFunction(classBuilder) ? classBuilder(props) : classBuilder;
-        chunks.push(dynamicClass.trim());
+        if (dynamicClass) chunks.push(dynamicClass.trim());
       }
     }
 

@@ -20,7 +20,7 @@ export interface MntListProps {
 export const MntList = mnt<MntListProps>('ul')`
   ${LIST_BASE_CLASS}
   ${({ horizontal = false }) => horizontal ? 'flex-row' : 'flex-col'}
-  ${({ dense = false }) => !dense ? 'gap-4' : ''}
+  ${({ dense = false }) => !dense && 'gap-4'}
 `
 
 MntList.displayName = 'MntList';

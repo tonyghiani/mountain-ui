@@ -69,13 +69,13 @@ type BaseIconProps = Omit<MntIconProps, 'type'>;
  * MntIcon component wrapper for svg icons
  */
 export const BaseIcon = mnt<BaseIconProps>('span').attrs(props => ({
-  as: ICON_VARIANTS[props.variant || 'icon'].tag
+  as: ICON_VARIANTS[props.variant || 'icon']?.tag
 }))`
-  ${({ color = 'primary' }) => ICON_COLORS[color] ?? ''}
+  ${({ color = 'primary' }) => ICON_COLORS[color]}
   ${({ size = 'm' }) => ICON_SIZES[size]}
-  ${({ variant = 'icon' }) => ICON_VARIANTS[variant].classes ?? ''}
+  ${({ variant = 'icon' }) => ICON_VARIANTS[variant]?.classes}
   ${({ withTransition = false }) =>
-    withTransition ? '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300' : ''}
+    withTransition && '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300'}
 `;
 
 export const MntIcon = React.forwardRef<IconElement, MntIconProps>(function MntIcon(

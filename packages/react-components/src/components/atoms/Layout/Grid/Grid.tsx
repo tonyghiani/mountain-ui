@@ -33,7 +33,7 @@ export interface MntGridProps {
  */
 export const MntGrid = mnt<MntGridProps>('div')`
   ${GRID_BASE_CLASS}
-  ${({ columns }) => columns ? GRID_COLUMNS[columns] : ''}
+  ${({ columns }) => columns && GRID_COLUMNS[columns]}
   ${justifyItems}
   ${alignItems}
 `
