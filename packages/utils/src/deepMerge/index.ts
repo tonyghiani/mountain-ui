@@ -1,1 +1,1 @@
-export { default } from './deepMerge';
+export { default } from 'deepmerge';
