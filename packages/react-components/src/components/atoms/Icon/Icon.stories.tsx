@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {
   args: {
-    type: 'react',
+    iconType: 'react',
     color: 'current',
     size: 'm',
     variant: 'icon',
@@ -44,7 +44,7 @@ export const Main: Story = {
 
 export const Variant: Story = {
   args: {
-    type: 'react',
+    iconType: 'react',
     variant: 'button'
   },
   render: args => {
@@ -60,7 +60,7 @@ export const Variant: Story = {
 
 export const Color: Story = {
   args: {
-    type: 'react'
+    iconType: 'react'
   },
   render: args => {
     return (
@@ -75,7 +75,7 @@ export const Color: Story = {
 
 export const Size: Story = {
   args: {
-    type: 'react'
+    iconType: 'react'
   },
   render: args => {
     return (
@@ -91,7 +91,7 @@ export const Size: Story = {
 const types = Object.keys(typesToIconMap) as MntIconType[];
 export const All: Story = {
   args: {
-    type: 'react'
+    iconType: 'react'
   },
   render: () => {
     const [search, setSearch] = useState('');
