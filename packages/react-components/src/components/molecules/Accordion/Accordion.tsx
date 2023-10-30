@@ -30,7 +30,7 @@ const StyledAccordion = mnt('div')`
   overflow-hidden
 `;
 
-const StyledAccordionSummary = mnt('div')`
+const StyledAccordionSummary = mnt('div') <Pick<MntAccordionProps, 'onClick'>>`
   cursor-pointer
 `;
 

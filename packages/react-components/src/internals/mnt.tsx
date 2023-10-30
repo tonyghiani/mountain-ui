@@ -17,9 +17,8 @@ type AttrsResult<T extends MntConfigOrFactory> = T extends (..._args: any) => in
 
 type AttrsTarget<
   Config extends MntConfigOrFactory,
-  FallbackTarget extends MntComponentType,
-  Result extends MntProps = AttrsResult<Config>
-> = Result extends { as: infer RuntimeTarget }
+  FallbackTarget extends MntComponentType
+> = AttrsResult<Config> extends { as: infer RuntimeTarget }
   ? RuntimeTarget extends MntComponentType
   ? RuntimeTarget
   : FallbackTarget
