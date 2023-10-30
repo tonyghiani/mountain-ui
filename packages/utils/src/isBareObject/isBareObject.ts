@@ -3,7 +3,7 @@
  * @param arg
  * @returns {boolean}
  */
-function isBareObject<TObject extends Record<string, unknown>>(arg: TObject): arg is TObject {
+function isBareObject<TObject extends Record<PropertyKey, unknown>>(arg: TObject): arg is TObject {
   return arg?.toString() === '[object Object]';
 }
 
