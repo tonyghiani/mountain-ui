@@ -21,7 +21,7 @@ export interface MntContainerProps {
  * MntContainer component for wrapping and styling content within a designated area. 
  * Helps in organizing and managing the layout of components and elements.
  */
-export const MntContainer = mnt<MntContainerProps>('div')`
+export const MntContainer = mnt('div') <MntContainerProps>`
   ${CONTAINER_BASE_CLASS}
   ${({ size = 'large' }) => CONTAINER_SIZES[size]}
 `;

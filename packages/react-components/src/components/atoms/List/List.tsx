@@ -17,7 +17,7 @@ export interface MntListProps {
  * List component for organizing and displaying a collection of items in a structured manner. 
  * Provides flexibility in layout and style, improving content presentation within a UI.
  */
-export const MntList = mnt<MntListProps>('ul')`
+export const MntList = mnt('ul') <MntListProps>`
   ${LIST_BASE_CLASS}
   ${({ horizontal = false }) => horizontal ? 'flex-row' : 'flex-col'}
   ${({ dense = false }) => !dense && 'gap-4'}

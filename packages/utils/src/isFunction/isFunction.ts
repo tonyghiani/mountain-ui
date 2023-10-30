@@ -1,11 +1,11 @@
-type AnyFunction = (...args: unknown[]) => unknown;
+type AnyFunction = (...args: any) => any;
 /**
  * Type guard to check if a value is a function.
  *
- * @param {unknown} value - The value to check.
- * @returns {value is Function} True if the value is a function, otherwise false.
+ * @param {unknown} arg - The arg to check.
+ * @returns {arg is Function} True if the arg is a function, otherwise false.
  */
-function isFunction<Fn>(arg: Fn): arg is Extract<Fn, AnyFunction> {
+function isFunction(arg: unknown): arg is AnyFunction {
   return typeof arg === 'function';
 }
 

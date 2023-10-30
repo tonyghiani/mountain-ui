@@ -40,7 +40,7 @@ export interface MntButtonProps {
  * Button component for triggering actions or events in the UI. 
  * Provides interactivity with styled visuals, enhancing user engagement and navigation within the application.
  */
-export const MntButton = mnt<MntButtonProps>('button')`
+export const MntButton = mnt('button') <MntButtonProps>`
   ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}

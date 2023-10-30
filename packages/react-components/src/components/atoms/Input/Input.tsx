@@ -74,7 +74,7 @@ const InputWrapper = mnt('div')`
   w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200
 `;
 
-const InputContainer = mnt<Pick<MntInputProps, 'status'>>('div')`
+const InputContainer = mnt('div') <Pick<MntInputProps, 'status'>>`
   w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20
   ${props => INPUT_STATUS[props.status]}
 `;

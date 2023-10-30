@@ -40,9 +40,9 @@ export type MntIconSize = keyof typeof ICON_SIZES;
 export type MntIconVariant = keyof typeof ICON_VARIANTS;
 
 type IconElementProps =
-  | (React.ComponentProps<'button'> & { variant?: 'button' })
   | (React.ComponentProps<'span'> & { variant?: 'icon' })
-  | (React.ComponentProps<'a'> & { variant?: 'link' });
+  | (React.ComponentProps<'a'> & { variant?: 'link' })
+  | (React.ComponentProps<'button'> & { variant?: 'button' })
 
 export type MntIconProps = IconElementProps & {
   /**
@@ -56,19 +56,19 @@ export type MntIconProps = IconElementProps & {
   /**
    * Icon type
    */
-  type: MntIconType;
+  iconType: MntIconType;
   /**
    * Transition on style changes
    */
   withTransition?: boolean;
 };
 
-type BaseIconProps = Omit<MntIconProps, 'type'>;
+type BaseIconProps = Omit<MntIconProps, 'iconType'>;
 
 /**
  * MntIcon component wrapper for svg icons
  */
-export const BaseIcon = mnt<BaseIconProps>('span').attrs(props => ({
+export const BaseIcon = mnt('span').attrs<BaseIconProps>(props => ({
   as: ICON_VARIANTS[props.variant || 'icon']?.tag
 }))`
   ${({ color = 'primary' }) => ICON_COLORS[color]}
@@ -79,19 +79,19 @@ export const BaseIcon = mnt<BaseIconProps>('span').attrs(props => ({
 `;
 
 export const MntIcon = React.forwardRef<IconElement, MntIconProps>(function MntIcon(
-  { className, color, size, type, variant, withTransition, ...props },
+  { className, color, size, iconType, variant, withTransition, ...props },
   ref
 ) {
   const [Icon, setIcon] = useState<React.FunctionComponent | undefined>();
 
   useEffect(() => {
-    const iconFilename = typesToIconMap[type];
+    const iconFilename = typesToIconMap[iconType];
     if (iconFilename) {
       import(`./icons/${iconFilename}.tsx`).then(module => {
         setIcon(() => module.default);
       });
     }
-  }, [type]);
+  }, [iconType]);
 
   return (
     Icon && (

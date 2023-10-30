@@ -1,41 +1,86 @@
-import React, { ForwardedRef, PropsWithChildren } from 'react';
-import { isBareObject, isFunction, isString } from '@mountain-ui/utils';
+import React, { ElementType, ForwardedRef } from 'react';
+import { isFunction } from '@mountain-ui/utils';
 
 import { supportedAttributesSet } from './mnt_attributes';
-import { MntConfigurationError } from './mnt_errors';
 
-export interface MntProps extends PropsWithChildren {
-  as?: React.ElementType;
-  className?: string
+export interface MntProps {
+  as?: MntComponentType;
 }
 
-type MntConfigFactory<Props> = (_props: Props) => Props;
-type MntConfigOrFactory<Props> = Props | MntConfigFactory<Props>;
+type AttrsResult<T extends MntConfigOrFactory> = T extends (..._args: any) => infer P
+  ? P extends object
+  ? P
+  : never
+  : T extends object
+  ? T
+  : never;
 
-type ClassesFactory<Props> = (_props: Props) => string;
+type AttrsTarget<
+  Config extends MntConfigOrFactory,
+  FallbackTarget extends MntComponentType,
+  Result extends MntProps = AttrsResult<Config>
+> = Result extends { as: infer RuntimeTarget }
+  ? RuntimeTarget extends MntComponentType
+  ? RuntimeTarget
+  : FallbackTarget
+  : FallbackTarget;
+
+interface Mnt<Target extends MntComponentType, TargetHtmlProps extends object> {
+  <Props extends object = BaseObject>(
+    ..._taggedStyle: TaggedStyle<Assign<TargetHtmlProps, Props>>
+  ): MntComponent<Target, Assign<TargetHtmlProps, Props>>;
+
+  attrs<
+    Props extends object = BaseObject,
+    PrivateMergedProps extends object = Assign<TargetHtmlProps, Props>,
+    PrivateAttrsArg extends
+    MntConfigOrFactory<PrivateMergedProps> = MntConfigOrFactory<PrivateMergedProps>,
+    PrivateResolvedTarget extends MntComponentType = AttrsTarget<PrivateAttrsArg, Target>
+  >(
+    _configFactory: PrivateAttrsArg
+  ): Mnt<
+    PrivateResolvedTarget,
+    PrivateResolvedTarget extends MntComponentType
+    ? Assign<React.ComponentPropsWithRef<PrivateResolvedTarget>, Props>
+    : PrivateMergedProps
+  >;
+}
+
+interface MntComponent<Target extends MntComponentType = any, Props extends object = BaseObject>
+  extends React.ForwardRefExoticComponent<
+    React.PropsWithoutRef<Props> & React.RefAttributes<unknown>
+  > {
+  <TAs extends MntComponentType>(_props: MntComponentProps<TAs, Props>): React.ReactNode;
+
+  _classesFactory: ClassesFactory<Props>;
+  _configFactory: MntConfigFactory<Props>;
+  _elementType: Target;
+  _isMnt: boolean;
+}
+
+type MntConfigFactory<Props> = (_props: MntProps & Props) => MntProps & Partial<Props>;
+type MntConfigOrFactory<Props extends object = BaseObject> =
+  | (MntProps & Partial<Props>)
+  | MntConfigFactory<Props>;
+
+type ClassesFactory<Props> = (_props: Assign<Props, MntProps>) => string;
 type ClassesFactoryOrString<Props> = ClassesFactory<Props> | string;
 
 type TaggedStyle<Props> = [TemplateStringsArray, ...ClassesFactoryOrString<Props>[]];
 
-type MntComponent<Props = any> = React.ForwardRefExoticComponent<
-  React.PropsWithoutRef<Props> & React.RefAttributes<unknown>
-> & {
-  _classesFactory?: ClassesFactory<Props>;
-  _configFactory?: MntConfigFactory<Props>;
-  _elementType?: MntComponentType;
-  _isMnt?: boolean;
-};
-
-type SupportedHTMLElement = Exclude<keyof React.JSX.IntrinsicElements, 'symbol' | 'object'>;
-
-type MntComponentType = SupportedHTMLElement | MntComponent;
+type MntComponentType = ElementType | MntComponent;
 
 type MntComponentProps<
-  Props,
-  Target = MntComponentType,
-> = Assign<React.AllHTMLAttributes<Target>, Props> & MntProps;
+  TAs extends MntComponentType = MntComponentType,
+  Props extends object = BaseObject,
+  TAsProps extends object = MntComponentType extends TAs ? BaseObject : React.ComponentPropsWithRef<TAs>,
+> = Omit<Assign<Props, TAsProps>, 'as'> & { as?: TAs }
 
-export type Assign<A, B> = Omit<A, keyof B> & B
+export type Assign<A, B> = Omit<A, keyof B> & B;
+export type NoInfer<T> = [T][T extends any ? 0 : never];
+type BaseObject = {};
+
+const isMnt = (arg: MntComponentType): arg is MntComponent => (arg as MntComponent)._isMnt === true
 
 /**
  * Creates a component factory function to enhance basic capabilities of a passed component.
@@ -47,75 +92,93 @@ export type Assign<A, B> = Omit<A, keyof B> & B
  * const Button = mnt(BaseTypography).attrs({as: 'a'})`text-blue ${props => props.disabled && text-disabled}`;
  * const Button = mnt(BaseTypography).attrs((props) => ({as: props.variant}))`text-blue ${props => props.disabled && text-disabled}`;
  */
-export const mnt = <Props,>(elementType: MntComponentType) => {
-  const builder = (
-    ...taggedStyles: TaggedStyle<MntComponentProps<Props, typeof elementType>>
-  ): MntComponent<MntComponentProps<Props, typeof elementType>> => {
-    return componentTemplate<Props, typeof elementType>(elementType)(...taggedStyles);
+export const mnt = <
+  Target extends MntComponentType,
+  TargetHtmlProps extends object = Target extends MntComponentType
+  ? React.ComponentPropsWithRef<Target>
+  : BaseObject
+>(
+  elementType: Target,
+  config: MntConfigOrFactory<BaseObject> = {}
+): Mnt<Target, TargetHtmlProps> => {
+  const builder = <Props extends object = BaseObject>(
+    ...taggedStyles: TaggedStyle<Assign<TargetHtmlProps, Props>>
+  ) => {
+    const classesFactory = getClasses(...taggedStyles);
+    const configFactory = isFunction(config) ? config : () => config;
+
+    if (isMnt(elementType)) {
+      return mnt(elementType._elementType, props => ({
+        ...elementType._configFactory(props),
+        ...configFactory(props)
+      })) <Props>`
+          ${props => elementType._classesFactory(props)}
+          ${props => classesFactory(props)}
+        `;
+    }
+
+    return componentTemplate<Target, Assign<TargetHtmlProps, Props>>(elementType, classesFactory, configFactory);
   };
 
-  builder.attrs = (config: MntConfigOrFactory<MntComponentProps<Props, typeof elementType>>) => {
-    if (isBareObject(config) || isFunction(config)) {
-      return componentTemplate<Props, typeof elementType>(elementType, config);
-    } else {
-      throw new MntConfigurationError();
-    }
+  builder.attrs = <
+    Props extends object = BaseObject,
+    PrivateMergedProps extends object = Assign<TargetHtmlProps, Props>,
+    PrivateAttrsArg extends
+    MntConfigOrFactory<PrivateMergedProps> = MntConfigOrFactory<PrivateMergedProps>,
+    PrivateResolvedTarget extends MntComponentType = AttrsTarget<PrivateAttrsArg, Target>
+  >(
+    config: PrivateAttrsArg
+  ) => {
+    return mnt<
+      PrivateResolvedTarget,
+      PrivateResolvedTarget extends MntComponentType
+      ? Assign<Assign<TargetHtmlProps, React.ComponentPropsWithRef<PrivateResolvedTarget>>, Props>
+      : PrivateMergedProps
+    >(elementType as unknown as PrivateResolvedTarget, config);
   };
 
   return builder;
 };
 
-const componentTemplate = <Props, Target extends MntComponentType>(
+const componentTemplate = <Target extends MntComponentType, Props extends object>(
   elementType: Target,
-  config: MntConfigOrFactory<MntComponentProps<Props, Target>> = (p: MntComponentProps<Props, Target>) => p
-) =>
-  (...taggedStyles: TaggedStyle<MntComponentProps<Props, Target>>): MntComponent<MntComponentProps<Props, Target>> => {
-    const classesFactory = getClasses<MntComponentProps<Props, Target>>(...taggedStyles);
-    const configFactory = isFunction(config) ? config : () => config;
+  classesFactory: ClassesFactory<Props>,
+  configFactory: MntConfigFactory<Props>
+) => {
+  function Component<TAs extends MntComponentType>(
+    componentProps: MntComponentProps<TAs, Props>,
+    ref: ForwardedRef<unknown>
+  ) {
+    const { as: As, className, ...props } = componentProps;
 
-    if (!isString(elementType) && elementType._isMnt) {
-      return mnt<Props>(elementType._elementType).attrs(props => ({
-        ...elementType._configFactory(props),
-        ...configFactory(props)
-      }))`
-      ${props => elementType._classesFactory(props)}
-      ${props => classesFactory(props)}
-    `;
-    }
+    const { as: configAs, ...config } = configFactory(componentProps as Props);
+    const taggedClasses = classesFactory(componentProps as Props);
 
-    function Component(componentProps: MntComponentProps<Props, Target>, ref: ForwardedRef<unknown>) {
-      const { as: As, className, ...props } = componentProps;
+    const classes = [taggedClasses, className].filter(Boolean).join(' ').trim();
 
-      const taggedClasses = classesFactory(componentProps);
+    const cleanedConfig = cleanProps(config);
+    const cleanedProps = cleanProps(props);
 
-      const classes = [taggedClasses, className].filter(Boolean).join(' ').trim();
+    const TagName = As ?? configAs ?? elementType;
+    return <TagName {...cleanedConfig} {...cleanedProps} ref={ref} className={classes} />;
+  }
 
-      const config = configFactory(componentProps);
+  if (hasStaticProperty(elementType, 'displayName')) {
+    Component.displayName = elementType.displayName || elementType.name;
+  }
 
-      const cleanedProps = cleanProps(props)
+  const MntComponent = React.forwardRef(Component) as MntComponent<Target, Props>;
 
-      const TagName = As ?? config.as ?? elementType;
-      return <TagName ref={ref} className={classes} {...cleanedProps} />;
-    }
+  MntComponent._classesFactory = classesFactory;
+  MntComponent._configFactory = configFactory;
+  MntComponent._elementType = elementType;
+  MntComponent._isMnt = true;
 
-    if (hasStaticProperty(elementType, 'displayName')) {
-      Component.displayName = elementType.displayName || elementType.name;
-    }
+  return MntComponent;
+};
 
-    const MntComponent: MntComponent<MntComponentProps<Props, Target>> = React.forwardRef<unknown, MntComponentProps<Props, Target>>(
-      Component
-    );
-
-    MntComponent._classesFactory = classesFactory;
-    MntComponent._configFactory = configFactory;
-    MntComponent._elementType = elementType;
-    MntComponent._isMnt = true;
-
-    return MntComponent;
-  };
-
-function getClasses<Props>(...taggedStyles: TaggedStyle<Props>) {
-  return (props: Props) => {
+function getClasses<Props = {}>(...taggedStyles: TaggedStyle<Props>): ClassesFactory<Props> {
+  return (props) => {
     const [statics, ...dynamics] = taggedStyles;
     const chunks = [];
 
@@ -133,16 +196,16 @@ function getClasses<Props>(...taggedStyles: TaggedStyle<Props>) {
   };
 }
 
-function cleanProps(props: Record<string, unknown>) {
-  const cleanedProps = {}
+function cleanProps<Props extends object>(props: Props) {
+  const cleanedProps: Partial<Props> = {};
 
   for (const prop in props) {
-    if (supportedAttributesSet.has(prop)) cleanedProps[prop] = props[prop]
+    if (supportedAttributesSet.has(prop)) cleanedProps[prop] = props[prop];
   }
 
-  return cleanedProps
+  return cleanedProps;
 }
 
-function hasStaticProperty(input: any, propertyName: string): input is Function {
+function hasStaticProperty(input: unknown, propertyName: string): input is Function {
   return isFunction(input) && propertyName in input;
 }

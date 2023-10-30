@@ -8,7 +8,7 @@ export interface MntCodeProps { };
  * Code component for displaying and styling code snippets. 
  * Enhances code readability and presentation, ideal for showcasing programming examples within a UI.
  */
-export const MntCode = mnt<MntCodeProps>('code')`
+export const MntCode = mnt('code') <MntCodeProps>`
   ${CODE_BASE_CLASS}
 `;
 

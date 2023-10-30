@@ -25,7 +25,7 @@ export interface MntHeadingProps extends MntBaseTypographyProps {
  * Heading component for displaying text titles or headings in a styled and visually appealing manner,
  * enhancing content presentation within a UI.
  */
-export const MntHeading = mnt<MntHeadingProps>(MntBaseTypography).attrs(p => ({ as: p.as ?? p.variant }))`
+export const MntHeading = mnt(MntBaseTypography).attrs<MntHeadingProps>(p => ({ as: p.as ?? p.variant }))`
   ${HEADING_BASE_CLASS}
   ${({ variant = 'h1' }) => HEADING_VARIANTS[variant]}
 `

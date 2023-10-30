@@ -5,6 +5,6 @@ interface MntBoxProps { };
 /**
  * Box used to define Layout components
  */
-export const MntBox = mnt<MntBoxProps>('div')``;
+export const MntBox = mnt('div') <MntBoxProps>``;
 
 MntBox.displayName = 'MntBox';

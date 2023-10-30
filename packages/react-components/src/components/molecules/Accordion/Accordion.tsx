@@ -34,7 +34,7 @@ const StyledAccordionSummary = mnt('div')`
   cursor-pointer
 `;
 
-const StyledAccordionDetail = mnt<{ shouldOverflow: boolean }>('div')`
+const StyledAccordionDetail = mnt('div') <{ shouldOverflow: boolean }>`
   will-change-[height] transition-height ease duration-150
   ${({ shouldOverflow }) => shouldOverflow ? 'overflow-auto' : 'overflow-hidden'}
 `;

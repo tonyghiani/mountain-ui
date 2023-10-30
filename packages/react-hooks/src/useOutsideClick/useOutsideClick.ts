@@ -11,7 +11,7 @@ import useEventListener from '../useEventListener';
  */
 function useOutsideClick(
   ref: React.RefObject<HTMLElement> | void = requiredArgument('ref'),
-  handler: (e: Event) => void,
+  handler: (_e: Event) => void,
   event = 'click'
 ): void {
   const listener: EventListener = event => {
