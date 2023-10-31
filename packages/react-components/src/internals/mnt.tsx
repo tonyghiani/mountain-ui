@@ -7,17 +7,24 @@ export interface MntProps {
   as?: MntComponentType;
 }
 
-type AttrsResult<T> = T extends (..._args: any) => infer P
-  ? P extends object ? P : never
-  : T extends object ? T : never;
+export type AttrsResult<T> = T extends (..._args: any) => infer P
+  ? P extends object
+  ? P
+  : never
+  : T extends object
+  ? T
+  : never;
 
-type AttrsTarget<Config extends MntConfigOrFactory, FallbackTarget extends MntComponentType> = AttrsResult<Config> extends { as: infer RuntimeTarget }
+export type AttrsTarget<
+  Config extends MntConfigOrFactory,
+  FallbackTarget extends MntComponentType
+> = AttrsResult<Config> extends { as: infer RuntimeTarget }
   ? RuntimeTarget extends MntComponentType
   ? RuntimeTarget
   : FallbackTarget
   : FallbackTarget;
 
-interface Mnt<Target extends MntComponentType, TargetHtmlProps extends object> {
+export interface Mnt<Target extends MntComponentType, TargetHtmlProps extends object> {
   <Props extends object = BaseObject>(
     ..._taggedStyle: TaggedStyle<Assign<TargetHtmlProps, Props>>
   ): MntComponent<Target, Assign<TargetHtmlProps, Props>>;
@@ -38,10 +45,12 @@ interface Mnt<Target extends MntComponentType, TargetHtmlProps extends object> {
   >;
 }
 
-interface MntComponent<Target extends MntComponentType = any, Props extends object = BaseObject>
-  extends React.ForwardRefExoticComponent<
-    React.PropsWithoutRef<Props> & React.RefAttributes<unknown>
-  > {
+export interface MntComponent<
+  Target extends MntComponentType = any,
+  Props extends object = BaseObject
+> extends React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<Props> & React.RefAttributes<unknown>
+> {
   <TAs extends MntComponentType>(_props: MntComponentProps<TAs, Props>): React.ReactNode;
 
   _classesFactory: ClassesFactory<Props>;
@@ -50,19 +59,19 @@ interface MntComponent<Target extends MntComponentType = any, Props extends obje
   _isMnt: boolean;
 }
 
-type MntConfigFactory<Props> = (_props: MntProps & Props) => MntProps & Partial<Props>;
-type MntConfigOrFactory<Props extends object = BaseObject> =
+export type MntConfigFactory<Props> = (_props: MntProps & Props) => MntProps & Partial<Props>;
+export type MntConfigOrFactory<Props extends object = BaseObject> =
   | (MntProps & Partial<Props>)
   | MntConfigFactory<Props>;
 
-type ClassesFactory<Props> = (_props: Assign<Props, MntProps>) => string;
-type ClassesFactoryOrString<Props> = ClassesFactory<Props> | string;
+export type ClassesFactory<Props> = (_props: Assign<Props, MntProps>) => string;
+export type ClassesFactoryOrString<Props> = ClassesFactory<Props> | string;
 
-type TaggedStyle<Props> = [TemplateStringsArray, ...ClassesFactoryOrString<Props>[]];
+export type TaggedStyle<Props> = [TemplateStringsArray, ...ClassesFactoryOrString<Props>[]];
 
-type MntComponentType = ElementType | MntComponent;
+export type MntComponentType = ElementType | MntComponent;
 
-type MntComponentProps<
+export type MntComponentProps<
   TAs extends MntComponentType = MntComponentType,
   Props extends object = BaseObject,
   TAsProps extends object = MntComponentType extends TAs
@@ -72,7 +81,7 @@ type MntComponentProps<
 
 export type Assign<A, B> = Omit<A, keyof B> & B;
 export type NoInfer<T> = [T][T extends any ? 0 : never];
-type BaseObject = {};
+export type BaseObject = {};
 
 const isMnt = (arg: MntComponentType): arg is MntComponent => (arg as MntComponent)._isMnt === true;
 
