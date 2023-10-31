@@ -4,9 +4,13 @@ import { IProps, ITrackProps } from 'react-range/lib/types';
 import { mnt } from 'mnt-internals';
 
 export interface MntRangeInputProps extends Omit<IProps, 'renderTrack' | 'renderThumb'> {
-  /* Props for the track element */
+  /**
+   * Props for the track element 
+   */
   trackProps?: ITrackProps;
-  /* MntRangeInput children */
+  /**
+   * MntRangeInput children 
+   */
   children: React.ReactNode | ((_value: number) => React.ReactNode);
 }
 

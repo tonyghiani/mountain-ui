@@ -7,18 +7,11 @@ export interface MntProps {
   as?: MntComponentType;
 }
 
-type AttrsResult<T extends MntConfigOrFactory> = T extends (..._args: any) => infer P
-  ? P extends object
-  ? P
-  : never
-  : T extends object
-  ? T
-  : never;
+type AttrsResult<T> = T extends (..._args: any) => infer P
+  ? P extends object ? P : never
+  : T extends object ? T : never;
 
-type AttrsTarget<
-  Config extends MntConfigOrFactory,
-  FallbackTarget extends MntComponentType
-> = AttrsResult<Config> extends { as: infer RuntimeTarget }
+type AttrsTarget<Config extends MntConfigOrFactory, FallbackTarget extends MntComponentType> = AttrsResult<Config> extends { as: infer RuntimeTarget }
   ? RuntimeTarget extends MntComponentType
   ? RuntimeTarget
   : FallbackTarget
@@ -72,14 +65,16 @@ type MntComponentType = ElementType | MntComponent;
 type MntComponentProps<
   TAs extends MntComponentType = MntComponentType,
   Props extends object = BaseObject,
-  TAsProps extends object = MntComponentType extends TAs ? BaseObject : React.ComponentPropsWithRef<TAs>,
-> = Omit<Assign<Props, TAsProps>, 'as'> & { as?: TAs }
+  TAsProps extends object = MntComponentType extends TAs
+  ? BaseObject
+  : React.ComponentPropsWithRef<TAs>
+> = Omit<Assign<Props, TAsProps>, 'as'> & { as?: TAs };
 
 export type Assign<A, B> = Omit<A, keyof B> & B;
 export type NoInfer<T> = [T][T extends any ? 0 : never];
 type BaseObject = {};
 
-const isMnt = (arg: MntComponentType): arg is MntComponent => (arg as MntComponent)._isMnt === true
+const isMnt = (arg: MntComponentType): arg is MntComponent => (arg as MntComponent)._isMnt === true;
 
 /**
  * Creates a component factory function to enhance basic capabilities of a passed component.
@@ -116,7 +111,11 @@ export const mnt = <
         `;
     }
 
-    return componentTemplate<Target, Assign<TargetHtmlProps, Props>>(elementType, classesFactory, configFactory);
+    return componentTemplate<Target, Assign<TargetHtmlProps, Props>>(
+      elementType,
+      classesFactory,
+      configFactory
+    );
   };
 
   builder.attrs = <
@@ -177,7 +176,7 @@ const componentTemplate = <Target extends MntComponentType, Props extends object
 };
 
 function getClasses<Props = {}>(...taggedStyles: TaggedStyle<Props>): ClassesFactory<Props> {
-  return (props) => {
+  return props => {
     const [statics, ...dynamics] = taggedStyles;
     const chunks = [];
 
