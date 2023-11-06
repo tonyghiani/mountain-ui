@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { Assign, mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 import { MntParagraph, MntText } from '../Typography';
 
@@ -36,35 +36,24 @@ const INPUT_SIZES = {
 export type MntInputSize = keyof typeof INPUT_SIZES;
 export type MntInputStatus = keyof typeof INPUT_STATUS;
 
-export type MntInputProps = Assign<
-  React.ComponentProps<typeof StyledInput>,
-  {
-    /**
-     * Children components within the input container.
-     */
-    children?: React.ReactNode;
-    /**
-     * Caption text for the input.
-     */
-    caption?: string;
-    /**
-     * Unique identifier for the input.
-     */
-    id?: string;
-    /**
-     * Label text for the input.
-     */
-    label?: string;
-    /**
-     * Size of the input tag.
-     */
-    size?: MntInputSize;
-    /**
-     * Status of the input tag.
-     */
-    status?: MntInputStatus;
-  }
->;
+export type MntInputProps = React.ComponentProps<typeof StyledInput> & {
+  /**
+   * Caption text for the input.
+   */
+  caption?: string;
+  /**
+   * Label text for the input.
+   */
+  label?: string;
+  /**
+   * Size of the input tag.
+   */
+  size?: MntInputSize;
+  /**
+   * Status of the input tag.
+   */
+  status?: MntInputStatus;
+};
 
 const StyledInput = mnt('input')`
   w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal
@@ -74,7 +63,7 @@ const InputWrapper = mnt('div')`
   w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200
 `;
 
-const InputContainer = mnt('div') <Pick<MntInputProps, 'status'>>`
+const InputContainer = mnt('div')<Pick<MntInputProps, 'status'>>`
   w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20
   ${props => INPUT_STATUS[props.status]}
 `;
@@ -86,7 +75,7 @@ const InputContainer = mnt('div') <Pick<MntInputProps, 'status'>>`
 export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
   ({ status = 'default', size = 'm', label, caption, children, id, className, ...props }, ref) => {
     const { input, wrapper } = INPUT_SIZES[size];
-    const wrapperClasses = [wrapper, className].filter(Boolean).join(' ')
+    const wrapperClasses = [wrapper, className].filter(Boolean).join(' ');
 
     const inputNode = (
       <InputWrapper className={wrapperClasses}>
@@ -102,7 +91,9 @@ export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
             {label}
             {inputNode}
           </MntText>
-        ) : inputNode}
+        ) : (
+          inputNode
+        )}
         {caption && (
           <MntParagraph className='text-caption text-[--text-input]'>{caption}</MntParagraph>
         )}

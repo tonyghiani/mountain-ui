@@ -1,20 +1,20 @@
 import React from 'react';
+import mnt from 'react-mnt';
 import { Range } from 'react-range';
 import { IProps, ITrackProps } from 'react-range/lib/types';
-import { mnt } from 'mnt-internals';
 
 export interface MntRangeInputProps extends Omit<IProps, 'renderTrack' | 'renderThumb'> {
   /**
-   * Props for the track element 
+   * Props for the track element
    */
   trackProps?: ITrackProps;
   /**
-   * MntRangeInput children 
+   * MntRangeInput children
    */
   children: React.ReactNode | ((_value: number) => React.ReactNode);
 }
 
-export const MntRangeTrack = mnt('div') <ITrackProps>`
+export const MntRangeTrack = mnt('div')<ITrackProps>`
   w-full h-3 rounded-lg	bg-gradient-to-r from-sky-400 to-sky-200 border-4 border-solid border-transparent bg-clip-content
 `;
 

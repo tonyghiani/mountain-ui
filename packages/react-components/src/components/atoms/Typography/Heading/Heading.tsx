@@ -1,8 +1,8 @@
-import { mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 import { MntBaseTypography, MntBaseTypographyProps } from '../BaseTypography';
 
-export const HEADING_BASE_CLASS = 'font-bold tracking-wide'
+export const HEADING_BASE_CLASS = 'font-bold tracking-wide';
 export const HEADING_VARIANTS = {
   h1: 'text-h1 leading-snug text-[--c-heading1]',
   h2: 'text-h2 leading-snug text-[--c-heading2]',
@@ -12,22 +12,24 @@ export const HEADING_VARIANTS = {
   h6: 'text-h6 leading-normal text-[--c-heading6]'
 } as const;
 
-export type MntHeadingVariant = keyof typeof HEADING_VARIANTS
+export type MntHeadingVariant = keyof typeof HEADING_VARIANTS;
 
 export interface MntHeadingProps extends MntBaseTypographyProps {
   /**
    * Variant options for styling a Heading component.
    */
-  variant?: MntHeadingVariant
+  variant?: MntHeadingVariant;
 }
 
 /**
  * Heading component for displaying text titles or headings in a styled and visually appealing manner,
  * enhancing content presentation within a UI.
  */
-export const MntHeading = mnt(MntBaseTypography).attrs<MntHeadingProps>(p => ({ as: p.as ?? p.variant }))`
+export const MntHeading = mnt(MntBaseTypography).params<MntHeadingProps>(p => ({
+  as: p.as ?? p.variant
+}))`
   ${HEADING_BASE_CLASS}
   ${({ variant = 'h1' }) => HEADING_VARIANTS[variant]}
-`
+`;
 
 MntHeading.displayName = 'MntHeading';

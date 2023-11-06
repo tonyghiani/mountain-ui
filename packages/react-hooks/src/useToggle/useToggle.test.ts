@@ -67,13 +67,11 @@ describe('useToggle hook', () => {
     expect(result.current[0]).toBe(false);
 
     act(() => {
-      // @ts-ignore
       toggle('false');
     });
     expect(result.current[0]).toBe(true);
 
     act(() => {
-      // @ts-ignore
       toggle(213);
     });
     expect(result.current[0]).toBe(false);

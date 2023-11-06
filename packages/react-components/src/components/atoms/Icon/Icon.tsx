@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 import { MntIconType, typesToIconMap } from './typesToIconMap';
 
@@ -42,7 +42,7 @@ export type MntIconVariant = keyof typeof ICON_VARIANTS;
 type IconElementProps =
   | (React.ComponentProps<'span'> & { variant?: 'icon' })
   | (React.ComponentProps<'a'> & { variant?: 'link' })
-  | (React.ComponentProps<'button'> & { variant?: 'button' })
+  | (React.ComponentProps<'button'> & { variant?: 'button' });
 
 export type MntIconProps = IconElementProps & {
   /**
@@ -68,7 +68,7 @@ type BaseIconProps = Omit<MntIconProps, 'iconType'>;
 /**
  * MntIcon component wrapper for svg icons
  */
-export const BaseIcon = mnt('span').attrs<BaseIconProps>(props => ({
+export const BaseIcon = mnt('span').params<BaseIconProps>(props => ({
   as: ICON_VARIANTS[props.variant || 'icon']?.tag
 }))`
   ${({ color = 'primary' }) => ICON_COLORS[color]}

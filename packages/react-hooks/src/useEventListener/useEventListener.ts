@@ -5,7 +5,7 @@
 import { MutableRefObject, useEffect, useRef } from 'react';
 import { hasWindow } from '@mountain-ui/utils';
 
-export type Events = string | string[];
+export type TEvent = string | string[];
 export type Target = Window | MutableRefObject<HTMLElement> | null | undefined;
 
 function getElement(target: Target) {
@@ -14,7 +14,7 @@ function getElement(target: Target) {
 }
 
 function useEventListener(
-  events: Events,
+  events: TEvent,
   handler: EventListener,
   target: Target = hasWindow() ? window : null,
   options?: boolean | AddEventListenerOptions

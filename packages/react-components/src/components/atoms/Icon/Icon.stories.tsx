@@ -115,10 +115,10 @@ export const All: Story = {
 
               return (
                 <MntBox
-                  className='w-full flex gap-4 shadow-xl p-3 rounded-lg items-center'
+                  className='w-full flex gap-4 shadow-xl p-3 rounded-lg items-center text-xl'
                   key={type}
                 >
-                  <Icon className='text-xl' />
+                  <Icon />
                   <MntText bold>{type}</MntText>
                 </MntBox>
               );

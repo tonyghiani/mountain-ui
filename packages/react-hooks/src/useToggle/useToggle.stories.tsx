@@ -6,10 +6,10 @@ import useToggle from './useToggle';
 
 const meta = {
   title: 'Hooks/useToggle',
-  component: Demo,
+  component: Demo
 } satisfies Meta<typeof Demo>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {};
@@ -18,18 +18,12 @@ function Demo() {
   const [value, toggle] = useToggle();
 
   return (
-    <Container >
-      <Card heading={
-        <Text className="bold text-light">
-          {value.toString().toUpperCase()}
-        </Text>
-      }>
-        <div className="p-2">
-          <Button onClick={toggle} width={1}>
-            Toggle
-          </Button>
+    <Container>
+      <Card heading={<Text className='bold text-light'>{value.toString().toUpperCase()}</Text>}>
+        <div className='p-2'>
+          <Button onClick={toggle}>Toggle</Button>
         </div>
       </Card>
     </Container>
   );
-};
+}

@@ -1,9 +1,9 @@
 import { useReducer } from 'react';
 
 // eslint-disable-next-line no-unused-vars
-export type DispatchWithOptionalAction<Type> = (_arg?: Type | unknown) => void;
+export type DispatchWithOptionalAction = (_arg?: unknown) => void;
 
-export type UseToggleResult<Type> = [Type, DispatchWithOptionalAction<Type>];
+export type UseToggleResult = [boolean, DispatchWithOptionalAction];
 
 function _toggler(currentValue: boolean, newValue: boolean | undefined) {
   return typeof newValue === 'boolean' ? newValue : !currentValue;
@@ -11,9 +11,9 @@ function _toggler(currentValue: boolean, newValue: boolean | undefined) {
 /**
  *
  * @param initialValue boolean
- * @returns {UseToggleResult<boolean>}
+ * @returns {UseToggleResult}
  */
-function useToggle(initialValue: boolean = false): UseToggleResult<boolean> {
+function useToggle(initialValue: boolean = false): UseToggleResult {
   return useReducer(_toggler, initialValue);
 }
 

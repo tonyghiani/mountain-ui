@@ -1,27 +1,26 @@
-import { mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 export const LIST_BASE_CLASS = 'flex';
 
 export interface MntListProps {
   /**
-   * Remove space between items 
+   * Remove space between items
    */
   dense?: boolean;
   /**
-   * Use the list horizontally 
+   * Use the list horizontally
    */
   horizontal?: boolean;
-};
+}
 
 /**
- * List component for organizing and displaying a collection of items in a structured manner. 
+ * List component for organizing and displaying a collection of items in a structured manner.
  * Provides flexibility in layout and style, improving content presentation within a UI.
  */
-export const MntList = mnt('ul') <MntListProps>`
+export const MntList = mnt('ul')<MntListProps>`
   ${LIST_BASE_CLASS}
-  ${({ horizontal = false }) => horizontal ? 'flex-row' : 'flex-col'}
+  ${({ horizontal = false }) => (horizontal ? 'flex-row' : 'flex-col')}
   ${({ dense = false }) => !dense && 'gap-4'}
-`
+`;
 
 MntList.displayName = 'MntList';
-

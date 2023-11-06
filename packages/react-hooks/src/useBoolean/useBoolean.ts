@@ -7,7 +7,7 @@ export type VoidHandler = () => void;
 export interface UseBooleanHandlers {
   on: VoidHandler;
   off: VoidHandler;
-  toggle: DispatchWithOptionalAction<boolean>;
+  toggle: DispatchWithOptionalAction;
 }
 
 export type UseBooleanResult = [boolean, UseBooleanHandlers];

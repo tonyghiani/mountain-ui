@@ -1,5 +1,5 @@
 import React from 'react';
-import { mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 import { MntText } from '../Typography';
 
@@ -77,7 +77,7 @@ interface TagStatusProps {
 }
 
 /**
- * Tag component for visually representing and categorizing items or content. 
+ * Tag component for visually representing and categorizing items or content.
  * Enhances organization and provides a quick way to identify or filter specific elements within a UI.
  */
 export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) => {
@@ -93,7 +93,7 @@ export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) 
   );
 };
 
-const TagStatus = mnt('div') <TagStatusProps>`
+const TagStatus = mnt('div')<TagStatusProps>`
   absolute rounded-full border-light border-solid border-2
   ${({ size }) => TAG_STATUS_SIZES[size]}
   ${({ status }) => TAG_STATUS[status]}

@@ -6,10 +6,10 @@ import useUpdateEffect from './useUpdateEffect';
 
 const meta = {
   title: 'Hooks/useUpdateEffect',
-  component: Demo,
+  component: Demo
 } satisfies Meta<typeof Demo>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {};
@@ -28,24 +28,14 @@ function Demo() {
   }, [count]);
 
   return (
-    <Container >
-      <Card heading={
-        <Text className="bold text-light">
-          {count}
-        </Text>
-      }>
-        <div className="flex flex-col gap-3 p-2 items-center justify-center">
-          <Button onClick={() => setCount(prev => prev + 1)} width={1}>
-            Increment
-          </Button>
-          <Text>
-            useEffect {effect ? '✅' : '❌'}
-          </Text>
-          <Text>
-            useUpdateEffect {updateEffect ? '✅' : '❌'}
-          </Text>
+    <Container>
+      <Card heading={<Text className='bold text-light'>{count}</Text>}>
+        <div className='flex flex-col gap-3 p-2 items-center justify-center'>
+          <Button onClick={() => setCount(prev => prev + 1)}>Increment</Button>
+          <Text>useEffect {effect ? '✅' : '❌'}</Text>
+          <Text>useUpdateEffect {updateEffect ? '✅' : '❌'}</Text>
         </div>
       </Card>
-    </Container >
+    </Container>
   );
-};
+}

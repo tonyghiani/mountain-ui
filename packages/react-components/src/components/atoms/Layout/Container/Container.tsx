@@ -1,4 +1,4 @@
-import { mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 export const CONTAINER_BASE_CLASS = 'mx-auto px-4';
 export const CONTAINER_SIZES = {
@@ -14,14 +14,14 @@ export interface MntContainerProps {
   /**
    * The maximum size the container should take on the screen.
    */
-  size?: MntContainerSize
-};
+  size?: MntContainerSize;
+}
 
 /**
- * MntContainer component for wrapping and styling content within a designated area. 
+ * MntContainer component for wrapping and styling content within a designated area.
  * Helps in organizing and managing the layout of components and elements.
  */
-export const MntContainer = mnt('div') <MntContainerProps>`
+export const MntContainer = mnt('div')<MntContainerProps>`
   ${CONTAINER_BASE_CLASS}
   ${({ size = 'large' }) => CONTAINER_SIZES[size]}
 `;
