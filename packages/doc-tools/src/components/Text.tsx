@@ -1,5 +1,4 @@
-
-import React from "react";
+import mnt from 'react-mnt';
 
 export const TEXT_BASE_CLASS = 'leading-relaxed'
 export const TEXT_VARIANTS = {
@@ -9,22 +8,16 @@ export const TEXT_VARIANTS = {
 } as const;
 
 export type TextVariant = keyof typeof TEXT_VARIANTS
-export interface TextProps extends React.ComponentProps<'span'> {
-  as?: React.ElementType
+export interface TextProps {
   /**
    * Variant options for styling a Text component.
    */
   variant?: TextVariant
 };
 
-export const Text = ({ as: Tag = 'span', className, variant = 'primary', ...props }: TextProps) => {
-  const classes = [
-    TEXT_BASE_CLASS,
-    TEXT_VARIANTS[variant],
-    className
-  ].filter(Boolean).join(' ')
-
-  return <Tag className={classes} {...props} />
-}
+export const Text = mnt('span') <TextProps>`
+  ${TEXT_BASE_CLASS}
+  ${({ variant = 'primary' }) => TEXT_VARIANTS[variant]}
+`
 
 Text.displayName = 'Text';

@@ -34,7 +34,7 @@ const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps
   return (
     <p className='text-body leading-6.5' {...getLineProps({ line })}>
       {line.map((token, key) => (
-        <span key={key} {...getTokenProps({ token, key })} />
+        <span key={key} {...getTokenProps({ token })} />
       ))}
     </p>
   );

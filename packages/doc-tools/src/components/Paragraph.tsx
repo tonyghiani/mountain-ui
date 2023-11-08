@@ -1,11 +1,7 @@
-import React from "react";
+import mnt from 'react-mnt';
 
-import { Text, TextProps } from "./Text";
+import { Text } from "./Text";
 
-export interface ParagraphProps extends TextProps { };
-
-export const Paragraph = (props: ParagraphProps) => {
-  return <Text as="p" {...props} />
-}
+export const Paragraph = mnt(Text).params({ as: 'p' })``
 
 Paragraph.displayName = 'Paragraph';

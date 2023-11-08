@@ -50,5 +50,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "react-mnt": "^1.1.0"
   }
 }
