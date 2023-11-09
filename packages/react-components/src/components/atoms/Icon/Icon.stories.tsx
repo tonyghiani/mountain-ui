@@ -25,7 +25,6 @@ const meta = {
   title: 'Atoms/MntIcon',
   component: MntIcon,
   tags: ['autodocs'],
-  parameters: {}
 } satisfies Meta<typeof MntIcon>;
 
 export default meta;
@@ -89,6 +88,9 @@ export const Size: Story = {
 
 const types = Object.keys(typesToIconMap) as MntIconType[];
 export const All: Story = {
+  parameters: {
+    storyshots: { disable: true },
+  },
   args: {
     iconType: 'react'
   },
