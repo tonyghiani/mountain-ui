@@ -17,6 +17,18 @@
   "license": "MIT",
   "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
   "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -39,6 +51,9 @@
       "path": "git-cz"
     }
   },
+  "dependencies": {
+    "react-mnt": "^1.1.0"
+  },
   "devDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -50,8 +65,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "react-mnt": "^1.1.0"
   }
 }
