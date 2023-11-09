@@ -26,7 +26,7 @@ const StyledAccordionSummary = mnt('div')`
 `;
 type StyledAccordionSummaryClick = Pick<
   React.ComponentProps<typeof StyledAccordionSummary>,
-  'onClick'
+  'onClick' | 'children'
 >;
 
 const StyledAccordionDetail = mnt('div')<{ shouldOverflow: boolean }>`

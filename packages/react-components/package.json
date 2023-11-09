@@ -16,6 +16,18 @@
   "license": "MIT",
   "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
   "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -31,7 +43,6 @@
     "clean:build": "rimraf dist *.tsbuildinfo",
     "commit": "git cz",
     "icons:convert": "svgr --out-dir ./src/components/atoms/Icon/icons --config-file ./svgr.config.js ./src/components/atoms/Icon/assets",
-    "icons:types-map": "node ./scripts/create-type-to-icon-map.js",
     "lint": "eslint ./src",
     "lint:package": "sort-package-json",
     "release": "semantic-release",

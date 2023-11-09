@@ -1,1205 +1,1211 @@
-export { default as Abacus } from './Abacus';
-export { default as AccessibleIconAlt } from './AccessibleIconAlt';
-export { default as AdjustAlt } from './AdjustAlt';
-export { default as AdjustCircle } from './AdjustCircle';
-export { default as AdjustHalf } from './AdjustHalf';
-export { default as Adjust } from './Adjust';
-export { default as AdobeAlt } from './AdobeAlt';
-export { default as Adobe } from './Adobe';
-export { default as Airplay } from './Airplay';
-export { default as AlignAlt } from './AlignAlt';
-export { default as AlignCenterAlt } from './AlignCenterAlt';
-export { default as AlignCenterH } from './AlignCenterH';
-export { default as AlignCenterJustify } from './AlignCenterJustify';
-export { default as AlignCenterV } from './AlignCenterV';
-export { default as AlignCenter } from './AlignCenter';
-export { default as AlignJustify } from './AlignJustify';
-export { default as AlignLeftJustify } from './AlignLeftJustify';
-export { default as AlignLeft } from './AlignLeft';
-export { default as AlignLetterRight } from './AlignLetterRight';
-export { default as AlignRightJustify } from './AlignRightJustify';
-export { default as AlignRight } from './AlignRight';
-export { default as Align } from './Align';
-export { default as Amazon } from './Amazon';
-export { default as Ambulance } from './Ambulance';
-export { default as Analysis } from './Analysis';
-export { default as Analytics } from './Analytics';
-export { default as Anchor } from './Anchor';
-export { default as AndroidAlt } from './AndroidAlt';
-export { default as AndroidPhoneSlash } from './AndroidPhoneSlash';
-export { default as Android } from './Android';
-export { default as AngleDoubleDown } from './AngleDoubleDown';
-export { default as AngleDoubleLeft } from './AngleDoubleLeft';
-export { default as AngleDoubleRight } from './AngleDoubleRight';
-export { default as AngleDoubleUp } from './AngleDoubleUp';
-export { default as AngleDown } from './AngleDown';
-export { default as AngleLeftB } from './AngleLeftB';
-export { default as AngleLeft } from './AngleLeft';
-export { default as AngleRightB } from './AngleRightB';
-export { default as AngleRight } from './AngleRight';
-export { default as AngleUp } from './AngleUp';
-export { default as Angry } from './Angry';
-export { default as Ankh } from './Ankh';
-export { default as AnnoyedAlt } from './AnnoyedAlt';
-export { default as Annoyed } from './Annoyed';
-export { default as AppleAlt } from './AppleAlt';
-export { default as Apple } from './Apple';
-export { default as Apps } from './Apps';
-export { default as ArchiveAlt } from './ArchiveAlt';
-export { default as Archive } from './Archive';
-export { default as Archway } from './Archway';
-export { default as ArrowBreak } from './ArrowBreak';
-export { default as ArrowCircleDown } from './ArrowCircleDown';
-export { default as ArrowCircleLeft } from './ArrowCircleLeft';
-export { default as ArrowCircleRight } from './ArrowCircleRight';
-export { default as ArrowCircleUp } from './ArrowCircleUp';
-export { default as ArrowCompressH } from './ArrowCompressH';
-export { default as ArrowDownLeft } from './ArrowDownLeft';
-export { default as ArrowDownRight } from './ArrowDownRight';
-export { default as ArrowDown } from './ArrowDown';
-export { default as ArrowFromRight } from './ArrowFromRight';
-export { default as ArrowFromTop } from './ArrowFromTop';
-export { default as ArrowGrowth } from './ArrowGrowth';
-export { default as ArrowLeft } from './ArrowLeft';
-export { default as ArrowRandom } from './ArrowRandom';
-export { default as ArrowResizeDiagonal } from './ArrowResizeDiagonal';
-export { default as ArrowRight } from './ArrowRight';
-export { default as ArrowToBottom } from './ArrowToBottom';
-export { default as ArrowToRight } from './ArrowToRight';
-export { default as ArrowUpLeft } from './ArrowUpLeft';
-export { default as ArrowUpRight } from './ArrowUpRight';
-export { default as ArrowUp } from './ArrowUp';
-export { default as Arrow } from './Arrow';
-export { default as ArrowsHAlt } from './ArrowsHAlt';
-export { default as ArrowsH } from './ArrowsH';
-export { default as ArrowsLeftDown } from './ArrowsLeftDown';
-export { default as ArrowsMaximize } from './ArrowsMaximize';
-export { default as ArrowsMerge } from './ArrowsMerge';
-export { default as ArrowsResizeH } from './ArrowsResizeH';
-export { default as ArrowsResizeV } from './ArrowsResizeV';
-export { default as ArrowsResize } from './ArrowsResize';
-export { default as ArrowsRightDown } from './ArrowsRightDown';
-export { default as ArrowsShrinkH } from './ArrowsShrinkH';
-export { default as ArrowsShrinkV } from './ArrowsShrinkV';
-export { default as ArrowsUpRight } from './ArrowsUpRight';
-export { default as ArrowsVAlt } from './ArrowsVAlt';
-export { default as ArrowsV } from './ArrowsV';
-export { default as AssistiveListeningSystems } from './AssistiveListeningSystems';
-export { default as Asterisk } from './Asterisk';
-export { default as At } from './At';
-export { default as Atom } from './Atom';
-export { default as AutoFlash } from './AutoFlash';
-export { default as AwardAlt } from './AwardAlt';
-export { default as Award } from './Award';
-export { default as BabyCarriage } from './BabyCarriage';
-export { default as Backpack } from './Backpack';
-export { default as Backspace } from './Backspace';
-export { default as Backward } from './Backward';
-export { default as BagAlt } from './BagAlt';
-export { default as BagSlash } from './BagSlash';
-export { default as Bag } from './Bag';
-export { default as BalanceScale } from './BalanceScale';
-export { default as Ban } from './Ban';
-export { default as BandAid } from './BandAid';
-export { default as Bars } from './Bars';
-export { default as BaseballBall } from './BaseballBall';
-export { default as BasketballHoop } from './BasketballHoop';
-export { default as Basketball } from './Basketball';
-export { default as Bath } from './Bath';
-export { default as BatteryBolt } from './BatteryBolt';
-export { default as BatteryEmpty } from './BatteryEmpty';
-export { default as BedDouble } from './BedDouble';
-export { default as Bed } from './Bed';
-export { default as BehanceAlt } from './BehanceAlt';
-export { default as Behance } from './Behance';
-export { default as BellSchool } from './BellSchool';
-export { default as BellSlash } from './BellSlash';
-export { default as Bell } from './Bell';
-export { default as Bill } from './Bill';
-export { default as Bing } from './Bing';
-export { default as BitcoinAlt } from './BitcoinAlt';
-export { default as BitcoinCircle } from './BitcoinCircle';
-export { default as BitcoinSign } from './BitcoinSign';
-export { default as Bitcoin } from './Bitcoin';
-export { default as BlackBerry } from './BlackBerry';
-export { default as BloggerAlt } from './BloggerAlt';
-export { default as Blogger } from './Blogger';
-export { default as BluetoothB } from './BluetoothB';
-export { default as Bold } from './Bold';
-export { default as BoltAlt } from './BoltAlt';
-export { default as BoltSlash } from './BoltSlash';
-export { default as Bolt } from './Bolt';
-export { default as BookAlt } from './BookAlt';
-export { default as BookMedical } from './BookMedical';
-export { default as BookOpen } from './BookOpen';
-export { default as BookReader } from './BookReader';
-export { default as Book } from './Book';
-export { default as BookmarkFull } from './BookmarkFull';
-export { default as Bookmark } from './Bookmark';
-export { default as Books } from './Books';
-export { default as Boombox } from './Boombox';
-export { default as BorderAlt } from './BorderAlt';
-export { default as BorderBottom } from './BorderBottom';
-export { default as BorderClear } from './BorderClear';
-export { default as BorderHorizontal } from './BorderHorizontal';
-export { default as BorderInner } from './BorderInner';
-export { default as BorderLeft } from './BorderLeft';
-export { default as BorderOut } from './BorderOut';
-export { default as BorderRight } from './BorderRight';
-export { default as BorderTop } from './BorderTop';
-export { default as BorderVertical } from './BorderVertical';
-export { default as BowlingBall } from './BowlingBall';
-export { default as Box } from './Box';
-export { default as BracketsCurly } from './BracketsCurly';
-export { default as Brain } from './Brain';
-export { default as BriefcaseAlt } from './BriefcaseAlt';
-export { default as Briefcase } from './Briefcase';
-export { default as Bright } from './Bright';
-export { default as BrightnessEmpty } from './BrightnessEmpty';
-export { default as BrightnessHalf } from './BrightnessHalf';
-export { default as BrightnessLow } from './BrightnessLow';
-export { default as BrightnessMinus } from './BrightnessMinus';
-export { default as BrightnessPlus } from './BrightnessPlus';
-export { default as Brightness } from './Brightness';
-export { default as BringBottom } from './BringBottom';
-export { default as BringFront } from './BringFront';
-export { default as Browser } from './Browser';
-export { default as BrushAlt } from './BrushAlt';
-export { default as Bug } from './Bug';
-export { default as Building } from './Building';
-export { default as Bullseye } from './Bullseye';
-export { default as BusAlt } from './BusAlt';
-export { default as BusSchool } from './BusSchool';
-export { default as Bus } from './Bus';
-export { default as CalculatorAlt } from './CalculatorAlt';
-export { default as Calculator } from './Calculator';
-export { default as CalendarAlt } from './CalendarAlt';
-export { default as CalendarSlash } from './CalendarSlash';
-export { default as Calender } from './Calender';
-export { default as Calling } from './Calling';
-export { default as CameraChange } from './CameraChange';
-export { default as CameraPlus } from './CameraPlus';
-export { default as CameraSlash } from './CameraSlash';
-export { default as Camera } from './Camera';
-export { default as Cancel } from './Cancel';
-export { default as Capsule } from './Capsule';
-export { default as Capture } from './Capture';
-export { default as CarSideview } from './CarSideview';
-export { default as CarSlash } from './CarSlash';
-export { default as CarWash } from './CarWash';
-export { default as Car } from './Car';
-export { default as CardAtm } from './CardAtm';
-export { default as CaretRight } from './CaretRight';
-export { default as Cell } from './Cell';
-export { default as Celsius } from './Celsius';
-export { default as ChannelAdd } from './ChannelAdd';
-export { default as Channel } from './Channel';
-export { default as ChartBarAlt } from './ChartBarAlt';
-export { default as ChartBar } from './ChartBar';
-export { default as ChartDown } from './ChartDown';
-export { default as ChartGrowthAlt } from './ChartGrowthAlt';
-export { default as ChartGrowth } from './ChartGrowth';
-export { default as ChartLine } from './ChartLine';
-export { default as ChartPieAlt } from './ChartPieAlt';
-export { default as ChartPie } from './ChartPie';
-export { default as Chart } from './Chart';
-export { default as ChatBubbleUser } from './ChatBubbleUser';
-export { default as ChatInfo } from './ChatInfo';
-export { default as Chat } from './Chat';
-export { default as CheckCircle } from './CheckCircle';
-export { default as CheckSquare } from './CheckSquare';
-export { default as Check } from './Check';
-export { default as CircleLayer } from './CircleLayer';
-export { default as Circle } from './Circle';
-export { default as Circuit } from './Circuit';
-export { default as ClapperBoard } from './ClapperBoard';
-export { default as ClinicMedical } from './ClinicMedical';
-export { default as ClipboardAlt } from './ClipboardAlt';
-export { default as ClipboardBlank } from './ClipboardBlank';
-export { default as ClipboardNotes } from './ClipboardNotes';
-export { default as Clipboard } from './Clipboard';
-export { default as ClockEight } from './ClockEight';
-export { default as ClockFive } from './ClockFive';
-export { default as ClockNine } from './ClockNine';
-export { default as ClockSeven } from './ClockSeven';
-export { default as ClockTen } from './ClockTen';
-export { default as ClockThree } from './ClockThree';
-export { default as ClockTwo } from './ClockTwo';
-export { default as Clock } from './Clock';
-export { default as ClosedCaptioningSlash } from './ClosedCaptioningSlash';
-export { default as ClosedCaptioning } from './ClosedCaptioning';
-export { default as CloudBlock } from './CloudBlock';
-export { default as CloudBookmark } from './CloudBookmark';
-export { default as CloudCheck } from './CloudCheck';
-export { default as CloudComputing } from './CloudComputing';
-export { default as CloudDataConnection } from './CloudDataConnection';
-export { default as CloudDatabaseTree } from './CloudDatabaseTree';
-export { default as CloudDownload } from './CloudDownload';
-export { default as CloudDrizzle } from './CloudDrizzle';
-export { default as CloudExclamation } from './CloudExclamation';
-export { default as CloudHail } from './CloudHail';
-export { default as CloudHeart } from './CloudHeart';
-export { default as CloudInfo } from './CloudInfo';
-export { default as CloudLock } from './CloudLock';
-export { default as CloudMeatball } from './CloudMeatball';
-export { default as CloudMoonHail } from './CloudMoonHail';
-export { default as CloudMoonMeatball } from './CloudMoonMeatball';
-export { default as CloudMoonRain } from './CloudMoonRain';
-export { default as CloudMoonShowers } from './CloudMoonShowers';
-export { default as CloudMoon } from './CloudMoon';
-export { default as CloudQuestion } from './CloudQuestion';
-export { default as CloudRainSun } from './CloudRainSun';
-export { default as CloudRain } from './CloudRain';
-export { default as CloudRedo } from './CloudRedo';
-export { default as CloudShare } from './CloudShare';
-export { default as CloudShield } from './CloudShield';
-export { default as CloudShowersAlt } from './CloudShowersAlt';
-export { default as CloudShowersHeavy } from './CloudShowersHeavy';
-export { default as CloudShowers } from './CloudShowers';
-export { default as CloudSlash } from './CloudSlash';
-export { default as CloudSunHail } from './CloudSunHail';
-export { default as CloudSunMeatball } from './CloudSunMeatball';
-export { default as CloudSunRainAlt } from './CloudSunRainAlt';
-export { default as CloudSunRain } from './CloudSunRain';
-export { default as CloudSunTear } from './CloudSunTear';
-export { default as CloudSun } from './CloudSun';
-export { default as CloudTimes } from './CloudTimes';
-export { default as CloudUnlock } from './CloudUnlock';
-export { default as CloudUpload } from './CloudUpload';
-export { default as CloudWifi } from './CloudWifi';
-export { default as CloudWind } from './CloudWind';
-export { default as Cloud } from './Cloud';
-export { default as Clouds } from './Clouds';
-export { default as Club } from './Club';
-export { default as CodeBranch } from './CodeBranch';
-export { default as Coffee } from './Coffee';
-export { default as Cog } from './Cog';
-export { default as Coins } from './Coins';
-export { default as Columns } from './Columns';
-export { default as CommentAdd } from './CommentAdd';
-export { default as CommentAltBlock } from './CommentAltBlock';
-export { default as CommentAltChartLines } from './CommentAltChartLines';
-export { default as CommentAltCheck } from './CommentAltCheck';
-export { default as CommentAltDots } from './CommentAltDots';
-export { default as CommentAltDownload } from './CommentAltDownload';
-export { default as CommentAltEdit } from './CommentAltEdit';
-export { default as CommentAltExclamation } from './CommentAltExclamation';
-export { default as CommentAltHeart } from './CommentAltHeart';
-export { default as CommentAltImage } from './CommentAltImage';
-export { default as CommentAltInfo } from './CommentAltInfo';
-export { default as CommentAltLines } from './CommentAltLines';
-export { default as CommentAltLock } from './CommentAltLock';
-export { default as CommentAltMedical } from './CommentAltMedical';
-export { default as CommentAltMessage } from './CommentAltMessage';
-export { default as CommentAltNotes } from './CommentAltNotes';
-export { default as CommentAltPlus } from './CommentAltPlus';
-export { default as CommentAltQuestion } from './CommentAltQuestion';
-export { default as CommentAltRedo } from './CommentAltRedo';
-export { default as CommentAltSearch } from './CommentAltSearch';
-export { default as CommentAltShare } from './CommentAltShare';
-export { default as CommentAltShield } from './CommentAltShield';
-export { default as CommentAltSlash } from './CommentAltSlash';
-export { default as CommentAltUpload } from './CommentAltUpload';
-export { default as CommentAltVerify } from './CommentAltVerify';
-export { default as CommentAlt } from './CommentAlt';
-export { default as CommentBlock } from './CommentBlock';
-export { default as CommentChartLine } from './CommentChartLine';
-export { default as CommentCheck } from './CommentCheck';
-export { default as CommentDots } from './CommentDots';
-export { default as CommentDownload } from './CommentDownload';
-export { default as CommentEdit } from './CommentEdit';
-export { default as CommentExclamation } from './CommentExclamation';
-export { default as CommentHeart } from './CommentHeart';
-export { default as CommentImage } from './CommentImage';
-export { default as CommentInfoAlt } from './CommentInfoAlt';
-export { default as CommentInfo } from './CommentInfo';
-export { default as CommentLines } from './CommentLines';
-export { default as CommentLock } from './CommentLock';
-export { default as CommentMedical } from './CommentMedical';
-export { default as CommentMessage } from './CommentMessage';
-export { default as CommentNotes } from './CommentNotes';
-export { default as CommentPlus } from './CommentPlus';
-export { default as CommentQuestion } from './CommentQuestion';
-export { default as CommentRedo } from './CommentRedo';
-export { default as CommentSearch } from './CommentSearch';
-export { default as CommentShare } from './CommentShare';
-export { default as CommentShield } from './CommentShield';
-export { default as CommentSlash } from './CommentSlash';
-export { default as CommentUpload } from './CommentUpload';
-export { default as CommentVerify } from './CommentVerify';
-export { default as Comment } from './Comment';
-export { default as CommentsAlt } from './CommentsAlt';
-export { default as Comments } from './Comments';
-export { default as CompactDisc } from './CompactDisc';
-export { default as Comparison } from './Comparison';
-export { default as Compass } from './Compass';
-export { default as CompressAltLeft } from './CompressAltLeft';
-export { default as CompressAlt } from './CompressAlt';
-export { default as CompressArrows } from './CompressArrows';
-export { default as CompressLines } from './CompressLines';
-export { default as CompressPoint } from './CompressPoint';
-export { default as CompressV } from './CompressV';
-export { default as Compress } from './Compress';
-export { default as Confused } from './Confused';
-export { default as Constructor } from './Constructor';
-export { default as CopyAlt } from './CopyAlt';
-export { default as CopyLandscape } from './CopyLandscape';
-export { default as Copy } from './Copy';
-export { default as Copyright } from './Copyright';
-export { default as CornerDownLeft } from './CornerDownLeft';
-export { default as CornerDownRightAlt } from './CornerDownRightAlt';
-export { default as CornerDownRight } from './CornerDownRight';
-export { default as CornerLeftDown } from './CornerLeftDown';
-export { default as CornerRightDown } from './CornerRightDown';
-export { default as CornerUpLeftAlt } from './CornerUpLeftAlt';
-export { default as CornerUpLeft } from './CornerUpLeft';
-export { default as CornerUpRightAlt } from './CornerUpRightAlt';
-export { default as CornerUpRight } from './CornerUpRight';
-export { default as Coronavirus } from './Coronavirus';
-export { default as CreateDashboard } from './CreateDashboard';
-export { default as CreativeCommonsPd } from './CreativeCommonsPd';
-export { default as CreditCardSearch } from './CreditCardSearch';
-export { default as CreditCard } from './CreditCard';
-export { default as Crockery } from './Crockery';
-export { default as CropAltRotateLeft } from './CropAltRotateLeft';
-export { default as CropAltRotateRight } from './CropAltRotateRight';
-export { default as CropAlt } from './CropAlt';
-export { default as CrosshairAlt } from './CrosshairAlt';
-export { default as Crosshair } from './Crosshair';
-export { default as Crosshairs } from './Crosshairs';
-export { default as Css3Simple } from './Css3Simple';
-export { default as Cube } from './Cube';
-export { default as Dashboard } from './Dashboard';
-export { default as DataSharing } from './DataSharing';
-export { default as DatabaseAlt } from './DatabaseAlt';
-export { default as Database } from './Database';
-export { default as Desert } from './Desert';
-export { default as DesktopAltSlash } from './DesktopAltSlash';
-export { default as DesktopAlt } from './DesktopAlt';
-export { default as DesktopCloudAlt } from './DesktopCloudAlt';
-export { default as DesktopSlash } from './DesktopSlash';
-export { default as Desktop } from './Desktop';
-export { default as DialpadAlt } from './DialpadAlt';
-export { default as Dialpad } from './Dialpad';
-export { default as Diamond } from './Diamond';
-export { default as DiaryAlt } from './DiaryAlt';
-export { default as Diary } from './Diary';
-export { default as DiceFive } from './DiceFive';
-export { default as DiceFour } from './DiceFour';
-export { default as DiceOne } from './DiceOne';
-export { default as DiceSix } from './DiceSix';
-export { default as DiceThree } from './DiceThree';
-export { default as DiceTwo } from './DiceTwo';
-export { default as Direction } from './Direction';
-export { default as Directions } from './Directions';
-export { default as Discord } from './Discord';
-export { default as DizzyMeh } from './DizzyMeh';
-export { default as Dna } from './Dna';
-export { default as Docker } from './Docker';
-export { default as DocumentInfo } from './DocumentInfo';
-export { default as DocumentLayoutCenter } from './DocumentLayoutCenter';
-export { default as DocumentLayoutLeft } from './DocumentLayoutLeft';
-export { default as DocumentLayoutRight } from './DocumentLayoutRight';
-export { default as DollarAlt } from './DollarAlt';
-export { default as DollarSignAlt } from './DollarSignAlt';
-export { default as DollarSign } from './DollarSign';
-export { default as DownloadAlt } from './DownloadAlt';
-export { default as Draggabledots } from './Draggabledots';
-export { default as Dribbble } from './Dribbble';
-export { default as Drill } from './Drill';
-export { default as Dropbox } from './Dropbox';
-export { default as Dumbbell } from './Dumbbell';
-export { default as Ear } from './Ear';
-export { default as EditAlt } from './EditAlt';
-export { default as Edit } from './Edit';
-export { default as ElipsisDoubleVAlt } from './ElipsisDoubleVAlt';
-export { default as EllipsisH } from './EllipsisH';
-export { default as EllipsisV } from './EllipsisV';
-export { default as Emoji } from './Emoji';
-export { default as EnglishToChinese } from './EnglishToChinese';
-export { default as Enter } from './Enter';
-export { default as EnvelopeAdd } from './EnvelopeAdd';
-export { default as EnvelopeAlt } from './EnvelopeAlt';
-export { default as EnvelopeBlock } from './EnvelopeBlock';
-export { default as EnvelopeBookmark } from './EnvelopeBookmark';
-export { default as EnvelopeCheck } from './EnvelopeCheck';
-export { default as EnvelopeDownloadAlt } from './EnvelopeDownloadAlt';
-export { default as EnvelopeDownload } from './EnvelopeDownload';
-export { default as EnvelopeEdit } from './EnvelopeEdit';
-export { default as EnvelopeExclamation } from './EnvelopeExclamation';
-export { default as EnvelopeHeart } from './EnvelopeHeart';
-export { default as EnvelopeInfo } from './EnvelopeInfo';
-export { default as EnvelopeLock } from './EnvelopeLock';
-export { default as EnvelopeMinus } from './EnvelopeMinus';
-export { default as EnvelopeOpen } from './EnvelopeOpen';
-export { default as EnvelopeQuestion } from './EnvelopeQuestion';
-export { default as EnvelopeReceive } from './EnvelopeReceive';
-export { default as EnvelopeRedo } from './EnvelopeRedo';
-export { default as EnvelopeSearch } from './EnvelopeSearch';
-export { default as EnvelopeSend } from './EnvelopeSend';
-export { default as EnvelopeShare } from './EnvelopeShare';
-export { default as EnvelopeShield } from './EnvelopeShield';
-export { default as EnvelopeStar } from './EnvelopeStar';
-export { default as EnvelopeTimes } from './EnvelopeTimes';
-export { default as EnvelopeUploadAlt } from './EnvelopeUploadAlt';
-export { default as EnvelopeUpload } from './EnvelopeUpload';
-export { default as Envelope } from './Envelope';
-export { default as Envelopes } from './Envelopes';
-export { default as EqualCircle } from './EqualCircle';
-export { default as Estate } from './Estate';
-export { default as EuroCircle } from './EuroCircle';
-export { default as Euro } from './Euro';
-export { default as ExchangeAlt } from './ExchangeAlt';
-export { default as Exchange } from './Exchange';
-export { default as ExclamationCircle } from './ExclamationCircle';
-export { default as ExclamationOctagon } from './ExclamationOctagon';
-export { default as ExclamationTriangle } from './ExclamationTriangle';
-export { default as Exclamation } from './Exclamation';
-export { default as Exclude } from './Exclude';
-export { default as Exit } from './Exit';
-export { default as ExpandAlt } from './ExpandAlt';
-export { default as ExpandArrowsAlt } from './ExpandArrowsAlt';
-export { default as ExpandArrows } from './ExpandArrows';
-export { default as ExpandFromCorner } from './ExpandFromCorner';
-export { default as ExpandLeft } from './ExpandLeft';
-export { default as ExpandRight } from './ExpandRight';
-export { default as Export } from './Export';
-export { default as ExposureAlt } from './ExposureAlt';
-export { default as ExposureIncrease } from './ExposureIncrease';
-export { default as ExternalLinkAlt } from './ExternalLinkAlt';
-export { default as EyeSlash } from './EyeSlash';
-export { default as Eye } from './Eye';
-export { default as FacebookF } from './FacebookF';
-export { default as FacebookMessengerAlt } from './FacebookMessengerAlt';
-export { default as FacebookMessenger } from './FacebookMessenger';
-export { default as Facebook } from './Facebook';
-export { default as Fahrenheit } from './Fahrenheit';
-export { default as FastMailAlt } from './FastMailAlt';
-export { default as FastMail } from './FastMail';
-export { default as Favorite } from './Favorite';
-export { default as Feedback } from './Feedback';
-export { default as FidgetSpinner } from './FidgetSpinner';
-export { default as FileAlt } from './FileAlt';
-export { default as FileBlank } from './FileBlank';
-export { default as FileBlockAlt } from './FileBlockAlt';
-export { default as FileBookmarkAlt } from './FileBookmarkAlt';
-export { default as FileCheckAlt } from './FileCheckAlt';
-export { default as FileCheck } from './FileCheck';
-export { default as FileContractDollar } from './FileContractDollar';
-export { default as FileContract } from './FileContract';
-export { default as FileCopyAlt } from './FileCopyAlt';
-export { default as FileDownloadAlt } from './FileDownloadAlt';
-export { default as FileDownload } from './FileDownload';
-export { default as FileEditAlt } from './FileEditAlt';
-export { default as FileExclamationAlt } from './FileExclamationAlt';
-export { default as FileExclamation } from './FileExclamation';
-export { default as FileExport } from './FileExport';
-export { default as FileGraph } from './FileGraph';
-export { default as FileHeart } from './FileHeart';
-export { default as FileImport } from './FileImport';
-export { default as FileInfoAlt } from './FileInfoAlt';
-export { default as FileLandscapeAlt } from './FileLandscapeAlt';
-export { default as FileLandscape } from './FileLandscape';
-export { default as FileLanscapeSlash } from './FileLanscapeSlash';
-export { default as FileLockAlt } from './FileLockAlt';
-export { default as FileMedicalAlt } from './FileMedicalAlt';
-export { default as FileMedical } from './FileMedical';
-export { default as FileMinusAlt } from './FileMinusAlt';
-export { default as FileMinus } from './FileMinus';
-export { default as FileNetwork } from './FileNetwork';
-export { default as FilePlusAlt } from './FilePlusAlt';
-export { default as FilePlus } from './FilePlus';
-export { default as FileQuestionAlt } from './FileQuestionAlt';
-export { default as FileQuestion } from './FileQuestion';
-export { default as FileRedoAlt } from './FileRedoAlt';
-export { default as FileSearchAlt } from './FileSearchAlt';
-export { default as FileShareAlt } from './FileShareAlt';
-export { default as FileShieldAlt } from './FileShieldAlt';
-export { default as FileSlash } from './FileSlash';
-export { default as FileTimesAlt } from './FileTimesAlt';
-export { default as FileTimes } from './FileTimes';
-export { default as FileUploadAlt } from './FileUploadAlt';
-export { default as FileUpload } from './FileUpload';
-export { default as File } from './File';
-export { default as FilesLandscapesAlt } from './FilesLandscapesAlt';
-export { default as FilesLandscapes } from './FilesLandscapes';
-export { default as Film } from './Film';
-export { default as FilterSlash } from './FilterSlash';
-export { default as Filter } from './Filter';
-export { default as Fire } from './Fire';
-export { default as FlaskPotion } from './FlaskPotion';
-export { default as Flask } from './Flask';
-export { default as FlipHAlt } from './FlipHAlt';
-export { default as FlipH } from './FlipH';
-export { default as FlipVAlt } from './FlipVAlt';
-export { default as FlipV } from './FlipV';
-export { default as Flower } from './Flower';
-export { default as FocusAdd } from './FocusAdd';
-export { default as FocusTarget } from './FocusTarget';
-export { default as Focus } from './Focus';
-export { default as FolderCheck } from './FolderCheck';
-export { default as FolderDownload } from './FolderDownload';
-export { default as FolderExclamation } from './FolderExclamation';
-export { default as FolderHeart } from './FolderHeart';
-export { default as FolderInfo } from './FolderInfo';
-export { default as FolderLock } from './FolderLock';
-export { default as FolderMedical } from './FolderMedical';
-export { default as FolderMinus } from './FolderMinus';
-export { default as FolderNetwork } from './FolderNetwork';
-export { default as FolderOpen } from './FolderOpen';
-export { default as FolderPlus } from './FolderPlus';
-export { default as FolderQuestion } from './FolderQuestion';
-export { default as FolderSlash } from './FolderSlash';
-export { default as FolderTimes } from './FolderTimes';
-export { default as FolderUpload } from './FolderUpload';
-export { default as Folder } from './Folder';
-export { default as Font } from './Font';
-export { default as FootballAmerican } from './FootballAmerican';
-export { default as FootballBall } from './FootballBall';
-export { default as Football } from './Football';
-export { default as ForecastcloudMoonTear } from './ForecastcloudMoonTear';
-export { default as ForwadedCall } from './ForwadedCall';
-export { default as Forward } from './Forward';
-export { default as Frown } from './Frown';
-export { default as GameStructure } from './GameStructure';
-export { default as Gift } from './Gift';
-export { default as GithubAlt } from './GithubAlt';
-export { default as Github } from './Github';
-export { default as Gitlab } from './Gitlab';
-export { default as GlassMartiniAltSlash } from './GlassMartiniAltSlash';
-export { default as GlassMartiniAlt } from './GlassMartiniAlt';
-export { default as GlassMartini } from './GlassMartini';
-export { default as GlassTea } from './GlassTea';
-export { default as Glass } from './Glass';
-export { default as Globe } from './Globe';
-export { default as Gold } from './Gold';
-export { default as GolfBall } from './GolfBall';
-export { default as GoogleDriveAlt } from './GoogleDriveAlt';
-export { default as GoogleDrive } from './GoogleDrive';
-export { default as GoogleHangoutsAlt } from './GoogleHangoutsAlt';
-export { default as GoogleHangouts } from './GoogleHangouts';
-export { default as GooglePlay } from './GooglePlay';
-export { default as Google } from './Google';
-export { default as GraduationCap } from './GraduationCap';
-export { default as GraphBar } from './GraphBar';
-export { default as Grid } from './Grid';
-export { default as Grids } from './Grids';
-export { default as GrinTongueWinkAlt } from './GrinTongueWinkAlt';
-export { default as GrinTongueWink } from './GrinTongueWink';
-export { default as Grin } from './Grin';
-export { default as GripHorizontalLine } from './GripHorizontalLine';
-export { default as HardHat } from './HardHat';
-export { default as Hdd } from './Hdd';
-export { default as HeadSideCough } from './HeadSideCough';
-export { default as HeadSideMask } from './HeadSideMask';
-export { default as HeadSide } from './HeadSide';
-export { default as HeadphoneSlash } from './HeadphoneSlash';
-export { default as HeadphonesAlt } from './HeadphonesAlt';
-export { default as Headphones } from './Headphones';
-export { default as HeartAlt } from './HeartAlt';
-export { default as HeartBreak } from './HeartBreak';
-export { default as HeartMedical } from './HeartMedical';
-export { default as HeartRate } from './HeartRate';
-export { default as HeartSign } from './HeartSign';
-export { default as Heart } from './Heart';
-export { default as Heartbeat } from './Heartbeat';
-export { default as HindiToChinese } from './HindiToChinese';
-export { default as Hipchat } from './Hipchat';
-export { default as HistoryAlt } from './HistoryAlt';
-export { default as History } from './History';
-export { default as HomeAlt } from './HomeAlt';
-export { default as Home } from './Home';
-export { default as HorizontalAlignCenter } from './HorizontalAlignCenter';
-export { default as HorizontalAlignLeft } from './HorizontalAlignLeft';
-export { default as HorizontalAlignRight } from './HorizontalAlignRight';
-export { default as HorizontalDistributionCenter } from './HorizontalDistributionCenter';
-export { default as HorizontalDistributionLeft } from './HorizontalDistributionLeft';
-export { default as HorizontalDistributionRight } from './HorizontalDistributionRight';
-export { default as HospitalSquareSign } from './HospitalSquareSign';
-export { default as HospitalSymbol } from './HospitalSymbol';
-export { default as Hospital } from './Hospital';
-export { default as Hourglass } from './Hourglass';
-export { default as HouseUser } from './HouseUser';
-export { default as Html3Alt } from './Html3Alt';
-export { default as Html3 } from './Html3';
-export { default as Html5Alt } from './Html5Alt';
-export { default as Html5 } from './Html5';
-export { default as Hunting } from './Hunting';
-export { default as Icons } from './Icons';
-export { default as Illustration } from './Illustration';
-export { default as ImageAltSlash } from './ImageAltSlash';
-export { default as ImageBlock } from './ImageBlock';
-export { default as ImageBroken } from './ImageBroken';
-export { default as ImageCheck } from './ImageCheck';
-export { default as ImageDownload } from './ImageDownload';
-export { default as ImageEdit } from './ImageEdit';
-export { default as ImageLock } from './ImageLock';
-export { default as ImageMinus } from './ImageMinus';
-export { default as ImagePlus } from './ImagePlus';
-export { default as ImageQuestion } from './ImageQuestion';
-export { default as ImageRedo } from './ImageRedo';
-export { default as ImageResizeLandscape } from './ImageResizeLandscape';
-export { default as ImageResizeSquare } from './ImageResizeSquare';
-export { default as ImageSearch } from './ImageSearch';
-export { default as ImageShare } from './ImageShare';
-export { default as ImageShield } from './ImageShield';
-export { default as ImageSlash } from './ImageSlash';
-export { default as ImageTimes } from './ImageTimes';
-export { default as ImageUpload } from './ImageUpload';
-export { default as ImageV } from './ImageV';
-export { default as Image } from './Image';
-export { default as Images } from './Images';
-export { default as Import } from './Import';
-export { default as Inbox } from './Inbox';
-export { default as IncomingCall } from './IncomingCall';
-export { default as InfoCircle } from './InfoCircle';
-export { default as Info } from './Info';
-export { default as InstagramAlt } from './InstagramAlt';
-export { default as Instagram } from './Instagram';
-export { default as IntercomAlt } from './IntercomAlt';
-export { default as Intercom } from './Intercom';
-export { default as Invoice } from './Invoice';
-export { default as Italic } from './Italic';
-export { default as Jackhammer } from './Jackhammer';
-export { default as JavaScript } from './JavaScript';
-export { default as Kayak } from './Kayak';
-export { default as KeySkeletonAlt } from './KeySkeletonAlt';
-export { default as KeySkeleton } from './KeySkeleton';
-export { default as KeyboardAlt } from './KeyboardAlt';
-export { default as KeyboardHide } from './KeyboardHide';
-export { default as KeyboardShow } from './KeyboardShow';
-export { default as Keyboard } from './Keyboard';
-export { default as KeyholeCircle } from './KeyholeCircle';
-export { default as KeyholeSquareFull } from './KeyholeSquareFull';
-export { default as KeyholeSquare } from './KeyholeSquare';
-export { default as Kid } from './Kid';
-export { default as LabelAlt } from './LabelAlt';
-export { default as Label } from './Label';
-export { default as Lamp } from './Lamp';
-export { default as Language } from './Language';
-export { default as LaptopCloud } from './LaptopCloud';
-export { default as LaptopConnection } from './LaptopConnection';
-export { default as Laptop } from './Laptop';
-export { default as Laughing } from './Laughing';
-export { default as LayerGroupSlash } from './LayerGroupSlash';
-export { default as LayerGroup } from './LayerGroup';
-export { default as LayersAlt } from './LayersAlt';
-export { default as LayersSlash } from './LayersSlash';
-export { default as Layers } from './Layers';
-export { default as LeftArrowFromLeft } from './LeftArrowFromLeft';
-export { default as LeftArrowToLeft } from './LeftArrowToLeft';
-export { default as LeftIndentAlt } from './LeftIndentAlt';
-export { default as LeftIndent } from './LeftIndent';
-export { default as LeftToRightTextDirection } from './LeftToRightTextDirection';
-export { default as LetterChineseA } from './LetterChineseA';
-export { default as LetterEnglishA } from './LetterEnglishA';
-export { default as LetterHindiA } from './LetterHindiA';
-export { default as LetterJapaneseA } from './LetterJapaneseA';
-export { default as LifeRing } from './LifeRing';
-export { default as LightbulbAlt } from './LightbulbAlt';
-export { default as Lightbulb } from './Lightbulb';
-export { default as LineAlt } from './LineAlt';
-export { default as LineSpacing } from './LineSpacing';
-export { default as Line } from './Line';
-export { default as LinkAdd } from './LinkAdd';
-export { default as LinkAlt } from './LinkAlt';
-export { default as LinkBroken } from './LinkBroken';
-export { default as LinkH } from './LinkH';
-export { default as Link } from './Link';
-export { default as LinkedinAlt } from './LinkedinAlt';
-export { default as Linkedin } from './Linkedin';
-export { default as Linux } from './Linux';
-export { default as LiraSign } from './LiraSign';
-export { default as ListOlAlt } from './ListOlAlt';
-export { default as ListOl } from './ListOl';
-export { default as ListUiAlt } from './ListUiAlt';
-export { default as ListUl } from './ListUl';
-export { default as LocationArrowAlt } from './LocationArrowAlt';
-export { default as LocationArrow } from './LocationArrow';
-export { default as LocationPinAlt } from './LocationPinAlt';
-export { default as LocationPoint } from './LocationPoint';
-export { default as LockAccess } from './LockAccess';
-export { default as LockAlt } from './LockAlt';
-export { default as LockOpenAlt } from './LockOpenAlt';
-export { default as LockSlash } from './LockSlash';
-export { default as Lock } from './Lock';
-export { default as LottiefilesAlt } from './LottiefilesAlt';
-export { default as Lottiefiles } from './Lottiefiles';
-export { default as LuggageCart } from './LuggageCart';
-export { default as MailboxAlt } from './MailboxAlt';
-export { default as Mailbox } from './Mailbox';
-export { default as MapMarkerAlt } from './MapMarkerAlt';
-export { default as MapMarkerEdit } from './MapMarkerEdit';
-export { default as MapMarkerInfo } from './MapMarkerInfo';
-export { default as MapMarkerMinus } from './MapMarkerMinus';
-export { default as MapMarkerPlus } from './MapMarkerPlus';
-export { default as MapMarkerQuestion } from './MapMarkerQuestion';
-export { default as MapMarkerShield } from './MapMarkerShield';
-export { default as MapMarkerSlash } from './MapMarkerSlash';
-export { default as MapMarker } from './MapMarker';
-export { default as MapPinAlt } from './MapPinAlt';
-export { default as MapPin } from './MapPin';
-export { default as Map } from './Map';
-export { default as Mars } from './Mars';
-export { default as MasterCard } from './MasterCard';
-export { default as MaximizeLeft } from './MaximizeLeft';
-export { default as Medal } from './Medal';
-export { default as MedicalDrip } from './MedicalDrip';
-export { default as MedicalSquareFull } from './MedicalSquareFull';
-export { default as MedicalSquare } from './MedicalSquare';
-export { default as MediumM } from './MediumM';
-export { default as Medkit } from './Medkit';
-export { default as MeetingBoard } from './MeetingBoard';
-export { default as Megaphone } from './Megaphone';
-export { default as MehAlt } from './MehAlt';
-export { default as MehClosedEye } from './MehClosedEye';
-export { default as Meh } from './Meh';
-export { default as Message } from './Message';
-export { default as Metro } from './Metro';
-export { default as MicrophoneSlash } from './MicrophoneSlash';
-export { default as Microphone } from './Microphone';
-export { default as Microscope } from './Microscope';
-export { default as Microsoft } from './Microsoft';
-export { default as MinusCircle } from './MinusCircle';
-export { default as MinusPath } from './MinusPath';
-export { default as MinusSquareFull } from './MinusSquareFull';
-export { default as MinusSquare } from './MinusSquare';
-export { default as Minus } from './Minus';
-export { default as MissedCall } from './MissedCall';
-export { default as MobileAndroidAlt } from './MobileAndroidAlt';
-export { default as MobileAndroid } from './MobileAndroid';
-export { default as MobileVibrate } from './MobileVibrate';
-export { default as Modem } from './Modem';
-export { default as MoneyBillSlash } from './MoneyBillSlash';
-export { default as MoneyBillStack } from './MoneyBillStack';
-export { default as MoneyBill } from './MoneyBill';
-export { default as MoneyInsert } from './MoneyInsert';
-export { default as MoneyStack } from './MoneyStack';
-export { default as MoneyWithdraw } from './MoneyWithdraw';
-export { default as MoneyWithdrawal } from './MoneyWithdrawal';
-export { default as MoneybagAlt } from './MoneybagAlt';
-export { default as Moneybag } from './Moneybag';
-export { default as MonitorHeartRate } from './MonitorHeartRate';
-export { default as Monitor } from './Monitor';
-export { default as MoonEclipse } from './MoonEclipse';
-export { default as Moon } from './Moon';
-export { default as Moonset } from './Moonset';
-export { default as MountainsSun } from './MountainsSun';
-export { default as Mountains } from './Mountains';
-export { default as MouseAlt2 } from './MouseAlt2';
-export { default as MouseAlt } from './MouseAlt';
-export { default as Mouse } from './Mouse';
-export { default as Multiply } from './Multiply';
-export { default as MusicNote } from './MusicNote';
-export { default as MusicTuneSlash } from './MusicTuneSlash';
-export { default as Music } from './Music';
-export { default as NA } from './NA';
-export { default as Navigator } from './Navigator';
-export { default as Nerd } from './Nerd';
-export { default as Newspaper } from './Newspaper';
-export { default as Ninja } from './Ninja';
-export { default as NoEntry } from './NoEntry';
-export { default as Notebooks } from './Notebooks';
-export { default as Notes } from './Notes';
-export { default as ObjectGroup } from './ObjectGroup';
-export { default as ObjectUngroup } from './ObjectUngroup';
-export { default as Octagon } from './Octagon';
-export { default as Okta } from './Okta';
-export { default as OperaAlt } from './OperaAlt';
-export { default as Opera } from './Opera';
-export { default as OutgoingCall } from './OutgoingCall';
-export { default as Package } from './Package';
-export { default as Padlock } from './Padlock';
-export { default as Pagelines } from './Pagelines';
-export { default as Pagerduty } from './Pagerduty';
-export { default as PaintTool } from './PaintTool';
-export { default as Palette } from './Palette';
-export { default as PanelAdd } from './PanelAdd';
-export { default as PanoramaHAlt } from './PanoramaHAlt';
-export { default as PanoramaH } from './PanoramaH';
-export { default as PanoramaV } from './PanoramaV';
-export { default as Paperclip } from './Paperclip';
-export { default as Paragraph } from './Paragraph';
-export { default as Parcel } from './Parcel';
-export { default as ParkingCircle } from './ParkingCircle';
-export { default as ParkingSquare } from './ParkingSquare';
-export { default as PathfinderUnite } from './PathfinderUnite';
-export { default as Pathfinder } from './Pathfinder';
-export { default as PauseCircle } from './PauseCircle';
-export { default as Pause } from './Pause';
-export { default as Paypal } from './Paypal';
-export { default as Pen } from './Pen';
-export { default as Pentagon } from './Pentagon';
-export { default as Percentage } from './Percentage';
-export { default as PhoneAlt } from './PhoneAlt';
-export { default as PhonePause } from './PhonePause';
-export { default as PhoneSlash } from './PhoneSlash';
-export { default as PhoneTimes } from './PhoneTimes';
-export { default as PhoneVolume } from './PhoneVolume';
-export { default as Phone } from './Phone';
-export { default as Picture } from './Picture';
-export { default as PizzaSlice } from './PizzaSlice';
-export { default as PlaneArrival } from './PlaneArrival';
-export { default as PlaneDeparture } from './PlaneDeparture';
-export { default as PlaneFly } from './PlaneFly';
-export { default as Plane } from './Plane';
-export { default as PlayCircle } from './PlayCircle';
-export { default as Play } from './Play';
-export { default as Plug } from './Plug';
-export { default as Plus0 } from './Plus0';
-export { default as Plus10 } from './Plus10';
-export { default as Plus12 } from './Plus12';
-export { default as Plus13 } from './Plus13';
-export { default as Plus16 } from './Plus16';
-export { default as Plus17 } from './Plus17';
-export { default as Plus18 } from './Plus18';
-export { default as Plus21 } from './Plus21';
-export { default as Plus3 } from './Plus3';
-export { default as Plus6 } from './Plus6';
-export { default as PlusCircle } from './PlusCircle';
-export { default as PlusSquare } from './PlusSquare';
-export { default as Plus } from './Plus';
-export { default as Podium } from './Podium';
-export { default as Polygon } from './Polygon';
-export { default as PostStamp } from './PostStamp';
-export { default as Postcard } from './Postcard';
-export { default as PoundCircle } from './PoundCircle';
-export { default as Pound } from './Pound';
-export { default as Power } from './Power';
-export { default as PrescriptionBottle } from './PrescriptionBottle';
-export { default as PresentationCheck } from './PresentationCheck';
-export { default as PresentationEdit } from './PresentationEdit';
-export { default as PresentationLine } from './PresentationLine';
-export { default as PresentationLinesAlt } from './PresentationLinesAlt';
-export { default as PresentationMinus } from './PresentationMinus';
-export { default as PresentationPlay } from './PresentationPlay';
-export { default as PresentationPlus } from './PresentationPlus';
-export { default as PresentationTimes } from './PresentationTimes';
-export { default as Presentation } from './Presentation';
-export { default as Previous } from './Previous';
-export { default as PricetagAlt } from './PricetagAlt';
-export { default as PrintSlash } from './PrintSlash';
-export { default as Print } from './Print';
-export { default as Process } from './Process';
-export { default as Processor } from './Processor';
-export { default as ProgrammingLanguage } from './ProgrammingLanguage';
-export { default as Pump } from './Pump';
-export { default as PuzzlePiece } from './PuzzlePiece';
-export { default as Px500 } from './Px500';
-export { default as QrcodeScan } from './QrcodeScan';
-export { default as QuestionCircle } from './QuestionCircle';
-export { default as Question } from './Question';
-export { default as Rainbow } from './Rainbow';
-export { default as RaindropsAlt } from './RaindropsAlt';
-export { default as Raindrops } from './Raindrops';
-export { default as React } from './React';
-export { default as ReceiptAlt } from './ReceiptAlt';
-export { default as Receipt } from './Receipt';
-export { default as RecordAudio } from './RecordAudio';
-export { default as RedditAlienAlt } from './RedditAlienAlt';
-export { default as Redo } from './Redo';
-export { default as Refresh } from './Refresh';
-export { default as Registered } from './Registered';
-export { default as Repeat } from './Repeat';
-export { default as Restaurant } from './Restaurant';
-export { default as RightIndentAlt } from './RightIndentAlt';
-export { default as RightToLeftTextDirection } from './RightToLeftTextDirection';
-export { default as Robot } from './Robot';
-export { default as Rocket } from './Rocket';
-export { default as RopeWay } from './RopeWay';
-export { default as Rotate360 } from './Rotate360';
-export { default as RssAlt } from './RssAlt';
-export { default as RssInterface } from './RssInterface';
-export { default as Rss } from './Rss';
-export { default as RulerCombined } from './RulerCombined';
-export { default as Ruler } from './Ruler';
-export { default as RupeeSign } from './RupeeSign';
-export { default as SadCry } from './SadCry';
-export { default as SadCrying } from './SadCrying';
-export { default as SadDizzy } from './SadDizzy';
-export { default as SadSquint } from './SadSquint';
-export { default as Sad } from './Sad';
-export { default as SanitizerAlt } from './SanitizerAlt';
-export { default as Sanitizer } from './Sanitizer';
-export { default as Save } from './Save';
-export { default as ScalingLeft } from './ScalingLeft';
-export { default as ScalingRight } from './ScalingRight';
-export { default as Scenery } from './Scenery';
-export { default as Schedule } from './Schedule';
-export { default as Screw } from './Screw';
-export { default as ScrollH } from './ScrollH';
-export { default as Scroll } from './Scroll';
-export { default as SearchAlt } from './SearchAlt';
-export { default as SearchMinus } from './SearchMinus';
-export { default as SearchPlus } from './SearchPlus';
-export { default as Search } from './Search';
-export { default as Selfie } from './Selfie';
-export { default as ServerAlt } from './ServerAlt';
-export { default as ServerConnection } from './ServerConnection';
-export { default as ServerNetworkAlt } from './ServerNetworkAlt';
-export { default as ServerNetwork } from './ServerNetwork';
-export { default as Server } from './Server';
-export { default as Servers } from './Servers';
-export { default as Servicemark } from './Servicemark';
-export { default as Setting } from './Setting';
-export { default as ShareAlt } from './ShareAlt';
-export { default as Share } from './Share';
-export { default as ShieldCheck } from './ShieldCheck';
-export { default as ShieldExclamation } from './ShieldExclamation';
-export { default as ShieldPlus } from './ShieldPlus';
-export { default as ShieldQuestion } from './ShieldQuestion';
-export { default as ShieldSlash } from './ShieldSlash';
-export { default as Shield } from './Shield';
-export { default as Ship } from './Ship';
-export { default as Shop } from './Shop';
-export { default as ShoppingBag } from './ShoppingBag';
-export { default as ShoppingBasket } from './ShoppingBasket';
-export { default as ShoppingCartAlt } from './ShoppingCartAlt';
-export { default as ShoppingCart } from './ShoppingCart';
-export { default as Shovel } from './Shovel';
-export { default as Shrink } from './Shrink';
-export { default as Shuffle } from './Shuffle';
-export { default as ShutterAlt } from './ShutterAlt';
-export { default as Shutter } from './Shutter';
-export { default as Sick } from './Sick';
-export { default as Sigma } from './Sigma';
-export { default as SignAlt } from './SignAlt';
-export { default as SignInAlt } from './SignInAlt';
-export { default as SignLeft } from './SignLeft';
-export { default as SignOutAlt } from './SignOutAlt';
-export { default as SignRight } from './SignRight';
-export { default as SignalAlt3 } from './SignalAlt3';
-export { default as SignalAlt } from './SignalAlt';
-export { default as Signal } from './Signal';
-export { default as Signin } from './Signin';
-export { default as Signout } from './Signout';
-export { default as Silence } from './Silence';
-export { default as SilentSquint } from './SilentSquint';
-export { default as SimCard } from './SimCard';
-export { default as Sitemap } from './Sitemap';
-export { default as SkipForwardAlt } from './SkipForwardAlt';
-export { default as SkipForwardCircle } from './SkipForwardCircle';
-export { default as SkipForward } from './SkipForward';
-export { default as SkypeAlt } from './SkypeAlt';
-export { default as Skype } from './Skype';
-export { default as SlackAlt } from './SlackAlt';
-export { default as Slack } from './Slack';
-export { default as SliderHRange } from './SliderHRange';
-export { default as SliderH } from './SliderH';
-export { default as SlidersVAlt } from './SlidersVAlt';
-export { default as SlidersV } from './SlidersV';
-export { default as SmileBeam } from './SmileBeam';
-export { default as SmileDizzy } from './SmileDizzy';
-export { default as SmileSquintWinkAlt } from './SmileSquintWinkAlt';
-export { default as SmileSquintWink } from './SmileSquintWink';
-export { default as SmileWinkAlt } from './SmileWinkAlt';
-export { default as SmileWink } from './SmileWink';
-export { default as Smile } from './Smile';
-export { default as SnapchatAlt } from './SnapchatAlt';
-export { default as SnapchatGhost } from './SnapchatGhost';
-export { default as SnapchatSquare } from './SnapchatSquare';
-export { default as Snowflake } from './Snowflake';
-export { default as SocialDistancing } from './SocialDistancing';
-export { default as SortAmountDown } from './SortAmountDown';
-export { default as SortAmountUp } from './SortAmountUp';
-export { default as Sort } from './Sort';
-export { default as Sorting } from './Sorting';
-export { default as SpaceKey } from './SpaceKey';
-export { default as Spade } from './Spade';
-export { default as Sperms } from './Sperms';
-export { default as Spin } from './Spin';
-export { default as SpinnerAlt } from './SpinnerAlt';
-export { default as Spinner } from './Spinner';
-export { default as SquareFull } from './SquareFull';
-export { default as SquareShape } from './SquareShape';
-export { default as Square } from './Square';
-export { default as Squint } from './Squint';
-export { default as StarHalfAlt } from './StarHalfAlt';
-export { default as Star } from './Star';
-export { default as StepBackwardAlt } from './StepBackwardAlt';
-export { default as StepBackwardCircle } from './StepBackwardCircle';
-export { default as StepBackward } from './StepBackward';
-export { default as StepForward } from './StepForward';
-export { default as StethoscopeAlt } from './StethoscopeAlt';
-export { default as Stethoscope } from './Stethoscope';
-export { default as StopCircle } from './StopCircle';
-export { default as StopwatchSlash } from './StopwatchSlash';
-export { default as Stopwatch } from './Stopwatch';
-export { default as StoreAlt } from './StoreAlt';
-export { default as StoreSlash } from './StoreSlash';
-export { default as Store } from './Store';
-export { default as Streering } from './Streering';
-export { default as Stretcher } from './Stretcher';
-export { default as Subject } from './Subject';
-export { default as SubwayAlt } from './SubwayAlt';
-export { default as Subway } from './Subway';
-export { default as SuitcaseAlt } from './SuitcaseAlt';
-export { default as Suitcase } from './Suitcase';
-export { default as Sun } from './Sun';
-export { default as Sunset } from './Sunset';
-export { default as Surprise } from './Surprise';
-export { default as Swatchbook } from './Swatchbook';
-export { default as Swiggy } from './Swiggy';
-export { default as Swimmer } from './Swimmer';
-export { default as SyncExclamation } from './SyncExclamation';
-export { default as SyncSlash } from './SyncSlash';
-export { default as Sync } from './Sync';
-export { default as Syringe } from './Syringe';
-export { default as TableTennis } from './TableTennis';
-export { default as Table } from './Table';
-export { default as Tablet } from './Tablet';
-export { default as Tablets } from './Tablets';
-export { default as TachometerFastAlt } from './TachometerFastAlt';
-export { default as TachometerFast } from './TachometerFast';
-export { default as TagAlt } from './TagAlt';
-export { default as Tag } from './Tag';
-export { default as Tape } from './Tape';
-export { default as Taxi } from './Taxi';
-export { default as Tear } from './Tear';
-export { default as TelegramAlt } from './TelegramAlt';
-export { default as Telegram } from './Telegram';
-export { default as Telescope } from './Telescope';
-export { default as TemperatureEmpty } from './TemperatureEmpty';
-export { default as TemperatureHalf } from './TemperatureHalf';
-export { default as TemperatureMinus } from './TemperatureMinus';
-export { default as TemperaturePlus } from './TemperaturePlus';
-export { default as TemperatureQuarter } from './TemperatureQuarter';
-export { default as TemperatureThreeQuarter } from './TemperatureThreeQuarter';
-export { default as Temperature } from './Temperature';
-export { default as TennisBall } from './TennisBall';
-export { default as TextFields } from './TextFields';
-export { default as TextSize } from './TextSize';
-export { default as TextStrikeThrough } from './TextStrikeThrough';
-export { default as Text } from './Text';
-export { default as ThLarge } from './ThLarge';
-export { default as ThSlash } from './ThSlash';
-export { default as Th } from './Th';
-export { default as Thermometer } from './Thermometer';
-export { default as ThumbsDown } from './ThumbsDown';
-export { default as ThumbsUp } from './ThumbsUp';
-export { default as ThunderstormMoon } from './ThunderstormMoon';
-export { default as ThunderstormSun } from './ThunderstormSun';
-export { default as Thunderstorm } from './Thunderstorm';
-export { default as Ticket } from './Ticket';
-export { default as TimesCircle } from './TimesCircle';
-export { default as TimesSquare } from './TimesSquare';
-export { default as Times } from './Times';
-export { default as ToggleOff } from './ToggleOff';
-export { default as ToggleOn } from './ToggleOn';
-export { default as ToiletPaper } from './ToiletPaper';
-export { default as TopArrowFromTop } from './TopArrowFromTop';
-export { default as TopArrowToTop } from './TopArrowToTop';
-export { default as Tornado } from './Tornado';
-export { default as TrademarkCircle } from './TrademarkCircle';
-export { default as Trademark } from './Trademark';
-export { default as TrafficBarrier } from './TrafficBarrier';
-export { default as TrafficLight } from './TrafficLight';
-export { default as Transaction } from './Transaction';
-export { default as TrashAlt } from './TrashAlt';
-export { default as Trash } from './Trash';
-export { default as Trees } from './Trees';
-export { default as Triangle } from './Triangle';
-export { default as Trophy } from './Trophy';
-export { default as Trowel } from './Trowel';
-export { default as TruckLoading } from './TruckLoading';
-export { default as Truck } from './Truck';
-export { default as TumblrAlt } from './TumblrAlt';
-export { default as TumblrSquare } from './TumblrSquare';
-export { default as Tumblr } from './Tumblr';
-export { default as TvRetroSlash } from './TvRetroSlash';
-export { default as TvRetro } from './TvRetro';
-export { default as TwitterAlt } from './TwitterAlt';
-export { default as TwitterX } from './TwitterX';
-export { default as Twitter } from './Twitter';
-export { default as Umbrella } from './Umbrella';
-export { default as Unamused } from './Unamused';
-export { default as Underline } from './Underline';
-export { default as University } from './University';
-export { default as UnlockAlt } from './UnlockAlt';
-export { default as Unlock } from './Unlock';
-export { default as UploadAlt } from './UploadAlt';
-export { default as Upload } from './Upload';
-export { default as UsdCircle } from './UsdCircle';
-export { default as UsdSquare } from './UsdSquare';
-export { default as UserArrows } from './UserArrows';
-export { default as UserCheck } from './UserCheck';
-export { default as UserCircle } from './UserCircle';
-export { default as UserExclamation } from './UserExclamation';
-export { default as UserLocation } from './UserLocation';
-export { default as UserMd } from './UserMd';
-export { default as UserMinus } from './UserMinus';
-export { default as UserNurse } from './UserNurse';
-export { default as UserPlus } from './UserPlus';
-export { default as UserSquare } from './UserSquare';
-export { default as UserTimes } from './UserTimes';
-export { default as User } from './User';
-export { default as UsersAlt } from './UsersAlt';
-export { default as UtensilsAlt } from './UtensilsAlt';
-export { default as Utensils } from './Utensils';
-export { default as VectorSquareAlt } from './VectorSquareAlt';
-export { default as VectorSquare } from './VectorSquare';
-export { default as Venus } from './Venus';
-export { default as VerticalAlignBottom } from './VerticalAlignBottom';
-export { default as VerticalAlignCenter } from './VerticalAlignCenter';
-export { default as VerticalAlignTop } from './VerticalAlignTop';
-export { default as VerticalDistributeBottom } from './VerticalDistributeBottom';
-export { default as VerticalDistributionCenter } from './VerticalDistributionCenter';
-export { default as VerticalDistributionTop } from './VerticalDistributionTop';
-export { default as VideoQuestion } from './VideoQuestion';
-export { default as VideoSlash } from './VideoSlash';
-export { default as Video } from './Video';
-export { default as VirusSlash } from './VirusSlash';
-export { default as VisualStudio } from './VisualStudio';
-export { default as VkAlt } from './VkAlt';
-export { default as Vk } from './Vk';
-export { default as VoicemailRectangle } from './VoicemailRectangle';
-export { default as Voicemail } from './Voicemail';
-export { default as Volleyball } from './Volleyball';
-export { default as VolumeDown } from './VolumeDown';
-export { default as VolumeMute } from './VolumeMute';
-export { default as VolumeOff } from './VolumeOff';
-export { default as VolumeUp } from './VolumeUp';
-export { default as Volume } from './Volume';
-export { default as VuejsAlt } from './VuejsAlt';
-export { default as Vuejs } from './Vuejs';
-export { default as Wall } from './Wall';
-export { default as Wallet } from './Wallet';
-export { default as WatchAlt } from './WatchAlt';
-export { default as Watch } from './Watch';
-export { default as WaterDropSlash } from './WaterDropSlash';
-export { default as WaterGlass } from './WaterGlass';
-export { default as Water } from './Water';
-export { default as WebGridAlt } from './WebGridAlt';
-export { default as WebGrid } from './WebGrid';
-export { default as WebSectionAlt } from './WebSectionAlt';
-export { default as WebSection } from './WebSection';
-export { default as Webcam } from './Webcam';
-export { default as Weight } from './Weight';
-export { default as WhatsappAlt } from './WhatsappAlt';
-export { default as Whatsapp } from './Whatsapp';
-export { default as WheelBarrow } from './WheelBarrow';
-export { default as WheelchairAlt } from './WheelchairAlt';
-export { default as Wheelchair } from './Wheelchair';
-export { default as WifiRouter } from './WifiRouter';
-export { default as WifiSlash } from './WifiSlash';
-export { default as Wifi } from './Wifi';
-export { default as WindMoon } from './WindMoon';
-export { default as WindSun } from './WindSun';
-export { default as Wind } from './Wind';
-export { default as WindowGrid } from './WindowGrid';
-export { default as WindowMaximize } from './WindowMaximize';
-export { default as WindowSection } from './WindowSection';
-export { default as Window } from './Window';
-export { default as Windows } from './Windows';
-export { default as Windsock } from './Windsock';
-export { default as Windy } from './Windy';
-export { default as WordpressSimple } from './WordpressSimple';
-export { default as Wordpress } from './Wordpress';
-export { default as WrapText } from './WrapText';
-export { default as Wrench } from './Wrench';
-export { default as XAdd } from './XAdd';
-export { default as X } from './X';
-export { default as YenCircle } from './YenCircle';
-export { default as Yen } from './Yen';
-export { default as YinYang } from './YinYang';
-export { default as Youtube } from './Youtube';
+import { lazy } from 'react';
+
+export const typesToIconMap = {
+  abacus: lazy(() => import('./Abacus')),
+  accessibleIconAlt: lazy(() => import('./AccessibleIconAlt')),
+  adjustAlt: lazy(() => import('./AdjustAlt')),
+  adjustCircle: lazy(() => import('./AdjustCircle')),
+  adjustHalf: lazy(() => import('./AdjustHalf')),
+  adjust: lazy(() => import('./Adjust')),
+  adobeAlt: lazy(() => import('./AdobeAlt')),
+  adobe: lazy(() => import('./Adobe')),
+  airplay: lazy(() => import('./Airplay')),
+  alignAlt: lazy(() => import('./AlignAlt')),
+  alignCenterAlt: lazy(() => import('./AlignCenterAlt')),
+  alignCenterHorizontal: lazy(() => import('./AlignCenterH')),
+  alignCenterJustify: lazy(() => import('./AlignCenterJustify')),
+  alignCenterVertical: lazy(() => import('./AlignCenterV')),
+  alignCenter: lazy(() => import('./AlignCenter')),
+  alignJustify: lazy(() => import('./AlignJustify')),
+  alignLeftJustify: lazy(() => import('./AlignLeftJustify')),
+  alignLeft: lazy(() => import('./AlignLeft')),
+  alignLetterRight: lazy(() => import('./AlignLetterRight')),
+  alignRightJustify: lazy(() => import('./AlignRightJustify')),
+  alignRight: lazy(() => import('./AlignRight')),
+  align: lazy(() => import('./Align')),
+  amazon: lazy(() => import('./Amazon')),
+  ambulance: lazy(() => import('./Ambulance')),
+  analysis: lazy(() => import('./Analysis')),
+  analytics: lazy(() => import('./Analytics')),
+  anchor: lazy(() => import('./Anchor')),
+  androidAlt: lazy(() => import('./AndroidAlt')),
+  androidPhoneSlash: lazy(() => import('./AndroidPhoneSlash')),
+  android: lazy(() => import('./Android')),
+  angleDoubleDown: lazy(() => import('./AngleDoubleDown')),
+  angleDoubleLeft: lazy(() => import('./AngleDoubleLeft')),
+  angleDoubleRight: lazy(() => import('./AngleDoubleRight')),
+  angleDoubleUp: lazy(() => import('./AngleDoubleUp')),
+  angleDown: lazy(() => import('./AngleDown')),
+  angleLeftB: lazy(() => import('./AngleLeftB')),
+  angleLeft: lazy(() => import('./AngleLeft')),
+  angleRightB: lazy(() => import('./AngleRightB')),
+  angleRight: lazy(() => import('./AngleRight')),
+  angleUp: lazy(() => import('./AngleUp')),
+  angry: lazy(() => import('./Angry')),
+  ankh: lazy(() => import('./Ankh')),
+  annoyedAlt: lazy(() => import('./AnnoyedAlt')),
+  annoyed: lazy(() => import('./Annoyed')),
+  appleAlt: lazy(() => import('./AppleAlt')),
+  apple: lazy(() => import('./Apple')),
+  apps: lazy(() => import('./Apps')),
+  archiveAlt: lazy(() => import('./ArchiveAlt')),
+  archive: lazy(() => import('./Archive')),
+  archway: lazy(() => import('./Archway')),
+  arrowBreak: lazy(() => import('./ArrowBreak')),
+  arrowCircleDown: lazy(() => import('./ArrowCircleDown')),
+  arrowCircleLeft: lazy(() => import('./ArrowCircleLeft')),
+  arrowCircleRight: lazy(() => import('./ArrowCircleRight')),
+  arrowCircleUp: lazy(() => import('./ArrowCircleUp')),
+  arrowCompressHorizontal: lazy(() => import('./ArrowCompressH')),
+  arrowDownLeft: lazy(() => import('./ArrowDownLeft')),
+  arrowDownRight: lazy(() => import('./ArrowDownRight')),
+  arrowDown: lazy(() => import('./ArrowDown')),
+  arrowFromRight: lazy(() => import('./ArrowFromRight')),
+  arrowFromTop: lazy(() => import('./ArrowFromTop')),
+  arrowGrowth: lazy(() => import('./ArrowGrowth')),
+  arrowLeft: lazy(() => import('./ArrowLeft')),
+  arrowRandom: lazy(() => import('./ArrowRandom')),
+  arrowResizeDiagonal: lazy(() => import('./ArrowResizeDiagonal')),
+  arrowRight: lazy(() => import('./ArrowRight')),
+  arrowToBottom: lazy(() => import('./ArrowToBottom')),
+  arrowToRight: lazy(() => import('./ArrowToRight')),
+  arrowUpLeft: lazy(() => import('./ArrowUpLeft')),
+  arrowUpRight: lazy(() => import('./ArrowUpRight')),
+  arrowUp: lazy(() => import('./ArrowUp')),
+  arrow: lazy(() => import('./Arrow')),
+  arrowsHAlt: lazy(() => import('./ArrowsHAlt')),
+  arrowsHorizontal: lazy(() => import('./ArrowsH')),
+  arrowsLeftDown: lazy(() => import('./ArrowsLeftDown')),
+  arrowsMaximize: lazy(() => import('./ArrowsMaximize')),
+  arrowsMerge: lazy(() => import('./ArrowsMerge')),
+  arrowsResizeHorizontal: lazy(() => import('./ArrowsResizeH')),
+  arrowsResizeVertical: lazy(() => import('./ArrowsResizeV')),
+  arrowsResize: lazy(() => import('./ArrowsResize')),
+  arrowsRightDown: lazy(() => import('./ArrowsRightDown')),
+  arrowsShrinkHorizontal: lazy(() => import('./ArrowsShrinkH')),
+  arrowsShrinkVertical: lazy(() => import('./ArrowsShrinkV')),
+  arrowsUpRight: lazy(() => import('./ArrowsUpRight')),
+  arrowsVAlt: lazy(() => import('./ArrowsVAlt')),
+  arrowsVertical: lazy(() => import('./ArrowsV')),
+  assistiveListeningSystems: lazy(() => import('./AssistiveListeningSystems')),
+  asterisk: lazy(() => import('./Asterisk')),
+  at: lazy(() => import('./At')),
+  atom: lazy(() => import('./Atom')),
+  autoFlash: lazy(() => import('./AutoFlash')),
+  awardAlt: lazy(() => import('./AwardAlt')),
+  award: lazy(() => import('./Award')),
+  babyCarriage: lazy(() => import('./BabyCarriage')),
+  backpack: lazy(() => import('./Backpack')),
+  backspace: lazy(() => import('./Backspace')),
+  backward: lazy(() => import('./Backward')),
+  bagAlt: lazy(() => import('./BagAlt')),
+  bagSlash: lazy(() => import('./BagSlash')),
+  bag: lazy(() => import('./Bag')),
+  balanceScale: lazy(() => import('./BalanceScale')),
+  ban: lazy(() => import('./Ban')),
+  bandAid: lazy(() => import('./BandAid')),
+  bars: lazy(() => import('./Bars')),
+  baseballBall: lazy(() => import('./BaseballBall')),
+  basketballHoop: lazy(() => import('./BasketballHoop')),
+  basketball: lazy(() => import('./Basketball')),
+  bath: lazy(() => import('./Bath')),
+  batteryBolt: lazy(() => import('./BatteryBolt')),
+  batteryEmpty: lazy(() => import('./BatteryEmpty')),
+  bedDouble: lazy(() => import('./BedDouble')),
+  bed: lazy(() => import('./Bed')),
+  behanceAlt: lazy(() => import('./BehanceAlt')),
+  behance: lazy(() => import('./Behance')),
+  bellSchool: lazy(() => import('./BellSchool')),
+  bellSlash: lazy(() => import('./BellSlash')),
+  bell: lazy(() => import('./Bell')),
+  bill: lazy(() => import('./Bill')),
+  bing: lazy(() => import('./Bing')),
+  bitcoinAlt: lazy(() => import('./BitcoinAlt')),
+  bitcoinCircle: lazy(() => import('./BitcoinCircle')),
+  bitcoinSign: lazy(() => import('./BitcoinSign')),
+  bitcoin: lazy(() => import('./Bitcoin')),
+  blackBerry: lazy(() => import('./BlackBerry')),
+  bloggerAlt: lazy(() => import('./BloggerAlt')),
+  blogger: lazy(() => import('./Blogger')),
+  bluetoothB: lazy(() => import('./BluetoothB')),
+  bold: lazy(() => import('./Bold')),
+  boltAlt: lazy(() => import('./BoltAlt')),
+  boltSlash: lazy(() => import('./BoltSlash')),
+  bolt: lazy(() => import('./Bolt')),
+  bookAlt: lazy(() => import('./BookAlt')),
+  bookMedical: lazy(() => import('./BookMedical')),
+  bookOpen: lazy(() => import('./BookOpen')),
+  bookReader: lazy(() => import('./BookReader')),
+  book: lazy(() => import('./Book')),
+  bookmarkFull: lazy(() => import('./BookmarkFull')),
+  bookmark: lazy(() => import('./Bookmark')),
+  books: lazy(() => import('./Books')),
+  boombox: lazy(() => import('./Boombox')),
+  borderAlt: lazy(() => import('./BorderAlt')),
+  borderBottom: lazy(() => import('./BorderBottom')),
+  borderClear: lazy(() => import('./BorderClear')),
+  borderHorizontal: lazy(() => import('./BorderHorizontal')),
+  borderInner: lazy(() => import('./BorderInner')),
+  borderLeft: lazy(() => import('./BorderLeft')),
+  borderOut: lazy(() => import('./BorderOut')),
+  borderRight: lazy(() => import('./BorderRight')),
+  borderTop: lazy(() => import('./BorderTop')),
+  borderVertical: lazy(() => import('./BorderVertical')),
+  bowlingBall: lazy(() => import('./BowlingBall')),
+  box: lazy(() => import('./Box')),
+  bracketsCurly: lazy(() => import('./BracketsCurly')),
+  brain: lazy(() => import('./Brain')),
+  briefcaseAlt: lazy(() => import('./BriefcaseAlt')),
+  briefcase: lazy(() => import('./Briefcase')),
+  bright: lazy(() => import('./Bright')),
+  brightnessEmpty: lazy(() => import('./BrightnessEmpty')),
+  brightnessHalf: lazy(() => import('./BrightnessHalf')),
+  brightnessLow: lazy(() => import('./BrightnessLow')),
+  brightnessMinus: lazy(() => import('./BrightnessMinus')),
+  brightnessPlus: lazy(() => import('./BrightnessPlus')),
+  brightness: lazy(() => import('./Brightness')),
+  bringBottom: lazy(() => import('./BringBottom')),
+  bringFront: lazy(() => import('./BringFront')),
+  browser: lazy(() => import('./Browser')),
+  brushAlt: lazy(() => import('./BrushAlt')),
+  bug: lazy(() => import('./Bug')),
+  building: lazy(() => import('./Building')),
+  bullseye: lazy(() => import('./Bullseye')),
+  busAlt: lazy(() => import('./BusAlt')),
+  busSchool: lazy(() => import('./BusSchool')),
+  bus: lazy(() => import('./Bus')),
+  calculatorAlt: lazy(() => import('./CalculatorAlt')),
+  calculator: lazy(() => import('./Calculator')),
+  calendarAlt: lazy(() => import('./CalendarAlt')),
+  calendarSlash: lazy(() => import('./CalendarSlash')),
+  calender: lazy(() => import('./Calender')),
+  calling: lazy(() => import('./Calling')),
+  cameraChange: lazy(() => import('./CameraChange')),
+  cameraPlus: lazy(() => import('./CameraPlus')),
+  cameraSlash: lazy(() => import('./CameraSlash')),
+  camera: lazy(() => import('./Camera')),
+  cancel: lazy(() => import('./Cancel')),
+  capsule: lazy(() => import('./Capsule')),
+  capture: lazy(() => import('./Capture')),
+  carSideview: lazy(() => import('./CarSideview')),
+  carSlash: lazy(() => import('./CarSlash')),
+  carWash: lazy(() => import('./CarWash')),
+  car: lazy(() => import('./Car')),
+  cardAtm: lazy(() => import('./CardAtm')),
+  caretRight: lazy(() => import('./CaretRight')),
+  cell: lazy(() => import('./Cell')),
+  celsius: lazy(() => import('./Celsius')),
+  channelAdd: lazy(() => import('./ChannelAdd')),
+  channel: lazy(() => import('./Channel')),
+  chartBarAlt: lazy(() => import('./ChartBarAlt')),
+  chartBar: lazy(() => import('./ChartBar')),
+  chartDown: lazy(() => import('./ChartDown')),
+  chartGrowthAlt: lazy(() => import('./ChartGrowthAlt')),
+  chartGrowth: lazy(() => import('./ChartGrowth')),
+  chartLine: lazy(() => import('./ChartLine')),
+  chartPieAlt: lazy(() => import('./ChartPieAlt')),
+  chartPie: lazy(() => import('./ChartPie')),
+  chart: lazy(() => import('./Chart')),
+  chatBubbleUser: lazy(() => import('./ChatBubbleUser')),
+  chatInfo: lazy(() => import('./ChatInfo')),
+  chat: lazy(() => import('./Chat')),
+  checkCircle: lazy(() => import('./CheckCircle')),
+  checkSquare: lazy(() => import('./CheckSquare')),
+  check: lazy(() => import('./Check')),
+  circleLayer: lazy(() => import('./CircleLayer')),
+  circle: lazy(() => import('./Circle')),
+  circuit: lazy(() => import('./Circuit')),
+  clapperBoard: lazy(() => import('./ClapperBoard')),
+  clinicMedical: lazy(() => import('./ClinicMedical')),
+  clipboardAlt: lazy(() => import('./ClipboardAlt')),
+  clipboardBlank: lazy(() => import('./ClipboardBlank')),
+  clipboardNotes: lazy(() => import('./ClipboardNotes')),
+  clipboard: lazy(() => import('./Clipboard')),
+  clockEight: lazy(() => import('./ClockEight')),
+  clockFive: lazy(() => import('./ClockFive')),
+  clockNine: lazy(() => import('./ClockNine')),
+  clockSeven: lazy(() => import('./ClockSeven')),
+  clockTen: lazy(() => import('./ClockTen')),
+  clockThree: lazy(() => import('./ClockThree')),
+  clockTwo: lazy(() => import('./ClockTwo')),
+  clock: lazy(() => import('./Clock')),
+  closedCaptioningSlash: lazy(() => import('./ClosedCaptioningSlash')),
+  closedCaptioning: lazy(() => import('./ClosedCaptioning')),
+  cloudBlock: lazy(() => import('./CloudBlock')),
+  cloudBookmark: lazy(() => import('./CloudBookmark')),
+  cloudCheck: lazy(() => import('./CloudCheck')),
+  cloudComputing: lazy(() => import('./CloudComputing')),
+  cloudDataConnection: lazy(() => import('./CloudDataConnection')),
+  cloudDatabaseTree: lazy(() => import('./CloudDatabaseTree')),
+  cloudDownload: lazy(() => import('./CloudDownload')),
+  cloudDrizzle: lazy(() => import('./CloudDrizzle')),
+  cloudExclamation: lazy(() => import('./CloudExclamation')),
+  cloudHail: lazy(() => import('./CloudHail')),
+  cloudHeart: lazy(() => import('./CloudHeart')),
+  cloudInfo: lazy(() => import('./CloudInfo')),
+  cloudLock: lazy(() => import('./CloudLock')),
+  cloudMeatball: lazy(() => import('./CloudMeatball')),
+  cloudMoonHail: lazy(() => import('./CloudMoonHail')),
+  cloudMoonMeatball: lazy(() => import('./CloudMoonMeatball')),
+  cloudMoonRain: lazy(() => import('./CloudMoonRain')),
+  cloudMoonShowers: lazy(() => import('./CloudMoonShowers')),
+  cloudMoon: lazy(() => import('./CloudMoon')),
+  cloudQuestion: lazy(() => import('./CloudQuestion')),
+  cloudRainSun: lazy(() => import('./CloudRainSun')),
+  cloudRain: lazy(() => import('./CloudRain')),
+  cloudRedo: lazy(() => import('./CloudRedo')),
+  cloudShare: lazy(() => import('./CloudShare')),
+  cloudShield: lazy(() => import('./CloudShield')),
+  cloudShowersAlt: lazy(() => import('./CloudShowersAlt')),
+  cloudShowersHeavy: lazy(() => import('./CloudShowersHeavy')),
+  cloudShowers: lazy(() => import('./CloudShowers')),
+  cloudSlash: lazy(() => import('./CloudSlash')),
+  cloudSunHail: lazy(() => import('./CloudSunHail')),
+  cloudSunMeatball: lazy(() => import('./CloudSunMeatball')),
+  cloudSunRainAlt: lazy(() => import('./CloudSunRainAlt')),
+  cloudSunRain: lazy(() => import('./CloudSunRain')),
+  cloudSunTear: lazy(() => import('./CloudSunTear')),
+  cloudSun: lazy(() => import('./CloudSun')),
+  cloudTimes: lazy(() => import('./CloudTimes')),
+  cloudUnlock: lazy(() => import('./CloudUnlock')),
+  cloudUpload: lazy(() => import('./CloudUpload')),
+  cloudWifi: lazy(() => import('./CloudWifi')),
+  cloudWind: lazy(() => import('./CloudWind')),
+  cloud: lazy(() => import('./Cloud')),
+  clouds: lazy(() => import('./Clouds')),
+  club: lazy(() => import('./Club')),
+  codeBranch: lazy(() => import('./CodeBranch')),
+  coffee: lazy(() => import('./Coffee')),
+  cog: lazy(() => import('./Cog')),
+  coins: lazy(() => import('./Coins')),
+  columns: lazy(() => import('./Columns')),
+  commentAdd: lazy(() => import('./CommentAdd')),
+  commentAltBlock: lazy(() => import('./CommentAltBlock')),
+  commentAltChartLines: lazy(() => import('./CommentAltChartLines')),
+  commentAltCheck: lazy(() => import('./CommentAltCheck')),
+  commentAltDots: lazy(() => import('./CommentAltDots')),
+  commentAltDownload: lazy(() => import('./CommentAltDownload')),
+  commentAltEdit: lazy(() => import('./CommentAltEdit')),
+  commentAltExclamation: lazy(() => import('./CommentAltExclamation')),
+  commentAltHeart: lazy(() => import('./CommentAltHeart')),
+  commentAltImage: lazy(() => import('./CommentAltImage')),
+  commentAltInfo: lazy(() => import('./CommentAltInfo')),
+  commentAltLines: lazy(() => import('./CommentAltLines')),
+  commentAltLock: lazy(() => import('./CommentAltLock')),
+  commentAltMedical: lazy(() => import('./CommentAltMedical')),
+  commentAltMessage: lazy(() => import('./CommentAltMessage')),
+  commentAltNotes: lazy(() => import('./CommentAltNotes')),
+  commentAltPlus: lazy(() => import('./CommentAltPlus')),
+  commentAltQuestion: lazy(() => import('./CommentAltQuestion')),
+  commentAltRedo: lazy(() => import('./CommentAltRedo')),
+  commentAltSearch: lazy(() => import('./CommentAltSearch')),
+  commentAltShare: lazy(() => import('./CommentAltShare')),
+  commentAltShield: lazy(() => import('./CommentAltShield')),
+  commentAltSlash: lazy(() => import('./CommentAltSlash')),
+  commentAltUpload: lazy(() => import('./CommentAltUpload')),
+  commentAltVerify: lazy(() => import('./CommentAltVerify')),
+  commentAlt: lazy(() => import('./CommentAlt')),
+  commentBlock: lazy(() => import('./CommentBlock')),
+  commentChartLine: lazy(() => import('./CommentChartLine')),
+  commentCheck: lazy(() => import('./CommentCheck')),
+  commentDots: lazy(() => import('./CommentDots')),
+  commentDownload: lazy(() => import('./CommentDownload')),
+  commentEdit: lazy(() => import('./CommentEdit')),
+  commentExclamation: lazy(() => import('./CommentExclamation')),
+  commentHeart: lazy(() => import('./CommentHeart')),
+  commentImage: lazy(() => import('./CommentImage')),
+  commentInfoAlt: lazy(() => import('./CommentInfoAlt')),
+  commentInfo: lazy(() => import('./CommentInfo')),
+  commentLines: lazy(() => import('./CommentLines')),
+  commentLock: lazy(() => import('./CommentLock')),
+  commentMedical: lazy(() => import('./CommentMedical')),
+  commentMessage: lazy(() => import('./CommentMessage')),
+  commentNotes: lazy(() => import('./CommentNotes')),
+  commentPlus: lazy(() => import('./CommentPlus')),
+  commentQuestion: lazy(() => import('./CommentQuestion')),
+  commentRedo: lazy(() => import('./CommentRedo')),
+  commentSearch: lazy(() => import('./CommentSearch')),
+  commentShare: lazy(() => import('./CommentShare')),
+  commentShield: lazy(() => import('./CommentShield')),
+  commentSlash: lazy(() => import('./CommentSlash')),
+  commentUpload: lazy(() => import('./CommentUpload')),
+  commentVerify: lazy(() => import('./CommentVerify')),
+  comment: lazy(() => import('./Comment')),
+  commentsAlt: lazy(() => import('./CommentsAlt')),
+  comments: lazy(() => import('./Comments')),
+  compactDisc: lazy(() => import('./CompactDisc')),
+  comparison: lazy(() => import('./Comparison')),
+  compass: lazy(() => import('./Compass')),
+  compressAltLeft: lazy(() => import('./CompressAltLeft')),
+  compressAlt: lazy(() => import('./CompressAlt')),
+  compressArrows: lazy(() => import('./CompressArrows')),
+  compressLines: lazy(() => import('./CompressLines')),
+  compressPoint: lazy(() => import('./CompressPoint')),
+  compressVertical: lazy(() => import('./CompressV')),
+  compress: lazy(() => import('./Compress')),
+  confused: lazy(() => import('./Confused')),
+  constructor: lazy(() => import('./Constructor')),
+  copyAlt: lazy(() => import('./CopyAlt')),
+  copyLandscape: lazy(() => import('./CopyLandscape')),
+  copy: lazy(() => import('./Copy')),
+  copyright: lazy(() => import('./Copyright')),
+  cornerDownLeft: lazy(() => import('./CornerDownLeft')),
+  cornerDownRightAlt: lazy(() => import('./CornerDownRightAlt')),
+  cornerDownRight: lazy(() => import('./CornerDownRight')),
+  cornerLeftDown: lazy(() => import('./CornerLeftDown')),
+  cornerRightDown: lazy(() => import('./CornerRightDown')),
+  cornerUpLeftAlt: lazy(() => import('./CornerUpLeftAlt')),
+  cornerUpLeft: lazy(() => import('./CornerUpLeft')),
+  cornerUpRightAlt: lazy(() => import('./CornerUpRightAlt')),
+  cornerUpRight: lazy(() => import('./CornerUpRight')),
+  coronavirus: lazy(() => import('./Coronavirus')),
+  createDashboard: lazy(() => import('./CreateDashboard')),
+  creativeCommonsPd: lazy(() => import('./CreativeCommonsPd')),
+  creditCardSearch: lazy(() => import('./CreditCardSearch')),
+  creditCard: lazy(() => import('./CreditCard')),
+  crockery: lazy(() => import('./Crockery')),
+  cropAltRotateLeft: lazy(() => import('./CropAltRotateLeft')),
+  cropAltRotateRight: lazy(() => import('./CropAltRotateRight')),
+  cropAlt: lazy(() => import('./CropAlt')),
+  crosshairAlt: lazy(() => import('./CrosshairAlt')),
+  crosshair: lazy(() => import('./Crosshair')),
+  crosshairs: lazy(() => import('./Crosshairs')),
+  css3Simple: lazy(() => import('./Css3Simple')),
+  cube: lazy(() => import('./Cube')),
+  dashboard: lazy(() => import('./Dashboard')),
+  dataSharing: lazy(() => import('./DataSharing')),
+  databaseAlt: lazy(() => import('./DatabaseAlt')),
+  database: lazy(() => import('./Database')),
+  desert: lazy(() => import('./Desert')),
+  desktopAltSlash: lazy(() => import('./DesktopAltSlash')),
+  desktopAlt: lazy(() => import('./DesktopAlt')),
+  desktopCloudAlt: lazy(() => import('./DesktopCloudAlt')),
+  desktopSlash: lazy(() => import('./DesktopSlash')),
+  desktop: lazy(() => import('./Desktop')),
+  dialpadAlt: lazy(() => import('./DialpadAlt')),
+  dialpad: lazy(() => import('./Dialpad')),
+  diamond: lazy(() => import('./Diamond')),
+  diaryAlt: lazy(() => import('./DiaryAlt')),
+  diary: lazy(() => import('./Diary')),
+  diceFive: lazy(() => import('./DiceFive')),
+  diceFour: lazy(() => import('./DiceFour')),
+  diceOne: lazy(() => import('./DiceOne')),
+  diceSix: lazy(() => import('./DiceSix')),
+  diceThree: lazy(() => import('./DiceThree')),
+  diceTwo: lazy(() => import('./DiceTwo')),
+  direction: lazy(() => import('./Direction')),
+  directions: lazy(() => import('./Directions')),
+  discord: lazy(() => import('./Discord')),
+  dizzyMeh: lazy(() => import('./DizzyMeh')),
+  dna: lazy(() => import('./Dna')),
+  docker: lazy(() => import('./Docker')),
+  documentInfo: lazy(() => import('./DocumentInfo')),
+  documentLayoutCenter: lazy(() => import('./DocumentLayoutCenter')),
+  documentLayoutLeft: lazy(() => import('./DocumentLayoutLeft')),
+  documentLayoutRight: lazy(() => import('./DocumentLayoutRight')),
+  dollarAlt: lazy(() => import('./DollarAlt')),
+  dollarSignAlt: lazy(() => import('./DollarSignAlt')),
+  dollarSign: lazy(() => import('./DollarSign')),
+  downloadAlt: lazy(() => import('./DownloadAlt')),
+  draggabledots: lazy(() => import('./Draggabledots')),
+  dribbble: lazy(() => import('./Dribbble')),
+  drill: lazy(() => import('./Drill')),
+  dropbox: lazy(() => import('./Dropbox')),
+  dumbbell: lazy(() => import('./Dumbbell')),
+  ear: lazy(() => import('./Ear')),
+  editAlt: lazy(() => import('./EditAlt')),
+  edit: lazy(() => import('./Edit')),
+  elipsisDoubleVAlt: lazy(() => import('./ElipsisDoubleVAlt')),
+  ellipsisHorizontal: lazy(() => import('./EllipsisH')),
+  ellipsisVertical: lazy(() => import('./EllipsisV')),
+  emoji: lazy(() => import('./Emoji')),
+  englishToChinese: lazy(() => import('./EnglishToChinese')),
+  enter: lazy(() => import('./Enter')),
+  envelopeAdd: lazy(() => import('./EnvelopeAdd')),
+  envelopeAlt: lazy(() => import('./EnvelopeAlt')),
+  envelopeBlock: lazy(() => import('./EnvelopeBlock')),
+  envelopeBookmark: lazy(() => import('./EnvelopeBookmark')),
+  envelopeCheck: lazy(() => import('./EnvelopeCheck')),
+  envelopeDownloadAlt: lazy(() => import('./EnvelopeDownloadAlt')),
+  envelopeDownload: lazy(() => import('./EnvelopeDownload')),
+  envelopeEdit: lazy(() => import('./EnvelopeEdit')),
+  envelopeExclamation: lazy(() => import('./EnvelopeExclamation')),
+  envelopeHeart: lazy(() => import('./EnvelopeHeart')),
+  envelopeInfo: lazy(() => import('./EnvelopeInfo')),
+  envelopeLock: lazy(() => import('./EnvelopeLock')),
+  envelopeMinus: lazy(() => import('./EnvelopeMinus')),
+  envelopeOpen: lazy(() => import('./EnvelopeOpen')),
+  envelopeQuestion: lazy(() => import('./EnvelopeQuestion')),
+  envelopeReceive: lazy(() => import('./EnvelopeReceive')),
+  envelopeRedo: lazy(() => import('./EnvelopeRedo')),
+  envelopeSearch: lazy(() => import('./EnvelopeSearch')),
+  envelopeSend: lazy(() => import('./EnvelopeSend')),
+  envelopeShare: lazy(() => import('./EnvelopeShare')),
+  envelopeShield: lazy(() => import('./EnvelopeShield')),
+  envelopeStar: lazy(() => import('./EnvelopeStar')),
+  envelopeTimes: lazy(() => import('./EnvelopeTimes')),
+  envelopeUploadAlt: lazy(() => import('./EnvelopeUploadAlt')),
+  envelopeUpload: lazy(() => import('./EnvelopeUpload')),
+  envelope: lazy(() => import('./Envelope')),
+  envelopes: lazy(() => import('./Envelopes')),
+  equalCircle: lazy(() => import('./EqualCircle')),
+  estate: lazy(() => import('./Estate')),
+  euroCircle: lazy(() => import('./EuroCircle')),
+  euro: lazy(() => import('./Euro')),
+  exchangeAlt: lazy(() => import('./ExchangeAlt')),
+  exchange: lazy(() => import('./Exchange')),
+  exclamationCircle: lazy(() => import('./ExclamationCircle')),
+  exclamationOctagon: lazy(() => import('./ExclamationOctagon')),
+  exclamationTriangle: lazy(() => import('./ExclamationTriangle')),
+  exclamation: lazy(() => import('./Exclamation')),
+  exclude: lazy(() => import('./Exclude')),
+  exit: lazy(() => import('./Exit')),
+  expandAlt: lazy(() => import('./ExpandAlt')),
+  expandArrowsAlt: lazy(() => import('./ExpandArrowsAlt')),
+  expandArrows: lazy(() => import('./ExpandArrows')),
+  expandFromCorner: lazy(() => import('./ExpandFromCorner')),
+  expandLeft: lazy(() => import('./ExpandLeft')),
+  expandRight: lazy(() => import('./ExpandRight')),
+  export: lazy(() => import('./Export')),
+  exposureAlt: lazy(() => import('./ExposureAlt')),
+  exposureIncrease: lazy(() => import('./ExposureIncrease')),
+  externalLinkAlt: lazy(() => import('./ExternalLinkAlt')),
+  eyeSlash: lazy(() => import('./EyeSlash')),
+  eye: lazy(() => import('./Eye')),
+  facebookF: lazy(() => import('./FacebookF')),
+  facebookMessengerAlt: lazy(() => import('./FacebookMessengerAlt')),
+  facebookMessenger: lazy(() => import('./FacebookMessenger')),
+  facebook: lazy(() => import('./Facebook')),
+  fahrenheit: lazy(() => import('./Fahrenheit')),
+  fastMailAlt: lazy(() => import('./FastMailAlt')),
+  fastMail: lazy(() => import('./FastMail')),
+  favorite: lazy(() => import('./Favorite')),
+  feedback: lazy(() => import('./Feedback')),
+  fidgetSpinner: lazy(() => import('./FidgetSpinner')),
+  fileAlt: lazy(() => import('./FileAlt')),
+  fileBlank: lazy(() => import('./FileBlank')),
+  fileBlockAlt: lazy(() => import('./FileBlockAlt')),
+  fileBookmarkAlt: lazy(() => import('./FileBookmarkAlt')),
+  fileCheckAlt: lazy(() => import('./FileCheckAlt')),
+  fileCheck: lazy(() => import('./FileCheck')),
+  fileContractDollar: lazy(() => import('./FileContractDollar')),
+  fileContract: lazy(() => import('./FileContract')),
+  fileCopyAlt: lazy(() => import('./FileCopyAlt')),
+  fileDownloadAlt: lazy(() => import('./FileDownloadAlt')),
+  fileDownload: lazy(() => import('./FileDownload')),
+  fileEditAlt: lazy(() => import('./FileEditAlt')),
+  fileExclamationAlt: lazy(() => import('./FileExclamationAlt')),
+  fileExclamation: lazy(() => import('./FileExclamation')),
+  fileExport: lazy(() => import('./FileExport')),
+  fileGraph: lazy(() => import('./FileGraph')),
+  fileHeart: lazy(() => import('./FileHeart')),
+  fileImport: lazy(() => import('./FileImport')),
+  fileInfoAlt: lazy(() => import('./FileInfoAlt')),
+  fileLandscapeAlt: lazy(() => import('./FileLandscapeAlt')),
+  fileLandscape: lazy(() => import('./FileLandscape')),
+  fileLanscapeSlash: lazy(() => import('./FileLanscapeSlash')),
+  fileLockAlt: lazy(() => import('./FileLockAlt')),
+  fileMedicalAlt: lazy(() => import('./FileMedicalAlt')),
+  fileMedical: lazy(() => import('./FileMedical')),
+  fileMinusAlt: lazy(() => import('./FileMinusAlt')),
+  fileMinus: lazy(() => import('./FileMinus')),
+  fileNetwork: lazy(() => import('./FileNetwork')),
+  filePlusAlt: lazy(() => import('./FilePlusAlt')),
+  filePlus: lazy(() => import('./FilePlus')),
+  fileQuestionAlt: lazy(() => import('./FileQuestionAlt')),
+  fileQuestion: lazy(() => import('./FileQuestion')),
+  fileRedoAlt: lazy(() => import('./FileRedoAlt')),
+  fileSearchAlt: lazy(() => import('./FileSearchAlt')),
+  fileShareAlt: lazy(() => import('./FileShareAlt')),
+  fileShieldAlt: lazy(() => import('./FileShieldAlt')),
+  fileSlash: lazy(() => import('./FileSlash')),
+  fileTimesAlt: lazy(() => import('./FileTimesAlt')),
+  fileTimes: lazy(() => import('./FileTimes')),
+  fileUploadAlt: lazy(() => import('./FileUploadAlt')),
+  fileUpload: lazy(() => import('./FileUpload')),
+  file: lazy(() => import('./File')),
+  filesLandscapesAlt: lazy(() => import('./FilesLandscapesAlt')),
+  filesLandscapes: lazy(() => import('./FilesLandscapes')),
+  film: lazy(() => import('./Film')),
+  filterSlash: lazy(() => import('./FilterSlash')),
+  filter: lazy(() => import('./Filter')),
+  fire: lazy(() => import('./Fire')),
+  flaskPotion: lazy(() => import('./FlaskPotion')),
+  flask: lazy(() => import('./Flask')),
+  flipHAlt: lazy(() => import('./FlipHAlt')),
+  flipHorizontal: lazy(() => import('./FlipH')),
+  flipVAlt: lazy(() => import('./FlipVAlt')),
+  flipVertical: lazy(() => import('./FlipV')),
+  flower: lazy(() => import('./Flower')),
+  focusAdd: lazy(() => import('./FocusAdd')),
+  focusTarget: lazy(() => import('./FocusTarget')),
+  focus: lazy(() => import('./Focus')),
+  folderCheck: lazy(() => import('./FolderCheck')),
+  folderDownload: lazy(() => import('./FolderDownload')),
+  folderExclamation: lazy(() => import('./FolderExclamation')),
+  folderHeart: lazy(() => import('./FolderHeart')),
+  folderInfo: lazy(() => import('./FolderInfo')),
+  folderLock: lazy(() => import('./FolderLock')),
+  folderMedical: lazy(() => import('./FolderMedical')),
+  folderMinus: lazy(() => import('./FolderMinus')),
+  folderNetwork: lazy(() => import('./FolderNetwork')),
+  folderOpen: lazy(() => import('./FolderOpen')),
+  folderPlus: lazy(() => import('./FolderPlus')),
+  folderQuestion: lazy(() => import('./FolderQuestion')),
+  folderSlash: lazy(() => import('./FolderSlash')),
+  folderTimes: lazy(() => import('./FolderTimes')),
+  folderUpload: lazy(() => import('./FolderUpload')),
+  folder: lazy(() => import('./Folder')),
+  font: lazy(() => import('./Font')),
+  footballAmerican: lazy(() => import('./FootballAmerican')),
+  footballBall: lazy(() => import('./FootballBall')),
+  football: lazy(() => import('./Football')),
+  forecastcloudMoonTear: lazy(() => import('./ForecastcloudMoonTear')),
+  forwadedCall: lazy(() => import('./ForwadedCall')),
+  forward: lazy(() => import('./Forward')),
+  frown: lazy(() => import('./Frown')),
+  gameStructure: lazy(() => import('./GameStructure')),
+  gift: lazy(() => import('./Gift')),
+  githubAlt: lazy(() => import('./GithubAlt')),
+  github: lazy(() => import('./Github')),
+  gitlab: lazy(() => import('./Gitlab')),
+  glassMartiniAltSlash: lazy(() => import('./GlassMartiniAltSlash')),
+  glassMartiniAlt: lazy(() => import('./GlassMartiniAlt')),
+  glassMartini: lazy(() => import('./GlassMartini')),
+  glassTea: lazy(() => import('./GlassTea')),
+  glass: lazy(() => import('./Glass')),
+  globe: lazy(() => import('./Globe')),
+  gold: lazy(() => import('./Gold')),
+  golfBall: lazy(() => import('./GolfBall')),
+  googleDriveAlt: lazy(() => import('./GoogleDriveAlt')),
+  googleDrive: lazy(() => import('./GoogleDrive')),
+  googleHangoutsAlt: lazy(() => import('./GoogleHangoutsAlt')),
+  googleHangouts: lazy(() => import('./GoogleHangouts')),
+  googlePlay: lazy(() => import('./GooglePlay')),
+  google: lazy(() => import('./Google')),
+  graduationCap: lazy(() => import('./GraduationCap')),
+  graphBar: lazy(() => import('./GraphBar')),
+  grid: lazy(() => import('./Grid')),
+  grids: lazy(() => import('./Grids')),
+  grinTongueWinkAlt: lazy(() => import('./GrinTongueWinkAlt')),
+  grinTongueWink: lazy(() => import('./GrinTongueWink')),
+  grin: lazy(() => import('./Grin')),
+  gripHorizontalLine: lazy(() => import('./GripHorizontalLine')),
+  hardHat: lazy(() => import('./HardHat')),
+  hdd: lazy(() => import('./Hdd')),
+  headSideCough: lazy(() => import('./HeadSideCough')),
+  headSideMask: lazy(() => import('./HeadSideMask')),
+  headSide: lazy(() => import('./HeadSide')),
+  headphoneSlash: lazy(() => import('./HeadphoneSlash')),
+  headphonesAlt: lazy(() => import('./HeadphonesAlt')),
+  headphones: lazy(() => import('./Headphones')),
+  heartAlt: lazy(() => import('./HeartAlt')),
+  heartBreak: lazy(() => import('./HeartBreak')),
+  heartMedical: lazy(() => import('./HeartMedical')),
+  heartRate: lazy(() => import('./HeartRate')),
+  heartSign: lazy(() => import('./HeartSign')),
+  heart: lazy(() => import('./Heart')),
+  heartbeat: lazy(() => import('./Heartbeat')),
+  hindiToChinese: lazy(() => import('./HindiToChinese')),
+  hipchat: lazy(() => import('./Hipchat')),
+  historyAlt: lazy(() => import('./HistoryAlt')),
+  history: lazy(() => import('./History')),
+  homeAlt: lazy(() => import('./HomeAlt')),
+  home: lazy(() => import('./Home')),
+  horizontalAlignCenter: lazy(() => import('./HorizontalAlignCenter')),
+  horizontalAlignLeft: lazy(() => import('./HorizontalAlignLeft')),
+  horizontalAlignRight: lazy(() => import('./HorizontalAlignRight')),
+  horizontalDistributionCenter: lazy(() => import('./HorizontalDistributionCenter')),
+  horizontalDistributionLeft: lazy(() => import('./HorizontalDistributionLeft')),
+  horizontalDistributionRight: lazy(() => import('./HorizontalDistributionRight')),
+  hospitalSquareSign: lazy(() => import('./HospitalSquareSign')),
+  hospitalSymbol: lazy(() => import('./HospitalSymbol')),
+  hospital: lazy(() => import('./Hospital')),
+  hourglass: lazy(() => import('./Hourglass')),
+  houseUser: lazy(() => import('./HouseUser')),
+  html3Alt: lazy(() => import('./Html3Alt')),
+  html3: lazy(() => import('./Html3')),
+  html5Alt: lazy(() => import('./Html5Alt')),
+  html5: lazy(() => import('./Html5')),
+  hunting: lazy(() => import('./Hunting')),
+  icons: lazy(() => import('./Icons')),
+  illustration: lazy(() => import('./Illustration')),
+  imageAltSlash: lazy(() => import('./ImageAltSlash')),
+  imageBlock: lazy(() => import('./ImageBlock')),
+  imageBroken: lazy(() => import('./ImageBroken')),
+  imageCheck: lazy(() => import('./ImageCheck')),
+  imageDownload: lazy(() => import('./ImageDownload')),
+  imageEdit: lazy(() => import('./ImageEdit')),
+  imageLock: lazy(() => import('./ImageLock')),
+  imageMinus: lazy(() => import('./ImageMinus')),
+  imagePlus: lazy(() => import('./ImagePlus')),
+  imageQuestion: lazy(() => import('./ImageQuestion')),
+  imageRedo: lazy(() => import('./ImageRedo')),
+  imageResizeLandscape: lazy(() => import('./ImageResizeLandscape')),
+  imageResizeSquare: lazy(() => import('./ImageResizeSquare')),
+  imageSearch: lazy(() => import('./ImageSearch')),
+  imageShare: lazy(() => import('./ImageShare')),
+  imageShield: lazy(() => import('./ImageShield')),
+  imageSlash: lazy(() => import('./ImageSlash')),
+  imageTimes: lazy(() => import('./ImageTimes')),
+  imageUpload: lazy(() => import('./ImageUpload')),
+  imageVertical: lazy(() => import('./ImageV')),
+  image: lazy(() => import('./Image')),
+  images: lazy(() => import('./Images')),
+  import: lazy(() => import('./Import')),
+  inbox: lazy(() => import('./Inbox')),
+  incomingCall: lazy(() => import('./IncomingCall')),
+  infoCircle: lazy(() => import('./InfoCircle')),
+  info: lazy(() => import('./Info')),
+  instagramAlt: lazy(() => import('./InstagramAlt')),
+  instagram: lazy(() => import('./Instagram')),
+  intercomAlt: lazy(() => import('./IntercomAlt')),
+  intercom: lazy(() => import('./Intercom')),
+  invoice: lazy(() => import('./Invoice')),
+  italic: lazy(() => import('./Italic')),
+  jackhammer: lazy(() => import('./Jackhammer')),
+  javaScript: lazy(() => import('./JavaScript')),
+  kayak: lazy(() => import('./Kayak')),
+  keySkeletonAlt: lazy(() => import('./KeySkeletonAlt')),
+  keySkeleton: lazy(() => import('./KeySkeleton')),
+  keyboardAlt: lazy(() => import('./KeyboardAlt')),
+  keyboardHide: lazy(() => import('./KeyboardHide')),
+  keyboardShow: lazy(() => import('./KeyboardShow')),
+  keyboard: lazy(() => import('./Keyboard')),
+  keyholeCircle: lazy(() => import('./KeyholeCircle')),
+  keyholeSquareFull: lazy(() => import('./KeyholeSquareFull')),
+  keyholeSquare: lazy(() => import('./KeyholeSquare')),
+  kid: lazy(() => import('./Kid')),
+  labelAlt: lazy(() => import('./LabelAlt')),
+  label: lazy(() => import('./Label')),
+  lamp: lazy(() => import('./Lamp')),
+  language: lazy(() => import('./Language')),
+  laptopCloud: lazy(() => import('./LaptopCloud')),
+  laptopConnection: lazy(() => import('./LaptopConnection')),
+  laptop: lazy(() => import('./Laptop')),
+  laughing: lazy(() => import('./Laughing')),
+  layerGroupSlash: lazy(() => import('./LayerGroupSlash')),
+  layerGroup: lazy(() => import('./LayerGroup')),
+  layersAlt: lazy(() => import('./LayersAlt')),
+  layersSlash: lazy(() => import('./LayersSlash')),
+  layers: lazy(() => import('./Layers')),
+  leftArrowFromLeft: lazy(() => import('./LeftArrowFromLeft')),
+  leftArrowToLeft: lazy(() => import('./LeftArrowToLeft')),
+  leftIndentAlt: lazy(() => import('./LeftIndentAlt')),
+  leftIndent: lazy(() => import('./LeftIndent')),
+  leftToRightTextDirection: lazy(() => import('./LeftToRightTextDirection')),
+  letterChineseA: lazy(() => import('./LetterChineseA')),
+  letterEnglishA: lazy(() => import('./LetterEnglishA')),
+  letterHindiA: lazy(() => import('./LetterHindiA')),
+  letterJapaneseA: lazy(() => import('./LetterJapaneseA')),
+  lifeRing: lazy(() => import('./LifeRing')),
+  lightbulbAlt: lazy(() => import('./LightbulbAlt')),
+  lightbulb: lazy(() => import('./Lightbulb')),
+  lineAlt: lazy(() => import('./LineAlt')),
+  lineSpacing: lazy(() => import('./LineSpacing')),
+  line: lazy(() => import('./Line')),
+  linkAdd: lazy(() => import('./LinkAdd')),
+  linkAlt: lazy(() => import('./LinkAlt')),
+  linkBroken: lazy(() => import('./LinkBroken')),
+  linkHorizontal: lazy(() => import('./LinkH')),
+  link: lazy(() => import('./Link')),
+  linkedinAlt: lazy(() => import('./LinkedinAlt')),
+  linkedin: lazy(() => import('./Linkedin')),
+  linux: lazy(() => import('./Linux')),
+  liraSign: lazy(() => import('./LiraSign')),
+  listOlAlt: lazy(() => import('./ListOlAlt')),
+  listOl: lazy(() => import('./ListOl')),
+  listUiAlt: lazy(() => import('./ListUiAlt')),
+  listUl: lazy(() => import('./ListUl')),
+  locationArrowAlt: lazy(() => import('./LocationArrowAlt')),
+  locationArrow: lazy(() => import('./LocationArrow')),
+  locationPinAlt: lazy(() => import('./LocationPinAlt')),
+  locationPoint: lazy(() => import('./LocationPoint')),
+  lockAccess: lazy(() => import('./LockAccess')),
+  lockAlt: lazy(() => import('./LockAlt')),
+  lockOpenAlt: lazy(() => import('./LockOpenAlt')),
+  lockSlash: lazy(() => import('./LockSlash')),
+  lock: lazy(() => import('./Lock')),
+  lottiefilesAlt: lazy(() => import('./LottiefilesAlt')),
+  lottiefiles: lazy(() => import('./Lottiefiles')),
+  luggageCart: lazy(() => import('./LuggageCart')),
+  mailboxAlt: lazy(() => import('./MailboxAlt')),
+  mailbox: lazy(() => import('./Mailbox')),
+  mapMarkerAlt: lazy(() => import('./MapMarkerAlt')),
+  mapMarkerEdit: lazy(() => import('./MapMarkerEdit')),
+  mapMarkerInfo: lazy(() => import('./MapMarkerInfo')),
+  mapMarkerMinus: lazy(() => import('./MapMarkerMinus')),
+  mapMarkerPlus: lazy(() => import('./MapMarkerPlus')),
+  mapMarkerQuestion: lazy(() => import('./MapMarkerQuestion')),
+  mapMarkerShield: lazy(() => import('./MapMarkerShield')),
+  mapMarkerSlash: lazy(() => import('./MapMarkerSlash')),
+  mapMarker: lazy(() => import('./MapMarker')),
+  mapPinAlt: lazy(() => import('./MapPinAlt')),
+  mapPin: lazy(() => import('./MapPin')),
+  map: lazy(() => import('./Map')),
+  mars: lazy(() => import('./Mars')),
+  masterCard: lazy(() => import('./MasterCard')),
+  maximizeLeft: lazy(() => import('./MaximizeLeft')),
+  medal: lazy(() => import('./Medal')),
+  medicalDrip: lazy(() => import('./MedicalDrip')),
+  medicalSquareFull: lazy(() => import('./MedicalSquareFull')),
+  medicalSquare: lazy(() => import('./MedicalSquare')),
+  mediumM: lazy(() => import('./MediumM')),
+  medkit: lazy(() => import('./Medkit')),
+  meetingBoard: lazy(() => import('./MeetingBoard')),
+  megaphone: lazy(() => import('./Megaphone')),
+  mehAlt: lazy(() => import('./MehAlt')),
+  mehClosedEye: lazy(() => import('./MehClosedEye')),
+  meh: lazy(() => import('./Meh')),
+  message: lazy(() => import('./Message')),
+  metro: lazy(() => import('./Metro')),
+  microphoneSlash: lazy(() => import('./MicrophoneSlash')),
+  microphone: lazy(() => import('./Microphone')),
+  microscope: lazy(() => import('./Microscope')),
+  microsoft: lazy(() => import('./Microsoft')),
+  minusCircle: lazy(() => import('./MinusCircle')),
+  minusPath: lazy(() => import('./MinusPath')),
+  minusSquareFull: lazy(() => import('./MinusSquareFull')),
+  minusSquare: lazy(() => import('./MinusSquare')),
+  minus: lazy(() => import('./Minus')),
+  missedCall: lazy(() => import('./MissedCall')),
+  mobileAndroidAlt: lazy(() => import('./MobileAndroidAlt')),
+  mobileAndroid: lazy(() => import('./MobileAndroid')),
+  mobileVibrate: lazy(() => import('./MobileVibrate')),
+  modem: lazy(() => import('./Modem')),
+  moneyBillSlash: lazy(() => import('./MoneyBillSlash')),
+  moneyBillStack: lazy(() => import('./MoneyBillStack')),
+  moneyBill: lazy(() => import('./MoneyBill')),
+  moneyInsert: lazy(() => import('./MoneyInsert')),
+  moneyStack: lazy(() => import('./MoneyStack')),
+  moneyWithdraw: lazy(() => import('./MoneyWithdraw')),
+  moneyWithdrawal: lazy(() => import('./MoneyWithdrawal')),
+  moneybagAlt: lazy(() => import('./MoneybagAlt')),
+  moneybag: lazy(() => import('./Moneybag')),
+  monitorHeartRate: lazy(() => import('./MonitorHeartRate')),
+  monitor: lazy(() => import('./Monitor')),
+  moonEclipse: lazy(() => import('./MoonEclipse')),
+  moon: lazy(() => import('./Moon')),
+  moonset: lazy(() => import('./Moonset')),
+  mountainsSun: lazy(() => import('./MountainsSun')),
+  mountains: lazy(() => import('./Mountains')),
+  mouseAlt2: lazy(() => import('./MouseAlt2')),
+  mouseAlt: lazy(() => import('./MouseAlt')),
+  mouse: lazy(() => import('./Mouse')),
+  multiply: lazy(() => import('./Multiply')),
+  musicNote: lazy(() => import('./MusicNote')),
+  musicTuneSlash: lazy(() => import('./MusicTuneSlash')),
+  music: lazy(() => import('./Music')),
+  nA: lazy(() => import('./NA')),
+  navigator: lazy(() => import('./Navigator')),
+  nerd: lazy(() => import('./Nerd')),
+  newspaper: lazy(() => import('./Newspaper')),
+  ninja: lazy(() => import('./Ninja')),
+  noEntry: lazy(() => import('./NoEntry')),
+  notebooks: lazy(() => import('./Notebooks')),
+  notes: lazy(() => import('./Notes')),
+  objectGroup: lazy(() => import('./ObjectGroup')),
+  objectUngroup: lazy(() => import('./ObjectUngroup')),
+  octagon: lazy(() => import('./Octagon')),
+  okta: lazy(() => import('./Okta')),
+  operaAlt: lazy(() => import('./OperaAlt')),
+  opera: lazy(() => import('./Opera')),
+  outgoingCall: lazy(() => import('./OutgoingCall')),
+  package: lazy(() => import('./Package')),
+  padlock: lazy(() => import('./Padlock')),
+  pagelines: lazy(() => import('./Pagelines')),
+  pagerduty: lazy(() => import('./Pagerduty')),
+  paintTool: lazy(() => import('./PaintTool')),
+  palette: lazy(() => import('./Palette')),
+  panelAdd: lazy(() => import('./PanelAdd')),
+  panoramaHAlt: lazy(() => import('./PanoramaHAlt')),
+  panoramaHorizontal: lazy(() => import('./PanoramaH')),
+  panoramaVertical: lazy(() => import('./PanoramaV')),
+  paperclip: lazy(() => import('./Paperclip')),
+  paragraph: lazy(() => import('./Paragraph')),
+  parcel: lazy(() => import('./Parcel')),
+  parkingCircle: lazy(() => import('./ParkingCircle')),
+  parkingSquare: lazy(() => import('./ParkingSquare')),
+  pathfinderUnite: lazy(() => import('./PathfinderUnite')),
+  pathfinder: lazy(() => import('./Pathfinder')),
+  pauseCircle: lazy(() => import('./PauseCircle')),
+  pause: lazy(() => import('./Pause')),
+  paypal: lazy(() => import('./Paypal')),
+  pen: lazy(() => import('./Pen')),
+  pentagon: lazy(() => import('./Pentagon')),
+  percentage: lazy(() => import('./Percentage')),
+  phoneAlt: lazy(() => import('./PhoneAlt')),
+  phonePause: lazy(() => import('./PhonePause')),
+  phoneSlash: lazy(() => import('./PhoneSlash')),
+  phoneTimes: lazy(() => import('./PhoneTimes')),
+  phoneVolume: lazy(() => import('./PhoneVolume')),
+  phone: lazy(() => import('./Phone')),
+  picture: lazy(() => import('./Picture')),
+  pizzaSlice: lazy(() => import('./PizzaSlice')),
+  planeArrival: lazy(() => import('./PlaneArrival')),
+  planeDeparture: lazy(() => import('./PlaneDeparture')),
+  planeFly: lazy(() => import('./PlaneFly')),
+  plane: lazy(() => import('./Plane')),
+  playCircle: lazy(() => import('./PlayCircle')),
+  play: lazy(() => import('./Play')),
+  plug: lazy(() => import('./Plug')),
+  plus0: lazy(() => import('./Plus0')),
+  plus10: lazy(() => import('./Plus10')),
+  plus12: lazy(() => import('./Plus12')),
+  plus13: lazy(() => import('./Plus13')),
+  plus16: lazy(() => import('./Plus16')),
+  plus17: lazy(() => import('./Plus17')),
+  plus18: lazy(() => import('./Plus18')),
+  plus21: lazy(() => import('./Plus21')),
+  plus3: lazy(() => import('./Plus3')),
+  plus6: lazy(() => import('./Plus6')),
+  plusCircle: lazy(() => import('./PlusCircle')),
+  plusSquare: lazy(() => import('./PlusSquare')),
+  plus: lazy(() => import('./Plus')),
+  podium: lazy(() => import('./Podium')),
+  polygon: lazy(() => import('./Polygon')),
+  postStamp: lazy(() => import('./PostStamp')),
+  postcard: lazy(() => import('./Postcard')),
+  poundCircle: lazy(() => import('./PoundCircle')),
+  pound: lazy(() => import('./Pound')),
+  power: lazy(() => import('./Power')),
+  prescriptionBottle: lazy(() => import('./PrescriptionBottle')),
+  presentationCheck: lazy(() => import('./PresentationCheck')),
+  presentationEdit: lazy(() => import('./PresentationEdit')),
+  presentationLine: lazy(() => import('./PresentationLine')),
+  presentationLinesAlt: lazy(() => import('./PresentationLinesAlt')),
+  presentationMinus: lazy(() => import('./PresentationMinus')),
+  presentationPlay: lazy(() => import('./PresentationPlay')),
+  presentationPlus: lazy(() => import('./PresentationPlus')),
+  presentationTimes: lazy(() => import('./PresentationTimes')),
+  presentation: lazy(() => import('./Presentation')),
+  previous: lazy(() => import('./Previous')),
+  pricetagAlt: lazy(() => import('./PricetagAlt')),
+  printSlash: lazy(() => import('./PrintSlash')),
+  print: lazy(() => import('./Print')),
+  process: lazy(() => import('./Process')),
+  processor: lazy(() => import('./Processor')),
+  programmingLanguage: lazy(() => import('./ProgrammingLanguage')),
+  pump: lazy(() => import('./Pump')),
+  puzzlePiece: lazy(() => import('./PuzzlePiece')),
+  px500: lazy(() => import('./Px500')),
+  qrcodeScan: lazy(() => import('./QrcodeScan')),
+  questionCircle: lazy(() => import('./QuestionCircle')),
+  question: lazy(() => import('./Question')),
+  rainbow: lazy(() => import('./Rainbow')),
+  raindropsAlt: lazy(() => import('./RaindropsAlt')),
+  raindrops: lazy(() => import('./Raindrops')),
+  react: lazy(() => import('./React')),
+  receiptAlt: lazy(() => import('./ReceiptAlt')),
+  receipt: lazy(() => import('./Receipt')),
+  recordAudio: lazy(() => import('./RecordAudio')),
+  redditAlienAlt: lazy(() => import('./RedditAlienAlt')),
+  redo: lazy(() => import('./Redo')),
+  refresh: lazy(() => import('./Refresh')),
+  registered: lazy(() => import('./Registered')),
+  repeat: lazy(() => import('./Repeat')),
+  restaurant: lazy(() => import('./Restaurant')),
+  rightIndentAlt: lazy(() => import('./RightIndentAlt')),
+  rightToLeftTextDirection: lazy(() => import('./RightToLeftTextDirection')),
+  robot: lazy(() => import('./Robot')),
+  rocket: lazy(() => import('./Rocket')),
+  ropeWay: lazy(() => import('./RopeWay')),
+  rotate360: lazy(() => import('./Rotate360')),
+  rssAlt: lazy(() => import('./RssAlt')),
+  rssInterface: lazy(() => import('./RssInterface')),
+  rss: lazy(() => import('./Rss')),
+  rulerCombined: lazy(() => import('./RulerCombined')),
+  ruler: lazy(() => import('./Ruler')),
+  rupeeSign: lazy(() => import('./RupeeSign')),
+  sadCry: lazy(() => import('./SadCry')),
+  sadCrying: lazy(() => import('./SadCrying')),
+  sadDizzy: lazy(() => import('./SadDizzy')),
+  sadSquint: lazy(() => import('./SadSquint')),
+  sad: lazy(() => import('./Sad')),
+  sanitizerAlt: lazy(() => import('./SanitizerAlt')),
+  sanitizer: lazy(() => import('./Sanitizer')),
+  save: lazy(() => import('./Save')),
+  scalingLeft: lazy(() => import('./ScalingLeft')),
+  scalingRight: lazy(() => import('./ScalingRight')),
+  scenery: lazy(() => import('./Scenery')),
+  schedule: lazy(() => import('./Schedule')),
+  screw: lazy(() => import('./Screw')),
+  scrollHorizontal: lazy(() => import('./ScrollH')),
+  scroll: lazy(() => import('./Scroll')),
+  searchAlt: lazy(() => import('./SearchAlt')),
+  searchMinus: lazy(() => import('./SearchMinus')),
+  searchPlus: lazy(() => import('./SearchPlus')),
+  search: lazy(() => import('./Search')),
+  selfie: lazy(() => import('./Selfie')),
+  serverAlt: lazy(() => import('./ServerAlt')),
+  serverConnection: lazy(() => import('./ServerConnection')),
+  serverNetworkAlt: lazy(() => import('./ServerNetworkAlt')),
+  serverNetwork: lazy(() => import('./ServerNetwork')),
+  server: lazy(() => import('./Server')),
+  servers: lazy(() => import('./Servers')),
+  servicemark: lazy(() => import('./Servicemark')),
+  setting: lazy(() => import('./Setting')),
+  shareAlt: lazy(() => import('./ShareAlt')),
+  share: lazy(() => import('./Share')),
+  shieldCheck: lazy(() => import('./ShieldCheck')),
+  shieldExclamation: lazy(() => import('./ShieldExclamation')),
+  shieldPlus: lazy(() => import('./ShieldPlus')),
+  shieldQuestion: lazy(() => import('./ShieldQuestion')),
+  shieldSlash: lazy(() => import('./ShieldSlash')),
+  shield: lazy(() => import('./Shield')),
+  ship: lazy(() => import('./Ship')),
+  shop: lazy(() => import('./Shop')),
+  shoppingBag: lazy(() => import('./ShoppingBag')),
+  shoppingBasket: lazy(() => import('./ShoppingBasket')),
+  shoppingCartAlt: lazy(() => import('./ShoppingCartAlt')),
+  shoppingCart: lazy(() => import('./ShoppingCart')),
+  shovel: lazy(() => import('./Shovel')),
+  shrink: lazy(() => import('./Shrink')),
+  shuffle: lazy(() => import('./Shuffle')),
+  shutterAlt: lazy(() => import('./ShutterAlt')),
+  shutter: lazy(() => import('./Shutter')),
+  sick: lazy(() => import('./Sick')),
+  sigma: lazy(() => import('./Sigma')),
+  signAlt: lazy(() => import('./SignAlt')),
+  signInAlt: lazy(() => import('./SignInAlt')),
+  signLeft: lazy(() => import('./SignLeft')),
+  signOutAlt: lazy(() => import('./SignOutAlt')),
+  signRight: lazy(() => import('./SignRight')),
+  signalAlt3: lazy(() => import('./SignalAlt3')),
+  signalAlt: lazy(() => import('./SignalAlt')),
+  signal: lazy(() => import('./Signal')),
+  signin: lazy(() => import('./Signin')),
+  signout: lazy(() => import('./Signout')),
+  silence: lazy(() => import('./Silence')),
+  silentSquint: lazy(() => import('./SilentSquint')),
+  simCard: lazy(() => import('./SimCard')),
+  sitemap: lazy(() => import('./Sitemap')),
+  skipForwardAlt: lazy(() => import('./SkipForwardAlt')),
+  skipForwardCircle: lazy(() => import('./SkipForwardCircle')),
+  skipForward: lazy(() => import('./SkipForward')),
+  skypeAlt: lazy(() => import('./SkypeAlt')),
+  skype: lazy(() => import('./Skype')),
+  slackAlt: lazy(() => import('./SlackAlt')),
+  slack: lazy(() => import('./Slack')),
+  sliderHRange: lazy(() => import('./SliderHRange')),
+  sliderHorizontal: lazy(() => import('./SliderH')),
+  slidersVAlt: lazy(() => import('./SlidersVAlt')),
+  slidersVertical: lazy(() => import('./SlidersV')),
+  smileBeam: lazy(() => import('./SmileBeam')),
+  smileDizzy: lazy(() => import('./SmileDizzy')),
+  smileSquintWinkAlt: lazy(() => import('./SmileSquintWinkAlt')),
+  smileSquintWink: lazy(() => import('./SmileSquintWink')),
+  smileWinkAlt: lazy(() => import('./SmileWinkAlt')),
+  smileWink: lazy(() => import('./SmileWink')),
+  smile: lazy(() => import('./Smile')),
+  snapchatAlt: lazy(() => import('./SnapchatAlt')),
+  snapchatGhost: lazy(() => import('./SnapchatGhost')),
+  snapchatSquare: lazy(() => import('./SnapchatSquare')),
+  snowflake: lazy(() => import('./Snowflake')),
+  socialDistancing: lazy(() => import('./SocialDistancing')),
+  sortAmountDown: lazy(() => import('./SortAmountDown')),
+  sortAmountUp: lazy(() => import('./SortAmountUp')),
+  sort: lazy(() => import('./Sort')),
+  sorting: lazy(() => import('./Sorting')),
+  spaceKey: lazy(() => import('./SpaceKey')),
+  spade: lazy(() => import('./Spade')),
+  sperms: lazy(() => import('./Sperms')),
+  spin: lazy(() => import('./Spin')),
+  spinnerAlt: lazy(() => import('./SpinnerAlt')),
+  spinner: lazy(() => import('./Spinner')),
+  squareFull: lazy(() => import('./SquareFull')),
+  squareShape: lazy(() => import('./SquareShape')),
+  square: lazy(() => import('./Square')),
+  squint: lazy(() => import('./Squint')),
+  starHalfAlt: lazy(() => import('./StarHalfAlt')),
+  star: lazy(() => import('./Star')),
+  stepBackwardAlt: lazy(() => import('./StepBackwardAlt')),
+  stepBackwardCircle: lazy(() => import('./StepBackwardCircle')),
+  stepBackward: lazy(() => import('./StepBackward')),
+  stepForward: lazy(() => import('./StepForward')),
+  stethoscopeAlt: lazy(() => import('./StethoscopeAlt')),
+  stethoscope: lazy(() => import('./Stethoscope')),
+  stopCircle: lazy(() => import('./StopCircle')),
+  stopwatchSlash: lazy(() => import('./StopwatchSlash')),
+  stopwatch: lazy(() => import('./Stopwatch')),
+  storeAlt: lazy(() => import('./StoreAlt')),
+  storeSlash: lazy(() => import('./StoreSlash')),
+  store: lazy(() => import('./Store')),
+  streering: lazy(() => import('./Streering')),
+  stretcher: lazy(() => import('./Stretcher')),
+  subject: lazy(() => import('./Subject')),
+  subwayAlt: lazy(() => import('./SubwayAlt')),
+  subway: lazy(() => import('./Subway')),
+  suitcaseAlt: lazy(() => import('./SuitcaseAlt')),
+  suitcase: lazy(() => import('./Suitcase')),
+  sun: lazy(() => import('./Sun')),
+  sunset: lazy(() => import('./Sunset')),
+  surprise: lazy(() => import('./Surprise')),
+  swatchbook: lazy(() => import('./Swatchbook')),
+  swiggy: lazy(() => import('./Swiggy')),
+  swimmer: lazy(() => import('./Swimmer')),
+  syncExclamation: lazy(() => import('./SyncExclamation')),
+  syncSlash: lazy(() => import('./SyncSlash')),
+  sync: lazy(() => import('./Sync')),
+  syringe: lazy(() => import('./Syringe')),
+  tableTennis: lazy(() => import('./TableTennis')),
+  table: lazy(() => import('./Table')),
+  tablet: lazy(() => import('./Tablet')),
+  tablets: lazy(() => import('./Tablets')),
+  tachometerFastAlt: lazy(() => import('./TachometerFastAlt')),
+  tachometerFast: lazy(() => import('./TachometerFast')),
+  tagAlt: lazy(() => import('./TagAlt')),
+  tag: lazy(() => import('./Tag')),
+  tape: lazy(() => import('./Tape')),
+  taxi: lazy(() => import('./Taxi')),
+  tear: lazy(() => import('./Tear')),
+  telegramAlt: lazy(() => import('./TelegramAlt')),
+  telegram: lazy(() => import('./Telegram')),
+  telescope: lazy(() => import('./Telescope')),
+  temperatureEmpty: lazy(() => import('./TemperatureEmpty')),
+  temperatureHalf: lazy(() => import('./TemperatureHalf')),
+  temperatureMinus: lazy(() => import('./TemperatureMinus')),
+  temperaturePlus: lazy(() => import('./TemperaturePlus')),
+  temperatureQuarter: lazy(() => import('./TemperatureQuarter')),
+  temperatureThreeQuarter: lazy(() => import('./TemperatureThreeQuarter')),
+  temperature: lazy(() => import('./Temperature')),
+  tennisBall: lazy(() => import('./TennisBall')),
+  textFields: lazy(() => import('./TextFields')),
+  textSize: lazy(() => import('./TextSize')),
+  textStrikeThrough: lazy(() => import('./TextStrikeThrough')),
+  text: lazy(() => import('./Text')),
+  thLarge: lazy(() => import('./ThLarge')),
+  thSlash: lazy(() => import('./ThSlash')),
+  th: lazy(() => import('./Th')),
+  thermometer: lazy(() => import('./Thermometer')),
+  thumbsDown: lazy(() => import('./ThumbsDown')),
+  thumbsUp: lazy(() => import('./ThumbsUp')),
+  thunderstormMoon: lazy(() => import('./ThunderstormMoon')),
+  thunderstormSun: lazy(() => import('./ThunderstormSun')),
+  thunderstorm: lazy(() => import('./Thunderstorm')),
+  ticket: lazy(() => import('./Ticket')),
+  timesCircle: lazy(() => import('./TimesCircle')),
+  timesSquare: lazy(() => import('./TimesSquare')),
+  times: lazy(() => import('./Times')),
+  toggleOff: lazy(() => import('./ToggleOff')),
+  toggleOn: lazy(() => import('./ToggleOn')),
+  toiletPaper: lazy(() => import('./ToiletPaper')),
+  topArrowFromTop: lazy(() => import('./TopArrowFromTop')),
+  topArrowToTop: lazy(() => import('./TopArrowToTop')),
+  tornado: lazy(() => import('./Tornado')),
+  trademarkCircle: lazy(() => import('./TrademarkCircle')),
+  trademark: lazy(() => import('./Trademark')),
+  trafficBarrier: lazy(() => import('./TrafficBarrier')),
+  trafficLight: lazy(() => import('./TrafficLight')),
+  transaction: lazy(() => import('./Transaction')),
+  trashAlt: lazy(() => import('./TrashAlt')),
+  trash: lazy(() => import('./Trash')),
+  trees: lazy(() => import('./Trees')),
+  triangle: lazy(() => import('./Triangle')),
+  trophy: lazy(() => import('./Trophy')),
+  trowel: lazy(() => import('./Trowel')),
+  truckLoading: lazy(() => import('./TruckLoading')),
+  truck: lazy(() => import('./Truck')),
+  tumblrAlt: lazy(() => import('./TumblrAlt')),
+  tumblrSquare: lazy(() => import('./TumblrSquare')),
+  tumblr: lazy(() => import('./Tumblr')),
+  tvRetroSlash: lazy(() => import('./TvRetroSlash')),
+  tvRetro: lazy(() => import('./TvRetro')),
+  twitterAlt: lazy(() => import('./TwitterAlt')),
+  twitterX: lazy(() => import('./TwitterX')),
+  twitter: lazy(() => import('./Twitter')),
+  umbrella: lazy(() => import('./Umbrella')),
+  unamused: lazy(() => import('./Unamused')),
+  underline: lazy(() => import('./Underline')),
+  university: lazy(() => import('./University')),
+  unlockAlt: lazy(() => import('./UnlockAlt')),
+  unlock: lazy(() => import('./Unlock')),
+  uploadAlt: lazy(() => import('./UploadAlt')),
+  upload: lazy(() => import('./Upload')),
+  usdCircle: lazy(() => import('./UsdCircle')),
+  usdSquare: lazy(() => import('./UsdSquare')),
+  userArrows: lazy(() => import('./UserArrows')),
+  userCheck: lazy(() => import('./UserCheck')),
+  userCircle: lazy(() => import('./UserCircle')),
+  userExclamation: lazy(() => import('./UserExclamation')),
+  userLocation: lazy(() => import('./UserLocation')),
+  userMd: lazy(() => import('./UserMd')),
+  userMinus: lazy(() => import('./UserMinus')),
+  userNurse: lazy(() => import('./UserNurse')),
+  userPlus: lazy(() => import('./UserPlus')),
+  userSquare: lazy(() => import('./UserSquare')),
+  userTimes: lazy(() => import('./UserTimes')),
+  user: lazy(() => import('./User')),
+  usersAlt: lazy(() => import('./UsersAlt')),
+  utensilsAlt: lazy(() => import('./UtensilsAlt')),
+  utensils: lazy(() => import('./Utensils')),
+  vectorSquareAlt: lazy(() => import('./VectorSquareAlt')),
+  vectorSquare: lazy(() => import('./VectorSquare')),
+  venus: lazy(() => import('./Venus')),
+  verticalAlignBottom: lazy(() => import('./VerticalAlignBottom')),
+  verticalAlignCenter: lazy(() => import('./VerticalAlignCenter')),
+  verticalAlignTop: lazy(() => import('./VerticalAlignTop')),
+  verticalDistributeBottom: lazy(() => import('./VerticalDistributeBottom')),
+  verticalDistributionCenter: lazy(() => import('./VerticalDistributionCenter')),
+  verticalDistributionTop: lazy(() => import('./VerticalDistributionTop')),
+  videoQuestion: lazy(() => import('./VideoQuestion')),
+  videoSlash: lazy(() => import('./VideoSlash')),
+  video: lazy(() => import('./Video')),
+  virusSlash: lazy(() => import('./VirusSlash')),
+  visualStudio: lazy(() => import('./VisualStudio')),
+  vkAlt: lazy(() => import('./VkAlt')),
+  vk: lazy(() => import('./Vk')),
+  voicemailRectangle: lazy(() => import('./VoicemailRectangle')),
+  voicemail: lazy(() => import('./Voicemail')),
+  volleyball: lazy(() => import('./Volleyball')),
+  volumeDown: lazy(() => import('./VolumeDown')),
+  volumeMute: lazy(() => import('./VolumeMute')),
+  volumeOff: lazy(() => import('./VolumeOff')),
+  volumeUp: lazy(() => import('./VolumeUp')),
+  volume: lazy(() => import('./Volume')),
+  vuejsAlt: lazy(() => import('./VuejsAlt')),
+  vuejs: lazy(() => import('./Vuejs')),
+  wall: lazy(() => import('./Wall')),
+  wallet: lazy(() => import('./Wallet')),
+  watchAlt: lazy(() => import('./WatchAlt')),
+  watch: lazy(() => import('./Watch')),
+  waterDropSlash: lazy(() => import('./WaterDropSlash')),
+  waterGlass: lazy(() => import('./WaterGlass')),
+  water: lazy(() => import('./Water')),
+  webGridAlt: lazy(() => import('./WebGridAlt')),
+  webGrid: lazy(() => import('./WebGrid')),
+  webSectionAlt: lazy(() => import('./WebSectionAlt')),
+  webSection: lazy(() => import('./WebSection')),
+  webcam: lazy(() => import('./Webcam')),
+  weight: lazy(() => import('./Weight')),
+  whatsappAlt: lazy(() => import('./WhatsappAlt')),
+  whatsapp: lazy(() => import('./Whatsapp')),
+  wheelBarrow: lazy(() => import('./WheelBarrow')),
+  wheelchairAlt: lazy(() => import('./WheelchairAlt')),
+  wheelchair: lazy(() => import('./Wheelchair')),
+  wifiRouter: lazy(() => import('./WifiRouter')),
+  wifiSlash: lazy(() => import('./WifiSlash')),
+  wifi: lazy(() => import('./Wifi')),
+  windMoon: lazy(() => import('./WindMoon')),
+  windSun: lazy(() => import('./WindSun')),
+  wind: lazy(() => import('./Wind')),
+  windowGrid: lazy(() => import('./WindowGrid')),
+  windowMaximize: lazy(() => import('./WindowMaximize')),
+  windowSection: lazy(() => import('./WindowSection')),
+  window: lazy(() => import('./Window')),
+  windows: lazy(() => import('./Windows')),
+  windsock: lazy(() => import('./Windsock')),
+  windy: lazy(() => import('./Windy')),
+  wordpressSimple: lazy(() => import('./WordpressSimple')),
+  wordpress: lazy(() => import('./Wordpress')),
+  wrapText: lazy(() => import('./WrapText')),
+  wrench: lazy(() => import('./Wrench')),
+  xAdd: lazy(() => import('./XAdd')),
+  x: lazy(() => import('./X')),
+  yenCircle: lazy(() => import('./YenCircle')),
+  yen: lazy(() => import('./Yen')),
+  yinYang: lazy(() => import('./YinYang')),
+  youtube: lazy(() => import('./Youtube'))
+} as const;
+
+export type MntIconType = keyof typeof typesToIconMap;

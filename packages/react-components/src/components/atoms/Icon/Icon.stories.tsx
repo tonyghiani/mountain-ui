@@ -15,8 +15,7 @@ import {
   MntIconSize,
   MntIconVariant
 } from './Icon';
-import * as Icons from './icons';
-import { MntIconType, typesToIconMap } from './typesToIconMap';
+import { MntIconType, typesToIconMap } from './icons';
 
 const colors = Object.keys(ICON_COLORS) as MntIconColor[];
 const sizes = Object.keys(ICON_SIZES) as MntIconSize[];
@@ -110,15 +109,12 @@ export const All: Story = {
           {types
             .filter(type => type.toLowerCase().includes(search))
             .map(type => {
-              const iconName = typesToIconMap[type];
-              const Icon = Icons[iconName];
-
               return (
                 <MntBox
                   className='w-full flex gap-4 shadow-xl p-3 rounded-lg items-center text-xl'
                   key={type}
                 >
-                  <Icon />
+                  <MntIcon iconType={type} />
                   <MntText bold>{type}</MntText>
                 </MntBox>
               );

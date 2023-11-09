@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 import mnt from 'react-mnt';
 
-import { MntIconType, typesToIconMap } from './typesToIconMap';
+import { MntIconType, typesToIconMap } from './icons';
 
 export const ICON_COLORS = {
   current: 'text-current',
@@ -44,7 +44,7 @@ type IconElementProps =
   | (React.ComponentProps<'a'> & { variant?: 'link' })
   | (React.ComponentProps<'button'> & { variant?: 'button' });
 
-export type MntIconProps = IconElementProps & {
+interface MntIconBaseProps {
   /**
    * Tag version of the icon
    */
@@ -61,14 +61,16 @@ export type MntIconProps = IconElementProps & {
    * Transition on style changes
    */
   withTransition?: boolean;
-};
+}
+
+export type MntIconProps = IconElementProps & MntIconBaseProps;
 
 type BaseIconProps = Omit<MntIconProps, 'iconType'>;
 
 /**
  * MntIcon component wrapper for svg icons
  */
-export const BaseIcon = mnt('span').params<BaseIconProps>(props => ({
+const BaseIcon = mnt('span').params<BaseIconProps>(props => ({
   as: ICON_VARIANTS[props.variant || 'icon']?.tag
 }))`
   ${({ color = 'primary' }) => ICON_COLORS[color]}
@@ -78,35 +80,18 @@ export const BaseIcon = mnt('span').params<BaseIconProps>(props => ({
     withTransition && '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300'}
 `;
 
-export const MntIcon = React.forwardRef<IconElement, MntIconProps>(function MntIcon(
-  { className, color, size, iconType, variant, withTransition, ...props },
-  ref
-) {
-  const [Icon, setIcon] = useState<React.FunctionComponent | undefined>();
+export const MntIcon = React.forwardRef<IconElement, MntIconProps>(
+  ({ iconType, ...props }, ref) => {
+    const Icon = typesToIconMap[iconType];
 
-  useEffect(() => {
-    const iconFilename = typesToIconMap[iconType];
-    if (iconFilename) {
-      import(`./icons/${iconFilename}.tsx`).then(module => {
-        setIcon(() => module.default);
-      });
-    }
-  }, [iconType]);
-
-  return (
-    Icon && (
-      <BaseIcon
-        ref={ref}
-        className={className}
-        color={color}
-        size={size}
-        variant={variant}
-        withTransition={withTransition}
-      >
-        <Icon {...props} />
-      </BaseIcon>
-    )
-  );
-});
+    return (
+      Icon && (
+        <BaseIcon ref={ref} {...props}>
+          <Suspense>{Icon && <Icon />}</Suspense>
+        </BaseIcon>
+      )
+    );
+  }
+);
 
 MntIcon.displayName = 'MntIcon';
