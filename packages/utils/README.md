@@ -41,7 +41,7 @@ To harness the power of the @mountain-ui/utils library, follow these straightfor
 Here's a simple example demonstrating how to use some of the utilities in your project:
 
 ```javascript
-const {
+import {
   debounce,
   deepMerge,
   hasWindow,
@@ -52,7 +52,7 @@ const {
   sleep,
   toLowerCaseFirst,
   toUpperCaseFirst
-} = require('@mountain-ui/utils');
+} from '@mountain-ui/utils';
 
 // Example usage of debounce
 const debouncedFunction = debounce(() => {
