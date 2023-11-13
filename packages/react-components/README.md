@@ -1,4 +1,5 @@
-<h1 align="center">@mountain-ui/react-components</h1>
+# @mountain-ui/react-components
+
 <p>
   <a href="https://www.npmjs.com/package/@mountain-ui/react-components" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/npm/v/@mountain-ui/react-components?style=for-the-badge" />
@@ -9,7 +10,7 @@
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" />
   </a>
   <a href="https://twitter.com/tonyghiani" target="_blank">
-    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani.svg?style=for-the-badge" />
+    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani?style=for-the-badge&logo=x" />
   </a>
 </p>
 
