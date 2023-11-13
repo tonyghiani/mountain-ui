@@ -12,7 +12,7 @@
     <img alt="Lerna" src="https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg?style=for-the-badge" />
   </a>
   <a href="https://twitter.com/tonyghiani" target="_blank">
-    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani.svg?style=for-the-badge" />
+    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani?style=for-the-badge&logo=x" />
   </a>
 </p>
 
