@@ -52,7 +52,8 @@
     "test:coverage": "yarn test --coverage",
     "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
     "test:storybook": "test-storybook",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "update:deps": "ncu -u"
   },
   "config": {
     "commitizen": {
@@ -64,7 +65,7 @@
     "@mountain-ui/react-hooks": "^0.7.15",
     "@mountain-ui/utils": "^0.4.0",
     "prism-react-renderer": "2.2.0",
-    "react-mnt": "^1.1.0",
+    "react-mnt": "^1.1.2",
     "react-range": "^1.8.14"
   },
   "devDependencies": {
@@ -76,11 +77,11 @@
     "@storybook/blocks": "^7.5.3",
     "@storybook/react": "^7.5.3",
     "@storybook/react-vite": "^7.5.3",
-    "@storybook/test-runner": "^0.14.0",
+    "@storybook/test-runner": "^0.15.1",
     "@storybook/testing-library": "^0.2.2",
     "@svgr/cli": "^8.1.0",
     "@testing-library/jest-dom": "^6.1.4",
-    "@testing-library/react": "^14.1.0",
+    "@testing-library/react": "^14.1.2",
     "@types/mertasan__tailwindcss-variables": "^2.6.4",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",

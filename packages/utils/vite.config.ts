@@ -3,11 +3,10 @@ import { defineConfig } from 'vite';
 import macrosPlugin from 'vite-plugin-babel-macros';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
 
+import packageJson from './package.json';
+
 export default defineConfig(() => ({
   plugins: [macrosPlugin(), viteTsconfigPaths()],
-  define: {
-    'process.env': {}
-  },
   build: {
     minify: false,
     lib: {
@@ -29,6 +28,10 @@ export default defineConfig(() => ({
           preserveModules: true,
           preserveModulesRoot: 'src'
         }
+      ],
+      external: [
+        ...Object.keys(packageJson.dependencies).map(dep => new RegExp(dep)), // don't bundle dependencies
+        /^node:.*/ // don't bundle built-in Node.js modules (use protocol imports!),
       ]
     }
   }

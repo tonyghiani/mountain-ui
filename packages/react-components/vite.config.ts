@@ -8,9 +8,6 @@ import packageJson from './package.json';
 
 export default defineConfig(() => ({
   plugins: [react(), macrosPlugin(), viteTsconfigPaths()],
-  define: {
-    'process.env': {}
-  },
   build: {
     minify: false,
     lib: {
@@ -22,7 +19,7 @@ export default defineConfig(() => ({
       output: [
         {
           dir: 'dist/esm',
-          format: 'esm',
+          format: 'es',
           preserveModules: true,
           preserveModulesRoot: 'src'
         },
@@ -33,7 +30,13 @@ export default defineConfig(() => ({
           preserveModulesRoot: 'src'
         }
       ],
-      external: ['react/jsx-runtime', ...Object.keys(packageJson.peerDependencies)]
+      external: [
+        ...Object.keys(packageJson.dependencies).map(dep => new RegExp(dep)), // don't bundle dependencies
+        ...Object.keys(packageJson.peerDependencies), // don't bundle peerDependencies
+        /^node:.*/, // don't bundle built-in Node.js modules (use protocol imports!),
+        'react/jsx-runtime',
+        /tailwindcss/
+      ]
     }
   }
 }));

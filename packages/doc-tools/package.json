@@ -44,7 +44,8 @@
     "lint": "eslint",
     "lint:package": "sort-package-json",
     "release": "semantic-release",
-    "test": "NODE_ENV=testing jest --passWithNoTests"
+    "test": "NODE_ENV=testing jest --passWithNoTests",
+    "update:deps": "ncu -u"
   },
   "config": {
     "commitizen": {
@@ -52,7 +53,7 @@
     }
   },
   "dependencies": {
-    "react-mnt": "^1.1.0"
+    "react-mnt": "^1.1.2"
   },
   "devDependencies": {
     "react": "^18.2.0",

@@ -1,18 +1,14 @@
-// import { pathsToModuleNameMapper } from 'ts-jest';
-
 import baseConfig from '../../jest.config.base.js';
 
 import packageJson from './package.json';
-// import tsConfig from './tsconfig.json';
 
 export default {
   ...baseConfig,
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['./tests/jest.setup.js'],
+  setupFilesAfterEnv: ['./tests/jest.setup.ts'],
   moduleDirectories: ['node_modules', 'tests'],
   displayName: packageJson.name,
   moduleNameMapper: {
-    // ...pathsToModuleNameMapper(tsConfig.compilerOptions.paths),
     'mnt-internals': '<rootDir>/src/internals',
     '\\.(css)$': '<rootDir>/tests/__mocks__/styleMock.js'
   },

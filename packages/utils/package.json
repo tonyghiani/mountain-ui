@@ -46,7 +46,8 @@
     "test:ci": "NODE_ENV=ci jest --no-cache",
     "test:coverage": "yarn test --coverage",
     "test:json": "mkdir -p coverage && yarn test --json --outputFile=coverage/.jest-test-results.json || true",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "update:deps": "ncu -u"
   },
   "config": {
     "commitizen": {
