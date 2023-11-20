@@ -1,2 +1,2 @@
-export { default as Grid } from './Grid';
-export * from './Grid';
+export { MntGrid } from './Grid';
+export type { MntGridProps, MntGridColumns } from './Grid';

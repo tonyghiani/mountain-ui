@@ -1,40 +1,30 @@
-import styled from 'styled-components';
-import { variant } from 'styled-system';
+import mnt from 'react-mnt';
 
-import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
+import { MntBaseTypography, MntBaseTypographyProps } from '../BaseTypography';
 
-export type TextProps = BaseTypographyProps & {
-  /* Text variant */
-  variant?: 'primary' | 'secondary' | 'caption';
-};
+export const TEXT_BASE_CLASS = 'leading-relaxed';
+export const TEXT_VARIANTS = {
+  primary: 'text-body text-[--c-text-primary]',
+  secondary: 'text-secondaryBody text-[--c-text-secondary]',
+  caption: 'text-caption text-[--c-text-caption]'
+} as const;
 
-const Text = styled(BaseTypography)<TextProps>`
-  ${({ theme }) =>
-    variant({
-      scale: 'variants.typography.text',
-      variants: {
-        primary: {
-          color: `var(--c-text-primary, ${theme.colors.gray[900]})`,
-          fontSize: 'body'
-        },
-        secondary: {
-          color: `var(--c-text-secondary, ${theme.colors.gray[700]})`,
-          fontSize: 'secondaryBody'
-        },
-        caption: {
-          color: `var(--c-text-caption, ${theme.colors.gray[600]})`,
-          fontSize: 'caption'
-        }
-      }
-    })}
+export type MntTextVariant = keyof typeof TEXT_VARIANTS;
+
+export interface MntTextProps extends MntBaseTypographyProps {
+  /**
+   * Variant options for styling a Text component.
+   */
+  variant?: MntTextVariant;
+}
+
+/**
+ * Text component for rendering plain text content within a UI.
+ * Offers flexibility in styling and formatting textual information to enhance the user interface's visual appeal and clarity.
+ */
+export const MntText = mnt(MntBaseTypography)<MntTextProps>`
+  ${TEXT_BASE_CLASS}
+  ${({ variant = 'primary' }) => TEXT_VARIANTS[variant]}
 `;
 
-Text.defaultProps = {
-  color: 'dark',
-  lineHeight: 'tall',
-  as: 'span'
-};
-
-Text.displayName = 'Text';
-
-export default Text;
+MntText.displayName = 'MntText';

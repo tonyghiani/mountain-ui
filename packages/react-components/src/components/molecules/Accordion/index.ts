@@ -1,2 +1,6 @@
-export { default as Accordion } from './Accordion';
-export * from './Accordion';
+export { MntAccordion } from './Accordion';
+export type {
+  MntAccordionProps,
+  MntAccordionDetailProps,
+  MntAccordionSummaryProps
+} from './Accordion';

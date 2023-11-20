@@ -6,8 +6,11 @@
     "declarationDir": "./dist/types",
     "emitDeclarationOnly": true,
     "noEmit": false,
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "paths": {
+      "mnt-internals": ["./src/internals"]
+    }
   },
   "include": ["src"],
-  "exclude": ["src/**/*.test.tsx", "src/**/*.stories.tsx"]
+  "exclude": ["src/**/*.test.tsx", "src/**/*.stories.ts", "src/**/*.stories.tsx"]
 }

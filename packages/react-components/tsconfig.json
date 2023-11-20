@@ -1,10 +1,15 @@
 {
   "extends": "../../tsconfig.settings.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "mui-testing-tools": ["./tests/mui-testing-tools"]
+      "mnt-internals": ["./src/internals"],
+      "@mountain-ui/react-hooks": ["../react-hooks/src"],
+      "@mountain-ui/react-hooks/*": ["../react-hooks/*"],
+      "@mountain-ui/utils": ["../utils/src"],
+      "@mountain-ui/utils/*": ["../utils/*"]
     },
-    "types": ["jest", "node", "@testing-library/jest-dom", "jest-styled-components"]
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
   "include": ["src"]
 }

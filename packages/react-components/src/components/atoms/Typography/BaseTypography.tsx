@@ -1,77 +1,57 @@
-import styled, { css } from 'styled-components';
-import {
-  compose,
-  system,
-  textStyle,
-  TextStyleProps,
-  typography,
-  TypographyProps
-} from 'styled-system';
+import mnt from 'react-mnt';
 
-import { BaseElement, BaseElementProps } from '../../BaseElement';
+export const TEXT_GRADIENT_DIRECTIONS = {
+  t: 'bg-gradient-to-t',
+  tr: 'bg-gradient-to-tr',
+  r: 'bg-gradient-to-r',
+  br: 'bg-gradient-to-br',
+  b: 'bg-gradient-to-b',
+  bl: 'bg-gradient-to-bl',
+  l: 'bg-gradient-to-l',
+  tl: 'bg-gradient-to-tl'
+} as const;
 
-const textStyles = compose(typography, textStyle);
+export type MntTextGradientDirection = keyof typeof TEXT_GRADIENT_DIRECTIONS;
+export interface TextGradientOptions {
+  from: string;
+  to?: string;
+  direction?: MntTextGradientDirection;
+}
 
-export type BaseTypographyProps = BaseElementProps &
-  TypographyProps &
-  TextStyleProps & {
-    /* Text should be uncopyable */
-    uncopyable?: boolean;
-    /* Text should be bold */
-    strong?: boolean;
-    /* Text should be wrapped in ellipsis */
-    wrapped?: boolean;
-    /* Text should be clamped to specified line count */
-    lineClamp?: number;
-    /* Text should be underlined */
-    underline?: boolean;
-    /* Text have gradient color */
-    gradient?: string;
-  };
+export interface MntBaseTypographyProps {
+  /**
+   * Text should be uncopyable.
+   */
+  uncopyable?: boolean;
+  /**
+   * Text should be bold.
+   */
+  bold?: boolean;
+  /**
+   * Text should be wrapped in ellipsis.
+   */
+  truncate?: boolean;
+  /**
+   * Text should be underlined.
+   */
+  underline?: boolean;
+  /**
+   * Text have gradient color.
+   */
+  gradient?: TextGradientOptions;
+}
 
-const wrapped = css`
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+export const MntBaseTypography = mnt('span')<MntBaseTypographyProps>`
+  ${({ bold }) => (bold ? 'font-bold' : '')}
+  ${({ gradient }) =>
+    gradient
+      ? `text-transparent bg-clip-text ${TEXT_GRADIENT_DIRECTIONS[gradient.direction ?? 'r']} ${
+          gradient.from
+        } ${gradient.to ? gradient.to : ''}`
+      : ''}
+  ${({ truncate }) => (truncate ? 'truncate' : '')}
+  ${({ uncopyable }) => (uncopyable ? 'select-none' : '')}
+  ${({ underline }) => (underline ? 'underline underline-offset-4' : '')}
 `;
 
-const lineClamp = css`
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-`;
-
-const strong = css`
-  font-weight: ${p => p.theme.fontWeights.bold};
-`;
-
-const underline = css`
-  text-decoration: underline;
-`;
-
-const uncopyable = css`
-  user-select: none;
-`;
-
-const gradientColor = css`
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-/**
- * The `BaseTypography` component works as the first brick to compose more specific text components
- */
-const BaseTypography = styled(BaseElement)<BaseTypographyProps>`
-  ${textStyles}
-  ${system({ userSelect: true })}
-  ${p => p.gradient && `background: linear-gradient(${p.gradient}); ${gradientColor} `}
-  ${p => p.lineClamp && `${lineClamp}-webkit-line-clamp: ${p.lineClamp};`}
-  ${p => p.strong && strong}
-  ${p => p.uncopyable && uncopyable}
-  ${p => p.underline && underline}
-  ${p => p.wrapped && wrapped}
-`;
-
-BaseTypography.displayName = 'BaseTypography';
-
-export default BaseTypography;
+MntBaseTypography.displayName = 'MntBaseTypography';

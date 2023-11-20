@@ -1,10 +1,4 @@
 {
   "extends": "../../tsconfig.settings.json",
-  "compilerOptions": {
-    "paths": {
-      "mui-testing-tools": ["./tests/mui-testing-tools"]
-    },
-    "types": ["jest", "node", "@testing-library/jest-dom", "jest-styled-components"]
-  },
   "include": ["src"]
 }

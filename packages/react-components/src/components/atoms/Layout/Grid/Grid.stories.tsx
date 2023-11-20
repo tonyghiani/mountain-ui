@@ -1,40 +1,53 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import BaseLayout from '../Box';
+import { MntBox } from '../Box';
 
-import Grid from './Grid';
+import { GRID_COLUMNS, MntGrid, MntGridColumns } from './Grid';
 
-export default {
-  title: 'Atoms/Layout/Grid',
-  component: Grid
-};
+const meta = {
+  title: 'Atoms/Layout/MntGrid',
+  component: MntGrid,
+  tags: ['autodocs'],
+} satisfies Meta<typeof MntGrid>;
 
-export const GridStory = args => (
-  <Grid {...args}>
-    <Grid gridTemplateColumns='repeat(3, 1fr)' {...args}>
-      {[...Array(3)].map((_el, id) => (
-        <BaseLayout key={id} height={150} bg='blue.400' borderRadius={3} />
+export default meta
+
+type Story = StoryObj<typeof meta>;
+
+const GridItem = () => <MntBox className='w-16 h-16 bg-blue-400 rounded' />
+
+export const Main: Story = {
+  args: {
+    columns: 2,
+    justifyItems: 'center',
+    alignItems: 'center',
+    className: 'w-full h-96'
+  },
+  render: ({ columns, ...props }) => (
+    <MntGrid columns={columns} {...props}>
+      {[...Array(+columns)].map((_el, id) => (
+        <GridItem key={id} />
       ))}
-    </Grid>
-    <Grid gridTemplateColumns='repeat(4, 1fr)' {...args}>
-      {[...Array(4)].map((_el, id) => (
-        <BaseLayout key={id} height={150} bg='blue.400' borderRadius={3} />
-      ))}
-    </Grid>
-    <Grid gridTemplateColumns='repeat(6, 1fr)' {...args}>
-      {[...Array(6)].map((_el, id) => (
-        <BaseLayout key={id} height={150} bg='blue.400' borderRadius={3} />
-      ))}
-    </Grid>
-  </Grid>
-);
+    </MntGrid >
+  )
+}
 
-GridStory.storyName = 'Grid';
-
-GridStory.args = {
-  gridGap: 3
-};
-
-GridStory.parameters = {
-  jest: ['Layout.test.js']
+export const Columns: Story = {
+  args: {
+    justifyItems: 'center',
+    alignItems: 'center',
+    className: 'w-full h-32'
+  },
+  render: (args) => (
+    <MntGrid>
+      {Object.keys(GRID_COLUMNS).map((cols) => {
+        return <MntGrid key={cols} columns={+cols as MntGridColumns} {...args}>
+          {[...Array(+cols)].map((_el, id) => (
+            <GridItem key={id} />
+          ))}
+        </MntGrid>
+      })}
+    </MntGrid >
+  )
 };

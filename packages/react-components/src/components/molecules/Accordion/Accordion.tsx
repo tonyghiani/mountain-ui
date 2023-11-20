@@ -1,81 +1,98 @@
 import React, { useContext, useRef } from 'react';
+import mnt from 'react-mnt';
 import { useToggle } from '@mountain-ui/react-hooks';
-import styled from 'styled-components';
 
-import { Box, BoxProps } from '../../atoms';
-
-export type AccordionProps = BoxProps & {
-  /* Controlled value for the accordion expansion */
-  children: React.ReactNode;
-  /* Controlled value for the accordion expansion */
+export interface MntAccordionProps extends StyledAccordionSummaryClick {
+  /**
+   * Controlled value for the accordion expansion
+   */
   expanded?: boolean;
-  /* Controlled handler for the accordion expansion */
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-  /* Uncontrolled default value for the accordion expansion */
+  /**
+   * Uncontrolled default value for the accordion expansion
+   */
   defaultExpanded?: boolean;
-  /* Max height the accordion can expand to */
+  /**
+   * Max height the accordion can expand to
+   */
   maxHeight?: number;
-};
+}
 
-type AccordionContextInterface = Omit<AccordionProps, 'children' | 'defaulExpanded'>;
-
-type CompoundProps = Omit<AccordionProps, 'expanded' | 'defaulExpanded' | 'onClick' | 'maxHeight'>;
-
-const StyledDetail = styled(Box)`
-  will-change: height;
-  transition: height 0.3s;
+const StyledAccordion = mnt('div')<MntAccordionProps>`
+  overflow-hidden
 `;
 
-const AccordionContext = React.createContext<AccordionContextInterface | null>(null);
+const StyledAccordionSummary = mnt('div')`
+  cursor-pointer
+`;
+type StyledAccordionSummaryClick = Pick<
+  React.ComponentProps<typeof StyledAccordionSummary>,
+  'onClick' | 'children'
+>;
+
+const StyledAccordionDetail = mnt('div')<{ shouldOverflow: boolean }>`
+  will-change-[height] transition-height ease duration-150
+  ${({ shouldOverflow }) => (shouldOverflow ? 'overflow-auto' : 'overflow-hidden')}
+`;
+
+export type MntAccordionSummaryProps = React.ComponentProps<typeof StyledAccordionSummary>;
+export type MntAccordionDetailProps = Omit<
+  React.ComponentProps<typeof StyledAccordionDetail>,
+  'shouldOverflow'
+>;
+
+type MntAccordionContext = StyledAccordionSummaryClick &
+  Pick<MntAccordionProps, 'expanded' | 'maxHeight'>;
+
+const AccordionContext = React.createContext<MntAccordionContext | null>(null);
 
 /**
- * The `Accordion component allows to collapse/expand part of a DOM element`
+ * Accordion component for displaying collapsible sections, optimizing space and organizing content hierarchically.
+ * Improves UI efficiency and readability, allowing users to toggle and view information selectively.
  */
-function Accordion({
+export const MntAccordion = ({
   expanded,
   defaultExpanded = false,
   onClick,
   maxHeight = null,
   ...props
-}: AccordionProps) {
+}: MntAccordionProps) => {
   const [isExpanded, toggleExpanded] = useToggle(defaultExpanded);
 
   const context = {
     maxHeight,
     expanded: expanded ?? isExpanded,
-    onClick: onClick ?? toggleExpanded
+    onClick: (onClick ?? toggleExpanded) as StyledAccordionSummaryClick['onClick']
   };
 
   return (
     <AccordionContext.Provider value={context}>
-      <Box overflow='hidden' {...props} />
+      <StyledAccordion {...props} />
     </AccordionContext.Provider>
   );
-}
-
-Accordion.Summary = function AccordionSummary(props: CompoundProps) {
-  const { onClick } = useContext(AccordionContext);
-
-  return <Box onClick={onClick} cursor='pointer' {...props} />;
 };
 
-Accordion.Detail = function AccordionDetail(props: CompoundProps) {
+MntAccordion.Summary = function AccordionSummary(props: MntAccordionSummaryProps) {
+  const { onClick } = useContext(AccordionContext);
+
+  return <StyledAccordionSummary onClick={onClick} {...props} />;
+};
+
+MntAccordion.Detail = function AccordionDetail(props: MntAccordionDetailProps) {
   const { expanded, maxHeight } = useContext(AccordionContext);
 
   const ref = useRef(null);
 
   const maxCollapsedHeight = Math.min(maxHeight || Infinity, ref.current?.scrollHeight) || 'auto';
+  const shouldOverflow = Boolean(expanded && maxHeight);
 
   return (
-    <StyledDetail
+    <StyledAccordionDetail
       ref={ref}
-      height={expanded ? maxCollapsedHeight : 0}
-      overflow={expanded && maxHeight ? 'auto' : 'hidden'}
+      shouldOverflow={shouldOverflow}
+      style={{ height: expanded ? maxCollapsedHeight : 0 }}
       {...props}
     />
   );
 };
 
-Accordion.displayName = 'Accordion';
-
-export default Accordion;
+MntAccordion.displayName = 'MntAccordion';

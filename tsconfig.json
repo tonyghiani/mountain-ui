@@ -1,7 +1,7 @@
 {
   "files": [],
   "references": [
-    { "path": "./packages/icons" },
+    { "path": "./packages/doc-tools" },
     { "path": "./packages/react-components" },
     { "path": "./packages/react-hooks" },
     { "path": "./packages/utils" }

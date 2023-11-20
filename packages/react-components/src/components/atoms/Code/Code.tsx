@@ -1,24 +1,16 @@
-import styled from 'styled-components';
+import mnt from 'react-mnt';
 
-import { Text, TextProps } from '../Typography';
+export const CODE_BASE_CLASS =
+  'bg-blue-950 text-bold text-secondaryBody text-light inline-block px-1 rounded';
 
-export type CodeProps = TextProps;
+export interface MntCodeProps {}
+
 /**
- * Component used to render a code block
+ * Code component for displaying and styling code snippets.
+ * Enhances code readability and presentation, ideal for showcasing programming examples within a UI.
  */
-const Code = styled(Text)<CodeProps>``;
+export const MntCode = mnt('code')<MntCodeProps>`
+  ${CODE_BASE_CLASS}
+`;
 
-Code.defaultProps = {
-  as: 'code',
-  backgroundColor: 'blue.900',
-  borderRadius: 3,
-  fontWeight: 'bold',
-  fontSize: 'secondaryBody',
-  color: 'white',
-  display: 'inline-block',
-  paddingX: 2
-};
-
-Code.displayName = 'Code';
-
-export default Code;
+MntCode.displayName = 'MntCode';

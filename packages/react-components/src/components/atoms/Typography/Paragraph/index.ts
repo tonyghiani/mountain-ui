@@ -1,2 +1,2 @@
-export { default as Paragraph } from './Paragraph';
-export * from './Paragraph';
+export { MntParagraph } from './Paragraph';
+export type { MntParagraphProps } from './Paragraph';

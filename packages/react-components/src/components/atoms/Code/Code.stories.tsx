@@ -1,24 +1,24 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { Paragraph } from '../Typography/Paragraph';
+import { MntParagraph } from '../Typography/Paragraph';
 
-import Code from './Code';
+import { MntCode } from './Code';
 
-export default {
-  title: 'Atoms/Code',
-  component: Code
-};
+const meta = {
+  title: 'Atoms/MntCode',
+  component: MntCode,
+  tags: ['autodocs']
+} satisfies Meta<typeof MntCode>;
 
-export const CodeStory = args => (
-  <Paragraph>
-    The <Code {...args}>Code</Code> component is used to hightlight code keywords. The{' '}
-    <Code {...args}>Code</Code> component is used to hightlight code keywords. The{' '}
-    <Code {...args}>Code</Code> component is used to hightlight code keywords.
-  </Paragraph>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-CodeStory.storyName = 'Code';
-
-CodeStory.parameters = {
-  jest: ['Code.test.js']
+export const Main: Story = {
+  render: () => (
+    <MntParagraph>
+      MntCode component for displaying and styling <MntCode>variables names</MntCode>, describe some{' '}
+      <MntCode>keywords</MntCode> and much more.
+    </MntParagraph>
+  )
 };

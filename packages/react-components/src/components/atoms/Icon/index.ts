@@ -1,2 +1,3 @@
-export { default as Icon } from './Icon';
-export * from './Icon';
+export { MntIcon } from './Icon';
+export type { MntIconColor, MntIconSize, MntIconVariant, MntIconProps } from './Icon';
+export type { MntIconType } from './icons';

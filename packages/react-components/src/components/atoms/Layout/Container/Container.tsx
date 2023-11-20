@@ -1,20 +1,29 @@
-import styled from 'styled-components';
+import mnt from 'react-mnt';
 
-import Box, { BoxProps } from '../Box';
+export const CONTAINER_BASE_CLASS = 'mx-auto px-4';
+export const CONTAINER_SIZES = {
+  article: 'max-w-4xl',
+  large: 'max-w-screen-lg',
+  wide: 'max-w-screen-xl',
+  ultra: 'max-w-screen-2xl'
+} as const;
 
-export type ContainerProps = BoxProps;
+export type MntContainerSize = keyof typeof CONTAINER_SIZES;
+
+export interface MntContainerProps {
+  /**
+   * The maximum size the container should take on the screen.
+   */
+  size?: MntContainerSize;
+}
 
 /**
- * Container component
+ * MntContainer component for wrapping and styling content within a designated area.
+ * Helps in organizing and managing the layout of components and elements.
  */
-const Container = styled(Box)<ContainerProps>``;
+export const MntContainer = mnt('div')<MntContainerProps>`
+  ${CONTAINER_BASE_CLASS}
+  ${({ size = 'large' }) => CONTAINER_SIZES[size]}
+`;
 
-Container.defaultProps = {
-  maxWidth: 'min(100%, 1024px)',
-  px: 5,
-  mx: 'auto'
-};
-
-Container.displayName = 'Container';
-
-export default Container;
+MntContainer.displayName = 'MntContainer';

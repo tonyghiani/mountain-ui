@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/doc-tools",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Doc tools based on mountain ui",
   "keywords": [
     "mountain-ui",
@@ -17,6 +17,18 @@
   "license": "MIT",
   "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
   "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
@@ -24,53 +36,33 @@
     "dist"
   ],
   "scripts": {
-    "build": "yarn clean:build && yarn build:cjs && yarn build:esm && yarn build:types",
-    "build:cjs": "NODE_ENV=production BABEL_ENV=cjs babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/cjs",
-    "build:esm": "NODE_ENV=production BABEL_ENV=esm babel --extensions .ts,.tsx --ignore src/**/*.stories.tsx ./src --out-dir dist/esm",
+    "build": "yarn clean:build && yarn build:vite && yarn build:types",
     "build:types": "tsc --project ./tsconfig.types.json",
+    "build:vite": "vite build",
     "clean:build": "rimraf dist *.tsbuildinfo",
     "commit": "git cz",
     "lint": "eslint",
     "lint:package": "sort-package-json",
     "release": "semantic-release",
-    "test": "NODE_ENV=testing jest --passWithNoTests"
+    "test": "NODE_ENV=testing jest --passWithNoTests",
+    "update:deps": "ncu -u"
   },
   "config": {
     "commitizen": {
       "path": "git-cz"
     }
   },
+  "dependencies": {
+    "react-mnt": "^1.1.2"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.0",
-    "@babel/plugin-transform-runtime": "^7.16.0",
-    "@babel/preset-env": "^7.16.0",
-    "@babel/preset-react": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
-    "@styled-system/css": "^5.1.5",
-    "@testing-library/jest-dom": "^5.15.0",
-    "@testing-library/react": "^12.1.2",
-    "@types/styled-components": "^5.1.15",
-    "@types/styled-system": "^5.1.13",
-    "@types/styled-system__css": "^5.0.16",
-    "babel-plugin-styled-components": "^1.13.3",
-    "eslint-plugin-react": "^7.27.0",
-    "fs-extra": "^10.0.0",
-    "inquirer": "^8.2.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-range": "^1.8.11",
-    "styled-components": "^5.2.1",
-    "styled-system": "^5.1.5",
-    "typescript": "^4.4.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.5"
   },
   "peerDependencies": {
-    "@styled-system/css": ">=5",
-    "@types/react": "^17.0.34",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": ">=5",
-    "styled-system": ">=5"
+    "react": ">=17",
+    "react-dom": ">=17"
   },
   "publishConfig": {
     "access": "public"

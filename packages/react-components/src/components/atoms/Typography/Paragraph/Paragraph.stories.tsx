@@ -1,21 +1,22 @@
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import Paragraph from './Paragraph';
+import { Main as TextMainStory } from '../Text/Text.stories'
 
-export default {
-  title: 'Atoms/Typography/Paragraph',
-  component: Paragraph
-};
+import { MntParagraph } from './Paragraph';
 
-export const ParagraphStory = args => <Paragraph {...args} />;
+const meta = {
+  title: 'Atoms/Typography/MntParagraph',
+  component: MntParagraph,
+  tags: ['autodocs']
+} satisfies Meta<typeof MntParagraph>;
 
-ParagraphStory.storyName = 'Paragraph';
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-ParagraphStory.args = {
-  children:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-};
-
-ParagraphStory.parameters = {
-  jest: ['Typography.test.js']
+export const Main: Story = {
+  args: {
+    ...TextMainStory.args,
+    children: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    gradient: undefined
+  }
 };

@@ -1,48 +1,128 @@
-import React from 'react';
+//@ts-nocheck
+import React, { useState } from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import Icon from './Icon';
+import { MntInput } from '../Input';
+import { MntBox, MntGrid } from '../Layout';
+import { MntText } from '../Typography';
 
-export default {
-  title: 'Atoms/Icon',
-  component: Icon,
-  argTypes: {
-    color: {
-      control: {
-        type: 'color'
-      }
-    },
-    variant: {
-      control: {
-        type: 'radio'
-      }
-    },
-    fontSize: {
-      control: {
-        type: 'number',
-        min: 0,
-        max: 100,
-        step: 2
-      },
-      defaultValue: 64
-    }
+import {
+  ICON_COLORS,
+  ICON_SIZES,
+  ICON_VARIANTS,
+  MntIcon,
+  MntIconColor,
+  MntIconSize,
+  MntIconVariant
+} from './Icon';
+import { MntIconType, typesToIconMap } from './icons';
+
+const colors = Object.keys(ICON_COLORS) as MntIconColor[];
+const sizes = Object.keys(ICON_SIZES) as MntIconSize[];
+const variants = Object.keys(ICON_VARIANTS) as MntIconVariant[];
+
+const meta = {
+  title: 'Atoms/MntIcon',
+  component: MntIcon,
+  tags: ['autodocs'],
+} satisfies Meta<typeof MntIcon>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {
+  args: {
+    iconType: 'react',
+    color: 'current',
+    size: 'm',
+    variant: 'icon',
+    withTransition: false
   }
 };
 
-export const Basic = args => (
-  <Icon {...args}>
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
-      width='1em'
-      height='1em'
-      preserveAspectRatio='xMidYMid meet'
-      fill='currentColor'
-    >
-      <path d='M21.85 17.47l-5-8a1 1 0 00-1.7 0l-1 1.63-3.29-5.6a1 1 0 00-1.72 0l-7 12A1 1 0 003 19h18a1 1 0 00.85-1.53zM10.45 17H4.74L10 8l2.93 5zm2.35 0l2.2-3.43 1-1.68L19.2 17z' />
-    </svg>
-  </Icon>
-);
+export const Variant: Story = {
+  args: {
+    iconType: 'react',
+    variant: 'button'
+  },
+  render: args => {
+    return (
+      <div className='flex'>
+        {variants.map(variant => (
+          <MntIcon key={variant} {...args} variant={variant} />
+        ))}
+      </div>
+    );
+  }
+};
 
-Basic.parameters = {
-  jest: ['Icon.test.js']
+export const Color: Story = {
+  args: {
+    iconType: 'react'
+  },
+  render: args => {
+    return (
+      <div className='flex'>
+        {colors.map(color => (
+          <MntIcon key={color} {...args} color={color} />
+        ))}
+      </div>
+    );
+  }
+};
+
+export const Size: Story = {
+  args: {
+    iconType: 'react'
+  },
+  render: args => {
+    return (
+      <div className='flex'>
+        {sizes.map(size => (
+          <MntIcon key={size} {...args} size={size} />
+        ))}
+      </div>
+    );
+  }
+};
+
+const types = Object.keys(typesToIconMap) as MntIconType[];
+export const All: Story = {
+  parameters: {
+    storyshots: { disable: true },
+  },
+  args: {
+    iconType: 'react'
+  },
+  render: () => {
+    const [search, setSearch] = useState('');
+
+    const handleChange = e => setSearch(e.target.value.toLowerCase());
+
+    return (
+      <MntBox>
+        <MntInput
+          placeholder='React, Arrow, Github...'
+          onChange={handleChange}
+          value={search}
+          className='mb-3'
+        />
+        <MntGrid columns={3}>
+          {types
+            .filter(type => type.toLowerCase().includes(search))
+            .map(type => {
+              return (
+                <MntBox
+                  className='w-full flex gap-4 shadow-xl p-3 rounded-lg items-center text-xl'
+                  key={type}
+                >
+                  <MntIcon iconType={type} />
+                  <MntText bold>{type}</MntText>
+                </MntBox>
+              );
+            })}
+        </MntGrid>
+      </MntBox>
+    );
+  }
 };

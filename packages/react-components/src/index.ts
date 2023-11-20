@@ -1,7 +1,4 @@
 export * from './components/atoms';
 export * from './components/molecules';
-export * from './components/organisms';
 
-export * from './components/ThemeProvider';
-
-export * from './hooks';
+export { withMntConfig } from './with_mnt_config';

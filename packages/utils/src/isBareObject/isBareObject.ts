@@ -3,7 +3,7 @@
  * @param arg
  * @returns {boolean}
  */
-function isBareObject(arg: unknown): boolean {
+function isBareObject<TObject>(arg: TObject): arg is TObject {
   return arg?.toString() === '[object Object]';
 }
 

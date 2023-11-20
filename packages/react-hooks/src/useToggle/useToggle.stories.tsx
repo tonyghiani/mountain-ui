@@ -1,44 +1,29 @@
 import React from 'react';
-import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Button, Card, Container, Text } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useToggle from './useToggle';
 
-export default {
+const meta = {
   title: 'Hooks/useToggle',
-  component: useToggle
-};
+  component: Demo
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [value, toggle] = useToggle();
 
   return (
-    <Container padding={4}>
-      <Box
-        display='flex'
-        borderRadius={12}
-        border='1px solid'
-        flexDirection='column'
-        borderColor='hsl(206, 84%, 60%)'
-        overflow='hidden'
-        width={300}
-      >
-        <Box bg='hsl(206, 84%, 60%)' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            {value.toString().toUpperCase()}
-          </Paragraph>
-        </Box>
-        <Box p={3}>
-          <Button onClick={toggle} width={1}>
-            Toggle
-          </Button>
-        </Box>
-      </Box>
+    <Container>
+      <Card heading={<Text className='bold text-light'>{value.toString().toUpperCase()}</Text>}>
+        <div className='p-2'>
+          <Button onClick={toggle}>Toggle</Button>
+        </div>
+      </Card>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useToggle.test.js']
-};
+}

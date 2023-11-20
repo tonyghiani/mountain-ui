@@ -1,55 +1,45 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { useTheme } from '../../../../hooks';
-import { Box } from '../../Layout';
-import { Text } from '../Text';
+import { MntBox, MntGrid } from '../../Layout';
+import { MntText } from '../Text';
+import { Main as TextMainStory } from '../Text/Text.stories'
 
-import Heading from './Heading';
+import { HEADING_VARIANTS, MntHeading, MntHeadingVariant } from './Heading';
 
-export default {
-  title: 'Atoms/Typography/Heading',
-  component: Heading
+const variants = Object.keys(HEADING_VARIANTS) as MntHeadingVariant[];
+
+const meta = {
+  title: 'Atoms/Typography/MntHeading',
+  component: MntHeading,
+  tags: ['autodocs']
+} satisfies Meta<typeof MntHeading>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {
+  args: {
+    ...TextMainStory.args,
+    children: 'Mountain UI',
+    variant: 'h1'
+  }
 };
 
-export const HeadingStory = args => {
-  const theme = useTheme();
-
-  return (
-    <>
-      <Box>
-        <Text variant='secondary'>H1 - {theme.fontSizes.h1} - bold</Text>
-        <Heading {...args} variant='h1' />
-      </Box>
-      <Box>
-        <Text variant='secondary'>H2 - {theme.fontSizes.h2} - bold</Text>
-        <Heading {...args} variant='h2' />
-      </Box>
-      <Box>
-        <Text variant='secondary'>H3 - {theme.fontSizes.h3} - bold</Text>
-        <Heading {...args} variant='h3' />
-      </Box>
-      <Box>
-        <Text variant='secondary'>H4 - {theme.fontSizes.h4} - bold</Text>
-        <Heading {...args} variant='h4' />
-      </Box>
-      <Box>
-        <Text variant='secondary'>H5 - {theme.fontSizes.h5} - bold</Text>
-        <Heading {...args} variant='h5' />
-      </Box>
-      <Box>
-        <Text variant='secondary'>H6 - {theme.fontSizes.h6} - bold</Text>
-        <Heading {...args} variant='h6' />
-      </Box>
-    </>
-  );
-};
-
-HeadingStory.storyName = 'Heading';
-
-HeadingStory.args = {
-  children: 'Mountain UI library'
-};
-
-HeadingStory.parameters = {
-  jest: ['Typography.test.js']
+export const All: Story = {
+  args: {
+    children: 'Mountain UI'
+  },
+  render: args => {
+    return (
+      <MntGrid className='gap-4'>
+        {variants.map(variant => (
+          <MntBox key={variant}>
+            <MntText variant='secondary'>{variant.toUpperCase()} - bold</MntText>
+            <MntHeading key={variant} {...args} variant={variant} />
+          </MntBox>
+        ))}
+      </MntGrid>
+    );
+  }
 };

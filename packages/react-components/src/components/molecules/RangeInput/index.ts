@@ -1,2 +1,2 @@
-export { default as RangeInput } from './RangeInput';
-export * from './RangeInput';
+export { MntRangeInput } from './RangeInput';
+export type { MntRangeInputProps } from './RangeInput';

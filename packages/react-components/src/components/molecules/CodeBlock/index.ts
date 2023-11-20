@@ -1,2 +1,2 @@
-export { default as CodeBlock } from './CodeBlock';
-export * from './CodeBlock';
+export { MntCodeBlock } from './CodeBlock';
+export type { MntCodeBlockProps } from './CodeBlock';

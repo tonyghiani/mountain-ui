@@ -1,2 +1,2 @@
-export { default as Tag } from './Tag';
-export * from './Tag';
+export { MntTag } from './Tag';
+export type { MntTagProps, MntTagSize, MntTagStatus, MntTagStatusSize } from './Tag';

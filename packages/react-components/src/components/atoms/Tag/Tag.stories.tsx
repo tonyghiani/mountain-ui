@@ -1,30 +1,50 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { Box } from '../';
+import { MntBox } from '../Layout';
 
-import Tag from './Tag';
+import { MntTag } from './Tag';
 
-export default {
-  title: 'Atoms/Tag',
-  component: Tag
+const meta = {
+  title: 'Atoms/MntTag',
+  component: MntTag,
+  tags: ['autodocs']
+} satisfies Meta<typeof MntTag>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {
+  args: {
+    children: '#mountain-ui',
+    size: 'm',
+  },
 };
 
-export const TagStory = args => (
-  <Box display='flex' gap={4}>
-    <Tag {...args} size='XS' status='success' onClick={() => {}} />
-    <Tag {...args} size='S' status='success' />
-    <Tag {...args} size='M' status='success' />
-    <Tag {...args} size='L' status='success' />
-    <Tag {...args} size='XL' status='success' />
-  </Box>
-);
-
-TagStory.storyName = 'Tag';
-
-TagStory.args = {
-  children: '#mountain-ui'
+export const Size: Story = {
+  args: {
+    children: '#mountain-ui'
+  },
+  render: (args) => (
+    <MntBox className='flex gap-4'>
+      <MntTag {...args} size='xs' />
+      <MntTag {...args} size='s' />
+      <MntTag {...args} size='m' />
+      <MntTag {...args} size='l' />
+      <MntTag {...args} size='xl' />
+    </MntBox>
+  )
 };
 
-TagStory.parameters = {
-  jest: ['Tag.test.js']
+export const Status: Story = {
+  args: {
+    children: '#mountain-ui'
+  },
+  render: (args) => (
+    <MntBox className='flex gap-4'>
+      <MntTag {...args} size='m' status='success' />
+      <MntTag {...args} size='m' status='warning' />
+      <MntTag {...args} size='m' status='error' />
+    </MntBox>
+  )
 };

@@ -1,2 +1,2 @@
-export { default as Heading } from './Heading';
-export * from './Heading';
+export { MntHeading } from './Heading';
+export type { MntHeadingProps, MntHeadingVariant } from './Heading';

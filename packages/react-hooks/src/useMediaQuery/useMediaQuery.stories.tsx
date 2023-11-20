@@ -1,14 +1,20 @@
 import React from 'react';
-import { Box, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Card, Container, Text } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useMediaQuery from './useMediaQuery';
 
-export default {
+const meta = {
   title: 'Hooks/useMediaQuery',
-  component: useMediaQuery
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const mediaQueries = {
     mobile: 'screen and (min-width: 1px) and (max-width: 512px)',
     tablet: 'screen and (min-width: 513px) and (max-width: 1024px)',
@@ -24,45 +30,25 @@ export const Basic = () => {
   };
 
   return (
-    <Container padding={4}>
-      <Paragraph mb={2} fontStyle='oblique'>
+    <Container className="flex flex-col gap-2">
+      <Text>
         Try to resize the window to see the flags changing.
-      </Paragraph>
-      <Box
-        display='grid'
-        gridGap={2}
-        gridTemplateColumns={['1fr', '1fr 1fr 1fr', '1fr 1fr 1fr 1fr']}
-        mt={3}
+      </Text>
+      <div
+        className="flex gap-2"
       >
         {Object.keys(medias).map((name, i) => (
-          <Box key={i}>
-            <Box
-              display='flex'
-              borderRadius={12}
-              border='1px solid'
-              flexDirection='column'
-              borderColor='hsl(206, 84%, 60%)'
-              overflow='hidden'
-              width={300}
-            >
-              <Box bg='hsl(206, 84%, 60%)' p={2}>
-                <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-                  {name}
-                </Paragraph>
-              </Box>
-              <Paragraph strong textAlign='center' p={2}>
-                {medias[name].toString()}
-              </Paragraph>
-            </Box>
-          </Box>
+          <Card key={i} heading={
+            <Text className="bold text-light">
+              {name}
+            </Text>
+          }>
+            <Text className="grid place-items-center p-2">
+              {medias[name].toString()}
+            </Text>
+          </Card>
         ))}
-      </Box>
+      </div>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useMediaQuery.test.js']
 };

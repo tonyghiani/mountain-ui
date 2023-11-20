@@ -1,12 +1,10 @@
-import { BaseElement, BaseElementProps } from '../../BaseElement';
+import mnt from 'react-mnt';
 
-export type BoxProps = BaseElementProps;
+interface MntBoxProps {}
 
 /**
  * Box used to define Layout components
  */
-const Box = BaseElement;
+export const MntBox = mnt('div')<MntBoxProps>``;
 
-Box.displayName = 'Box';
-
-export default Box;
+MntBox.displayName = 'MntBox';

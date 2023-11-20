@@ -1,66 +1,35 @@
-import styled from 'styled-components';
-import { variant } from 'styled-system';
+import mnt from 'react-mnt';
 
-import { styleProps } from '../../../BaseElement';
-import BaseTypography, { BaseTypographyProps } from '../BaseTypography';
+import { MntBaseTypography, MntBaseTypographyProps } from '../BaseTypography';
 
-export type HeadingProps = BaseTypographyProps & {
-  /* Heading variant */
-  variant: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-};
+export const HEADING_BASE_CLASS = 'font-bold tracking-wide';
+export const HEADING_VARIANTS = {
+  h1: 'text-h1 leading-snug text-[--c-heading1]',
+  h2: 'text-h2 leading-snug text-[--c-heading2]',
+  h3: 'text-h3 leading-snug text-[--c-heading3]',
+  h4: 'text-h4 leading-normal text-[--c-heading4]',
+  h5: 'text-h5 leading-normal text-[--c-heading5]',
+  h6: 'text-h6 leading-normal text-[--c-heading6]'
+} as const;
 
-const Heading = styled(BaseTypography).attrs<HeadingProps>(p => ({
-  as: p.as || p.variant
-}))<HeadingProps>`
-  letter-spacing: 0.5px;
-  ${({ theme }) =>
-    variant({
-      scale: 'variants.typography.heading',
-      variants: {
-        h1: {
-          fontSize: 'h1',
-          lineHeight: 'short',
-          fontWeight: 'bold',
-          color: `var(--c-heading1, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h2: {
-          fontSize: 'h2',
-          lineHeight: 'short',
-          fontWeight: 'bold',
-          color: `var(--c-heading2, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h3: {
-          fontSize: 'h3',
-          lineHeight: 'short',
-          fontWeight: 'bold',
-          color: `var(--c-heading3, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h4: {
-          fontSize: 'h4',
-          lineHeight: 'normal',
-          fontWeight: 'bold',
-          color: `var(--c-heading4, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h5: {
-          fontSize: 'h5',
-          lineHeight: 'normal',
-          fontWeight: 'bold',
-          color: `var(--c-heading5, var(--c-heading, ${theme.colors.gray[900]}))`
-        },
-        h6: {
-          fontSize: 'h6',
-          lineHeight: 'normal',
-          fontWeight: 'bold',
-          color: `var(--c-heading6, var(--c-heading, ${theme.colors.gray[900]}))`
-        }
-      }
-    })}
-  ${styleProps}
+export type MntHeadingVariant = keyof typeof HEADING_VARIANTS;
+
+export interface MntHeadingProps extends MntBaseTypographyProps {
+  /**
+   * Variant options for styling a Heading component.
+   */
+  variant?: MntHeadingVariant;
+}
+
+/**
+ * Heading component for displaying text titles or headings in a styled and visually appealing manner,
+ * enhancing content presentation within a UI.
+ */
+export const MntHeading = mnt(MntBaseTypography).params<MntHeadingProps>(p => ({
+  as: p.as ?? p.variant
+}))`
+  ${HEADING_BASE_CLASS}
+  ${({ variant = 'h1' }) => HEADING_VARIANTS[variant]}
 `;
 
-Heading.displayName = 'Heading';
-Heading.defaultProps = {
-  variant: 'h1'
-};
-
-export default Heading;
+MntHeading.displayName = 'MntHeading';

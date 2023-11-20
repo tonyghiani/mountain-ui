@@ -1,46 +1,51 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { Grid } from '../Layout';
-import { Text } from '../Typography';
+import { MntGrid } from '../Layout';
 
-import Button from './Button';
+import { BUTTON_COLORS, BUTTON_VARIANTS, MntButton, MntButtonColor, MntButtonVariant } from './Button';
 
-export default {
-  title: 'Atoms/Button',
-  component: Button
+const colors = Object.keys(BUTTON_COLORS) as MntButtonColor[]
+const variants = Object.keys(BUTTON_VARIANTS) as MntButtonVariant[]
+
+const meta = {
+  title: 'Atoms/MntButton',
+  component: MntButton,
+  tags: ['autodocs'],
+} satisfies Meta<typeof MntButton>;
+
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {
+  args: {
+    children: 'Mountain UI',
+    color: 'primary',
+    disabled: false,
+    variant: 'shade',
+  }
 };
 
-export const All = () => (
-  <Grid gridTemplateRows='repeat(2, 1fr)' gridAutoFlow='column' gridGap={4} alignItems='center'>
-    <Text strong textAlign='center'>
-      Primary
-    </Text>
-    <Button variant='primary'>Click</Button>
-    <Text strong textAlign='center'>
-      Outline
-    </Text>
-    <Button variant='outline'>Click</Button>
-    <Text strong textAlign='center'>
-      Success
-    </Text>
-    <Button variant='success'>Click</Button>
-    <Text strong textAlign='center'>
-      Warning
-    </Text>
-    <Button variant='warning'>Click</Button>
-    <Text strong textAlign='center'>
-      Error
-    </Text>
-    <Button variant='error'>Click</Button>
-    <Text strong textAlign='center'>
-      Disabled
-    </Text>
-    <Button variant='primary' disabled>
-      Click
-    </Button>
-  </Grid>
-);
+export const Variant: Story = {
+  args: {
+    color: 'primary',
+    children: 'Mountain UI',
+  },
+  render: (args) => {
+    return (
+      <MntGrid columns={6} justifyItems='center' alignItems='center'>
+        {variants.map(variant => <MntButton key={variant} {...args} variant={variant} />)}
+      </MntGrid>
+    )
+  }
+};
 
-All.parameters = {
-  jest: ['Button.test.js']
+export const Color: Story = {
+  render: () => {
+    return (
+      <MntGrid columns={6} justifyItems='center' alignItems='center'>
+        {colors.map(color => variants.map(variant => <MntButton key={`${variant}-${color}`} color={color} variant={variant} >{color}</MntButton>))}
+      </MntGrid>
+    )
+  }
 };

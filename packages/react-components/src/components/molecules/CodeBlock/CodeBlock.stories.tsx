@@ -1,18 +1,22 @@
-import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import CodeBlock from './CodeBlock';
+import { MntCodeBlock } from './CodeBlock';
 
-export default {
-  title: 'Molecules/CodeBlock',
-  component: CodeBlock
-};
+const meta = {
+  title: 'Molecules/MntCodeBlock',
+  component: MntCodeBlock,
+  tags: ['autodocs']
+} satisfies Meta<typeof MntCodeBlock>;
 
-export const Basic = args => <CodeBlock {...args} />;
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-Basic.args = {
-  children: `/**
-* The CodeBlock component is used to represent blocks of code.
-*/
+export const Main: Story = {
+  args: {
+    syntax: 'jsx',
+    children: `/**
+ * The CodeBlock component is used to represent blocks of code.
+ */
 function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
   return (
     <Highlight {...defaultProps} theme={theme} code={children} language={syntax}>
@@ -32,8 +36,5 @@ function CodeBlock({ children, syntax, className, ...props }: CodeBlockProps) {
     </Highlight>
   );
 };`
-};
-
-Basic.parameters = {
-  jest: ['CodeBlock.test.js']
+  }
 };

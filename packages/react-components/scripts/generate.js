@@ -26,8 +26,7 @@ process.stdin.on('keypress', (_, { name }) => name === 'escape' && process.exit(
   await Promise.all([
     createIndex(componentName),
     createComponent(componentName),
-    createStory(componentName, type),
-    createTest(componentName)
+    createStory(componentName, type)
   ]);
   await addToIndex(type);
 
@@ -100,8 +99,8 @@ function createIndex(name) {
   return writeFile(
     COMPONENT_ENTRY,
     `
-export { default as ${name} } from './${name}'
-export * from './${name}';
+export { Mnt${name} } from './${name}'
+export type { Mnt${name}Props } from './${name}';
 `
   );
 }
@@ -111,26 +110,16 @@ function createComponent(name) {
   return writeFile(
     COMPONENT_IMPLEMENTATION,
     `
-import styled from 'styled-components';
+import { mnt } from 'mnt-internals';
 
-import { BaseElement, BaseElementProps } from '../../BaseElement';
-
-export type ${name}Props = BaseElementProps & {
-
-}
+export interface Mnt${name}Props { }
 
 /**
  * TODO: add component description headline
  */
-const ${name} = styled(BaseElement) <${name}Props>\`\`
+const Mnt${name} = mnt<Mnt${name}Props>('div')\`\`
 
-${name}.defaultProps = {
-   
-}
-
-${name}.displayName = '${name}';
-
-export default ${name};
+Mnt${name}.displayName = 'Mnt${name}';
 `
   );
 }
@@ -150,33 +139,22 @@ export default {
   component: ${name}
 };
 
-export const ${name}Story = args => <${name} {...args} />;
+import { Meta, StoryObj } from '@storybook/react';
 
-${name}Story.storyName = '${name}'
+import { Mnt${name} } from './${name}';
 
-${name}Story.parameters = {
-  jest: ['${name}.test.js'],
+const meta = {
+  title: '${group}/Mnt${name}',
+  component: Mnt${name},
+  tags: ['autodocs']
+} satisfies Meta<typeof Mnt${name}>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {
+  args: {}
 };
-`
-  );
-}
-
-function createTest(name) {
-  const COMPONENT_TEST = `${COMPONENT_DIR}/${name}.test.tsx`;
-  return writeFile(
-    COMPONENT_TEST,
-    `
-import React from 'react';
-import { render } from 'mui-testing-tools';
-
-import ${name} from './${name}';
-
-describe('${name}', () => {
-  it('should render correctly on mount', () => {
-    const { container } = render(<${name} />);
-    expect(container).toBeInTheDocument();
-  });
-});  
 `
   );
 }

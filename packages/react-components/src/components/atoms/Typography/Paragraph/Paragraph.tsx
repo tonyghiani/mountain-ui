@@ -1,10 +1,13 @@
-import styled from "styled-components"
+import mnt from 'react-mnt';
 
-import { Text, TextProps } from "../Text"
+import { MntText, MntTextProps } from '../Text';
 
-const Paragraph = styled(Text) <TextProps>``
+export interface MntParagraphProps extends MntTextProps {}
 
-Paragraph.defaultProps = { as: 'p' }
-Paragraph.displayName = 'Paragraph'
+/**
+ * Paragraph component for displaying text content in a structured and styled manner.
+ * Enhances readability and presentation of textual information within a UI.
+ */
+export const MntParagraph = mnt(MntText).params<MntParagraphProps>({ as: 'p' })``;
 
-export default Paragraph
+MntParagraph.displayName = 'MntParagraph';

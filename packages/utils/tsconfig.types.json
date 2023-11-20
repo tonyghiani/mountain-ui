@@ -6,7 +6,8 @@
     "declarationDir": "./dist/types",
     "emitDeclarationOnly": true,
     "noEmit": false,
-    "rootDir": "./src"
+    "rootDir": "./src",
+    "paths": {} // Reset custom paths for types build
   },
   "include": ["./src/**/*.ts*"],
   "exclude": ["src/**/*.test.ts"]

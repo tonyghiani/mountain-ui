@@ -1,72 +1,97 @@
-import React from 'react';
-import styled from 'styled-components';
-import { system, typography, variant } from 'styled-system';
+import React, { Suspense } from 'react';
+import mnt from 'react-mnt';
 
-import { BaseElementProps, styleProps } from '../../BaseElement';
+import { MntIconType, typesToIconMap } from './icons';
 
-export type IconRef = HTMLButtonElement | HTMLSpanElement | null;
+export const ICON_COLORS = {
+  current: 'text-current',
+  primary: 'text-sky-600',
+  accent: 'text-purple-600',
+  success: 'text-green-500',
+  warning: 'text-yellow-500',
+  danger: 'text-red-600',
+  disabled: 'text-gray-600'
+} as const;
+export const ICON_SIZES = {
+  xs: 'text-sm',
+  s: 'text-lg',
+  m: 'text-2xl',
+  l: 'text-4xl',
+  xl: 'text-6xl	'
+} as const;
+export const ICON_VARIANTS = {
+  button: {
+    tag: 'button',
+    classes: 'bg-transparent border-0 cursor-pointer'
+  },
+  icon: {
+    tag: 'span',
+    classes: ''
+  },
+  link: {
+    tag: 'a',
+    classes: ''
+  }
+} as const;
 
-export interface IconProps extends BaseElementProps {
-  /* Variant version of the icon */
-  variant?: 'icon' | 'button' | 'link';
-  /* Variant version of the icon */
-  onClick?: React.MouseEvent<IconRef>;
-  /* Transition on style changes */
+export type IconElement = HTMLButtonElement | HTMLSpanElement | HTMLAnchorElement;
+export type MntIconColor = keyof typeof ICON_COLORS;
+export type MntIconSize = keyof typeof ICON_SIZES;
+export type MntIconVariant = keyof typeof ICON_VARIANTS;
+
+type IconElementProps =
+  | (React.ComponentProps<'span'> & { variant?: 'icon' })
+  | (React.ComponentProps<'a'> & { variant?: 'link' })
+  | (React.ComponentProps<'button'> & { variant?: 'button' });
+
+interface MntIconBaseProps {
+  /**
+   * Tag version of the icon
+   */
+  color?: MntIconColor;
+  /**
+   * Icon size
+   */
+  size?: MntIconSize;
+  /**
+   * Icon type
+   */
+  iconType: MntIconType;
+  /**
+   * Transition on style changes
+   */
   withTransition?: boolean;
-  /* Variant version of the icon */
-  children: React.ReactNode;
 }
 
-const StyledIcon = styled.span<IconProps>`
-  ${system({
-    color: {
-      properties: ['fill'],
-      scale: 'colors'
-    }
-  })}
-  ${variant({
-    variants: {
-      icon: {
-        color: 'text.primary'
-      },
-      button: {
-        color: 'text.primary',
-        border: 0,
-        bg: 'transparent',
-        cursor: 'pointer'
-      }
-    }
-  })}
-  ${p => p.withTransition && '& > svg {transition: all .3s ease}'};
-  ${typography}
-  ${styleProps}
-`;
+export type MntIconProps = IconElementProps & MntIconBaseProps;
 
-const VARIANT_TAGS = {
-  button: 'button',
-  icon: 'span',
-  link: 'a'
-};
+type BaseIconProps = Omit<MntIconProps, 'iconType'>;
 
 /**
- * Icon component wrapper for svg icons
+ * MntIcon component wrapper for svg icons
  */
-const Icon = React.forwardRef(function Icon(
-  { children, variant, ...props }: IconProps,
-  ref: React.Ref<IconRef>
-) {
-  return (
-    <StyledIcon ref={ref} variant={variant} as={VARIANT_TAGS[variant]} {...props}>
-      {React.Children.only(children)}
-    </StyledIcon>
-  );
-});
+const BaseIcon = mnt('span').params<BaseIconProps>(props => ({
+  as: ICON_VARIANTS[props.variant || 'icon']?.tag
+}))`
+  ${({ color = 'primary' }) => ICON_COLORS[color]}
+  ${({ size = 'm' }) => ICON_SIZES[size]}
+  ${({ variant = 'icon' }) => ICON_VARIANTS[variant]?.classes}
+  ${({ withTransition = false }) =>
+    withTransition && '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300'}
+`;
 
-Icon.defaultProps = {
-  variant: 'icon',
-  withTransition: false
-};
+export const MntIcon = React.forwardRef<IconElement, MntIconProps>(
+  ({ iconType, ...props }, ref) => {
+    const Icon = typesToIconMap[iconType];
 
-Icon.displayName = 'Icon';
+    return (
+      Icon && (
+        <BaseIcon ref={ref} {...props}>
+          <Suspense>{Icon && <Icon />}</Suspense>
+        </BaseIcon>
+      )
+    );
+  }
+);
 
-export default Icon;
+MntIcon.displayName = 'MntIcon';

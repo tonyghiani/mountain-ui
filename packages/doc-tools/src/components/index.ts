@@ -1,13 +1,13 @@
 export * from './Button';
 
+export * from './Card';
+
 export * from './Code';
 
-export * from './Input';
+export * from './Container';
 
-export * from './Layout';
+export * from './Heading';
 
-export * from './List';
+export * from './Paragraph';
 
-export * from './ListItem';
-
-export * from './Typography';
+export * from './Text';

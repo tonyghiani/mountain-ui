@@ -4,10 +4,12 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "5.0",
     "isolatedModules": true,
     "jsx": "react",
-    "lib": ["es6", "dom", "es2016", "es2017"],
-    "moduleResolution": "node",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": false,
@@ -17,8 +19,21 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "ES2018",
-    "types": ["jest", "node", "@testing-library/jest-dom"]
+    "target": "ES2022",
+    "types": ["jest", "node", "@testing-library/jest-dom"],
+    "baseUrl": ".",
+    "rootDir": "",
+    "paths": {
+      "@mountain-ui/doc-tools": ["packages/doc-tools/src"],
+      "@mountain-ui/doc-tools/*": ["packages/doc-tools/*"],
+      "@mountain-ui/react-components": ["packages/react-components/src"],
+      "@mountain-ui/react-components/*": ["packages/react-components/*"],
+      "@mountain-ui/react-hooks": ["packages/react-hooks/src"],
+      "@mountain-ui/react-hooks/*": ["packages/react-hooks/*"],
+      "@mountain-ui/utils": ["packages/utils/src"],
+      "@mountain-ui/utils/*": ["packages/utils/*"]
+    }
   },
-  "exclude": ["node_modules", "dist", ".vscode", ".husky"]
+  "include": ["packages/**/*"],
+  "exclude": ["node_modules", "packages/*/node_modules", "dist", ".vscode", ".husky"]
 }

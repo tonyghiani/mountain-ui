@@ -1,83 +1,66 @@
 import React from 'react';
+import mnt from 'react-mnt';
 import { Range } from 'react-range';
 import { IProps, ITrackProps } from 'react-range/lib/types';
-import css from '@styled-system/css';
 
-import { useTheme } from '../../../hooks';
-import { Box } from '../../atoms';
-import { BaseElementProps } from '../../BaseElement';
+export interface MntRangeInputProps extends Omit<IProps, 'renderTrack' | 'renderThumb'> {
+  /**
+   * Props for the track element
+   */
+  trackProps?: ITrackProps;
+  /**
+   * MntRangeInput children
+   */
+  children: React.ReactNode | ((_value: number) => React.ReactNode);
+}
 
-export type RangeInputProps = IProps &
-  BaseElementProps & {
-    /* Props for the track element */
-    trackProps?: ITrackProps & BaseElementProps;
-    /* RangeInput children */
-    children: React.ReactNode | ((value: number) => React.ReactNode);
-  };
-
-export type ThumbProps = BaseElementProps;
+export const MntRangeTrack = mnt('div')<ITrackProps>`
+  w-full h-3 rounded-lg	bg-gradient-to-r from-sky-400 to-sky-200 border-4 border-solid border-transparent bg-clip-content
+`;
 
 /**
- * The `RangeInput` component provide a custom range input element
+ * The `MntRangeInput` component provide a custom range input element.
  */
-const RangeInput = ({ children, trackProps, ...inputProps }: RangeInputProps) => {
-  const theme = useTheme();
+export const MntRangeInput = ({
+  allowOverlap = null,
+  children,
+  onChange = null,
+  onFinalChange = null,
+  renderMark = null,
+  trackProps,
+  values = [],
+  ...inputProps
+}: MntRangeInputProps) => {
   return (
     <Range
       renderTrack={({ props, children: trackChildren }) => (
-        <Box
-          {...props}
-          width={1}
-          height={4}
-          borderRadius={1}
-          backgroundImage={`linear-gradient(90deg, ${theme.colors.blue[400]}, ${theme.colors.blue[200]})`}
-          {...trackProps}
-        >
+        <MntRangeTrack {...props} {...trackProps}>
           {trackChildren}
-        </Box>
+        </MntRangeTrack>
       )}
       renderThumb={({ props, value }) => {
         return (
-          <div {...props} style={{ ...props.style, outline: 'none' }} aria-label='RangeInput Thumb'>
+          <div
+            {...props}
+            style={{ ...props.style, outline: 'none' }}
+            aria-label='MntRangeInput Thumb'
+          >
             {typeof children === 'function' ? children(value) : children}
           </div>
         );
       }}
+      allowOverlap={allowOverlap}
+      onChange={onChange}
+      onFinalChange={onFinalChange}
+      renderMark={renderMark}
+      values={values}
       {...inputProps}
     />
   );
 };
 
-RangeInput.displayName = 'RangeInput';
-RangeInput.defaultProps = {
-  values: [],
-  onChange: null,
-  onFinalChange: null,
-  renderMark: null,
-  allowOverlap: true
-};
+MntRangeInput.displayName = 'MntRangeInput';
 
-export default RangeInput;
-
-const thumbPseudoSelectors = css({
-  transition: 'all .1s ease-in-out',
-  '&:hover': {
-    boxShadow: '0px 0px 0px 6px rgba(175, 223, 230, 0.15)'
-  },
-  '&:active': {
-    transform: 'scale(1.2)'
-  }
-});
-
-RangeInput.Thumb = function Thumb(props: ThumbProps) {
-  return (
-    <Box
-      width={12}
-      height={12}
-      borderRadius={7}
-      backgroundColor='blue.400'
-      css={thumbPseudoSelectors}
-      {...props}
-    />
-  );
-};
+MntRangeInput.Thumb = mnt('div')`
+  w-3 h-3 rounded-full bg-blue-400 transition-all ease-in-out duration-100 active:scale-125
+`;

@@ -1,47 +1,34 @@
 import React from 'react';
-import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Button, Card, Container, Text } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useDarkMode from './useDarkMode';
 
-export default {
+const meta = {
   title: 'Hooks/useDarkMode',
-  component: useDarkMode
-};
+  component: Demo
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [isDarkMode, setDarkMode] = useDarkMode({ darkModeClassName: 'dark-mode' });
 
   return (
-    <Container padding={4}>
-      <Box
-        display='flex'
-        borderRadius={12}
-        border='1px solid'
-        flexDirection='column'
-        borderColor='hsl(206, 84%, 60%)'
-        overflow='hidden'
-        width={300}
+    <Container>
+      <Card
+        heading={
+          <Text className='bold text-light'>Body has dark mode class: {isDarkMode.toString()}</Text>
+        }
       >
-        <Box bg='hsl(206, 84%, 60%)' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            Body has dark mode class: {isDarkMode.toString()}
-          </Paragraph>
-        </Box>
-        <Box display='grid' gridTemplateColumns='repeat(2, 1fr)' gridGap={3} p={3}>
-          <Button onClick={() => setDarkMode(true)} width={1}>
-            Enable
-          </Button>
-          <Button onClick={() => setDarkMode(false)} width={1}>
-            Disable
-          </Button>
-        </Box>
-      </Box>
+        <div className='flex gap-2 p-2'>
+          <Button onClick={() => setDarkMode(true)}>Enable</Button>
+          <Button onClick={() => setDarkMode(false)}>Disable</Button>
+        </div>
+      </Card>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useDarkMode.test.js']
-};
+}

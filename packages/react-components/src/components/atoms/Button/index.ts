@@ -1,2 +1,2 @@
-export { default as Button } from './Button';
-export * from './Button';
+export { MntButton } from './Button';
+export type { MntButtonColor, MntButtonVariant, MntButtonProps } from './Button';

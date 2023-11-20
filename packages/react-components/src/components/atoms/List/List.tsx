@@ -1,35 +1,26 @@
-import styled, { css } from 'styled-components';
+import mnt from 'react-mnt';
 
-import { BaseElement, BaseElementProps } from '../../BaseElement';
+export const LIST_BASE_CLASS = 'flex';
 
-export type ListProps = BaseElementProps & {
-  /* Remove space between items */
+export interface MntListProps {
+  /**
+   * Remove space between items
+   */
   dense?: boolean;
-  /* Use the list horizontally */
+  /**
+   * Use the list horizontally
+   */
   horizontal?: boolean;
-  /* List content */
-  children: React.ReactNode;
-};
-
-const withSpace = css`
-  gap: ${p => p.theme.space[5]};
-`;
+}
 
 /**
- * The `List` component is used to render unordered and ordered lists.
+ * List component for organizing and displaying a collection of items in a structured manner.
+ * Provides flexibility in layout and style, improving content presentation within a UI.
  */
-const List = styled(BaseElement)<ListProps>`
-  display: flex;
-  flex-direction: ${p => (p.horizontal ? 'row' : 'column')};
-  ${p => !p.dense && withSpace}
+export const MntList = mnt('ul')<MntListProps>`
+  ${LIST_BASE_CLASS}
+  ${({ horizontal = false }) => (horizontal ? 'flex-row' : 'flex-col')}
+  ${({ dense = false }) => !dense && 'gap-4'}
 `;
 
-List.defaultProps = {
-  as: 'ul',
-  dense: false,
-  horizontal: false
-};
-
-List.displayName = 'List';
-
-export default List;
+MntList.displayName = 'MntList';

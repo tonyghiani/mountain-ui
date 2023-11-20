@@ -1,4 +1,5 @@
-<h1 align="center">Mountain UI 🏔 </h1>
+# @mountain-ui/react-components
+
 <p>
   <a href="https://www.npmjs.com/package/@mountain-ui/react-components" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/npm/v/@mountain-ui/react-components?style=for-the-badge" />
@@ -9,52 +10,79 @@
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" />
   </a>
   <a href="https://twitter.com/tonyghiani" target="_blank">
-    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani.svg?style=for-the-badge" />
+    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani?style=for-the-badge&logo=x" />
   </a>
 </p>
 
-> React components library developed with Typescript, styled components and styled system.
+Welcome to the @mountain-ui/react-components library documentation! This component library follows the atomic design structure, providing a scalable and organized approach to building UI components. Leveraging the power of [`react-mnt`](https://github.com/tonyghiani/mnt), our library offers features such as polymorphism, composability, and strong typing for seamless integration into your React applications.
 
 ## Prerequisites
 
-- node >=12.6.0
-- yarn >=1.22.0
+Before integrating our component library into your project, ensure that you have the following prerequisites:
 
-## Install
+- **Node.js:** Make sure Node.js is installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 
-```sh
-yarn install
+## Installation
+
+To install and use the @mountain-ui/react-components library, follow these steps:
+
+1. Open a terminal window in your project directory.
+
+2. Run the following command to install the component library:
+
+   ```bash
+   npm install @mountain-ui/react-components
+   ```
+
+3. Once installed, you can import and use the components in your project.
+
+## Usage Example
+
+Here's a simple example demonstrating how to use some of the components in your React application:
+
+```jsx
+import React from 'react';
+import { MntButton, MntInput, MntCodeBlock } from '@mountain-ui/react-components';
+
+function App() {
+  return (
+    <div>
+      <MntButton variant='solid'>Click me</MntButton>
+      <MntInput type='text' placeholder='Enter text' />
+      <MntCodeBlock language='jsx'>
+        {`function example() {
+  // Your code here
+}`}
+      </MntCodeBlock>
+    </div>
+  );
+}
+
+export default App;
 ```
 
-## Usage
+## Components
 
-```sh
-yarn storybook
-```
+For detailed information about each component, refer to the sub-pages:
 
-## Run tests
+### Atoms
 
-```sh
-yarn test
-```
+- [MntButton](./src/components/atoms/Button)
+- [MntCode](./src/components/atoms/Code)
+- [MntIcon](./src/components/atoms/Icon)
+- [MntInput](./src/components/atoms/Input)
+- [MntBox](./src/components/atoms/Layout)
+- [MntGrid](./src/components/atoms/Layout/Grid)
+- [MntContainer](./src/components/atoms/Layout/Container)
+- [MntList](./src/components/atoms/List)
+- [MntListItem](./src/components/atoms/List)
+- [MntTag](./src/components/atoms/Tag)
+- [MntText](./src/components/atoms/Typography/Text)
+- [MntParagraph](./src/components/atoms/Typography/Paragraph)
+- [MntHeading](./src/components/atoms/Typography/Heading)
 
-## Author
+### Molecules
 
-👤 **Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>**
-
-- Website: https://marcoghiani.com
-- Twitter: [@tonyghiani](https://twitter.com/tonyghiani)
-- Github: [@tonyghiani](https://github.com/tonyghiani)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/tonyghiani/mountain-ui/issues). You can also take a look at the [contributing guide](https://github.com/tonyghiani/mountain-ui/blob/master/CONTRIBUTING.md).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2021 [Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>](https://github.com/tonyghiani).<br />
-This project is [MIT](https://github.com/tonyghiani/mountain-ui/blob/master/LICENSE) licensed.
+- [MntAccordion](./src/components/molecules/Accordion)
+- [MntCodeBlock](./src/components/molecules/CodeBlock)
+- [MntRangeInput](./src/components/molecules/RangeInput)

@@ -1,37 +1,40 @@
 import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
 
-import { ListItem, Text } from '../index';
+import { MntText } from '../Typography';
 
-import List, { ListProps } from './List';
+import { MntList } from './List';
+import { MntListItem } from './ListItem';
 
-export default {
-  title: 'Atoms/List',
-  component: List
-};
+const meta = {
+  title: 'Atoms/MntList',
+  component: MntList,
+  tags: ['autodocs']
+} satisfies Meta<typeof MntList>;
 
-export const ListStory = ({ children, ...args }: ListProps) => (
-  <List {...args}>
-    <ListItem>
-      <Text>{children}</Text>
-    </ListItem>
-    <ListItem>
-      <Text>{children}</Text>
-    </ListItem>
-    <ListItem>
-      <Text>{children}</Text>
-    </ListItem>
-    <ListItem>
-      <Text>{children}</Text>
-    </ListItem>
-  </List>
-);
+export default meta;
+type Story = StoryObj<typeof meta>;
 
-ListStory.storyName = 'List';
-
-ListStory.args = {
-  children: 'Mountain UI library'
-};
-
-ListStory.parameters = {
-  jest: ['List.test.js']
+export const Main: Story = {
+  args: {
+    children: 'Mountain UI library',
+    dense: false,
+    horizontal: false
+  },
+  render: ({ children, ...args }) => (
+    <MntList {...args}>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+      <MntListItem>
+        <MntText>{children}</MntText>
+      </MntListItem>
+    </MntList>
+  )
 };

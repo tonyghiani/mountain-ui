@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.11.8...@mountain-ui/react-components@1.0.0) (2023-11-20)
+
+### Bug Fixes
+
+- **react-components:** 🐛 accordion types ([60805a3](https://github.com/tonyghiani/mountain-ui/commit/60805a3f1a77141ee2a99f04347bd0dd17d403e8))
+- **react-components:** 🐛 fix icon story ([27cef53](https://github.com/tonyghiani/mountain-ui/commit/27cef53dc9c36059117c5ebd8c71b1a6bcbb6a76))
+- **react-components:** 🐛 update exports ([e7063af](https://github.com/tonyghiani/mountain-ui/commit/e7063af5af48cb76f0abf9263a6eb773bc192306))
+
+### Features
+
+- **react-components:** 🎸 port layout ([a50972e](https://github.com/tonyghiani/mountain-ui/commit/a50972e2e1eaab4ba1a92a0bd101a482bc920030))
+- **react-components:** 🎸 update grid and button stories ([67a1c38](https://github.com/tonyghiani/mountain-ui/commit/67a1c3853f69d76b4fe6bb4c94bc4013884cf9e0))
+- update mnt function implementation' ([2399a60](https://github.com/tonyghiani/mountain-ui/commit/2399a6025fe82136ff94819dc51c75d918828132))
+
 ## [0.11.8](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@0.11.7...@mountain-ui/react-components@0.11.8) (2022-11-09)
 
 **Note:** Version bump only for package @mountain-ui/react-components

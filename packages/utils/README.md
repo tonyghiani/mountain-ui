@@ -1,4 +1,5 @@
-<h1 align="center">Mountain UI 🏔 </h1>
+# @mountain-ui/utils
+
 <p>
   <a href="https://www.npmjs.com/package/@mountain-ui/utils" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/npm/v/@mountain-ui/utils?style=for-the-badge" />
@@ -9,46 +10,91 @@
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" />
   </a>
   <a href="https://twitter.com/tonyghiani" target="_blank">
-    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani.svg?style=for-the-badge" />
+    <img alt="Twitter: tonyghiani" src="https://img.shields.io/twitter/follow/tonyghiani?style=for-the-badge&logo=x" />
   </a>
 </p>
 
-> React components library developed with Typescript, styled components and styled system.
+# @mountain-ui/utils
 
 ## Prerequisites
 
-- node >=12.6.0
-- yarn >=1.22.0
+Before integrating the @mountain-ui/utils library into your project, ensure that you have the following prerequisites:
 
-## Install
+- **Node.js:** Make sure Node.js is installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 
-```sh
-yarn install
+## Installation
+
+To harness the power of the @mountain-ui/utils library, follow these straightforward steps:
+
+1. Open a terminal window in your project directory.
+
+2. Run the following command to install the utils library:
+
+   ```bash
+   npm install @mountain-ui/utils
+   ```
+
+3. Once installed, you can import and use the utilities in your project.
+
+## Usage Example
+
+Here's a simple example demonstrating how to use some of the utilities in your project:
+
+```javascript
+import {
+  debounce,
+  deepMerge,
+  hasWindow,
+  isBareObject,
+  isFunction,
+  isString,
+  pipe,
+  sleep,
+  toLowerCaseFirst,
+  toUpperCaseFirst
+} from '@mountain-ui/utils';
+
+// Example usage of debounce
+const debouncedFunction = debounce(() => {
+  console.log('Debounced function executed.');
+}, 300);
+
+// Example usage of deepMerge
+const mergedObject = deepMerge({ a: 1 }, { b: 2, a: 3 });
+
+// Example usage of isFunction
+console.log(isFunction(() => {})); // true
+console.log(isFunction('not a function')); // false
+
+// Example usage of sleep
+async function delayedFunction() {
+  console.log('Before sleep');
+  await sleep(2000);
+  console.log('After sleep');
+}
+
+// Example usage of toUpperCaseFirst
+const uppercased = toUpperCaseFirst('hello');
+
+// Example usage of pipe
+const addOne = x => x + 1;
+const double = x => x * 2;
+const result = pipe(addOne, double)(3); // (3 + 1) * 2 = 8
+
+console.log(result);
 ```
 
-## Run tests
+## Utilities
 
-```sh
-yarn test
-```
+For detailed information about each utility, refer to the sub-pages:
 
-## Author
-
-👤 **Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>**
-
-- Website: https://distilled.me/marco
-- Twitter: [@tonyghiani](https://twitter.com/tonyghiani)
-- Github: [@tonyghiani](https://github.com/tonyghiani)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/tonyghiani/mountain-ui/issues). You can also take a look at the [contributing guide](https://github.com/tonyghiani/mountain-ui/blob/master/CONTRIBUTING.md).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-## 📝 License
-
-Copyright © 2021 [Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>](https://github.com/tonyghiani).<br />
-This project is [MIT](https://github.com/tonyghiani/mountain-ui/blob/master/LICENSE) licensed.
+- [debounce](./src/debounce)
+- [deepMerge](./src/deepMerge)
+- [hasWindow](./src/hasWindow)
+- [isBareObject](./src/isBareObject)
+- [isFunction](./src/isFunction)
+- [isString](./src/isString)
+- [pipe](./src/pipe)
+- [sleep](./src/sleep)
+- [toLowerCaseFirst](./src/toLowerCaseFirst)
+- [toUpperCaseFirst](./src/toUpperCaseFirst)

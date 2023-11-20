@@ -1,50 +1,41 @@
 import React from 'react';
-import { Box, Button, Container, Paragraph } from '@mountain-ui/doc-tools';
+import { Button, Card, Container, Text } from '@mountain-ui/doc-tools';
+import { Meta, StoryObj } from '@storybook/react';
 
 import useBoolean from './useBoolean';
 
-export default {
+const meta = {
   title: 'Hooks/useBoolean',
-  component: useBoolean
-};
+  component: Demo,
+} satisfies Meta<typeof Demo>;
 
-export const Basic = () => {
+export default meta
+type Story = StoryObj<typeof meta>;
+
+export const Main: Story = {};
+
+function Demo() {
   const [value, { on, off, toggle }] = useBoolean();
 
   return (
-    <Container padding={4}>
-      <Box
-        display='flex'
-        borderRadius={12}
-        border='1px solid'
-        flexDirection='column'
-        borderColor='hsl(206, 84%, 60%)'
-        overflow='hidden'
-        width={300}
-      >
-        <Box bg='hsl(206, 84%, 60%)' p={2}>
-          <Paragraph fontSize={3} strong textAlign='center' color='#FFFFFF'>
-            {value.toString().toUpperCase()}
-          </Paragraph>
-        </Box>
-        <Box display='grid' gridTemplateColumns='repeat(3, 1fr)' gridGap={2} p={3}>
-          <Button onClick={on} width={1}>
+    <Container >
+      <Card heading={
+        <Text className="bold text-light">
+          {value.toString().toUpperCase()}
+        </Text>
+      }>
+        <div className="flex gap-2 p-2">
+          <Button onClick={on}>
             On
           </Button>
-          <Button onClick={off} width={1}>
+          <Button onClick={off}>
             Off
           </Button>
-          <Button onClick={toggle} width={1}>
+          <Button onClick={toggle}>
             Toggle
           </Button>
-        </Box>
-      </Box>
+        </div>
+      </Card>
     </Container>
   );
-};
-
-Basic.args = {};
-
-Basic.parameters = {
-  jest: ['useBoolean.test.js']
 };
