@@ -22,6 +22,7 @@ export const Main: Story = {
     children: 'Mountain UI',
     color: 'primary',
     disabled: false,
+    rounded: false,
     variant: 'shade',
   }
 };

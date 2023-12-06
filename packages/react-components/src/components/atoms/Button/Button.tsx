@@ -32,6 +32,10 @@ export interface MntButtonProps {
    */
   disabled?: boolean;
   /**
+   * Makes the button rounded
+   */
+  rounded?: boolean;
+  /**
    * The variant to use for the button
    */
   variant?: MntButtonVariant;
@@ -41,9 +45,10 @@ export interface MntButtonProps {
  * Button component for triggering actions or events in the UI.
  * Provides interactivity with styled visuals, enhancing user engagement and navigation within the application.
  */
-export const MntButton = mnt('button')<MntButtonProps>`
+export const MntButton = mnt('button') <MntButtonProps>`
   ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
+  ${({ rounded = false }) => rounded && '!rounded-full'}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}
 `;
 
