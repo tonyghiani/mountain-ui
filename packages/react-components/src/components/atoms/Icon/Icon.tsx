@@ -4,6 +4,8 @@ import mnt from 'react-mnt';
 import { MntIconType, typesToIconMap } from './icons';
 
 export const ICON_COLORS = {
+  light: 'text-light',
+  dark: 'text-dark',
   current: 'text-current',
   primary: 'text-sky-600',
   accent: 'text-purple-600',

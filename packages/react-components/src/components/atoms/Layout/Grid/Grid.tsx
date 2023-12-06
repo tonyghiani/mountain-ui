@@ -32,7 +32,7 @@ export interface MntGridProps {
  * Grid component for organizing content in a structured layout with rows and columns.
  * Facilitates alignment and distribution, ideal for creating organized and aesthetically pleasing interfaces.
  */
-export const MntGrid = mnt('div')<MntGridProps>`
+export const MntGrid = mnt('div') <MntGridProps>`
   ${GRID_BASE_CLASS}
   ${({ columns }) => columns && GRID_COLUMNS[columns]}
   ${justifyItems}

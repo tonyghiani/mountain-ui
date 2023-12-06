@@ -50,7 +50,7 @@ const TagContainer = mnt('div')`
   ${({ onClick }) => (onClick ? 'cursor-pointer' : 'cursor-default')}
 `;
 
-export interface MntTagProps {
+export interface MntTagProps extends React.ComponentProps<typeof TagContainer> {
   /**
    * Tag text children
    */
@@ -93,7 +93,7 @@ export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) 
   );
 };
 
-const TagStatus = mnt('div')<TagStatusProps>`
+const TagStatus = mnt('div') <TagStatusProps>`
   absolute rounded-full border-light border-solid border-2
   ${({ size }) => TAG_STATUS_SIZES[size]}
   ${({ status }) => TAG_STATUS[status]}
