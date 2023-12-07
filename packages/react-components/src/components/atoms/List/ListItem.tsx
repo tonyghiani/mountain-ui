@@ -1,7 +1,7 @@
 import React from 'react';
 import mnt from 'react-mnt';
 
-export const LIST_ITEM_BASE_CLASS = `flex items-start gap-4`;
+export const LIST_ITEM_BASE_CLASS = `mnt-list-item`;
 
 export interface MntListItemProps {
   /**
