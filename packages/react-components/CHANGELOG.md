@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.0.2...@mountain-ui/react-components@1.1.0) (2023-12-07)
+
+### Features
+
+- **react-components:** 🎸 add Button rounded version ([f4bd2bc](https://github.com/tonyghiani/mountain-ui/commit/f4bd2bc3f8fda35bec706b071bbef620745220b5))
+
 ## [1.0.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.0.1...@mountain-ui/react-components@1.0.2) (2023-11-23)
 
 **Note:** Version bump only for package @mountain-ui/react-components
