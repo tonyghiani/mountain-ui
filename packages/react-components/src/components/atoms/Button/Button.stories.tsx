@@ -30,12 +30,11 @@ export const Main: Story = {
 export const Variant: Story = {
   args: {
     color: 'primary',
-    children: 'Mountain UI',
   },
   render: (args) => {
     return (
       <MntGrid columns={6} justifyItems='center' alignItems='center'>
-        {variants.map(variant => <MntButton key={variant} {...args} variant={variant} />)}
+        {variants.map(variant => <MntButton key={variant} {...args} variant={variant}>{variant}</MntButton>)}
       </MntGrid>
     )
   }

@@ -14,8 +14,8 @@ export interface MntRangeInputProps extends Omit<IProps, 'renderTrack' | 'render
   children: React.ReactNode | ((_value: number) => React.ReactNode);
 }
 
-export const MntRangeTrack = mnt('div')<ITrackProps>`
-  w-full h-3 rounded-lg	bg-gradient-to-r from-sky-400 to-sky-200 border-4 border-solid border-transparent bg-clip-content
+export const MntRangeTrack = mnt('div') <ITrackProps>`
+  mnt-range-input-track
 `;
 
 /**
@@ -62,5 +62,5 @@ export const MntRangeInput = ({
 MntRangeInput.displayName = 'MntRangeInput';
 
 MntRangeInput.Thumb = mnt('div')`
-  w-3 h-3 rounded-full bg-blue-400 transition-all ease-in-out duration-100 active:scale-125
+  mnt-range-input-thumb
 `;

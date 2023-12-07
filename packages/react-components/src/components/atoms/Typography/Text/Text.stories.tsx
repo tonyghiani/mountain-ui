@@ -1,6 +1,11 @@
+import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { MntText } from './Text';
+import { MntGrid } from '../../Layout';
+
+import { MntText, MntTextVariant, TEXT_VARIANTS } from './Text';
+
+const variants = Object.keys(TEXT_VARIANTS) as MntTextVariant[]
 
 const meta = {
   title: 'Atoms/Typography/MntText',
@@ -16,12 +21,24 @@ export const Main: Story = {
     children: "Mountain UI",
     variant: 'primary',
     bold: false,
-    gradient: {
-      from: 'from-red-500',
-      to: 'to-yellow-500',
-    },
     truncate: false,
     uncopyable: false,
     underline: false,
+  }
+};
+
+export const Variant: Story = {
+  args: {
+    bold: false,
+    truncate: false,
+    uncopyable: false,
+    underline: false,
+  },
+  render: (args) => {
+    return (
+      <MntGrid columns={3} justifyItems='center' alignItems='center'>
+        {variants.map(variant => <MntText key={variant} {...args} variant={variant}>{variant} text</MntText>)}
+      </MntGrid>
+    )
   }
 };

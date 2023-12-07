@@ -45,8 +45,7 @@ export type MntTagStatus = keyof typeof TAG_STATUS;
 export type MntTagStatusSize = keyof typeof TAG_STATUS_SIZES;
 
 const TagContainer = mnt('div')`
-  relative inline-flex items-center rounded-[32px] hover:scale-[1.03] transition ease duration-300
-  bg-gradient-to-br from-blue-500 to-blue-300
+  mnt-tag
   ${({ onClick }) => (onClick ? 'cursor-pointer' : 'cursor-default')}
 `;
 
@@ -94,7 +93,7 @@ export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) 
 };
 
 const TagStatus = mnt('div') <TagStatusProps>`
-  absolute rounded-full border-light border-solid border-2
+  mnt-tag-status
   ${({ size }) => TAG_STATUS_SIZES[size]}
   ${({ status }) => TAG_STATUS[status]}
 `;

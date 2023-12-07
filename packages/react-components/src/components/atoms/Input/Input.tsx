@@ -4,10 +4,10 @@ import mnt from 'react-mnt';
 import { MntParagraph, MntText } from '../Typography';
 
 export const INPUT_STATUS = {
-  default: '[--text-input:theme(colors.gray.500)] [--bg-input:theme(colors.gray.50)]',
-  success: '[--text-input:theme(colors.green.600)] [--bg-input:theme(colors.emerald.50)]',
-  warning: '[--text-input:theme(colors.yellow.600)] [--bg-input:theme(colors.yellow.50)]',
-  error: '[--text-input:theme(colors.red.600)] [--bg-input:theme(colors.red.50)]'
+  default: 'mnt-input-default',
+  success: 'mnt-input-success',
+  warning: 'mnt-input-warning',
+  error: 'mnt-input-error'
 } as const;
 
 const INPUT_SIZES = {
@@ -56,15 +56,15 @@ export type MntInputProps = Omit<React.ComponentProps<typeof StyledInput>, 'size
 };
 
 const StyledInput = mnt('input')`
-  w-full text-dark font-medium border-0 bg-transparent placeholder:font-normal
+  mnt-input-node
 `;
 
 const InputWrapper = mnt('div')`
-  w-full rounded-lg bg-[--bg-input] shadow-input focus-within:shadow-input-focus flex items-center flex-nowrap gap-2 transition duration-200
+  mnt-input-wrapper
 `;
 
 const InputContainer = mnt('div') <Pick<MntInputProps, 'status'>>`
-  w-full relative focus-within:[--text-input:theme(colors.blue.500)] focus-within:[--bg-input:theme(colors.blue.50)] focus-within:bg-opacity-20
+  mnt-input
   ${props => INPUT_STATUS[props.status]}
 `;
 

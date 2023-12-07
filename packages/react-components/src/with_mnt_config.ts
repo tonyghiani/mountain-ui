@@ -7,6 +7,16 @@ import { deepMerge } from '@mountain-ui/utils';
 import { Config as TailwindConfig } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 
+import btnClasses from './components/atoms/Button/Button.classes';
+import codeClasses from './components/atoms/Code/Code.classes';
+import inputClasses from './components/atoms/Input/Input.classes';
+import listClasses from './components/atoms/List/List.classes';
+import tagClasses from './components/atoms/Tag/Tag.classes';
+import typographyClasses from './components/atoms/Typography/Typography.classes';
+import accordionClasses from './components/molecules/Accordion/Accordion.classes';
+import codeblockClasses from './components/molecules/CodeBlock/CodeBlock.classes';
+import rangeInputClasses from './components/molecules/RangeInput/RangeInput.classes';
+
 const materialTailwindConfig = {
   content: [
     './node_modules/@mountain-ui/react-components/dist/cjs/components/**/*.{js,ts,jsx,tsx}',
@@ -20,6 +30,22 @@ const materialTailwindConfig = {
           outline: 'none'
         }
       });
+
+      // Register components class names
+      addComponents(
+        Object.assign(
+          {},
+          btnClasses,
+          codeClasses,
+          inputClasses,
+          listClasses,
+          tagClasses,
+          typographyClasses,
+          accordionClasses,
+          codeblockClasses,
+          rangeInputClasses
+        )
+      );
 
       addComponents(
         variablesApi.variables({
@@ -40,6 +66,11 @@ const materialTailwindConfig = {
       );
 
       const newUtilities = {
+        '.flex-center': {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center'
+        },
         '.mnt-scrollbar': {
           scrollbarWidth: 'thin',
           scrollbarColor: `${theme('colors.gray.400')} transparent`,

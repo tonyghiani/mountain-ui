@@ -75,7 +75,7 @@ type BaseIconProps = Omit<MntIconProps, 'iconType'>;
 const BaseIcon = mnt('span').params<BaseIconProps>(props => ({
   as: ICON_VARIANTS[props.variant || 'icon']?.tag
 }))`
-  ${({ color = 'primary' }) => ICON_COLORS[color]}
+  ${({ color = 'current' }) => ICON_COLORS[color]}
   ${({ size = 'm' }) => ICON_SIZES[size]}
   ${({ variant = 'icon' }) => ICON_VARIANTS[variant]?.classes}
   ${({ withTransition = false }) =>

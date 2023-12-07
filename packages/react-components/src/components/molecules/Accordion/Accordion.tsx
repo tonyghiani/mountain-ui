@@ -17,20 +17,20 @@ export interface MntAccordionProps extends StyledAccordionSummaryClick {
   maxHeight?: number;
 }
 
-const StyledAccordion = mnt('div')<MntAccordionProps>`
-  overflow-hidden
+const StyledAccordion = mnt('div') <MntAccordionProps>`
+  mnt-accordion
 `;
 
 const StyledAccordionSummary = mnt('div')`
-  cursor-pointer
+  mnt-accordion-summary
 `;
 type StyledAccordionSummaryClick = Pick<
   React.ComponentProps<typeof StyledAccordionSummary>,
   'onClick' | 'children'
 >;
 
-const StyledAccordionDetail = mnt('div')<{ shouldOverflow: boolean }>`
-  will-change-[height] transition-height ease duration-150
+const StyledAccordionDetail = mnt('div') <{ shouldOverflow: boolean }>`
+  mnt-accordion-detail
   ${({ shouldOverflow }) => (shouldOverflow ? 'overflow-auto' : 'overflow-hidden')}
 `;
 

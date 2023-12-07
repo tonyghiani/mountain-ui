@@ -110,7 +110,7 @@ function createComponent(name) {
   return writeFile(
     COMPONENT_IMPLEMENTATION,
     `
-import { mnt } from 'mnt-internals';
+import mnt from 'react-mnt';
 
 export interface Mnt${name}Props { }
 
