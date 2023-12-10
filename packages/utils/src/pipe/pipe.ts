@@ -1,15 +1,14 @@
 /**
  * Utility to pipe pure functions.
  * @param ...functions
- * @returns {boolean}
  */
 
-type Func = (arg: unknown) => unknown;
+type Func<TInput> = (arg: TInput) => TInput;
 
-const stepFn = (value: unknown, nextFn: Func) => nextFn(value);
-
-const pipe = (...functions: Func[]) => (value: unknown): unknown => {
-  return functions.reduce(stepFn, value);
-};
+const pipe =
+  <TInput>(...functions: Func<TInput>[]) =>
+  (value: TInput) => {
+    return functions.reduce((value, nextFn) => nextFn(value), value);
+  };
 
 export default pipe;
