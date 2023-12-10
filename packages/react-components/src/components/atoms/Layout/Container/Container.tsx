@@ -10,7 +10,7 @@ export const CONTAINER_SIZES = {
 
 export type MntContainerSize = keyof typeof CONTAINER_SIZES;
 
-export interface MntContainerProps {
+export interface ContainerProps {
   /**
    * The maximum size the container should take on the screen.
    */
@@ -21,9 +21,11 @@ export interface MntContainerProps {
  * MntContainer component for wrapping and styling content within a designated area.
  * Helps in organizing and managing the layout of components and elements.
  */
-export const MntContainer = mnt('div')<MntContainerProps>`
+export const MntContainer = mnt('div')<ContainerProps>`
   ${CONTAINER_BASE_CLASS}
   ${({ size = 'large' }) => CONTAINER_SIZES[size]}
 `;
+
+export type MntContainerProps = React.ComponentPropsWithRef<typeof MntContainer>;
 
 MntContainer.displayName = 'MntContainer';

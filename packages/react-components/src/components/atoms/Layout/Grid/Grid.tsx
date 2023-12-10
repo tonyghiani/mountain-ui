@@ -19,7 +19,7 @@ export const GRID_COLUMNS = {
 
 export type MntGridColumns = keyof typeof GRID_COLUMNS;
 
-export interface MntGridProps {
+interface GridProps {
   /**
    * The number of columns to split the grid
    */
@@ -38,11 +38,13 @@ export interface MntGridProps {
  * Grid component for organizing content in a structured layout with rows and columns.
  * Facilitates alignment and distribution, ideal for creating organized and aesthetically pleasing interfaces.
  */
-export const MntGrid = mnt('div') <MntGridProps>`
+export const MntGrid = mnt('div')<GridProps>`
   ${GRID_BASE_CLASS}
   ${({ columns }) => columns && GRID_COLUMNS[columns]}
   ${justifyItems}
   ${alignItems}
 `;
+
+export type MntGridProps = React.ComponentPropsWithRef<typeof MntGrid>;
 
 MntGrid.displayName = 'MntGrid';

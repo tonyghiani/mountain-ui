@@ -2,7 +2,7 @@ import React, { useContext, useRef } from 'react';
 import mnt from 'react-mnt';
 import { useToggle } from '@mountain-ui/react-hooks';
 
-export interface MntAccordionProps extends StyledAccordionSummaryClick {
+export interface AccordionProps extends StyledAccordionSummaryClick {
   /**
    * Controlled value for the accordion expansion
    */
@@ -17,7 +17,7 @@ export interface MntAccordionProps extends StyledAccordionSummaryClick {
   maxHeight?: number;
 }
 
-const StyledAccordion = mnt('div') <MntAccordionProps>`
+const StyledAccordion = mnt('div')<AccordionProps>`
   mnt-accordion
 `;
 
@@ -29,7 +29,7 @@ type StyledAccordionSummaryClick = Pick<
   'onClick' | 'children'
 >;
 
-const StyledAccordionDetail = mnt('div') <{ shouldOverflow: boolean }>`
+const StyledAccordionDetail = mnt('div')<{ shouldOverflow: boolean }>`
   mnt-accordion-detail
   ${({ shouldOverflow }) => (shouldOverflow ? 'overflow-auto' : 'overflow-hidden')}
 `;
@@ -41,9 +41,11 @@ export type MntAccordionDetailProps = Omit<
 >;
 
 type MntAccordionContext = StyledAccordionSummaryClick &
-  Pick<MntAccordionProps, 'expanded' | 'maxHeight'>;
+  Pick<AccordionProps, 'expanded' | 'maxHeight'>;
 
 const AccordionContext = React.createContext<MntAccordionContext | null>(null);
+
+export type MntAccordionProps = React.ComponentPropsWithRef<typeof StyledAccordion>;
 
 /**
  * Accordion component for displaying collapsible sections, optimizing space and organizing content hierarchically.
@@ -55,7 +57,7 @@ export const MntAccordion = ({
   onClick,
   maxHeight = null,
   ...props
-}: MntAccordionProps) => {
+}: AccordionProps) => {
   const [isExpanded, toggleExpanded] = useToggle(defaultExpanded);
 
   const context = {

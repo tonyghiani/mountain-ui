@@ -21,7 +21,7 @@ export const BUTTON_VARIANTS = {
 export type MntButtonColor = keyof typeof BUTTON_COLORS;
 export type MntButtonVariant = keyof typeof BUTTON_VARIANTS;
 
-export interface MntButtonProps {
+interface ButtonProps {
   /**
    * The color to apply for the button content
    */
@@ -44,11 +44,13 @@ export interface MntButtonProps {
  * Button component for triggering actions or events in the UI.
  * Provides interactivity with styled visuals, enhancing user engagement and navigation within the application.
  */
-export const MntButton = mnt('button') <MntButtonProps>`
+export const MntButton = mnt('button')<ButtonProps>`
   ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
   ${({ rounded = false }) => rounded && '!rounded-full'}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}
 `;
+
+export type MntButtonProps = React.ComponentPropsWithRef<typeof MntButton>;
 
 MntButton.displayName = 'MntButton';

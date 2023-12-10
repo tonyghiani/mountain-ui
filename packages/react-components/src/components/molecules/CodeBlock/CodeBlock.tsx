@@ -1,19 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import mnt from 'react-mnt';
+import { isString } from '@mountain-ui/utils';
 import { Highlight, Language, themes } from 'prism-react-renderer';
 
 import { MntText } from '../../atoms/Typography';
 
-export interface MntCodeBlockProps {
-  /**
-   * CodeBlock to show inside the block
-   */
-  children: string;
-  /**
-   * Class name passed to the code block
-   */
-  className?: string;
+export interface CodeBlockProps {
   /**
    * Syntax to use when highlighing the code block
    */
@@ -40,27 +33,28 @@ const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps
   );
 };
 
+export type MntCodeBlockProps = React.ComponentPropsWithRef<typeof CodeBlockContainer> &
+  CodeBlockProps;
+
 /**
  * CodeBlock component for rendering and styling a block of code.
  * Enhances code presentation, readability, and formatting within a UI, ideal for showcasing programming snippets or examples.
  */
 export const MntCodeBlock = ({
-  children = '',
+  children,
   syntax = 'jsx',
   className,
   ...props
 }: MntCodeBlockProps) => {
   const language = className?.replace(/language-/, '') || syntax;
+  const code = (isString(children) ? children.trim() : children) as string;
 
   return (
-    <Highlight theme={themes.nightOwl} code={children.trim()} language={language as Language}>
+    <Highlight theme={themes.nightOwl} code={code} language={language as Language}>
       {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
         return (
           <CodeBlockContainer {...props}>
-            <Syntax
-              bold
-              className='mnt-codeblock-syntax'
-            >
+            <Syntax bold className='mnt-codeblock-syntax'>
               {language}
             </Syntax>
             <pre className='mnt-codeblock-pre' tabIndex={0}>

@@ -51,10 +51,6 @@ const TagContainer = mnt('div')`
 
 export interface MntTagProps extends React.ComponentProps<typeof TagContainer> {
   /**
-   * Tag text children
-   */
-  children: React.ReactNode;
-  /**
    * Tag size
    */
   size?: MntTagSize;
@@ -79,11 +75,12 @@ interface TagStatusProps {
  * Tag component for visually representing and categorizing items or content.
  * Enhances organization and provides a quick way to identify or filter specific elements within a UI.
  */
-export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) => {
+export const MntTag = ({ children, className, size = 'm', status, ...props }: MntTagProps) => {
   const { label, wrapper } = TAG_SIZES[size];
+  const containerClasses = [wrapper, className].filter(Boolean).join(' ');
 
   return (
-    <TagContainer className={wrapper} {...props}>
+    <TagContainer className={containerClasses} {...props}>
       <MntText bold className={`text-light ${label}`}>
         {children}
       </MntText>
@@ -92,7 +89,7 @@ export const MntTag = ({ children, size = 'm', status, ...props }: MntTagProps) 
   );
 };
 
-const TagStatus = mnt('div') <TagStatusProps>`
+const TagStatus = mnt('div')<TagStatusProps>`
   mnt-tag-status
   ${({ size }) => TAG_STATUS_SIZES[size]}
   ${({ status }) => TAG_STATUS[status]}

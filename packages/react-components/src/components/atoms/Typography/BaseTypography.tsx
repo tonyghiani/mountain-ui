@@ -18,7 +18,7 @@ export interface TextGradientOptions {
   direction?: MntTextGradientDirection;
 }
 
-export interface MntBaseTypographyProps {
+interface BaseTypographyProps {
   /**
    * Text should be uncopyable.
    */
@@ -41,7 +41,7 @@ export interface MntBaseTypographyProps {
   gradient?: TextGradientOptions;
 }
 
-export const MntBaseTypography = mnt('span')<MntBaseTypographyProps>`
+export const MntBaseTypography = mnt('span')<BaseTypographyProps>`
   ${({ bold }) => (bold ? 'font-bold' : '')}
   ${({ gradient }) =>
     gradient
@@ -53,5 +53,7 @@ export const MntBaseTypography = mnt('span')<MntBaseTypographyProps>`
   ${({ uncopyable }) => (uncopyable ? 'select-none' : '')}
   ${({ underline }) => (underline ? 'underline underline-offset-4' : '')}
 `;
+
+export type MntBaseTypographyProps = React.ComponentPropsWithRef<typeof MntBaseTypography>;
 
 MntBaseTypography.displayName = 'MntBaseTypography';
