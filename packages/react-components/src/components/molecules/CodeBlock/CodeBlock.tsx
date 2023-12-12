@@ -4,7 +4,7 @@ import mnt from 'react-mnt';
 import { isString } from '@mountain-ui/utils';
 import { Highlight, Language, themes } from 'prism-react-renderer';
 
-import { MntText } from '../../atoms/Typography';
+import { MntCode } from './../../atoms/Code';
 
 export interface CodeBlockProps {
   /**
@@ -20,8 +20,6 @@ type CodeBlockLineProps = Pick<RenderProps, 'getTokenProps' | 'getLineProps'> & 
 const CodeBlockContainer = mnt('div')`
   mnt-codeblock
 `;
-
-const Syntax = MntText;
 
 const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps) => {
   return (
@@ -40,25 +38,17 @@ export type MntCodeBlockProps = React.ComponentPropsWithRef<typeof CodeBlockCont
  * CodeBlock component for rendering and styling a block of code.
  * Enhances code presentation, readability, and formatting within a UI, ideal for showcasing programming snippets or examples.
  */
-export const MntCodeBlock = ({
-  children,
-  syntax = 'jsx',
-  className,
-  ...props
-}: MntCodeBlockProps) => {
-  const language = className?.replace(/language-/, '') || syntax;
+export const MntCodeBlock = ({ children, syntax = 'jsx', ...props }: MntCodeBlockProps) => {
   const code = (isString(children) ? children.trim() : children) as string;
 
   return (
-    <Highlight theme={themes.nightOwl} code={code} language={language as Language}>
+    <Highlight theme={themes.nightOwl} code={code} language={syntax as Language}>
       {({ tokens, getLineProps, getTokenProps }: RenderProps) => {
         return (
           <CodeBlockContainer {...props}>
-            <Syntax bold className='mnt-codeblock-syntax'>
-              {language}
-            </Syntax>
+            <span className='mnt-codeblock-syntax'>{syntax}</span>
             <pre className='mnt-codeblock-pre' tabIndex={0}>
-              <code className='block text-body'>
+              <MntCode>
                 {tokens.map((line, i) => (
                   <CodeBlockLine
                     key={i}
@@ -67,7 +57,7 @@ export const MntCodeBlock = ({
                     getLineProps={getLineProps}
                   />
                 ))}
-              </code>
+              </MntCode>
             </pre>
           </CodeBlockContainer>
         );

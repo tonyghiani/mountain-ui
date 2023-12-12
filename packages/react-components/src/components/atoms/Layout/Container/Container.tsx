@@ -2,7 +2,7 @@ import mnt from 'react-mnt';
 
 export const CONTAINER_BASE_CLASS = 'mx-auto px-4';
 export const CONTAINER_SIZES = {
-  article: 'max-w-4xl',
+  article: 'max-w-3xl',
   large: 'max-w-screen-lg',
   wide: 'max-w-screen-xl',
   ultra: 'max-w-screen-2xl'
