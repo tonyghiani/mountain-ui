@@ -76,8 +76,8 @@ const materialTailwindConfig = {
           scrollbarColor: `${theme('colors.gray.400')} transparent`,
           '&::-webkit-scrollbar': {
             backgroundColor: 'transparent',
-            inlineSize: theme('space.4'),
-            blockSize: theme('space.4')
+            inlineSize: theme('space.3'),
+            blockSize: theme('space.3')
           },
           '&::-webkit-scrollbar-thumb': {
             backgroundColor: theme('colors.gray.400'),
