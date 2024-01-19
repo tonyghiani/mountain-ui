@@ -23,7 +23,7 @@ const CodeBlockContainer = mnt('div')`
 
 const CodeBlockLine = ({ line, getTokenProps, getLineProps }: CodeBlockLineProps) => {
   return (
-    <p className='text-body leading-6.5' {...getLineProps({ line })}>
+    <p {...getLineProps({ line })}>
       {line.map((token, key) => (
         <span key={key} {...getTokenProps({ token })} />
       ))}
