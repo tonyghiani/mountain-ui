@@ -13,6 +13,7 @@ import inputClasses from './components/atoms/Input/Input.classes';
 import listClasses from './components/atoms/List/List.classes';
 import tagClasses from './components/atoms/Tag/Tag.classes';
 import typographyClasses from './components/atoms/Typography/Typography.classes';
+import visuallyHiddenClasses from './components/atoms/VisuallyHidden/VisuallyHidden.classes';
 import accordionClasses from './components/molecules/Accordion/Accordion.classes';
 import codeblockClasses from './components/molecules/CodeBlock/CodeBlock.classes';
 import rangeInputClasses from './components/molecules/RangeInput/RangeInput.classes';
@@ -40,6 +41,7 @@ const materialTailwindConfig = {
           inputClasses,
           listClasses,
           tagClasses,
+          visuallyHiddenClasses,
           typographyClasses,
           accordionClasses,
           codeblockClasses,

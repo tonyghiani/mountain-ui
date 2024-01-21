@@ -18,7 +18,7 @@ export interface TextGradientOptions {
   direction?: MntTextGradientDirection;
 }
 
-interface BaseTypographyProps {
+export interface BaseTypographyProps {
   /**
    * Text should be uncopyable.
    */

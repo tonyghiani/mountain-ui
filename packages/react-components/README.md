@@ -80,6 +80,8 @@ For detailed information about each component, refer to the sub-pages:
 - [MntText](./src/components/atoms/Typography/Text)
 - [MntParagraph](./src/components/atoms/Typography/Paragraph)
 - [MntHeading](./src/components/atoms/Typography/Heading)
+- [MntHeading](./src/components/atoms/Typography/Heading)
+- [MntVisuallyHidden](./src/components/atoms/VisuallyHidden)
 
 ### Molecules
 
