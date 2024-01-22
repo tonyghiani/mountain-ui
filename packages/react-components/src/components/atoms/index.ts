@@ -13,3 +13,5 @@ export * from './List';
 export * from './Tag';
 
 export * from './Typography';
+
+export * from './VisuallyHidden';
