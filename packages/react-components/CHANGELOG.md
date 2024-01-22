@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.1.0...@mountain-ui/react-components@1.2.0) (2024-01-22)
+
+### Features
+
+- **react-components:** 🎸 add MntVisuallyHidden component ([8263b4d](https://github.com/tonyghiani/mountain-ui/commit/8263b4dcbbf8742870128b62d72e4af49cb44932))
+
 # [1.1.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.0.2...@mountain-ui/react-components@1.1.0) (2023-12-07)
 
 ### Features
