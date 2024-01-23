@@ -65,7 +65,7 @@
     "@mountain-ui/react-hooks": "^1.0.4",
     "@mountain-ui/utils": "^1.0.2",
     "prism-react-renderer": "2.3.1",
-    "react-mnt": "^1.1.6",
+    "react-mnt": "^1.1.7",
     "react-range": "^1.8.14"
   },
   "devDependencies": {
@@ -80,7 +80,7 @@
     "@storybook/test-runner": "^0.16.0",
     "@storybook/testing-library": "^0.2.2",
     "@svgr/cli": "^8.1.0",
-    "@testing-library/jest-dom": "^6.2.0",
+    "@testing-library/jest-dom": "^6.2.1",
     "@testing-library/react": "^14.1.2",
     "@types/mertasan__tailwindcss-variables": "^2.6.4",
     "@types/react": "^18.2.48",

@@ -9,7 +9,8 @@
     "rootDir": "./src",
     "paths": {
       "mnt-internals": ["./src/internals"]
-    }
+    },
+    "noErrorTruncation": true
   },
   "include": ["src"],
   "exclude": ["src/**/*.test.tsx", "src/**/*.stories.ts", "src/**/*.stories.tsx"]
