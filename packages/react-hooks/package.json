@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-hooks",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Mountain UI hooks library",
   "keywords": [
     "react",
@@ -60,7 +60,7 @@
     "@mountain-ui/utils": "^1.0.2"
   },
   "devDependencies": {
-    "@mountain-ui/doc-tools": "^1.0.4",
+    "@mountain-ui/doc-tools": "^1.0.5",
     "@storybook/addon-a11y": "^7.6.10",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
