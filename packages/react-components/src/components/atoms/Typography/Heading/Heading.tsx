@@ -15,6 +15,7 @@ export const HEADING_VARIANTS = {
 export type MntHeadingVariant = keyof typeof HEADING_VARIANTS;
 
 export interface MntHeadingProps extends MntBaseTypographyProps {
+  ref?: React.Ref<HTMLHeadingElement>;
   /**
    * Variant options for styling a Heading component.
    */
