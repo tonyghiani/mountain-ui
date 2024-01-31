@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/utils@1.0.2...@mountain-ui/utils@1.0.3) (2024-01-31)
+
+### Bug Fixes
+
+- **utils:** 🐛 update debounce types ([ef5ec9d](https://github.com/tonyghiani/mountain-ui/commit/ef5ec9d5cb4f851014a7e3158e7392bf8f942d7c))
+
 ## [1.0.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/utils@1.0.1...@mountain-ui/utils@1.0.2) (2024-01-22)
 
 **Note:** Version bump only for package @mountain-ui/utils

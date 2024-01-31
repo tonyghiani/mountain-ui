@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "A set of utilities for the mountain-ui libraries",
   "keywords": [

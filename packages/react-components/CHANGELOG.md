@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.1...@mountain-ui/react-components@1.2.2) (2024-01-31)
+
+### Bug Fixes
+
+- **react-components:** 🐛 heading types ([31ce30a](https://github.com/tonyghiani/mountain-ui/commit/31ce30a3774634fc940d58e07e4245de8a2a3292))
+
 ## [1.2.1](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.0...@mountain-ui/react-components@1.2.1) (2024-01-23)
 
 ### Bug Fixes
