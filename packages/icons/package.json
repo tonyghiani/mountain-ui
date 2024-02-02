@@ -1,0 +1,83 @@
+{
+  "name": "@mountain-ui/icons",
+  "version": "0.1.33",
+  "description": "Icon components set for Mountain UI",
+  "keywords": [
+    "react",
+    "react-components",
+    "icons",
+    "svg",
+    "mountain-ui",
+    "assets"
+  ],
+  "homepage": "https://github.com/mountain-ui/mountain-ui/tree/main/packages/icons#readme",
+  "bugs": {
+    "url": "https://github.com/mountain-ui/mountain-ui/issues"
+  },
+  "repository": "https://github.com/tonyghiani/mountain-ui",
+  "license": "MIT",
+  "author": "Marco Antonio Ghiani <marcoantonio.ghiani01@gmail.com>",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn clean:build && yarn icons:convert && yarn build:vite && yarn build:types",
+    "build:storybook": "storybook build",
+    "build:types": "tsc --project ./tsconfig.types.json",
+    "build:vite": "vite build",
+    "clean:build": "rimraf dist *.tsbuildinfo",
+    "commit": "git cz",
+    "icons:convert": "svgr --ignore-existing --out-dir src/icons --config-file ./svgr.config.js ./assets",
+    "lint": "eslint ./src",
+    "lint:package": "sort-package-json",
+    "release": "semantic-release",
+    "storybook": "storybook dev -p 6006",
+    "test": "NODE_ENV=testing jest --passWithNoTests",
+    "update:deps": "ncu -u"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "dependencies": {
+    "react-mnt": "^1.1.8"
+  },
+  "devDependencies": {
+    "@mountain-ui/doc-tools": "^0.1.0",
+    "@mountain-ui/utils": "^0.3.0",
+    "@storybook/addon-a11y": "^7.6.11",
+    "@storybook/addon-essentials": "^7.6.11",
+    "@storybook/addon-interactions": "^7.6.11",
+    "@storybook/addon-links": "^7.6.11",
+    "@storybook/addon-storyshots": "^7.6.11",
+    "@storybook/blocks": "^7.6.11",
+    "@storybook/react": "^7.6.11",
+    "@storybook/react-vite": "^7.6.11",
+    "@storybook/test-runner": "^0.16.0",
+    "@storybook/testing-library": "^0.2.2",
+    "@svgr/cli": "^8.1.0",
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^14.2.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.33",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.6.11",
+    "tailwindcss": "^3.4.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
