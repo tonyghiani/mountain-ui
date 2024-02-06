@@ -2,8 +2,6 @@ export * from './Button';
 
 export * from './Code';
 
-export * from './Icon';
-
 export * from './Input';
 
 export * from './Layout';
