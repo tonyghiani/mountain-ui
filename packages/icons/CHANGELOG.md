@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@0.3.0...@mountain-ui/icons@1.0.0) (2024-02-06)
+
+### Features
+
+- **icons:** 🎸 promote to v1 ([37cadc9](https://github.com/tonyghiani/mountain-ui/commit/37cadc9dd0bc488c5950f008baf00410ffe18294))
+- **icons:** 🎸 restore icons package ([92916ce](https://github.com/tonyghiani/mountain-ui/commit/92916ceee8790a0de5b2139d3783d9fa033a2990))
+
+### BREAKING CHANGES
+
+- **icons:** 🧨 restore icons
+
 ## [0.2.2](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@0.2.1...@mountain-ui/icons@0.2.2) (2022-10-19)
 
 **Note:** Version bump only for package @mountain-ui/icons
