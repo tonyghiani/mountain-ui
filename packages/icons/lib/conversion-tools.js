@@ -1,38 +1,35 @@
 const path = require('path');
 const { pipe } = require('@mountain-ui/utils');
+const t = require('@babel/types');
 
 exports.indexTemplate = function indexTemplate(filePaths) {
   const exportEntries = filePaths.map(renameExport);
   return exportEntries.join('\n');
 };
 
-exports.template = function template(api, opts, data) {
-  const { template, types } = api;
-  const { imports, interfaces, componentName, props, jsx, exports } = data;
+exports.template = function template(variables, { tpl }) {
+  const { imports, interfaces, componentName, props, jsx, exports } = variables;
 
-  const plugins = makePlugins(opts);
-  const allImports = addImports(types, imports);
-  const implementation = wrapWithIcon(types, jsx);
+  const allImports = addImports(imports);
+  const implementation = wrapWithIcon(jsx);
 
-  props[0] = makeTypedProp(types, { name: 'props', type: 'IconPresetProps' });
+  props[0] = makeTypedProp({ name: 'props', type: 'MntIconProps' });
 
-  const typeScriptTpl = template.smart({ plugins });
+  return tpl`${allImports};
 
-  return typeScriptTpl.ast`${allImports}
+${interfaces};
 
-${interfaces}
+const ${componentName} = (${props}) => (
+  ${implementation}
+);
 
-function ${componentName} (${props}) {
-  return ${implementation}
-}
-
-${exports}
+${exports};
   `;
 };
 
 /************************************************************/
 
-function renameExport(filePath) {
+function renameExport({ path: filePath }) {
   const basename = path.basename(filePath, path.extname(filePath));
   const exportName = pipe(
     cleanFromSvg,
@@ -64,26 +61,26 @@ function renameVertical(name) {
   return name.slice(0, -1).concat('Vertical');
 }
 
-function wrapWithIcon(t, jsx) {
+function wrapWithIcon(jsx) {
   return t.JSXElement(
-    t.JSXOpeningElement(t.JSXIdentifier('Icon'), [t.JSXSpreadAttribute(t.identifier('props'))]),
-    t.JSXClosingElement(t.JSXIdentifier('Icon')),
+    t.JSXOpeningElement(t.JSXIdentifier('MntIcon'), [t.JSXSpreadAttribute(t.identifier('props'))]),
+    t.JSXClosingElement(t.JSXIdentifier('MntIcon')),
     [jsx]
   );
 }
 
-function addImports(t, imports) {
-  return [...imports, makeImport(t, { names: ['Icon', 'IconPresetProps'], path: '../Icon' })];
+function addImports(imports) {
+  return [...imports, makeImport({ names: ['MntIcon', 'MntIconProps'], path: '../Icon' })];
 }
 
-function makeImport(t, { names, path }) {
+function makeImport({ names, path }) {
   return t.importDeclaration(
     names.map(name => t.importSpecifier(t.identifier(name), t.identifier(name))),
     t.stringLiteral(path)
   );
 }
 
-function makeTypedProp(t, { name, type }) {
+function makeTypedProp({ name, type }) {
   return {
     ...t.identifier(name),
     typeAnnotation: {
@@ -95,10 +92,4 @@ function makeTypedProp(t, { name, type }) {
       }
     }
   };
-}
-
-function makePlugins(opts) {
-  const plugins = ['jsx'];
-  if (opts.typescript) plugins.push('typescript');
-  return plugins;
 }

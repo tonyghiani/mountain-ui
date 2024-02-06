@@ -44,7 +44,7 @@ type IconElementProps =
   | (React.ComponentProps<'a'> & { variant?: 'link' })
   | (React.ComponentProps<'button'> & { variant?: 'button' });
 
-interface IconBaseProps {
+export interface IconBaseProps {
   /**
    * Tag version of the icon
    */
@@ -59,7 +59,7 @@ interface IconBaseProps {
   withTransition?: boolean;
 }
 
-export type MntIconProps = IconElementProps & IconBaseProps;
+export type MntIconProps = Omit<IconElementProps & IconBaseProps, 'ref'>;
 
 /**
  * MntIcon component wrapper for svg icons
@@ -74,14 +74,8 @@ const BaseIcon = mnt('span').params<MntIconProps>(props => ({
     withTransition && '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300'}
 `;
 
-export const MntIcon = React.forwardRef<IconElement, MntIconProps>(
-  ({ children, ...props }, ref) => {
-    return (
-      <BaseIcon ref={ref} {...props}>
-        {React.Children.only(children)}
-      </BaseIcon>
-    );
-  }
-);
+export const MntIcon = ({ children, ...props }: MntIconProps) => {
+  return <BaseIcon {...props}>{React.Children.only(children)}</BaseIcon>;
+};
 
 MntIcon.displayName = 'MntIcon';

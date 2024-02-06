@@ -32,18 +32,21 @@ export const Main: Story = {
     size: 'm',
     variant: 'icon',
     withTransition: false
+  },
+  render: args => {
+    return <Icons.Mountains {...args} />;
   }
 };
 
 export const Variant: Story = {
   args: {
-    variant: 'button'
+    variant: 'icon'
   },
   render: args => {
     return (
       <div className='flex'>
         {variants.map(variant => (
-          <MntIcon key={variant} variant={variant} {...args} />
+          <Icons.Mountains key={variant} variant={variant} {...args} />
         ))}
       </div>
     );
@@ -55,7 +58,7 @@ export const Color: Story = {
     return (
       <div className='flex'>
         {colors.map(color => (
-          <MntIcon key={color} {...args} color={color} />
+          <Icons.Mountains key={color} {...args} color={color} />
         ))}
       </div>
     );
@@ -67,7 +70,7 @@ export const Size: Story = {
     return (
       <div className='flex'>
         {sizes.map(size => (
-          <MntIcon key={size} {...args} size={size} />
+          <Icons.Mountains key={size} {...args} size={size} />
         ))}
       </div>
     );
