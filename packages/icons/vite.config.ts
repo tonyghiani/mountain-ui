@@ -32,6 +32,7 @@ export default defineConfig(() => ({
       ],
       external: [
         ...Object.keys(packageJson.dependencies).map(dep => new RegExp(dep)), // don't bundle dependencies
+        ...Object.keys(packageJson.peerDependencies), // don't bundle peerDependencies
         /^node:.*/, // don't bundle built-in Node.js modules (use protocol imports!),
         'react/jsx-runtime',
         /tailwindcss/

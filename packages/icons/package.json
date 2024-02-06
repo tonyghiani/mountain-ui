@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/icons",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Icon components set for Mountain UI",
   "keywords": [
     "react",
@@ -76,6 +76,11 @@
     "react-dom": "^18.2.0",
     "storybook": "^7.6.12",
     "tailwindcss": "^3.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=17",
+    "react-dom": ">=17",
+    "tailwindcss": ">=3"
   },
   "publishConfig": {
     "access": "public"
