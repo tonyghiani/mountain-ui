@@ -1,5 +1,5 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import mnt from 'react-mnt';
 
 export const ICON_COLORS = {
   light: 'text-light',
@@ -20,31 +20,21 @@ export const ICON_SIZES = {
   xl: 'text-6xl	'
 } as const;
 export const ICON_VARIANTS = {
-  button: {
-    tag: 'button',
-    classes: 'bg-transparent border-0 cursor-pointer'
-  },
-  icon: {
-    tag: 'span',
-    classes: ''
-  },
-  link: {
-    tag: 'a',
-    classes: ''
-  }
+  button: 'bg-transparent border-0 cursor-pointer',
+  icon: '',
+  link: ''
 } as const;
 
-export type IconElement = HTMLButtonElement | HTMLSpanElement | HTMLAnchorElement;
 export type MntIconColor = keyof typeof ICON_COLORS;
 export type MntIconSize = keyof typeof ICON_SIZES;
 export type MntIconVariant = keyof typeof ICON_VARIANTS;
 
 type IconElementProps =
-  | (React.ComponentProps<'span'> & { variant?: 'icon' })
-  | (React.ComponentProps<'a'> & { variant?: 'link' })
-  | (React.ComponentProps<'button'> & { variant?: 'button' });
+  | (React.HTMLAttributes<HTMLSpanElement> & { variant?: 'icon' })
+  | (React.AnchorHTMLAttributes<HTMLAnchorElement> & { variant?: 'link' })
+  | (React.ButtonHTMLAttributes<HTMLButtonElement> & { variant?: 'button' });
 
-export interface IconBaseProps {
+export type IconBaseProps = {
   /**
    * Tag version of the icon
    */
@@ -57,25 +47,52 @@ export interface IconBaseProps {
    * Transition on style changes
    */
   withTransition?: boolean;
-}
+};
 
-export type MntIconProps = Omit<IconElementProps & IconBaseProps, 'ref'>;
+export type MntIconProps = IconElementProps & IconBaseProps;
 
-/**
- * MntIcon component wrapper for svg icons
- */
-const BaseIcon = mnt('span').params<MntIconProps>(props => ({
-  as: ICON_VARIANTS[props.variant || 'icon']?.tag
-}))`
-  ${({ color = 'current' }) => ICON_COLORS[color]}
-  ${({ size = 'm' }) => ICON_SIZES[size]}
-  ${({ variant = 'icon' }) => ICON_VARIANTS[variant]?.classes}
-  ${({ withTransition = false }) =>
-    withTransition && '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300'}
-`;
+export const MntIcon = ({
+  children,
+  className,
+  color = 'current',
+  size = 'm',
+  withTransition = false,
+  ...props
+}: MntIconProps) => {
+  const classes = [
+    ICON_COLORS[color],
+    ICON_SIZES[size],
+    ICON_VARIANTS[props.variant],
+    withTransition && '[&>svg]:transition-all [&>svg]:ease [&>svg]:duration-300',
+    className
+  ]
+    .filter(Boolean)
+    .join(' ');
 
-export const MntIcon = ({ children, ...props }: MntIconProps) => {
-  return <BaseIcon {...props}>{React.Children.only(children)}</BaseIcon>;
+  if (props.variant === 'button') {
+    const { variant: _, ...rest } = props;
+    return (
+      <button className={classes} {...rest}>
+        {React.Children.only(children)}
+      </button>
+    );
+  }
+
+  if (props.variant === 'link') {
+    const { variant: _, ...rest } = props;
+    return (
+      <a className={classes} {...rest}>
+        {React.Children.only(children)}
+      </a>
+    );
+  }
+
+  const { variant: _, ...rest } = props;
+  return (
+    <span className={classes} {...rest}>
+      {React.Children.only(children)}
+    </span>
+  );
 };
 
 MntIcon.displayName = 'MntIcon';

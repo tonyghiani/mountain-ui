@@ -39,14 +39,11 @@ export const Main: Story = {
 };
 
 export const Variant: Story = {
-  args: {
-    variant: 'icon'
-  },
-  render: args => {
+  render: () => {
     return (
       <div className='flex'>
         {variants.map(variant => (
-          <Icons.Mountains key={variant} variant={variant} {...args} />
+          <Icons.Mountains key={variant} variant={variant} />
         ))}
       </div>
     );
@@ -54,11 +51,11 @@ export const Variant: Story = {
 };
 
 export const Color: Story = {
-  render: args => {
+  render: () => {
     return (
       <div className='flex'>
         {colors.map(color => (
-          <Icons.Mountains key={color} {...args} color={color} />
+          <Icons.Mountains key={color} color={color} />
         ))}
       </div>
     );
@@ -66,11 +63,11 @@ export const Color: Story = {
 };
 
 export const Size: Story = {
-  render: args => {
+  render: () => {
     return (
       <div className='flex'>
         {sizes.map(size => (
-          <Icons.Mountains key={size} {...args} size={size} />
+          <Icons.Mountains key={size} size={size} />
         ))}
       </div>
     );

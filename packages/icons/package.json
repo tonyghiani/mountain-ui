@@ -51,9 +51,6 @@
       "path": "git-cz"
     }
   },
-  "dependencies": {
-    "react-mnt": "^1.1.8"
-  },
   "devDependencies": {
     "@mountain-ui/doc-tools": "^1.0.6",
     "@mountain-ui/utils": "^1.0.3",
