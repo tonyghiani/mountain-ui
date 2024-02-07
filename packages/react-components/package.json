@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/react-components",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "React components library based on mountain ui",
   "keywords": [
     "mountain-ui",
@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@mertasan/tailwindcss-variables": "^2.7.0",
-    "@mountain-ui/react-hooks": "^1.0.8",
+    "@mountain-ui/react-hooks": "^1.0.9",
     "@mountain-ui/utils": "^1.0.3",
     "prism-react-renderer": "2.3.1",
     "react-mnt": "^1.1.8",
