@@ -1,6 +1,6 @@
 const btnClasses = {
   '.mnt-btn': {
-    '@apply relative inline-block w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease-out duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed':
+    '@apply relative flex-center gap-2 w-fit border-0 rounded-lg font-medium text-body py-2 px-4 cursor-pointer transition ease-out duration-150 disabled:text-gray-700 disabled:bg-gray-100 disabled:cursor-not-allowed':
       {},
     '&-primary': { '@apply text-blue-700 bg-blue-600 from-blue-600 to-blue-400': {} },
     '&-accent': { '@apply text-purple-700 bg-purple-600 from-purple-600 to-purple-400': {} },

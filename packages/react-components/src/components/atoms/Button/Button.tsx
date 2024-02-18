@@ -1,3 +1,4 @@
+import React from 'react';
 import mnt from 'react-mnt';
 
 export const BUTTON_BASE_CLASS = 'mnt-btn';
@@ -31,6 +32,14 @@ interface ButtonProps {
    */
   disabled?: boolean;
   /**
+   * An icon to show on the left of the content
+   */
+  leftIcon?: React.ReactNode;
+  /**
+   * An icon to show on the left of the content
+   */
+  rightIcon?: React.ReactNode;
+  /**
    * Makes the button rounded
    */
   rounded?: boolean;
@@ -44,13 +53,23 @@ interface ButtonProps {
  * Button component for triggering actions or events in the UI.
  * Provides interactivity with styled visuals, enhancing user engagement and navigation within the application.
  */
-export const MntButton = mnt('button')<ButtonProps>`
+export const BaseButton = mnt('button')<ButtonProps>`
   ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
   ${({ rounded = false }) => rounded && '!rounded-full'}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}
 `;
 
-export type MntButtonProps = React.ComponentPropsWithRef<typeof MntButton>;
+export function MntButton({ children, leftIcon, rightIcon, ...props }: MntButtonProps) {
+  return (
+    <BaseButton {...props}>
+      {leftIcon}
+      <span>{children}</span>
+      {rightIcon}
+    </BaseButton>
+  );
+}
+
+export type MntButtonProps = React.ComponentPropsWithRef<typeof BaseButton>;
 
 MntButton.displayName = 'MntButton';
