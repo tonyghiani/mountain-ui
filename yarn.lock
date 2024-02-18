@@ -2005,13 +2005,6 @@
   dependencies:
     lodash "^4.17.21"
 
-"@mountain-ui/react-hooks@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@mountain-ui/react-hooks/-/react-hooks-1.0.9.tgz#d6bfbf72e37d7a680af99f1a519de348cae68e6c"
-  integrity sha512-LNhKYvN05oYDKcWr+SypY/EPwPBjX4T/dXA02d17yJadotsL1Wve/Tm2TjaLJhOGPbikvZ1EA3hGGzNXZJSyhQ==
-  dependencies:
-    "@mountain-ui/utils" "^1.0.3"
-
 "@ndelangen/get-tarball@^3.0.7":
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/@ndelangen/get-tarball/-/get-tarball-3.0.9.tgz#727ff4454e65f34707e742a59e5e6b1f525d8964"
