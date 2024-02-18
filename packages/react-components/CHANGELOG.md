@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.6](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.5...@mountain-ui/react-components@1.2.6) (2024-02-18)
+
+**Note:** Version bump only for package @mountain-ui/react-components
+
 ## [1.2.5](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.4...@mountain-ui/react-components@1.2.5) (2024-02-07)
 
 **Note:** Version bump only for package @mountain-ui/react-components
