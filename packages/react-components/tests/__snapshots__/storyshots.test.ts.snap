@@ -335,232 +335,455 @@ exports[`Storyshots Atoms/MntButton Color 1`] = `
   className="grid gap-3 grid-cols-6 justify-items-center items-center"
 >
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-shade"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
     color="primary"
   >
-    primary
+    <span>
+      primary
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-solid"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-solid"
     color="primary"
   >
-    primary
+    <span>
+      primary
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-outline"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-outline"
     color="primary"
   >
-    primary
+    <span>
+      primary
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-gradient"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-gradient"
     color="primary"
   >
-    primary
+    <span>
+      primary
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-link"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-link"
     color="primary"
   >
-    primary
+    <span>
+      primary
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-text"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-text"
     color="primary"
   >
-    primary
+    <span>
+      primary
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-accent mnt-btn-shade"
+    className="mnt-btn mnt-btn-accent text-body py-2 px-4 mnt-btn-shade"
     color="accent"
   >
-    accent
+    <span>
+      accent
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-accent mnt-btn-solid"
+    className="mnt-btn mnt-btn-accent text-body py-2 px-4 mnt-btn-solid"
     color="accent"
   >
-    accent
+    <span>
+      accent
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-accent mnt-btn-outline"
+    className="mnt-btn mnt-btn-accent text-body py-2 px-4 mnt-btn-outline"
     color="accent"
   >
-    accent
+    <span>
+      accent
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-accent mnt-btn-gradient"
+    className="mnt-btn mnt-btn-accent text-body py-2 px-4 mnt-btn-gradient"
     color="accent"
   >
-    accent
+    <span>
+      accent
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-accent mnt-btn-link"
+    className="mnt-btn mnt-btn-accent text-body py-2 px-4 mnt-btn-link"
     color="accent"
   >
-    accent
+    <span>
+      accent
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-accent mnt-btn-text"
+    className="mnt-btn mnt-btn-accent text-body py-2 px-4 mnt-btn-text"
     color="accent"
   >
-    accent
+    <span>
+      accent
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-success mnt-btn-shade"
+    className="mnt-btn mnt-btn-success text-body py-2 px-4 mnt-btn-shade"
     color="success"
   >
-    success
+    <span>
+      success
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-success mnt-btn-solid"
+    className="mnt-btn mnt-btn-success text-body py-2 px-4 mnt-btn-solid"
     color="success"
   >
-    success
+    <span>
+      success
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-success mnt-btn-outline"
+    className="mnt-btn mnt-btn-success text-body py-2 px-4 mnt-btn-outline"
     color="success"
   >
-    success
+    <span>
+      success
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-success mnt-btn-gradient"
+    className="mnt-btn mnt-btn-success text-body py-2 px-4 mnt-btn-gradient"
     color="success"
   >
-    success
+    <span>
+      success
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-success mnt-btn-link"
+    className="mnt-btn mnt-btn-success text-body py-2 px-4 mnt-btn-link"
     color="success"
   >
-    success
+    <span>
+      success
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-success mnt-btn-text"
+    className="mnt-btn mnt-btn-success text-body py-2 px-4 mnt-btn-text"
     color="success"
   >
-    success
+    <span>
+      success
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-warning mnt-btn-shade"
+    className="mnt-btn mnt-btn-warning text-body py-2 px-4 mnt-btn-shade"
     color="warning"
   >
-    warning
+    <span>
+      warning
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-warning mnt-btn-solid"
+    className="mnt-btn mnt-btn-warning text-body py-2 px-4 mnt-btn-solid"
     color="warning"
   >
-    warning
+    <span>
+      warning
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-warning mnt-btn-outline"
+    className="mnt-btn mnt-btn-warning text-body py-2 px-4 mnt-btn-outline"
     color="warning"
   >
-    warning
+    <span>
+      warning
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-warning mnt-btn-gradient"
+    className="mnt-btn mnt-btn-warning text-body py-2 px-4 mnt-btn-gradient"
     color="warning"
   >
-    warning
+    <span>
+      warning
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-warning mnt-btn-link"
+    className="mnt-btn mnt-btn-warning text-body py-2 px-4 mnt-btn-link"
     color="warning"
   >
-    warning
+    <span>
+      warning
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-warning mnt-btn-text"
+    className="mnt-btn mnt-btn-warning text-body py-2 px-4 mnt-btn-text"
     color="warning"
   >
-    warning
+    <span>
+      warning
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-danger mnt-btn-shade"
+    className="mnt-btn mnt-btn-danger text-body py-2 px-4 mnt-btn-shade"
     color="danger"
   >
-    danger
+    <span>
+      danger
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-danger mnt-btn-solid"
+    className="mnt-btn mnt-btn-danger text-body py-2 px-4 mnt-btn-solid"
     color="danger"
   >
-    danger
+    <span>
+      danger
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-danger mnt-btn-outline"
+    className="mnt-btn mnt-btn-danger text-body py-2 px-4 mnt-btn-outline"
     color="danger"
   >
-    danger
+    <span>
+      danger
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-danger mnt-btn-gradient"
+    className="mnt-btn mnt-btn-danger text-body py-2 px-4 mnt-btn-gradient"
     color="danger"
   >
-    danger
+    <span>
+      danger
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-danger mnt-btn-link"
+    className="mnt-btn mnt-btn-danger text-body py-2 px-4 mnt-btn-link"
     color="danger"
   >
-    danger
+    <span>
+      danger
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-danger mnt-btn-text"
+    className="mnt-btn mnt-btn-danger text-body py-2 px-4 mnt-btn-text"
     color="danger"
   >
-    danger
+    <span>
+      danger
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-disabled mnt-btn-shade"
+    className="mnt-btn mnt-btn-disabled text-body py-2 px-4 mnt-btn-shade"
     color="disabled"
   >
-    disabled
+    <span>
+      disabled
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-disabled mnt-btn-solid"
+    className="mnt-btn mnt-btn-disabled text-body py-2 px-4 mnt-btn-solid"
     color="disabled"
   >
-    disabled
+    <span>
+      disabled
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-disabled mnt-btn-outline"
+    className="mnt-btn mnt-btn-disabled text-body py-2 px-4 mnt-btn-outline"
     color="disabled"
   >
-    disabled
+    <span>
+      disabled
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-disabled mnt-btn-gradient"
+    className="mnt-btn mnt-btn-disabled text-body py-2 px-4 mnt-btn-gradient"
     color="disabled"
   >
-    disabled
+    <span>
+      disabled
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-disabled mnt-btn-link"
+    className="mnt-btn mnt-btn-disabled text-body py-2 px-4 mnt-btn-link"
     color="disabled"
   >
-    disabled
+    <span>
+      disabled
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-disabled mnt-btn-text"
+    className="mnt-btn mnt-btn-disabled text-body py-2 px-4 mnt-btn-text"
     color="disabled"
   >
-    disabled
+    <span>
+      disabled
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Atoms/MntButton Icons 1`] = `
+<div
+  className="grid gap-3 grid-cols-3 justify-items-center items-center"
+>
+  <button
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
+  >
+    <span
+      className="text-current text-lg"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m20.34 9.32-14-7a3 3 0 0 0-4.08 3.9l2.4 5.37a1.06 1.06 0 0 1 0 .82l-2.4 5.37A3 3 0 0 0 5 22a3.14 3.14 0 0 0 1.35-.32l14-7a3 3 0 0 0 0-5.36Zm-.89 3.57-14 7a1 1 0 0 1-1.35-1.3l2.39-5.37a2 2 0 0 0 .08-.22h6.89a1 1 0 0 0 0-2H6.57a2 2 0 0 0-.08-.22L4.1 5.41a1 1 0 0 1 1.35-1.3l14 7a1 1 0 0 1 0 1.78"
+        />
+      </svg>
+    </span>
+    <span>
+      Mountain
+    </span>
+  </button>
+  <button
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
+  >
+    <span>
+      Mountain
+    </span>
+    <span
+      className="text-current text-lg"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m20.34 9.32-14-7a3 3 0 0 0-4.08 3.9l2.4 5.37a1.06 1.06 0 0 1 0 .82l-2.4 5.37A3 3 0 0 0 5 22a3.14 3.14 0 0 0 1.35-.32l14-7a3 3 0 0 0 0-5.36Zm-.89 3.57-14 7a1 1 0 0 1-1.35-1.3l2.39-5.37a2 2 0 0 0 .08-.22h6.89a1 1 0 0 0 0-2H6.57a2 2 0 0 0-.08-.22L4.1 5.41a1 1 0 0 1 1.35-1.3l14 7a1 1 0 0 1 0 1.78"
+        />
+      </svg>
+    </span>
+  </button>
+  <button
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
+  >
+    <span
+      className="text-current text-lg"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m20.34 9.32-14-7a3 3 0 0 0-4.08 3.9l2.4 5.37a1.06 1.06 0 0 1 0 .82l-2.4 5.37A3 3 0 0 0 5 22a3.14 3.14 0 0 0 1.35-.32l14-7a3 3 0 0 0 0-5.36Zm-.89 3.57-14 7a1 1 0 0 1-1.35-1.3l2.39-5.37a2 2 0 0 0 .08-.22h6.89a1 1 0 0 0 0-2H6.57a2 2 0 0 0-.08-.22L4.1 5.41a1 1 0 0 1 1.35-1.3l14 7a1 1 0 0 1 0 1.78"
+        />
+      </svg>
+    </span>
+    <span>
+      Mountain
+    </span>
+    <span
+      className="text-current text-lg"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        preserveAspectRatio="xMidYMid meet"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="m20.34 9.32-14-7a3 3 0 0 0-4.08 3.9l2.4 5.37a1.06 1.06 0 0 1 0 .82l-2.4 5.37A3 3 0 0 0 5 22a3.14 3.14 0 0 0 1.35-.32l14-7a3 3 0 0 0 0-5.36Zm-.89 3.57-14 7a1 1 0 0 1-1.35-1.3l2.39-5.37a2 2 0 0 0 .08-.22h6.89a1 1 0 0 0 0-2H6.57a2 2 0 0 0-.08-.22L4.1 5.41a1 1 0 0 1 1.35-1.3l14 7a1 1 0 0 1 0 1.78"
+        />
+      </svg>
+    </span>
   </button>
 </div>
 `;
 
 exports[`Storyshots Atoms/MntButton Main 1`] = `
 <button
-  className="mnt-btn mnt-btn-primary mnt-btn-shade"
+  className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
   color="primary"
   disabled={false}
 >
-  Mountain UI
+  <span>
+    Mountain UI
+  </span>
 </button>
+`;
+
+exports[`Storyshots Atoms/MntButton Size 1`] = `
+<div
+  className="grid gap-3 grid-cols-3 justify-items-center items-center"
+>
+  <button
+    className="mnt-btn mnt-btn-primary text-caption py-1 px-2 mnt-btn-shade"
+    size="xs"
+  >
+    <span>
+      Button with size "
+      xs
+      "
+    </span>
+  </button>
+  <button
+    className="mnt-btn mnt-btn-primary text-secondaryBody py-1.5 px-3 mnt-btn-shade"
+    size="s"
+  >
+    <span>
+      Button with size "
+      s
+      "
+    </span>
+  </button>
+  <button
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
+    size="m"
+  >
+    <span>
+      Button with size "
+      m
+      "
+    </span>
+  </button>
+  <button
+    className="mnt-btn mnt-btn-primary text-lg py-2.5 px-5 mnt-btn-shade"
+    size="l"
+  >
+    <span>
+      Button with size "
+      l
+      "
+    </span>
+  </button>
+  <button
+    className="mnt-btn mnt-btn-primary text-xl py-3 px-6 mnt-btn-shade"
+    size="xl"
+  >
+    <span>
+      Button with size "
+      xl
+      "
+    </span>
+  </button>
+</div>
 `;
 
 exports[`Storyshots Atoms/MntButton Variant 1`] = `
@@ -568,40 +791,52 @@ exports[`Storyshots Atoms/MntButton Variant 1`] = `
   className="grid gap-3 grid-cols-6 justify-items-center items-center"
 >
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-shade"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-shade"
     color="primary"
   >
-    shade
+    <span>
+      shade
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-solid"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-solid"
     color="primary"
   >
-    solid
+    <span>
+      solid
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-outline"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-outline"
     color="primary"
   >
-    outline
+    <span>
+      outline
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-gradient"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-gradient"
     color="primary"
   >
-    gradient
+    <span>
+      gradient
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-link"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-link"
     color="primary"
   >
-    link
+    <span>
+      link
+    </span>
   </button>
   <button
-    className="mnt-btn mnt-btn-primary mnt-btn-text"
+    className="mnt-btn mnt-btn-primary text-body py-2 px-4 mnt-btn-text"
     color="primary"
   >
-    text
+    <span>
+      text
+    </span>
   </button>
 </div>
 `;
@@ -625,6 +860,57 @@ exports[`Storyshots Atoms/MntCode Main 1`] = `
   </code>
    and much more.
 </p>
+`;
+
+exports[`Storyshots Atoms/MntInput Custom Classes 1`] = `
+<div
+  className="grid gap-3 grid-cols-4 justify-items-start items-start"
+>
+  <div
+    className="mnt-input mnt-input-default [--text-input:theme(colors.purple.500)] [--bg-input:theme(colors.purple.50)]"
+  >
+    <label
+      className="leading-relaxed text-body text-[--c-text-primary] mb-2 text-[--text-input]"
+    >
+      Name
+      <div
+        className="mnt-input-wrapper h-11 px-4 py-3"
+      >
+        <input
+          className="mnt-input-node text-primary"
+          value="Marco Antonio Ghiani"
+        />
+      </div>
+    </label>
+    <p
+      className="leading-relaxed text-body text-[--c-text-primary] text-caption text-[--text-input]"
+    >
+      Oh no, your name seems too long!
+    </p>
+  </div>
+  <div
+    className="mnt-input mnt-input-default"
+  >
+    <label
+      className="leading-relaxed text-body text-[--c-text-primary] mb-2 text-[--text-input]"
+    >
+      Name
+      <div
+        className="mnt-input-wrapper h-11 px-4 py-3"
+      >
+        <input
+          className="mnt-input-node text-primary"
+          value="Marco Antonio Ghiani"
+        />
+      </div>
+    </label>
+    <p
+      className="leading-relaxed text-body text-[--c-text-primary] text-caption text-[--text-input]"
+    >
+      Oh no, your name seems too long!
+    </p>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Atoms/MntInput Decoration 1`] = `
