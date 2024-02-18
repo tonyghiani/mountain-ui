@@ -42,6 +42,10 @@ export type MntInputProps = Omit<React.ComponentProps<typeof StyledInput>, 'size
    */
   caption?: string;
   /**
+   * Custom class for the input container.
+   */
+  containerClassName?: string;
+  /**
    * Label text for the input.
    */
   label?: string;
@@ -63,7 +67,7 @@ const InputWrapper = mnt('div')`
   mnt-input-wrapper
 `;
 
-const InputContainer = mnt('div') <Pick<MntInputProps, 'status'>>`
+const InputContainer = mnt('div')<Pick<MntInputProps, 'status'>>`
   mnt-input
   ${props => INPUT_STATUS[props.status]}
 `;
@@ -73,7 +77,20 @@ const InputContainer = mnt('div') <Pick<MntInputProps, 'status'>>`
  * Supports various input types and styles, enhancing user interaction and enabling data submission or manipulation.
  */
 export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
-  ({ status = 'default', size = 'm', label, caption, children, id, className, ...props }, ref) => {
+  (
+    {
+      caption,
+      children,
+      className,
+      containerClassName,
+      id,
+      label,
+      size = 'm',
+      status = 'default',
+      ...props
+    },
+    ref
+  ) => {
     const { input, wrapper } = INPUT_SIZES[size];
     const wrapperClasses = [wrapper, className].filter(Boolean).join(' ');
 
@@ -85,7 +102,7 @@ export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
     );
 
     return (
-      <InputContainer status={status}>
+      <InputContainer className={containerClassName} status={status}>
         {label ? (
           <MntText as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
             {label}
