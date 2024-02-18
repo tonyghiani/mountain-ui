@@ -5,13 +5,16 @@ import { MntGrid } from '../Layout';
 
 import {
   BUTTON_COLORS,
+  BUTTON_SIZES,
   BUTTON_VARIANTS,
   MntButton,
   MntButtonColor,
+  MntButtonSize,
   MntButtonVariant
 } from './Button';
 
 const colors = Object.keys(BUTTON_COLORS) as MntButtonColor[];
+const sizes = Object.keys(BUTTON_SIZES) as MntButtonSize[];
 const variants = Object.keys(BUTTON_VARIANTS) as MntButtonVariant[];
 
 const meta = {
@@ -43,6 +46,20 @@ export const Variant: Story = {
         {variants.map(variant => (
           <MntButton key={variant} {...args} variant={variant}>
             {variant}
+          </MntButton>
+        ))}
+      </MntGrid>
+    );
+  }
+};
+
+export const Size: Story = {
+  render: () => {
+    return (
+      <MntGrid columns={3} justifyItems='center' alignItems='center'>
+        {sizes.map(size => (
+          <MntButton key={size} size={size}>
+            Button with size &quot;{size}&quot;
           </MntButton>
         ))}
       </MntGrid>

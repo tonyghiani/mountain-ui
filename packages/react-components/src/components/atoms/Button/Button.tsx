@@ -10,6 +10,13 @@ export const BUTTON_COLORS = {
   danger: 'mnt-btn-danger',
   disabled: 'mnt-btn-disabled'
 } as const;
+export const BUTTON_SIZES = {
+  xs: 'text-caption py-1 px-2',
+  s: 'text-secondaryBody py-1.5 px-3',
+  m: 'text-body py-2 px-4',
+  l: 'text-lg py-2.5 px-5',
+  xl: 'text-xl py-3 px-6'
+} as const;
 export const BUTTON_VARIANTS = {
   shade: 'mnt-btn-shade',
   solid: 'mnt-btn-solid',
@@ -20,6 +27,7 @@ export const BUTTON_VARIANTS = {
 } as const;
 
 export type MntButtonColor = keyof typeof BUTTON_COLORS;
+export type MntButtonSize = keyof typeof BUTTON_SIZES;
 export type MntButtonVariant = keyof typeof BUTTON_VARIANTS;
 
 interface ButtonProps {
@@ -44,6 +52,10 @@ interface ButtonProps {
    */
   rounded?: boolean;
   /**
+   * Makes the button rounded
+   */
+  size?: MntButtonSize;
+  /**
    * The variant to use for the button
    */
   variant?: MntButtonVariant;
@@ -57,6 +69,7 @@ export const BaseButton = mnt('button')<ButtonProps>`
   ${BUTTON_BASE_CLASS}
   ${({ color = 'primary' }) => BUTTON_COLORS[color]}
   ${({ rounded = false }) => rounded && '!rounded-full'}
+  ${({ size = 'm' }) => BUTTON_SIZES[size]}
   ${({ variant = 'shade' }) => BUTTON_VARIANTS[variant]}
 `;
 
