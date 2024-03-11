@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.6...@mountain-ui/react-components@1.3.0) (2024-03-11)
+
+### Features
+
+- **react-components:** 🎸 add MntBreadcrumbs component ([089c406](https://github.com/tonyghiani/mountain-ui/commit/089c4064ef2797788b4a4601bc0365b5eed9e44f))
+
 ## [1.2.6](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.5...@mountain-ui/react-components@1.2.6) (2024-02-18)
 
 **Note:** Version bump only for package @mountain-ui/react-components
