@@ -86,5 +86,6 @@ For detailed information about each component, refer to the sub-pages:
 ### Molecules
 
 - [MntAccordion](./src/components/molecules/Accordion)
+- [MntBreadcrumbs](./src/components/molecules/Breadcrumbs)
 - [MntCodeBlock](./src/components/molecules/CodeBlock)
 - [MntRangeInput](./src/components/molecules/RangeInput)

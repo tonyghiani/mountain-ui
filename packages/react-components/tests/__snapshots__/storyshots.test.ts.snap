@@ -1438,6 +1438,42 @@ exports[`Storyshots Molecules/MntAccordion Main 1`] = `
 </div>
 `;
 
+exports[`Storyshots Molecules/MntBreadcrumbs Main 1`] = `
+<nav
+  className="mnt-breadcrumbs"
+>
+  <ol>
+    <li
+      data-separator="/"
+    >
+      <span
+        className="leading-relaxed text-body text-[--c-text-primary]"
+      >
+        Home
+      </span>
+    </li>
+    <li
+      data-separator="/"
+    >
+      <span
+        className="leading-relaxed text-body text-[--c-text-primary]"
+      >
+        Blog
+      </span>
+    </li>
+    <li
+      data-separator="/"
+    >
+      <span
+        className="leading-relaxed text-body text-[--c-text-primary]"
+      >
+        A design system called Mountain UI
+      </span>
+    </li>
+  </ol>
+</nav>
+`;
+
 exports[`Storyshots Molecules/MntCodeBlock Main 1`] = `
 <div
   className="mnt-codeblock"
