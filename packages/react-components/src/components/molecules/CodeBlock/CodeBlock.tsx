@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import mnt from 'react-mnt';
 import { isString } from '@mountain-ui/utils';

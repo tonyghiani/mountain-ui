@@ -6,10 +6,10 @@ import useMediaQuery from './useMediaQuery';
 
 const meta = {
   title: 'Hooks/useMediaQuery',
-  component: Demo,
+  component: Demo
 } satisfies Meta<typeof Demo>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {};
@@ -30,25 +30,15 @@ function Demo() {
   };
 
   return (
-    <Container className="flex flex-col gap-2">
-      <Text>
-        Try to resize the window to see the flags changing.
-      </Text>
-      <div
-        className="flex gap-2"
-      >
+    <Container className='flex flex-col gap-2'>
+      <Text>Try to resize the window to see the flags changing.</Text>
+      <div className='flex gap-2'>
         {Object.keys(medias).map((name, i) => (
-          <Card key={i} heading={
-            <Text className="bold text-light">
-              {name}
-            </Text>
-          }>
-            <Text className="grid place-items-center p-2">
-              {medias[name].toString()}
-            </Text>
+          <Card key={i} heading={<Text className='bold text-light'>{name}</Text>}>
+            <Text className='grid place-items-center p-2'>{medias[name].toString()}</Text>
           </Card>
         ))}
       </div>
     </Container>
   );
-};
+}

@@ -5,7 +5,7 @@
  * @param timeout Amount of millisecond to debounce the function call
  * @returns {boolean}
  */
-function debounce<TArgs, TRes>(func: (...args: TArgs[]) => TRes, timeout = 300) {
+function debounce<TArgs, TRes>(func: (..._args: TArgs[]) => TRes, timeout = 300) {
   let timer: NodeJS.Timeout;
   return (...args: TArgs[]) => {
     clearTimeout(timer);

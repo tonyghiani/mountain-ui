@@ -6,10 +6,10 @@ import useOutsideClick from './useOutsideClick';
 
 const meta = {
   title: 'Hooks/useOutsideClick',
-  component: Demo,
+  component: Demo
 } satisfies Meta<typeof Demo>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Main: Story = {};
@@ -20,11 +20,9 @@ function Demo() {
 
   return (
     <Container>
-      <Card ref={containerRef} className="p-4">
-        <Text>
-          Click anywhere outside the box to run the event callback!
-        </Text>
+      <Card ref={containerRef} className='p-4'>
+        <Text>Click anywhere outside the box to run the event callback!</Text>
       </Card>
     </Container>
   );
-};
+}

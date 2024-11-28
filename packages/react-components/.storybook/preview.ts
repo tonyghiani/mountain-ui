@@ -4,7 +4,6 @@ import '../src/styles/tailwind.base.css';
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       exclude: ['as', 'ref', 'key'],
       expanded: true,

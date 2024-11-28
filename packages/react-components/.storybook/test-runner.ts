@@ -1,6 +1,5 @@
-import { injectAxe, checkA11y } from 'axe-playwright';
-
 import type { TestRunnerConfig } from '@storybook/test-runner';
+import { checkA11y, injectAxe } from 'axe-playwright';
 
 const a11yConfig: TestRunnerConfig = {
   async preRender(page) {
@@ -13,6 +12,12 @@ const a11yConfig: TestRunnerConfig = {
         html: true
       }
     });
+  },
+  async postVisit(page) {
+    // the #storybook-root element wraps the story. In Storybook 6.x, the selector is #root
+    const elementHandler = await page.$('#storybook-root');
+    const innerHTML = await elementHandler?.innerHTML();
+    expect(innerHTML).toMatchSnapshot();
   }
 };
 

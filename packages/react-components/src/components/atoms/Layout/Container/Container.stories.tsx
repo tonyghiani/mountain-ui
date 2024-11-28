@@ -5,10 +5,10 @@ import { MntContainer } from './Container';
 const meta = {
   title: 'Atoms/Layout/MntContainer',
   component: MntContainer,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 } satisfies Meta<typeof MntContainer>;
 
-export default meta
+export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Article: Story = {
@@ -38,6 +38,3 @@ export const Ultra: Story = {
     size: 'ultra'
   }
 };
-
-
-

@@ -12,7 +12,8 @@ export const JUSTIFY_CONTENT = {
   stretch: 'justify-stretch'
 } as const;
 export type JustifyContent = keyof typeof JUSTIFY_CONTENT;
-export const justifyContent = ({ justifyContent: justify = 'normal' }) => JUSTIFY_CONTENT[justify];
+export const justifyContent = ({ justifyContent: justify = 'normal' }) =>
+  JUSTIFY_CONTENT[justify as JustifyContent];
 
 /**
  * `justify-content` options
@@ -24,7 +25,8 @@ export const JUSTIFY_ITEMS = {
   stretch: 'justify-items-stretch'
 } as const;
 export type JustifyItems = keyof typeof JUSTIFY_ITEMS;
-export const justifyItems = ({ justifyItems: justify = 'start' }) => JUSTIFY_ITEMS[justify];
+export const justifyItems = ({ justifyItems: justify = 'start' }) =>
+  JUSTIFY_ITEMS[justify as JustifyItems];
 
 /**
  * `align-items` options
@@ -37,4 +39,5 @@ export const ALIGN_ITEMS = {
   stretch: 'items-stretch'
 } as const;
 export type AlignItems = keyof typeof ALIGN_ITEMS;
-export const alignItems = ({ alignItems: alignment = 'start' }) => ALIGN_ITEMS[alignment];
+export const alignItems = ({ alignItems: alignment = 'start' }) =>
+  ALIGN_ITEMS[alignment as AlignItems];

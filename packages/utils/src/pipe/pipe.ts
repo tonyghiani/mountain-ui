@@ -3,7 +3,7 @@
  * @param ...functions
  */
 
-type Func<TInput> = (arg: TInput) => TInput;
+type Func<TInput> = (_arg: TInput) => TInput;
 
 const pipe =
   <TInput>(...functions: Func<TInput>[]) =>

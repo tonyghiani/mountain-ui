@@ -1,4 +1,4 @@
-const { indexTemplate, template } = require('./lib/conversion-tools.js');
+const { indexTemplate, template } = require('./lib/conversion-tools.cjs');
 
 module.exports = {
   dimensions: true,

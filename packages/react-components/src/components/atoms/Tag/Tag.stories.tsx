@@ -17,15 +17,15 @@ type Story = StoryObj<typeof meta>;
 export const Main: Story = {
   args: {
     children: '#mountain-ui',
-    size: 'm',
-  },
+    size: 'm'
+  }
 };
 
 export const Size: Story = {
   args: {
     children: '#mountain-ui'
   },
-  render: (args) => (
+  render: args => (
     <MntBox className='flex gap-4'>
       <MntTag {...args} size='xs' />
       <MntTag {...args} size='s' />
@@ -40,7 +40,7 @@ export const Status: Story = {
   args: {
     children: '#mountain-ui'
   },
-  render: (args) => (
+  render: args => (
     <MntBox className='flex gap-4'>
       <MntTag {...args} size='m' status='success' />
       <MntTag {...args} size='m' status='warning' />

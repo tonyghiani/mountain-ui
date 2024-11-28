@@ -1,6 +1,6 @@
 /* eslint-env jest */
 // @ts-nocheck
-import { cleanup, renderHook } from '@testing-library/react-hooks';
+import { cleanup, renderHook } from '@testing-library/react';
 
 import useEventListener from './useEventListener';
 
