@@ -10,6 +10,12 @@ export * from './useEventListener';
 export { default as useFontSize } from './useFontSize';
 export * from './useFontSize';
 
+export { default as useIsClient } from './useIsClient';
+export * from './useIsClient';
+
+export { default as useKeyDown } from './useKeyDown';
+export * from './useKeyDown';
+
 export { default as useLocalStorage } from './useLocalStorage';
 export * from './useLocalStorage';
 
