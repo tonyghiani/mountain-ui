@@ -92,6 +92,13 @@ const materialTailwindConfig = {
           '&::-webkit-scrollbar-thumb:hover': {
             backgroundColor: theme('colors.gray.300')
           }
+        },
+        '.no-scrollbar': {
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
+          }
         }
       };
 
