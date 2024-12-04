@@ -17,7 +17,9 @@ const config: StorybookConfig = {
 
   typescript: {
     reactDocgen: 'react-docgen-typescript'
-  }
+  },
+
+  staticDirs: ['./']
 };
 export default config;
 

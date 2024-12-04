@@ -1,6 +1,6 @@
 const fs = require('fs');
 const fse = require('fs-extra');
-const inquirer = require('inquirer');
+const { input, select } = require('@inquirer/prompts');
 const printHeader = require('../../../scripts/printHeader');
 
 const BASE_DIR = process.cwd();
@@ -40,19 +40,13 @@ process.stdin.on('keypress', (_, { name }) => name === 'escape' && process.exit(
  */
 async function askComponentDetails() {
   console.log();
-  return inquirer.prompt([
-    {
-      type: 'list',
-      name: 'type',
-      message: 'What type of component are you going to create?',
-      choices: ['atom', 'molecule', 'organism']
-    },
-    {
-      type: 'input',
-      name: 'name',
-      message: `Type the component name: `
-    }
-  ]);
+  const type = await select({
+    message: 'What type of component are you going to create?',
+    choices: ['atom', 'molecule', 'organism']
+  });
+  const name = await input({ message: 'Type the component name: ' });
+
+  return { name, type };
 }
 
 /**
@@ -117,7 +111,7 @@ export interface Mnt${name}Props { }
 /**
  * TODO: add component description headline
  */
-const Mnt${name} = mnt<Mnt${name}Props>('div')\`\`
+export const Mnt${name} = mnt('div')<Mnt${name}Props>\`\`
 
 Mnt${name}.displayName = 'Mnt${name}';
 `
@@ -131,14 +125,6 @@ function createStory(name, type) {
     COMPONENT_STORY,
     `
 import React from 'react'
-
-import ${name} from './${name}';
-
-export default {
-  title: '${group}/${name}',
-  component: ${name}
-};
-
 import { Meta, StoryObj } from '@storybook/react';
 
 import { Mnt${name} } from './${name}';
