@@ -1,6 +1,6 @@
-const lernaConfig = require('@commitlint/config-lerna-scopes');
+import lernaConfig from '@commitlint/config-lerna-scopes';
 
-module.exports = {
+export default {
   extends: ['@commitlint/config-conventional', '@commitlint/config-lerna-scopes'],
   rules: {
     'scope-enum': async () => {

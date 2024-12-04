@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import { MntBox, MntGrid } from '../../Layout';
 import { MntText } from '../Text';
-import { Main as TextMainStory } from '../Text/Text.stories'
+import { Main as TextMainStory } from '../Text/Text.stories';
 
 import { HEADING_VARIANTS, MntHeading, MntHeadingVariant } from './Heading';
 

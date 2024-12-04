@@ -2,10 +2,11 @@
  * Extended from Gabe Ragland implementation https://usehooks.com/useEventListener/
  * to accept multiple events with the same handler and listener options
  */
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { EventHandler, MutableRefObject, useEffect, useRef } from 'react';
 import { hasWindow } from '@mountain-ui/utils';
 
-export type TEvent = string | string[];
+type EventsMap = DocumentEventMap & WindowEventMap;
+export type TEventKey = keyof EventsMap | (string & {});
 export type Target = Window | Document | MutableRefObject<HTMLElement>;
 
 function getElement(target: Target) {
@@ -13,12 +14,17 @@ function getElement(target: Target) {
   return targetIsRef ? target.current : target;
 }
 
-function useEventListener(
-  events: TEvent,
-  handler: EventListener,
+function useEventListener<
+  TEvent extends TEventKey,
+  TEventListener extends EventHandler<any> = TEvent extends keyof EventsMap
+    ? (_event: EventsMap[TEvent]) => void
+    : EventHandler<any>
+>(
+  events: TEvent | TEvent[],
+  handler: TEventListener,
   target: Target = hasWindow() ? window : null,
   options?: boolean | AddEventListenerOptions
-): void {
+) {
   // Create a list of events if a single string is passed
   const eventList = Array.isArray(events) ? events : [events];
   const serializedEventList = JSON.stringify(eventList);

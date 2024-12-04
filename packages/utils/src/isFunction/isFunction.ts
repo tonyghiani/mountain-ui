@@ -1,4 +1,4 @@
-type AnyFunction = (...args: any) => any;
+type AnyFunction = (..._args: any) => any;
 /**
  * Type guard to check if a value is a function.
  *

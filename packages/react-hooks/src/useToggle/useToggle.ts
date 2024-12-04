@@ -1,6 +1,5 @@
 import { useReducer } from 'react';
 
-// eslint-disable-next-line no-unused-vars
 export type DispatchWithOptionalAction = (_arg?: unknown) => void;
 
 export type UseToggleResult = [boolean, DispatchWithOptionalAction];

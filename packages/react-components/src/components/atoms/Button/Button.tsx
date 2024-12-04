@@ -83,6 +83,19 @@ export function MntButton({ children, leftIcon, rightIcon, ...props }: MntButton
   );
 }
 
+export function MntIconButton({ icon, className, ...props }: MntIconButtonProps) {
+  const iconButtonClasses = ['px-0 py-0 !p-2', className].filter(Boolean).join(' ');
+
+  return (
+    <BaseButton className={iconButtonClasses} {...props}>
+      {icon}
+    </BaseButton>
+  );
+}
+
 export type MntButtonProps = React.ComponentPropsWithRef<typeof BaseButton>;
+export type MntIconButtonProps = Omit<MntButtonProps, 'leftIcon' | 'rightIcon'> & {
+  icon: React.ReactNode;
+};
 
 MntButton.displayName = 'MntButton';

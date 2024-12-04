@@ -8,6 +8,7 @@ addons.setConfig({
     fontCode: 'monaco',
     brandTitle: 'Mountain UI',
     brandUrl: 'https://react-components.mountain-ui.com',
+    brandImage: './mnt_logo.png',
     brandTarget: '_self'
   })
 });

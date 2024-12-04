@@ -17,6 +17,7 @@ import visuallyHiddenClasses from './components/atoms/VisuallyHidden/VisuallyHid
 import accordionClasses from './components/molecules/Accordion/Accordion.classes';
 import breadcrumbsClasses from './components/molecules/Breadcrumbs/Breadcrumbs.classes';
 import codeblockClasses from './components/molecules/CodeBlock/CodeBlock.classes';
+import modalClasses from './components/molecules/Modal/Modal.classes';
 import rangeInputClasses from './components/molecules/RangeInput/RangeInput.classes';
 
 const materialTailwindConfig = {
@@ -37,6 +38,7 @@ const materialTailwindConfig = {
       addComponents(
         Object.assign(
           {},
+          // Atom components classes
           btnClasses,
           codeClasses,
           inputClasses,
@@ -44,9 +46,11 @@ const materialTailwindConfig = {
           tagClasses,
           visuallyHiddenClasses,
           typographyClasses,
+          // Molecule components classes
           accordionClasses,
           breadcrumbsClasses,
           codeblockClasses,
+          modalClasses,
           rangeInputClasses
         )
       );
@@ -91,6 +95,13 @@ const materialTailwindConfig = {
           },
           '&::-webkit-scrollbar-thumb:hover': {
             backgroundColor: theme('colors.gray.300')
+          }
+        },
+        '.no-scrollbar': {
+          msOverflowStyle: 'none',
+          scrollbarWidth: 'none',
+          '&::-webkit-scrollbar': {
+            display: 'none'
           }
         }
       };

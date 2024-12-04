@@ -13,8 +13,8 @@ const meta = {
      * Disable since it uses an internal ref which is set to null, the suggested approach doesn't work
      * https://www.npmjs.com/package/@storybook/addon-storyshots#using-createnodemock-to-mock-refs
      */
-    storyshots: { disable: true },
-  },
+    storyshots: { disable: true }
+  }
 } satisfies Meta<typeof MntRangeInput>;
 
 export default meta;

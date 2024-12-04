@@ -8,14 +8,14 @@ import { GRID_COLUMNS, MntGrid, MntGridColumns } from './Grid';
 const meta = {
   title: 'Atoms/Layout/MntGrid',
   component: MntGrid,
-  tags: ['autodocs'],
+  tags: ['autodocs']
 } satisfies Meta<typeof MntGrid>;
 
-export default meta
+export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-const GridItem = () => <MntBox className='w-16 h-16 bg-blue-400 rounded' />
+const GridItem = () => <MntBox className='w-16 h-16 bg-blue-400 rounded' />;
 
 export const Main: Story = {
   args: {
@@ -29,9 +29,9 @@ export const Main: Story = {
       {[...Array(+columns)].map((_el, id) => (
         <GridItem key={id} />
       ))}
-    </MntGrid >
+    </MntGrid>
   )
-}
+};
 
 export const Columns: Story = {
   args: {
@@ -39,15 +39,17 @@ export const Columns: Story = {
     alignItems: 'center',
     className: 'w-full h-32'
   },
-  render: (args) => (
+  render: args => (
     <MntGrid>
-      {Object.keys(GRID_COLUMNS).map((cols) => {
-        return <MntGrid key={cols} columns={+cols as MntGridColumns} {...args}>
-          {[...Array(+cols)].map((_el, id) => (
-            <GridItem key={id} />
-          ))}
-        </MntGrid>
+      {Object.keys(GRID_COLUMNS).map(cols => {
+        return (
+          <MntGrid key={cols} columns={+cols as MntGridColumns} {...args}>
+            {[...Array(+cols)].map((_el, id) => (
+              <GridItem key={id} />
+            ))}
+          </MntGrid>
+        );
       })}
-    </MntGrid >
+    </MntGrid>
   )
 };
