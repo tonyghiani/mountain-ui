@@ -10,7 +10,8 @@ import {
   MntButton,
   MntButtonColor,
   MntButtonSize,
-  MntButtonVariant
+  MntButtonVariant,
+  MntIconButton
 } from './Button';
 
 const colors = Object.keys(BUTTON_COLORS) as MntButtonColor[];
@@ -107,6 +108,25 @@ export const Icons: Story = {
         <MntButton leftIcon={<TestIcon />} rightIcon={<TestIcon />}>
           Mountain
         </MntButton>
+      </MntGrid>
+    );
+  }
+};
+
+export const IconButton: Story = {
+  render: () => {
+    return (
+      <MntGrid columns={6} justifyItems='center' alignItems='center'>
+        {colors.map(color =>
+          variants.map(variant => (
+            <MntIconButton
+              key={`${variant}-${color}`}
+              color={color}
+              variant={variant}
+              icon={<TestIcon />}
+            />
+          ))
+        )}
       </MntGrid>
     );
   }
