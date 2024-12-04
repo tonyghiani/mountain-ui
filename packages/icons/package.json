@@ -1,6 +1,6 @@
 {
   "name": "@mountain-ui/icons",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Icon components set for Mountain UI",
   "keywords": [
     "react",
@@ -52,8 +52,8 @@
     }
   },
   "devDependencies": {
-    "@mountain-ui/doc-tools": "^1.0.6",
-    "@mountain-ui/utils": "^1.0.3",
+    "@mountain-ui/doc-tools": "^1.0.7",
+    "@mountain-ui/utils": "^1.0.4",
     "@storybook/addon-a11y": "^8.4.6",
     "@storybook/addon-essentials": "^8.4.6",
     "@storybook/addon-interactions": "^8.4.6",

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@1.0.3...@mountain-ui/icons@1.0.4) (2024-12-04)
+
+**Note:** Version bump only for package @mountain-ui/icons
+
 ## [1.0.3](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/icons@1.0.2...@mountain-ui/icons@1.0.3) (2024-02-18)
 
 **Note:** Version bump only for package @mountain-ui/icons

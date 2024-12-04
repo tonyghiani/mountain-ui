@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@1.0.10...@mountain-ui/react-hooks@1.1.0) (2024-12-04)
+
+### Features
+
+- **react-hooks:** 🎸 add useKeyDown and useIsClient hooks ([6999368](https://github.com/tonyghiani/mountain-ui/commit/6999368983ba1302b48c3a93465cac679ef0e5cb))
+
 ## [1.0.10](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-hooks@1.0.9...@mountain-ui/react-hooks@1.0.10) (2024-02-18)
 
 **Note:** Version bump only for package @mountain-ui/react-hooks

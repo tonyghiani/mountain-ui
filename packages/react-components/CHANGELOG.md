@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.3.0...@mountain-ui/react-components@1.4.0) (2024-12-04)
+
+### Features
+
+- **react-components:** 🎸 add MntIconButton component ([a3b9577](https://github.com/tonyghiani/mountain-ui/commit/a3b9577d84d0985247e8f163533736b258b6e72e))
+- **react-components:** 🎸 add MntModal component ([2524367](https://github.com/tonyghiani/mountain-ui/commit/25243679ed2067aec938ec10ac21fd7876972d3e))
+
 # [1.3.0](https://github.com/tonyghiani/mountain-ui/compare/@mountain-ui/react-components@1.2.6...@mountain-ui/react-components@1.3.0) (2024-03-11)
 
 ### Features
