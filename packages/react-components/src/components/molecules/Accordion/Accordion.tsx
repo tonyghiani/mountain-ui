@@ -96,5 +96,3 @@ MntAccordion.Detail = function AccordionDetail(props: MntAccordionDetailProps) {
     />
   );
 };
-
-MntAccordion.displayName = 'MntAccordion';

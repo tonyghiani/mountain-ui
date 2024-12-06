@@ -35,5 +35,3 @@ export const MntHeading = mnt(MntBaseTypography).params<HeadingProps>(p => ({
 export type MntHeadingProps = Omit<React.ComponentPropsWithRef<typeof MntHeading>, 'ref'> & {
   ref?: React.Ref<HTMLHeadingElement>;
 };
-
-MntHeading.displayName = 'MntHeading';

@@ -22,9 +22,7 @@ export interface MntTextProps extends MntBaseTypographyProps {
  * Text component for rendering plain text content within a UI.
  * Offers flexibility in styling and formatting textual information to enhance the user interface's visual appeal and clarity.
  */
-export const MntText = mnt(MntBaseTypography) <MntTextProps>`
+export const MntText = mnt(MntBaseTypography)<MntTextProps>`
   ${TEXT_BASE_CLASS}
   ${({ variant = 'primary' }) => TEXT_VARIANTS[variant]}
 `;
-
-MntText.displayName = 'MntText';

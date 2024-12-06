@@ -64,5 +64,3 @@ export const MntCodeBlock = ({ children, syntax = 'jsx', ...props }: MntCodeBloc
     </Highlight>
   );
 };
-
-MntCodeBlock.displayName = 'MntCodeBlock';

@@ -112,8 +112,6 @@ export interface Mnt${name}Props { }
  * TODO: add component description headline
  */
 export const Mnt${name} = mnt('div')<Mnt${name}Props>\`\`
-
-Mnt${name}.displayName = 'Mnt${name}';
 `
   );
 }

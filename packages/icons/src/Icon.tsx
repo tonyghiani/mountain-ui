@@ -94,5 +94,3 @@ export const MntIcon = ({
     </span>
   );
 };
-
-MntIcon.displayName = 'MntIcon';

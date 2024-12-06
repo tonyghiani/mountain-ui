@@ -28,5 +28,3 @@ export const MntBreadcrumbs = ({ children, separator = '/', ...props }: MntBread
     </StyledBreadcrumbs>
   );
 };
-
-MntBreadcrumbs.displayName = 'MntBreadcrumbs';

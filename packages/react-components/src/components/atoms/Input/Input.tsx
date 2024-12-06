@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import mnt from 'react-mnt';
 
 import { MntParagraph, MntText } from '../Typography';
@@ -76,47 +76,40 @@ const InputContainer = mnt('div')<Pick<MntInputProps, 'status'>>`
  * Input component for accepting user input within a UI.
  * Supports various input types and styles, enhancing user interaction and enabling data submission or manipulation.
  */
-export const MntInput = forwardRef<HTMLInputElement, MntInputProps>(
-  (
-    {
-      caption,
-      children,
-      className,
-      containerClassName,
-      id,
-      label,
-      size = 'm',
-      status = 'default',
-      ...props
-    },
-    ref
-  ) => {
-    const { input, wrapper } = INPUT_SIZES[size];
-    const wrapperClasses = [wrapper, className].filter(Boolean).join(' ');
+export const MntInput = ({
+  caption,
+  children,
+  className,
+  containerClassName,
+  id,
+  label,
+  size = 'm',
+  status = 'default',
+  ...props
+}: MntInputProps) => {
+  const { input, wrapper } = INPUT_SIZES[size];
+  const wrapperClasses = [wrapper, className].filter(Boolean).join(' ');
 
-    const inputNode = (
-      <InputWrapper className={wrapperClasses}>
-        {children}
-        <StyledInput ref={ref} id={id} className={input} {...props} />
-      </InputWrapper>
-    );
+  const inputNode = (
+    <InputWrapper className={wrapperClasses}>
+      {children}
+      <StyledInput id={id} className={input} {...props} />
+    </InputWrapper>
+  );
 
-    return (
-      <InputContainer className={containerClassName} status={status}>
-        {label ? (
-          <MntText as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
-            {label}
-            {inputNode}
-          </MntText>
-        ) : (
-          inputNode
-        )}
-        {caption && (
-          <MntParagraph className='text-caption text-[--text-input]'>{caption}</MntParagraph>
-        )}
-      </InputContainer>
-    );
-  }
-);
-
-MntInput.displayName = 'MntInput';
+  return (
+    <InputContainer className={containerClassName} status={status}>
+      {label ? (
+        <MntText as='label' className='mb-2 text-[--text-input]' htmlFor={id}>
+          {label}
+          {inputNode}
+        </MntText>
+      ) : (
+        inputNode
+      )}
+      {caption && (
+        <MntParagraph className='text-caption text-[--text-input]'>{caption}</MntParagraph>
+      )}
+    </InputContainer>
+  );
+};

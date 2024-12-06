@@ -62,8 +62,6 @@ export const MntModal = ({ isOpen, onClose, children, ...props }: MntModalProps)
 
 export type MntModalProps = React.ComponentPropsWithRef<typeof StyledDialog>;
 
-MntModal.displayName = 'MntModal';
-
 const CloseIcon = () => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

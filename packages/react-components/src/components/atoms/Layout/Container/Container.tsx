@@ -27,5 +27,3 @@ export const MntContainer = mnt('div')<ContainerProps>`
 `;
 
 export type MntContainerProps = React.ComponentPropsWithRef<typeof MntContainer>;
-
-MntContainer.displayName = 'MntContainer';

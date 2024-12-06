@@ -55,5 +55,3 @@ export const MntBaseTypography = mnt('span')<BaseTypographyProps>`
 `;
 
 export type MntBaseTypographyProps = React.ComponentPropsWithRef<typeof MntBaseTypography>;
-
-MntBaseTypography.displayName = 'MntBaseTypography';

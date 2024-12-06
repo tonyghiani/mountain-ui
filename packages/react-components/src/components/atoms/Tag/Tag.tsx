@@ -94,5 +94,3 @@ const TagStatus = mnt('div')<TagStatusProps>`
   ${({ size }) => TAG_STATUS_SIZES[size]}
   ${({ status }) => TAG_STATUS[status]}
 `;
-
-MntTag.displayName = 'MntTag';

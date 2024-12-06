@@ -11,5 +11,3 @@ export const MntCode = mnt('code')`
 `;
 
 export type MntCodeProps = React.ComponentPropsWithRef<typeof MntCode>;
-
-MntCode.displayName = 'MntCode';

@@ -46,5 +46,3 @@ export const MntGrid = mnt('div')<GridProps>`
 `;
 
 export type MntGridProps = React.ComponentPropsWithRef<typeof MntGrid>;
-
-MntGrid.displayName = 'MntGrid';

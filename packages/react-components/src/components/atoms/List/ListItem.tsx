@@ -27,5 +27,3 @@ export const MntListItem = ({ children, icon, ...props }: MntListItemProps) => {
     </StyledListItem>
   );
 };
-
-MntListItem.displayName = 'MntListItem';

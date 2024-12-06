@@ -9,5 +9,3 @@ export interface MntParagraphProps extends MntTextProps {}
  * Enhances readability and presentation of textual information within a UI.
  */
 export const MntParagraph = mnt(MntText).params<MntParagraphProps>({ as: 'p' })``;
-
-MntParagraph.displayName = 'MntParagraph';

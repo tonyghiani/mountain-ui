@@ -97,5 +97,3 @@ export type MntButtonProps = React.ComponentPropsWithRef<typeof BaseButton>;
 export type MntIconButtonProps = Omit<MntButtonProps, 'leftIcon' | 'rightIcon'> & {
   icon: React.ReactNode;
 };
-
-MntButton.displayName = 'MntButton';

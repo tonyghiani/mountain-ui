@@ -14,7 +14,7 @@ export interface MntRangeInputProps extends Omit<IProps, 'renderTrack' | 'render
   children: React.ReactNode | ((_value: number) => React.ReactNode);
 }
 
-export const MntRangeTrack = mnt('div') <ITrackProps>`
+export const MntRangeTrack = mnt('div')<ITrackProps>`
   mnt-range-input-track
 `;
 
@@ -58,8 +58,6 @@ export const MntRangeInput = ({
     />
   );
 };
-
-MntRangeInput.displayName = 'MntRangeInput';
 
 MntRangeInput.Thumb = mnt('div')`
   mnt-range-input-thumb

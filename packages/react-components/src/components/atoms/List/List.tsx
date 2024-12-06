@@ -24,5 +24,3 @@ export const MntList = mnt('ul')<ListProps>`
 `;
 
 export type MntListProps = React.ComponentPropsWithRef<typeof MntList>;
-
-MntList.displayName = 'MntList';
